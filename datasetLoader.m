@@ -5,11 +5,13 @@
 clc;
 clearvars;
 
+dataFolder = 'binData';
+
 % Load train and test images into randomized datastores
-trainDataPath = fullfile('data', 'train');
+trainDataPath = fullfile(dataFolder, 'train');
 trainData = shuffle(imageDatastore(trainDataPath, 'IncludeSubfolders', ...
     true, 'LabelSource', 'foldernames'));
-testDataPath = fullfile('data', 'test');
+testDataPath = fullfile(dataFolder, 'test');
 testData = shuffle(imageDatastore(testDataPath, 'IncludeSubfolders', ...
     true, 'LabelSource', 'foldernames'));
 
