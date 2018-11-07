@@ -16,6 +16,7 @@ testLabels = loadMNISTLabels('t10k-labels-idx1-ubyte');
 % Loop over images and store them in folders named with labels
 for i = 1:numImgsTrain
     currentImg = reshape(trainImgs(:, i), [28, 28, 1]);
+    currentImg = padarray(currentImg, [2 2]);
     currentGT = trainLabels(i);
     dest = fullfile('data', 'train', int2str(currentGT), strcat(int2str(i), '.png'));
     fprintf('%s\n', dest);
@@ -26,6 +27,7 @@ end
 
 for i = 1:numImgsTest
     currentImg = reshape(testImgs(:, i), [28, 28, 1]);
+    currentImg = padarray(currentImg, [2 2]);
     currentGT = testLabels(i);
     dest = fullfile('data', 'test', int2str(currentGT), strcat(int2str(i), '.png'));
     fprintf('%s\n', dest);
