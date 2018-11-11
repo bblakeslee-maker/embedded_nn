@@ -1,4 +1,4 @@
-% Bryan Blakeslee
+ba% Bryan Blakeslee
 % 9-13-18
 % Trainer for LeNet-5 CNN
 
