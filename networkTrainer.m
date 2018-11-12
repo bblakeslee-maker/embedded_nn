@@ -1,10 +1,10 @@
-ba% Bryan Blakeslee
+% Bryan Blakeslee
 % 9-13-18
 % Trainer for LeNet-5 CNN
 
 % Define LeNet5 architecture
 lenet5 = [...
-    imageInputLayer([28 28 1], 'Name', 'inputLayer')
+    imageInputLayer([32 32 1], 'Name', 'inputLayer')
     convolution2dLayer(5, 6, 'Name', 'conv1')
     reluLayer('Name', 'relu1')
     maxPooling2dLayer(2, 'Stride', 2, 'Name', 'pool1')
