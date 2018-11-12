@@ -5,7 +5,7 @@
 clc;
 clearvars;
 
-dataFolder = 'binData';
+dataFolder = 'data';
 
 % Load train and test images into randomized datastores
 trainDataPath = fullfile(dataFolder, 'train');
