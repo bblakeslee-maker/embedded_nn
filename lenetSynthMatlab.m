@@ -2,7 +2,7 @@ function [netScores] = lenetSynthMatlab(inputImg, weightsConv1, biasConv1, weigh
 %LENETSYNTH Synthesizable model of LeNet5
 %   inputImg: 32x32x1 MNIST image
 
-    % Layer 1: conv1
+    % Layer 1: conv1 -- OK
     conv1ActivationMap = zeros(28, 28, 6);
     for f = 1:1:6
         % Extract desired filter
@@ -15,13 +15,10 @@ function [netScores] = lenetSynthMatlab(inputImg, weightsConv1, biasConv1, weigh
         end
     end
     
-    netScores = conv1ActivationMap;
-    return;
-    
-    % Layer 2: relu1
+    % Layer 2: relu1 -- OK
     relu1ActivationMap = max(0, conv1ActivationMap);
     
-    % Layer 3: pool1
+    % Layer 3: pool1 -- OK
     pool1ActivationMap = zeros(14, 14, 6);
     for f = 1:1:6
         rowOutIdx = 1;
@@ -35,7 +32,7 @@ function [netScores] = lenetSynthMatlab(inputImg, weightsConv1, biasConv1, weigh
         end
     end
     
-    % Layer 4: conv2
+    % Layer 4: conv2 -- OK
     conv2ActivationMap = zeros(10, 10, 16);
     for f = 1:1:16
         % Extract desired filter
@@ -43,17 +40,17 @@ function [netScores] = lenetSynthMatlab(inputImg, weightsConv1, biasConv1, weigh
         for r = 1:1:10
             for c = 1:1:10
                 imgRegion = pool1ActivationMap(r:r + 4, c:c + 4, :);
-                conv2ActivationMap(r, c, :) = sum(sum(sum(filter .* imgRegion))) + biasConv2(:, :, f);
+                conv2ActivationMap(r, c, f) = sum(sum(sum(filter .* imgRegion))) + biasConv2(:, :, f);
             end
         end
     end
         
-    % Layer 5: relu2
+    % Layer 5: relu2 -- OK
     relu2ActivationMap = max(0, conv2ActivationMap);
     
-    % Layer 6: pool2
+    % Layer 6: pool2 -- OK
     pool2ActivationMap = zeros(5, 5, 16);
-    for f = 1:1:6
+    for f = 1:1:16
         rowOutIdx = 1;
         for r = 1:2:9
             colOutIdx = 1;
@@ -65,19 +62,19 @@ function [netScores] = lenetSynthMatlab(inputImg, weightsConv1, biasConv1, weigh
         end
     end
     
-    % Layer 7: fc1
+    % Layer 7: fc1 -- OK
     fc1ActivationMap = zeros(120, 1);
     for f = 1:1:120
         fc1ActivationMap(f) = sum(sum(sum((pool2ActivationMap .* weightsFC1(:, :, :, f))))) + biasFC1(:, :, f);
     end
     
-    % Layer 8: relu3
+    % Layer 8: relu3 -- OK
     relu3ActivationMap = max(0, fc1ActivationMap);
     
-    % Layer 9: fc2
+    % Layer 9: fc2 -- OK
     fc2ActivationMap = weightsFC2 * relu3ActivationMap + biasFC2;
     
-    % Layer 10: fc3
+    % Layer 10: fc3 -- OK
     netScores = weightsFC3 * fc2ActivationMap + biasFC3;
 
 end
