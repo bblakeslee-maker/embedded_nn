@@ -4,7 +4,7 @@
 
 % Read out test data
 testData.ReadSize = 10000;
-reset(testData);
+% reset(testData);
 imageMatrix = read(testData);
 groundTruth = testData.Labels;
 
@@ -12,29 +12,13 @@ prob = zeros(10000, 10);
 correctClass = 0;
 errorClass = 0;
 
-global netType;
-% netType = 'matlab';
-
-if strcmp(netType, 'matlab')
-    testFunction = @lenetSynthMatlab;
-elseif strcmp(netType, 'tensor')
-    testFunction = @lenetSynthTensor;
-else
-    fprintf('Invalid net type!\n');
-    return
-end
-
 fprintf('Progress:\n')
 for i = 1:10000
     if(mod(i, 100) == 0) 
         fprintf('%d / 10000\n', i); 
     end
-    scores = testFunction(imageMatrix{i}, weightsConv1, biasConv1, weightsConv2, biasConv2, weightsFC1, biasFC1, weightsFC2, biasFC2, weightsFC3, biasFC3);
-    if strcmp(netType, 'matlab')
-        prob(i, :) = softmax(scores);   % Matlab
-    elseif strcmp(netType, 'tensor')
-        prob(i, :) = softmax(scores');  % Tensorflow
-    end
+    scores = lenetSynthMatlab(single(imageMatrix{i}), weightsConv1, biasConv1, weightsConv2, biasConv2, weightsFC1, biasFC1, weightsFC2, biasFC2, weightsFC3, biasFC3);
+    prob(i, :) = softmax(scores);   % Matlab
     [~, idx] = max(prob(i, :));
     class = uint8(idx - 1);
     gt = uint8(groundTruth(i)) - 1;

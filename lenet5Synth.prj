@@ -12,15 +12,15 @@
     <param.fixptconv.enum.needfixedpoint>option.fixptconv.enum.needfixedpoint.yes</param.fixptconv.enum.needfixedpoint>
     <param.hdl.WorkingDirectory>option.hdl.ProjectDirectory</param.hdl.WorkingDirectory>
     <param.hdl.WorkingSpecifiedDirectory />
-    <param.hdl.BuildDirectory>option.hdl.ProjectDirectory</param.hdl.BuildDirectory>
-    <param.hdl.BuildSpecifiedDirectory />
-    <param.fixptconv.InstrumentedMexFile />
-    <param.fixptconv.InstrumentedBuildChecksum />
+    <param.hdl.BuildDirectory>option.hdl.BuildSpecifiedDirectory</param.hdl.BuildDirectory>
+    <param.hdl.BuildSpecifiedDirectory>/home/tyrian/nnproject/synthBuild</param.hdl.BuildSpecifiedDirectory>
+    <param.fixptconv.InstrumentedMexFile>${PROJECT_ROOT}/synthBuild/lenetSynthMatlab/fixpt/lenetSynthMatlab_float_mex.mexa64</param.fixptconv.InstrumentedMexFile>
+    <param.fixptconv.InstrumentedBuildChecksum>4195464281</param.fixptconv.InstrumentedBuildChecksum>
     <param.fixptconv.ShowCoverage>true</param.fixptconv.ShowCoverage>
     <param.fixptconv.FixedPointValidationChecksum />
     <param.fixptconv.FixedPointSourceCodeChecksum />
     <param.fixptconv.FixedPointStaticAnalysisChecksum />
-    <param.fixptconv.DefaultTestFile />
+    <param.fixptconv.DefaultTestFile>${PROJECT_ROOT}/synthTester.m</param.fixptconv.DefaultTestFile>
     <param.fixptconv.ExcludedFixedPointVerificationFiles />
     <param.fixptconv.ExcludedFixedPointSimulationFiles />
     <param.fixptconv.FixptProposalKind>option.fixptconv.ProposeFracLenBasedOnWordLen</param.fixptconv.FixptProposalKind>
@@ -29,6 +29,299 @@
     <param.fixptconv.ContainerTypes>false</param.fixptconv.ContainerTypes>
     <param.fixptconv.SafetyMargin>0</param.fixptconv.SafetyMargin>
     <param.fixptconv.ProposeUsingDesignMinMaxAnd>option.fixptconv.ProposeUsingDesignMinMaxAnd.SimAndDerivedMinMax</param.fixptconv.ProposeUsingDesignMinMaxAnd>
+    <param.transformedVariables>
+      <UserEntities>
+        <Function file="$(PROJECTDIR)/lenetSynthMatlab.m" name="lenetSynthMatlab" specialization="lenetSynthMatlab" specializationId="-1" uniqueId="lenetSynthMatlab">
+          <Variable name="netScores" specid="-1">
+            <Column property="LoggingEnabled" type="Boolean" value="true" />
+          </Variable>
+          <Variable name="inputImg" specid="-1">
+            <Column property="LoggingEnabled" type="Boolean" value="true" />
+          </Variable>
+          <Variable name="weightsConv1" specid="-1">
+            <Column property="LoggingEnabled" type="Boolean" value="true" />
+          </Variable>
+          <Variable name="biasConv1" specid="-1">
+            <Column property="LoggingEnabled" type="Boolean" value="true" />
+          </Variable>
+          <Variable name="weightsConv2" specid="-1">
+            <Column property="LoggingEnabled" type="Boolean" value="true" />
+          </Variable>
+          <Variable name="biasConv2" specid="-1">
+            <Column property="LoggingEnabled" type="Boolean" value="true" />
+          </Variable>
+          <Variable name="weightsFC1" specid="-1">
+            <Column property="LoggingEnabled" type="Boolean" value="true" />
+          </Variable>
+          <Variable name="biasFC1" specid="-1">
+            <Column property="LoggingEnabled" type="Boolean" value="true" />
+          </Variable>
+          <Variable name="weightsFC2" specid="-1">
+            <Column property="LoggingEnabled" type="Boolean" value="true" />
+          </Variable>
+          <Variable name="biasFC2" specid="-1">
+            <Column property="LoggingEnabled" type="Boolean" value="true" />
+          </Variable>
+          <Variable name="weightsFC3" specid="-1">
+            <Column property="LoggingEnabled" type="Boolean" value="true" />
+          </Variable>
+          <Variable name="biasFC3" specid="-1">
+            <Column property="LoggingEnabled" type="Boolean" value="true" />
+          </Variable>
+          <Variable name="conv1ActivationMap" specid="-1" />
+          <Variable name="f" specid="-1" />
+          <Variable name="filter" specid="1" />
+          <Variable name="filter" specid="2" />
+          <Variable name="r" specid="-1" />
+          <Variable name="c" specid="-1" />
+          <Variable name="imgRegion" specid="1" />
+          <Variable name="imgRegion" specid="2" />
+          <Variable name="relu1ActivationMap" specid="-1" />
+          <Variable name="pool1ActivationMap" specid="-1" />
+          <Variable name="rowOutIdx" specid="-1" />
+          <Variable name="colOutIdx" specid="-1" />
+          <Variable name="conv2ActivationMap" specid="-1" />
+          <Variable name="relu2ActivationMap" specid="-1" />
+          <Variable name="pool2ActivationMap" specid="-1" />
+          <Variable name="fc1ActivationMap" specid="-1" />
+          <Variable name="relu3ActivationMap" specid="-1" />
+          <Variable name="fc2ActivationMap" specid="-1" />
+        </Function>
+      </UserEntities>
+    </param.transformedVariables>
+    <param.computedVariables>
+      <ComputedEntities>
+        <Function file="$(PROJECTDIR)/lenetSynthMatlab.m" name="lenetSynthMatlab" specialization="lenetSynthMatlab" specializationId="-1" uniqueId="lenetSynthMatlab">
+          <Variable name="netScores" specid="-1">
+            <Column property="Kind" type="String" value="output" />
+            <MATLABType class="single" complex="false">
+              <size>10</size>
+              <size>1</size>
+            </MATLABType>
+          </Variable>
+          <Variable name="inputImg" specid="-1">
+            <Column property="Kind" type="String" value="input" />
+            <MATLABType class="single" complex="false">
+              <size>32</size>
+              <size>32</size>
+            </MATLABType>
+          </Variable>
+          <Variable name="weightsConv1" specid="-1">
+            <Column property="Kind" type="String" value="input" />
+            <MATLABType class="single" complex="false">
+              <size>5</size>
+              <size>5</size>
+              <size>1</size>
+              <size>6</size>
+            </MATLABType>
+          </Variable>
+          <Variable name="biasConv1" specid="-1">
+            <Column property="Kind" type="String" value="input" />
+            <MATLABType class="single" complex="false">
+              <size>1</size>
+              <size>1</size>
+              <size>6</size>
+            </MATLABType>
+          </Variable>
+          <Variable name="weightsConv2" specid="-1">
+            <Column property="Kind" type="String" value="input" />
+            <MATLABType class="single" complex="false">
+              <size>5</size>
+              <size>5</size>
+              <size>6</size>
+              <size>16</size>
+            </MATLABType>
+          </Variable>
+          <Variable name="biasConv2" specid="-1">
+            <Column property="Kind" type="String" value="input" />
+            <MATLABType class="single" complex="false">
+              <size>1</size>
+              <size>1</size>
+              <size>16</size>
+            </MATLABType>
+          </Variable>
+          <Variable name="weightsFC1" specid="-1">
+            <Column property="Kind" type="String" value="input" />
+            <MATLABType class="single" complex="false">
+              <size>5</size>
+              <size>5</size>
+              <size>16</size>
+              <size>120</size>
+            </MATLABType>
+          </Variable>
+          <Variable name="biasFC1" specid="-1">
+            <Column property="Kind" type="String" value="input" />
+            <MATLABType class="single" complex="false">
+              <size>1</size>
+              <size>1</size>
+              <size>120</size>
+            </MATLABType>
+          </Variable>
+          <Variable name="weightsFC2" specid="-1">
+            <Column property="Kind" type="String" value="input" />
+            <MATLABType class="single" complex="false">
+              <size>84</size>
+              <size>120</size>
+            </MATLABType>
+          </Variable>
+          <Variable name="biasFC2" specid="-1">
+            <Column property="Kind" type="String" value="input" />
+            <MATLABType class="single" complex="false">
+              <size>84</size>
+              <size>1</size>
+            </MATLABType>
+          </Variable>
+          <Variable name="weightsFC3" specid="-1">
+            <Column property="Kind" type="String" value="input" />
+            <MATLABType class="single" complex="false">
+              <size>10</size>
+              <size>84</size>
+            </MATLABType>
+          </Variable>
+          <Variable name="biasFC3" specid="-1">
+            <Column property="Kind" type="String" value="input" />
+            <MATLABType class="single" complex="false">
+              <size>10</size>
+              <size>1</size>
+            </MATLABType>
+          </Variable>
+          <Variable name="conv1ActivationMap" specid="-1">
+            <Column property="Kind" type="String" value="local" />
+            <MATLABType class="double" complex="false">
+              <size>28</size>
+              <size>28</size>
+              <size>6</size>
+            </MATLABType>
+          </Variable>
+          <Variable name="f" specid="-1">
+            <Column property="Kind" type="String" value="local" />
+            <MATLABType class="double" complex="false">
+              <size>1</size>
+              <size>1</size>
+            </MATLABType>
+          </Variable>
+          <Variable name="filter" specid="1">
+            <Column property="Kind" type="String" value="local" />
+            <MATLABType class="single" complex="false">
+              <size>5</size>
+              <size>5</size>
+            </MATLABType>
+          </Variable>
+          <Variable name="filter" specid="2">
+            <Column property="Kind" type="String" value="local" />
+            <MATLABType class="single" complex="false">
+              <size>5</size>
+              <size>5</size>
+              <size>6</size>
+            </MATLABType>
+          </Variable>
+          <Variable name="r" specid="-1">
+            <Column property="Kind" type="String" value="local" />
+            <MATLABType class="double" complex="false">
+              <size>1</size>
+              <size>1</size>
+            </MATLABType>
+          </Variable>
+          <Variable name="c" specid="-1">
+            <Column property="Kind" type="String" value="local" />
+            <MATLABType class="double" complex="false">
+              <size>1</size>
+              <size>1</size>
+            </MATLABType>
+          </Variable>
+          <Variable name="imgRegion" specid="1">
+            <Column property="Kind" type="String" value="local" />
+            <MATLABType class="single" complex="false">
+              <size>5</size>
+              <size>5</size>
+            </MATLABType>
+          </Variable>
+          <Variable name="imgRegion" specid="2">
+            <Column property="Kind" type="String" value="local" />
+            <MATLABType class="double" complex="false">
+              <size>5</size>
+              <size>5</size>
+              <size>6</size>
+            </MATLABType>
+          </Variable>
+          <Variable name="relu1ActivationMap" specid="-1">
+            <Column property="Kind" type="String" value="local" />
+            <MATLABType class="double" complex="false">
+              <size>28</size>
+              <size>28</size>
+              <size>6</size>
+            </MATLABType>
+          </Variable>
+          <Variable name="pool1ActivationMap" specid="-1">
+            <Column property="Kind" type="String" value="local" />
+            <MATLABType class="double" complex="false">
+              <size>14</size>
+              <size>14</size>
+              <size>6</size>
+            </MATLABType>
+          </Variable>
+          <Variable name="rowOutIdx" specid="-1">
+            <Column property="Kind" type="String" value="local" />
+            <MATLABType class="double" complex="false">
+              <size>1</size>
+              <size>1</size>
+            </MATLABType>
+          </Variable>
+          <Variable name="colOutIdx" specid="-1">
+            <Column property="Kind" type="String" value="local" />
+            <MATLABType class="double" complex="false">
+              <size>1</size>
+              <size>1</size>
+            </MATLABType>
+          </Variable>
+          <Variable name="conv2ActivationMap" specid="-1">
+            <Column property="Kind" type="String" value="local" />
+            <MATLABType class="double" complex="false">
+              <size>10</size>
+              <size>10</size>
+              <size>16</size>
+            </MATLABType>
+          </Variable>
+          <Variable name="relu2ActivationMap" specid="-1">
+            <Column property="Kind" type="String" value="local" />
+            <MATLABType class="double" complex="false">
+              <size>10</size>
+              <size>10</size>
+              <size>16</size>
+            </MATLABType>
+          </Variable>
+          <Variable name="pool2ActivationMap" specid="-1">
+            <Column property="Kind" type="String" value="local" />
+            <MATLABType class="double" complex="false">
+              <size>5</size>
+              <size>5</size>
+              <size>16</size>
+            </MATLABType>
+          </Variable>
+          <Variable name="fc1ActivationMap" specid="-1">
+            <Column property="Kind" type="String" value="local" />
+            <MATLABType class="double" complex="false">
+              <size>120</size>
+              <size>1</size>
+            </MATLABType>
+          </Variable>
+          <Variable name="relu3ActivationMap" specid="-1">
+            <Column property="Kind" type="String" value="local" />
+            <MATLABType class="double" complex="false">
+              <size>120</size>
+              <size>1</size>
+            </MATLABType>
+          </Variable>
+          <Variable name="fc2ActivationMap" specid="-1">
+            <Column property="Kind" type="String" value="local" />
+            <MATLABType class="single" complex="false">
+              <size>84</size>
+              <size>1</size>
+            </MATLABType>
+          </Variable>
+        </Function>
+      </ComputedEntities>
+    </param.computedVariables>
     <param.fixptconv.FiMathString>fimath('RoundingMethod', 'Floor', 'OverflowAction', 'Wrap', 'ProductMode', 'FullPrecision', 'MaxProductWordLength', 128, 'SumMode', 'FullPrecision', 'MaxSumWordLength', 128)</param.fixptconv.FiMathString>
     <param.fixptconv.DefaultRoundMode>option.fixptconv.proposetypes.floor</param.fixptconv.DefaultRoundMode>
     <param.fixptconv.DefaultOverflowMode>option.fixptconv.proposetypes.wrap</param.fixptconv.DefaultOverflowMode>
@@ -40,7 +333,9 @@
     <param.fixptconv.ConvertConstantsToFi>true</param.fixptconv.ConvertConstantsToFi>
     <param.fixptconv.FICastFiVariables>false</param.fixptconv.FICastFiVariables>
     <param.fixptconv.SuppressErrorMessages>true</param.fixptconv.SuppressErrorMessages>
-    <param.fixptconv.generatefixptcode.function_replacements />
+    <param.fixptconv.generatefixptcode.function_replacements>
+      <FunctionReplacements />
+    </param.fixptconv.generatefixptcode.function_replacements>
     <param.fixptconv.PlotFunction />
     <param.SDIPlot>false</param.SDIPlot>
     <param.EnableCodeEfficiencyChecks>false</param.EnableCodeEfficiencyChecks>
@@ -48,18 +343,18 @@
     <param.fixptconv.DefaultFixedPointSignedness>option.fixptconv.DefaultFixedPointSignedness.Automatic</param.fixptconv.DefaultFixedPointSignedness>
     <param.fixptconv.StaticAnalysisTimeout />
     <param.fixptconv.StaticAnalysisGlobalRangesOnly>false</param.fixptconv.StaticAnalysisGlobalRangesOnly>
-    <var.lastFixedPointAction>option.fixedPointAction.none</var.lastFixedPointAction>
-    <var.lastSimContext />
+    <var.lastFixedPointAction>option.fixedPointAction.sim</var.lastFixedPointAction>
+    <var.lastSimContext>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;&lt;SimulationContext&gt;&lt;testFiles&gt;&lt;file&gt;/home/tyrian/nnproject/synthTester.m&lt;/file&gt;&lt;/testFiles&gt;&lt;synthetic&gt;false&lt;/synthetic&gt;&lt;/SimulationContext&gt;</var.lastSimContext>
     <var.lastVerifyContext />
-    <param.fpDataRoot />
+    <param.fpDataRoot>/home/tyrian/nnproject/synthBuild/lenetSynthMatlab/fixpt/guiFpReport.mat</param.fpDataRoot>
     <param.fpUserFileChecksum />
-    <var.snapshotChecksum />
+    <var.snapshotChecksum>95955705</var.snapshotChecksum>
     <param.fpLastConvertChecksum />
     <var.FixedPointAnalysisMode>option.FixedPointAnalysisMode.Sim</var.FixedPointAnalysisMode>
     <param.FixedPointUseDesignRanges>false</param.FixedPointUseDesignRanges>
     <param.hdl.Workflow>option.workflow.GenericAsicFpga</param.hdl.Workflow>
     <param.hdl.TargetPlatform />
-    <param.hdl.SynthesisTool />
+    <param.hdl.SynthesisTool>No synthesis tool available on system path</param.hdl.SynthesisTool>
     <param.hdl.InputFrequency>100</param.hdl.InputFrequency>
     <param.hdl.TargetFrequency>100</param.hdl.TargetFrequency>
     <param.hdl.ReferenceDesign />
@@ -252,15 +547,10 @@
       <param.fixptconv.enum.needfixedpoint />
       <param.hdl.WorkingDirectory />
       <param.hdl.WorkingSpecifiedDirectory />
-      <param.hdl.BuildDirectory />
-      <param.hdl.BuildSpecifiedDirectory />
-      <param.fixptconv.InstrumentedMexFile />
-      <param.fixptconv.InstrumentedBuildChecksum />
       <param.fixptconv.ShowCoverage />
       <param.fixptconv.FixedPointValidationChecksum />
       <param.fixptconv.FixedPointSourceCodeChecksum />
       <param.fixptconv.FixedPointStaticAnalysisChecksum />
-      <param.fixptconv.DefaultTestFile />
       <param.fixptconv.ExcludedFixedPointVerificationFiles />
       <param.fixptconv.ExcludedFixedPointSimulationFiles />
       <param.fixptconv.FixptProposalKind />
@@ -280,7 +570,6 @@
       <param.fixptconv.ConvertConstantsToFi />
       <param.fixptconv.FICastFiVariables />
       <param.fixptconv.SuppressErrorMessages />
-      <param.fixptconv.generatefixptcode.function_replacements />
       <param.fixptconv.PlotFunction />
       <param.SDIPlot />
       <param.EnableCodeEfficiencyChecks />
@@ -288,18 +577,13 @@
       <param.fixptconv.DefaultFixedPointSignedness />
       <param.fixptconv.StaticAnalysisTimeout />
       <param.fixptconv.StaticAnalysisGlobalRangesOnly />
-      <var.lastFixedPointAction />
-      <var.lastSimContext />
       <var.lastVerifyContext />
-      <param.fpDataRoot />
       <param.fpUserFileChecksum />
-      <var.snapshotChecksum />
       <param.fpLastConvertChecksum />
       <var.FixedPointAnalysisMode />
       <param.FixedPointUseDesignRanges />
       <param.hdl.Workflow />
       <param.hdl.TargetPlatform />
-      <param.hdl.SynthesisTool />
       <param.hdl.InputFrequency />
       <param.hdl.TargetFrequency />
       <param.hdl.ReferenceDesign />
@@ -479,9 +763,102 @@
       <param.hdl.BitstreamBuildMode />
     </unset>
     <fileset.entrypoints>
-      <file custom-data-expanded="true" value="${PROJECT_ROOT}/lenetSynthMatlab.m" />
+      <file custom-data-expanded="false" value="${PROJECT_ROOT}/lenetSynthMatlab.m">
+        <Inputs fileName="lenetSynthMatlab.m" functionName="lenetSynthMatlab" nargout="1">
+          <Input Name="inputImg">
+            <Class>single</Class>
+            <Size>32 x 32</Size>
+            <Value />
+            <InitialValue />
+            <UserDefined>false</UserDefined>
+            <Complex>false</Complex>
+          </Input>
+          <Input Name="weightsConv1">
+            <Class>single</Class>
+            <Size>5 x 5 x 1 x 6</Size>
+            <Value />
+            <InitialValue />
+            <UserDefined>false</UserDefined>
+            <Complex>false</Complex>
+          </Input>
+          <Input Name="biasConv1">
+            <Class>single</Class>
+            <Size>1 x 1 x 6</Size>
+            <Value />
+            <InitialValue />
+            <UserDefined>false</UserDefined>
+            <Complex>false</Complex>
+          </Input>
+          <Input Name="weightsConv2">
+            <Class>single</Class>
+            <Size>5 x 5 x 6 x 16</Size>
+            <Value />
+            <InitialValue />
+            <UserDefined>false</UserDefined>
+            <Complex>false</Complex>
+          </Input>
+          <Input Name="biasConv2">
+            <Class>single</Class>
+            <Size>1 x 1 x 16</Size>
+            <Value />
+            <InitialValue />
+            <UserDefined>false</UserDefined>
+            <Complex>false</Complex>
+          </Input>
+          <Input Name="weightsFC1">
+            <Class>single</Class>
+            <Size>5 x 5 x 16 x 120</Size>
+            <Value />
+            <InitialValue />
+            <UserDefined>false</UserDefined>
+            <Complex>false</Complex>
+          </Input>
+          <Input Name="biasFC1">
+            <Class>single</Class>
+            <Size>1 x 1 x 120</Size>
+            <Value />
+            <InitialValue />
+            <UserDefined>false</UserDefined>
+            <Complex>false</Complex>
+          </Input>
+          <Input Name="weightsFC2">
+            <Class>single</Class>
+            <Size>84 x 120</Size>
+            <Value />
+            <InitialValue />
+            <UserDefined>false</UserDefined>
+            <Complex>false</Complex>
+          </Input>
+          <Input Name="biasFC2">
+            <Class>single</Class>
+            <Size>84 x 1</Size>
+            <Value />
+            <InitialValue />
+            <UserDefined>false</UserDefined>
+            <Complex>false</Complex>
+          </Input>
+          <Input Name="weightsFC3">
+            <Class>single</Class>
+            <Size>10 x 84</Size>
+            <Value />
+            <InitialValue />
+            <UserDefined>false</UserDefined>
+            <Complex>false</Complex>
+          </Input>
+          <Input Name="biasFC3">
+            <Class>single</Class>
+            <Size>10 x 1</Size>
+            <Value />
+            <InitialValue />
+            <UserDefined>false</UserDefined>
+            <Complex>false</Complex>
+          </Input>
+        </Inputs>
+      </file>
     </fileset.entrypoints>
-    <fileset.scriptfile />
+    <fileset.scriptfile>
+      <file>${PROJECT_ROOT}/synthTester.m</file>
+    </fileset.scriptfile>
     <fileset.package />
     <build-deliverables />
     <workflow>

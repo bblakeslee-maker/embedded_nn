@@ -10,7 +10,7 @@ function [netScores] = lenetSynthMatlab(inputImg, weightsConv1, biasConv1, weigh
         for r = 1:1:28
             for c = 1:1:28
                 imgRegion = inputImg(r:r + 4, c:c + 4, :);
-                conv1ActivationMap(r, c, f) = sum(sum(filter .* single(imgRegion))) + biasConv1(:, :, f);
+                conv1ActivationMap(r, c, f) = sum(sum(filter .* imgRegion)) + biasConv1(:, :, f);
             end
         end
     end
