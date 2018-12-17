@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message severity="INFO" prefix="[SIM 211-2]" key="SIM_2_1569" tag="" content="*************** CSIM start ***************"/>
+	<Message severity="INFO" prefix="[SIM 211-4]" key="SIM_4_1577" tag="" content="CSIM will launch GCC as the compiler."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1427" tag="" content="Running &apos;/home/tyrian/xilinx/Vivado/2018.2/bin/unwrapped/lnx64.o/apcc&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;tyrian&apos; on host &apos;Neuromancer&apos; (Linux_x86_64 version 4.15.0-42-generic) on Sun Dec 09 17:51:05 EST 2018"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1429" tag="" content="On os Ubuntu 18.04.1 LTS"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1430" tag="" content="In directory &apos;/home/tyrian/nnproject/hlsProject8Bit/solution1/csim/build&apos;"/>
+	<Message severity="ERROR" prefix="[APCC 202-10]" key="APCC_10_1602" tag="" content="clang compile failed: child process exited abnormally"/>
+	<Message severity="ERROR" prefix="[APCC 202-1]" key="APCC_1_1595" tag="" content="ProcessSources failed"/>
+	<Message severity="INFO" prefix="[APCC 202-3]" key="APCC_3_1610" tag="" content="Tmp directory is /tmp/apcc_db_tyrian/76941544395865230998"/>
+	<Message severity="ERROR" prefix="[APCC 202-1]" key="APCC_1_1612" tag="" content="APCC failed."/>
+	<Message severity="ERROR" prefix="[SIM 211-100]" key="SIM_100_1589" tag="" content="&apos;csim_design&apos; failed: compilation error(s)."/>
+	<Message severity="INFO" prefix="[SIM 211-3]" key="SIM_3_1588" tag="" content="*************** CSIM finish ***************"/>
+</Messages>

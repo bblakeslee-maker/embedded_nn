@@ -1,0 +1,82 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Wed Dec 12 12:41:30 2018
+| Host         : Neuromancer running 64-bit Ubuntu 18.04.1 LTS
+| Command      : report_timing -file ./report/lenetSynthMatlab_timing_synth.rpt
+| Design       : lenetSynthMatlab
+| Device       : 7a100t-csg324
+| Speed File   : -1  PRODUCTION 1.22 2018-03-21
+------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             7.042ns  (required time - arrival time)
+  Source:                 weightsFC1_U/lenetSynthMatlab_g8j_rom_U/q0_reg_0_16/CLKARDCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by ap_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            reg_1488_reg[23]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (ap_clk rise@20.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        12.918ns  (logic 9.031ns (69.913%)  route 3.887ns (30.087%))
+  Logic Levels:           8  (DSP48E1=3 LUT5=2 LUT6=2 RAMB36E1=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 20.924 - 20.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=3620, unset)         0.973     0.973    weightsFC1_U/lenetSynthMatlab_g8j_rom_U/ap_clk
+                         RAMB36E1                                     r  weightsFC1_U/lenetSynthMatlab_g8j_rom_U/q0_reg_0_16/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+                         RAMB36E1 (Prop_ramb36e1_CLKARDCLK_CASCADEOUTA)
+                                                      1.028     2.001 r  weightsFC1_U/lenetSynthMatlab_g8j_rom_U/q0_reg_0_16/CASCADEOUTA
+                         net (fo=1, unplaced)         0.065     2.066    weightsFC1_U/lenetSynthMatlab_g8j_rom_U/q0_reg_0_16_n_0
+                         RAMB36E1 (Prop_ramb36e1_CASCADEINA_DOADO[0])
+                                                      0.425     2.491 r  weightsFC1_U/lenetSynthMatlab_g8j_rom_U/q0_reg_1_16/DOADO[0]
+                         net (fo=1, unplaced)         0.803     3.294    pool1ActivationMap_U/lenetSynthMatlab_mb6_ram_U/q0_reg_1_31[16]
+                         LUT6 (Prop_lut6_I4_O)        0.124     3.418 r  pool1ActivationMap_U/lenetSynthMatlab_mb6_ram_U/lenetSynthMatlab_ap_fmul_0_max_dsp_32_u_i_113/O
+                         net (fo=1, unplaced)         0.449     3.867    weightsFC3_U/lenetSynthMatlab_kbM_rom_U/ram_reg_0_14
+                         LUT5 (Prop_lut5_I4_O)        0.124     3.991 r  weightsFC3_U/lenetSynthMatlab_kbM_rom_U/lenetSynthMatlab_ap_fmul_0_max_dsp_32_u_i_48/O
+                         net (fo=2, unplaced)         0.803     4.794    lenetSynthMatlab_DeQ_U18/lenetSynthMatlab_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/s_axis_b_tdata[16]
+                         DSP48E1 (Prop_dsp48e1_B[16]_PCOUT[47])
+                                                      3.851     8.645 r  lenetSynthMatlab_DeQ_U18/lenetSynthMatlab_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/PCOUT[47]
+                         net (fo=1, unplaced)         0.000     8.645    lenetSynthMatlab_DeQ_U18/lenetSynthMatlab_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/PCOUT[47]
+                         DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.713    10.358 r  lenetSynthMatlab_DeQ_U18/lenetSynthMatlab_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/PCOUT[47]
+                         net (fo=1, unplaced)         0.000    10.358    lenetSynthMatlab_DeQ_U18/lenetSynthMatlab_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/RESULT_CASC[47]
+                         DSP48E1 (Prop_dsp48e1_PCIN[47]_P[32])
+                                                      1.518    11.876 r  lenetSynthMatlab_DeQ_U18/lenetSynthMatlab_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/P[32]
+                         net (fo=1, unplaced)         0.803    12.679    lenetSynthMatlab_DeQ_U18/lenetSynthMatlab_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/dsp_p_op[32]
+                         LUT5 (Prop_lut5_I4_O)        0.124    12.803 r  lenetSynthMatlab_DeQ_U18/lenetSynthMatlab_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/m_axis_result_tdata[23]_INST_0_i_1/O
+                         net (fo=1, unplaced)         0.964    13.767    lenetSynthMatlab_DeQ_U18/lenetSynthMatlab_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/EXP/EXP_ADD.C_CHAIN/DSP_0
+                         LUT6 (Prop_lut6_I4_O)        0.124    13.891 r  lenetSynthMatlab_DeQ_U18/lenetSynthMatlab_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/EXP/EXP_ADD.C_CHAIN/m_axis_result_tdata[23]_INST_0/O
+                         net (fo=1, unplaced)         0.000    13.891    grp_fu_1453_p2[23]
+                         FDRE                                         r  reg_1488_reg[23]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    20.000    20.000 r  
+                                                      0.000    20.000 r  ap_clk (IN)
+                         net (fo=3620, unset)         0.924    20.924    ap_clk
+                         FDRE                                         r  reg_1488_reg[23]/C
+                         clock pessimism              0.000    20.924    
+                         clock uncertainty           -0.035    20.889    
+                         FDRE (Setup_fdre_C_D)        0.044    20.933    reg_1488_reg[23]
+  -------------------------------------------------------------------
+                         required time                         20.933    
+                         arrival time                         -13.891    
+  -------------------------------------------------------------------
+                         slack                                  7.042    
+
+
+
+

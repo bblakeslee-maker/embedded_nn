@@ -1,0 +1,74 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'lenetSynthMatlab_fixpt'" level="0">
+<item name = "Date">Mon Dec 10 15:19:43 2018
+</item>
+<item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
+<item name = "Project">hls8Bit16Quant</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">artix7</item>
+<item name = "Target device">xc7a100tcsg324-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 8.360, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">2729254, 6861094, 2729254, 6861094, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_c_sum_fu_618">c_sum, 781, 2311, 781, 2311, none</column>
+<column name="grp_f_sum_fu_624">f_sum, 2161, 6721, 2161, 6721, none</column>
+<column name="grp_g_sum_fu_630">g_sum, 241, 881, 241, 881, none</column>
+<column name="grp_d_sum_fu_636">d_sum, 91, 283, 91, 283, none</column>
+<column name="grp_sum_fu_642">sum, 76, 236, 76, 236, none</column>
+<column name="grp_b_max_fu_648">b_max, 15737, 15737, 15737, 15737, none</column>
+<column name="grp_d_max_fu_654">d_max, 5021, 5021, 5021, 5021, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Loop 1">593052, 1345692, 98842 ~ 224282, -, -, 6, no</column>
+<column name=" + Loop 1.1">98840, 224280, 3530 ~ 8010, -, -, 28, no</column>
+<column name="  ++ Loop 1.1.1">3528, 8008, 126 ~ 286, -, -, 28, no</column>
+<column name="   +++ Loop 1.1.1.1">35, 35, 7, -, -, 5, no</column>
+<column name="    ++++ Loop 1.1.1.1.1">5, 5, 1, -, -, 5, no</column>
+<column name="   +++ Loop 1.1.1.2">8, 8, 2, -, -, 4, no</column>
+<column name="- Loop 2">1760352, 4515552, 110022 ~ 282222, -, -, 16, no</column>
+<column name=" + Loop 2.1">110020, 282220, 11002 ~ 28222, -, -, 10, no</column>
+<column name="  ++ Loop 2.1.1">11000, 28220, 1100 ~ 2822, -, -, 10, no</column>
+<column name="   +++ Loop 2.1.1.1">210, 210, 42, -, -, 5, no</column>
+<column name="    ++++ Loop 2.1.1.1.1">40, 40, 8, -, -, 5, no</column>
+<column name="     +++++ Loop 2.1.1.1.1.1">6, 6, 1, -, -, 6, no</column>
+<column name="   +++ Loop 2.1.1.2">10, 10, 2, -, -, 5, no</column>
+<column name="- Loop 3">344040, 968040, 2867 ~ 8067, -, -, 120, no</column>
+<column name=" + Loop 3.1">460, 460, 92, -, -, 5, no</column>
+<column name="  ++ Loop 3.1.1">90, 90, 18, -, -, 5, no</column>
+<column name="   +++ Loop 3.1.1.1">16, 16, 1, -, -, 16, no</column>
+<column name="- Loop 4">10164, 10164, 121, -, -, 84, no</column>
+<column name=" + Loop 4.1">119, 119, 1, -, -, 120, no</column>
+<column name="- Loop 5">860, 860, 86, -, -, 10, no</column>
+<column name=" + Loop 5.1">84, 84, 1, -, -, 84, no</column>
+<column name="- Loop 6">20, 20, 2, -, -, 10, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

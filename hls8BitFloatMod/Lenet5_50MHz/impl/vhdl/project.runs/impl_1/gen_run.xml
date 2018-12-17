@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1544636495">
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="BG-DRC" Name="lenetSynthMatlab.drc"/>
+  <File Type="BG-BGN" Name="lenetSynthMatlab.bgn"/>
+  <File Type="BITSTR-SYSDEF" Name="lenetSynthMatlab.sysdef"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="lenetSynthMatlab.ltx"/>
+  <File Type="BITSTR-MMI" Name="lenetSynthMatlab.mmi"/>
+  <File Type="BITSTR-BMM" Name="lenetSynthMatlab_bd.bmm"/>
+  <File Type="BITSTR-NKY" Name="lenetSynthMatlab.nky"/>
+  <File Type="BITSTR-RBT" Name="lenetSynthMatlab.rbt"/>
+  <File Type="BITSTR-MSK" Name="lenetSynthMatlab.msk"/>
+  <File Type="BG-BIN" Name="lenetSynthMatlab.bin"/>
+  <File Type="BG-BIT" Name="lenetSynthMatlab.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="lenetSynthMatlab_bus_skew_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="lenetSynthMatlab_bus_skew_postroute_physopted.pb"/>
+  <File Type="RDI-RDI" Name="lenetSynthMatlab.vdi"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="lenetSynthMatlab_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="lenetSynthMatlab_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="lenetSynthMatlab_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="lenetSynthMatlab_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="lenetSynthMatlab_postroute_physopt.dcp"/>
+  <File Type="ROUTE-BUS-SKEW" Name="lenetSynthMatlab_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="lenetSynthMatlab_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-SIMILARITY" Name="lenetSynthMatlab_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-TIMING-RPX" Name="lenetSynthMatlab_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-TIMING-PB" Name="lenetSynthMatlab_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="lenetSynthMatlab_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="lenetSynthMatlab_route_status.pb"/>
+  <File Type="ROUTE-STATUS" Name="lenetSynthMatlab_route_status.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="lenetSynthMatlab_power_routed.rpx"/>
+  <File Type="ROUTE-PWR-SUM" Name="lenetSynthMatlab_power_summary_routed.pb"/>
+  <File Type="PLACE-UTIL" Name="lenetSynthMatlab_utilization_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="lenetSynthMatlab_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-IO" Name="lenetSynthMatlab_io_placed.rpt"/>
+  <File Type="PWROPT-DCP" Name="lenetSynthMatlab_pwropt.dcp"/>
+  <File Type="OPT-TIMING" Name="lenetSynthMatlab_timing_summary_opted.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="lenetSynthMatlab_incremental_reuse_placed.rpt"/>
+  <File Type="OPT-HWDEF" Name="lenetSynthMatlab.hwdef"/>
+  <File Type="PWROPT-DRC" Name="lenetSynthMatlab_drc_pwropted.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="lenetSynthMatlab_bus_skew_routed.pb"/>
+  <File Type="PA-TCL" Name="lenetSynthMatlab.tcl"/>
+  <File Type="PLACE-DCP" Name="lenetSynthMatlab_placed.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="lenetSynthMatlab_bus_skew_postroute_physopted.rpt"/>
+  <File Type="PA-DCP" Name="lenetSynthMatlab.dcp"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="lenetSynthMatlab_bus_skew_routed.rpx"/>
+  <File Type="REPORTS-TCL" Name="lenetSynthMatlab_reports.tcl"/>
+  <File Type="INIT-TIMING" Name="lenetSynthMatlab_timing_summary_init.rpt"/>
+  <File Type="PLACE-CTRL" Name="lenetSynthMatlab_control_sets_placed.rpt"/>
+  <File Type="PWROPT-TIMING" Name="lenetSynthMatlab_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="lenetSynthMatlab_incremental_reuse_pre_placed.rpt"/>
+  <File Type="OPT-DCP" Name="lenetSynthMatlab_opt.dcp"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="lenetSynthMatlab_methodology_drc_opted.rpt"/>
+  <File Type="OPT-DRC" Name="lenetSynthMatlab_drc_opted.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="lenetSynthMatlab_utilization_placed.pb"/>
+  <File Type="PLACE-TIMING" Name="lenetSynthMatlab_timing_summary_placed.rpt"/>
+  <File Type="ROUTE-DRC" Name="lenetSynthMatlab_drc_routed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="lenetSynthMatlab_postplace_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="lenetSynthMatlab_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="lenetSynthMatlab_drc_routed.pb"/>
+  <File Type="PHYSOPT-DCP" Name="lenetSynthMatlab_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="lenetSynthMatlab_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-TIMING" Name="lenetSynthMatlab_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-PWR" Name="lenetSynthMatlab_power_routed.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="lenetSynthMatlab_routed_error.dcp"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="lenetSynthMatlab_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-DCP" Name="lenetSynthMatlab_routed.dcp"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="lenetSynthMatlab_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="lenetSynthMatlab_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC-RPX" Name="lenetSynthMatlab_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="lenetSynthMatlab_methodology_drc_routed.rpt"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/ip/lenetSynthMatlab_ap_fcmp_0_no_dsp_32/lenetSynthMatlab_ap_fcmp_0_no_dsp_32.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/lenetSynthMatlab_ap_uitofp_1_no_dsp_32/lenetSynthMatlab_ap_uitofp_1_no_dsp_32.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/lenetSynthMatlab_ap_fmul_0_max_dsp_32/lenetSynthMatlab_ap_fmul_0_max_dsp_32.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/lenetSynthMatlab_ap_fadd_2_full_dsp_32/lenetSynthMatlab_ap_fadd_2_full_dsp_32.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/c_sum.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/d_sum.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/f_sum.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/g_sum.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/lenetSynthMatlab.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/lenetSynthMatlab_Aem.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/lenetSynthMatlab_CeG.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/lenetSynthMatlab_DeQ.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/lenetSynthMatlab_Ee0.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/lenetSynthMatlab_Ffa.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/lenetSynthMatlab_bkb.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/lenetSynthMatlab_cud.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/lenetSynthMatlab_dEe.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/lenetSynthMatlab_eOg.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/lenetSynthMatlab_fYi.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/lenetSynthMatlab_g8j.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/lenetSynthMatlab_hbi.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/lenetSynthMatlab_ibs.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/lenetSynthMatlab_jbC.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/lenetSynthMatlab_kbM.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/lenetSynthMatlab_lbW.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/lenetSynthMatlab_mb6.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/lenetSynthMatlab_ncg.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/lenetSynthMatlab_ocq.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/lenetSynthMatlab_pcA.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/lenetSynthMatlab_qcK.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/lenetSynthMatlab_rcU.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/lenetSynthMatlab_sc4.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/lenetSynthMatlab_tde.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/lenetSynthMatlab_udo.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/lenetSynthMatlab_vdy.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/lenetSynthMatlab_wdI.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/lenetSynthMatlab_yd2.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/lenetSynthMatlab_zec.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/sum.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="lenetSynthMatlab"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PPRDIR/lenetSynthMatlab.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
+      <Desc>Default settings for Implementation.</Desc>
+    </StratHandle>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design" EnableStepBool="1"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

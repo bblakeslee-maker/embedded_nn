@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="lenetSynthMatlab" xd:componentRef="lenetSynthMatlab" xd:initiationInterval="6978125" xd:clockPeriod="10.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="ap_ctrl" xd:busTypeRef="acc_handshake" xd:type="acc_handshake"/>
+  <xd:arg xd:name="inputImg_q0" xd:originalName="inputImg_q0" xd:direction="in" xd:interfaceRef="inputImg_q0" xd:busTypeRef="ap_memory" xd:arraySize="1024" xd:dataWidth="32"/>
+  <xd:arg xd:name="netScores_d0" xd:originalName="netScores_d0" xd:direction="out" xd:interfaceRef="netScores_d0" xd:busTypeRef="ap_memory" xd:arraySize="10" xd:dataWidth="32"/>
+  <xd:latencyEstimates xd:best-case="6978124" xd:worst-case="6978124" xd:average-case="6978124"/>
+  <xd:resourceEstimates xd:LUT="10555" xd:FF="6405" xd:BRAM="98" xd:DSP="21"/>
+</xd:acceleratorMap>

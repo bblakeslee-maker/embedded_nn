@@ -1,0 +1,84 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'lenetSynthMatlab'" level="0">
+<item name = "Date">Wed Dec 12 12:37:00 2018
+</item>
+<item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
+<item name = "Project">hls8BitFloatMod</item>
+<item name = "Solution">Lenet5_50MHz</item>
+<item name = "Product family">artix7</item>
+<item name = "Target device">xc7a100tcsg324-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">20.00, 16.232, 2.50</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">4644468, 4644468, 4644468, 4644468, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Loop 1">1571490, 1571490, 261915, -, -, 6, no</column>
+<column name=" + Loop 1.1">261912, 261912, 9354, -, -, 28, no</column>
+<column name="  ++ Loop 1.1.1">9352, 9352, 334, -, -, 28, no</column>
+<column name="   +++ Loop 1.1.1.1">185, 185, 37, -, -, 5, no</column>
+<column name="    ++++ Loop 1.1.1.1.1">35, 35, 7, -, -, 5, no</column>
+<column name="   +++ Loop 1.1.1.2">20, 20, 5, -, -, 4, no</column>
+<column name="- Loop 2">11032, 11032, 394, -, -, 28, no</column>
+<column name=" + Loop 2.1">392, 392, 14, -, -, 28, no</column>
+<column name="  ++ Loop 2.1.1">12, 12, 2, -, -, 6, no</column>
+<column name="- memset_pool1ActivationMap">1175, 1175, 1, -, -, 1176, no</column>
+<column name="- Loop 4">11016, 11016, 1836, -, -, 6, no</column>
+<column name=" + Loop 4.1">1834, 1834, 131, -, -, 14, no</column>
+<column name="  ++ Loop 4.1.1">126, 126, 9, -, -, 14, no</column>
+<column name="   +++ Loop 4.1.1.1">6, 6, 3, -, -, 2, no</column>
+<column name="- Loop 5">2493168, 2493168, 155823, -, -, 16, no</column>
+<column name=" + Loop 5.1">155820, 155820, 15582, -, -, 10, no</column>
+<column name="  ++ Loop 5.1.1">15580, 15580, 1558, -, -, 10, no</column>
+<column name="   +++ Loop 5.1.1.1">660, 660, 132, -, -, 5, no</column>
+<column name="    ++++ Loop 5.1.1.1.1">130, 130, 26, -, -, 5, no</column>
+<column name="     +++++ Loop 5.1.1.1.1.1">24, 24, 4, -, -, 6, no</column>
+<column name="   +++ Loop 5.1.1.2">25, 25, 5, -, -, 5, no</column>
+<column name="- Loop 6">3420, 3420, 342, -, -, 10, no</column>
+<column name=" + Loop 6.1">340, 340, 34, -, -, 10, no</column>
+<column name="  ++ Loop 6.1.1">32, 32, 2, -, -, 16, no</column>
+<column name="- memset_pool2ActivationMap">399, 399, 1, -, -, 400, no</column>
+<column name="- Loop 8">4032, 4032, 252, -, -, 16, no</column>
+<column name=" + Loop 8.1">250, 250, 50, -, -, 5, no</column>
+<column name="  ++ Loop 8.1.1">45, 45, 9, -, -, 5, no</column>
+<column name="   +++ Loop 8.1.1.1">6, 6, 3, -, -, 2, no</column>
+<column name="- Loop 9">471480, 471480, 3929, -, -, 120, no</column>
+<column name=" + Loop 9.1">1660, 1660, 332, -, -, 5, no</column>
+<column name="  ++ Loop 9.1.1">330, 330, 66, -, -, 5, no</column>
+<column name="   +++ Loop 9.1.1.1">64, 64, 4, -, -, 16, no</column>
+<column name=" + Loop 9.2">75, 75, 5, -, -, 15, no</column>
+<column name="- Loop 10">240, 240, 2, -, -, 120, no</column>
+<column name="- Loop 11">71064, 71064, 846, -, -, 84, no</column>
+<column name=" + Loop 11.1">840, 840, 7, -, -, 120, no</column>
+<column name="- Loop 12">5940, 5940, 594, -, -, 10, no</column>
+<column name=" + Loop 12.1">588, 588, 7, -, -, 84, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Mon Dec 10 15:24:43 2018
+# Process ID: 5465
+# Current directory: /home/tyrian/nnproject/hls8Bit16Quant/solution1/impl/vhdl/project.runs/impl_1
+# Command line: vivado -log lenetSynthMatlab_fixpt.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source lenetSynthMatlab_fixpt.tcl -notrace
+# Log file: /home/tyrian/nnproject/hls8Bit16Quant/solution1/impl/vhdl/project.runs/impl_1/lenetSynthMatlab_fixpt.vdi
+# Journal file: /home/tyrian/nnproject/hls8Bit16Quant/solution1/impl/vhdl/project.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source lenetSynthMatlab_fixpt.tcl -notrace

@@ -1,6 +1,19 @@
-function [netScores] = lenetSynthMatlab(inputImg, weightsConv1, biasConv1, weightsConv2, biasConv2, weightsFC1, biasFC1, weightsFC2, biasFC2, weightsFC3, biasFC3)
+function [netScores] = lenetSynthMatlab(inputImg)
 %LENETSYNTH Synthesizable model of LeNet5
 %   inputImg: 32x32x1 MNIST image
+
+    % Load all constants
+    % networkWeights = coder.load('networkWeights.mat');
+    global weightsConv1;    weightsConv1 = weightsConv1;
+    global biasConv1;       biasConv1 = biasConv1;
+    global weightsConv2;    weightsConv2 = weightsConv2;
+    global biasConv2;       biasConv2 = biasConv2;
+    global weightsFC1;      weightsFC1 = weightsFC1;
+    global biasFC1;         biasFC1 = biasFC1;
+    global weightsFC2;      weightsFC2 = weightsFC2;
+    global biasFC2;         biasFC2 = biasFC2;
+    global weightsFC3;      weightsFC3 = weightsFC3;
+    global biasFC3;         biasFC3 = biasFC3;
 
     % Layer 1: conv1 -- OK
     conv1ActivationMap = zeros(28, 28, 6);

@@ -1,0 +1,116 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Tue Dec 11 23:02:28 2018
+| Host         : Neuromancer running 64-bit Ubuntu 18.04.1 LTS
+| Command      : report_timing -file ./report/lenetSynthMatlab_timing_synth.rpt
+| Design       : lenetSynthMatlab
+| Device       : 7a100t-csg324
+| Speed File   : -1  PRODUCTION 1.22 2018-03-21
+------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             65.156ns  (required time - arrival time)
+  Source:                 weightsFC1_U/lenetSynthMatlab_g8j_rom_U/q0_reg_0_16/CLKARDCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by ap_clk  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Destination:            conv1ActivationMap_U/lenetSynthMatlab_ncg_ram_U/ram_reg_0/DIADI[0]
+                            (rising edge-triggered cell RAMB36E1 clocked by ap_clk  {rise@0.000ns fall@50.000ns period=100.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            100.000ns  (ap_clk rise@100.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        34.023ns  (logic 21.557ns (63.360%)  route 12.466ns (36.640%))
+  Logic Levels:           22  (CARRY4=3 DSP48E1=5 LUT3=1 LUT4=1 LUT5=5 LUT6=6 RAMB36E1=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 100.924 - 100.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=2202, unset)         0.973     0.973    weightsFC1_U/lenetSynthMatlab_g8j_rom_U/ap_clk
+                         RAMB36E1                                     r  weightsFC1_U/lenetSynthMatlab_g8j_rom_U/q0_reg_0_16/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+                         RAMB36E1 (Prop_ramb36e1_CLKARDCLK_CASCADEOUTA)
+                                                      2.872     3.845 r  weightsFC1_U/lenetSynthMatlab_g8j_rom_U/q0_reg_0_16/CASCADEOUTA
+                         net (fo=1, unplaced)         0.065     3.910    weightsFC1_U/lenetSynthMatlab_g8j_rom_U/q0_reg_0_16_n_0
+                         RAMB36E1 (Prop_ramb36e1_CASCADEINA_DOADO[0])
+                                                      0.425     4.335 r  weightsFC1_U/lenetSynthMatlab_g8j_rom_U/q0_reg_1_16/DOADO[0]
+                         net (fo=1, unplaced)         0.803     5.138    pool1ActivationMap_U/lenetSynthMatlab_mb6_ram_U/out[16]
+                         LUT5 (Prop_lut5_I4_O)        0.124     5.262 r  pool1ActivationMap_U/lenetSynthMatlab_mb6_ram_U/lenetSynthMatlab_ap_fmul_0_max_dsp_32_u_i_112/O
+                         net (fo=1, unplaced)         0.449     5.711    pool1ActivationMap_U/lenetSynthMatlab_mb6_ram_U/lenetSynthMatlab_ap_fmul_0_max_dsp_32_u_i_112_n_0
+                         LUT5 (Prop_lut5_I2_O)        0.124     5.835 r  pool1ActivationMap_U/lenetSynthMatlab_mb6_ram_U/lenetSynthMatlab_ap_fmul_0_max_dsp_32_u_i_48/O
+                         net (fo=2, unplaced)         0.803     6.638    lenetSynthMatlab_DeQ_U18/lenetSynthMatlab_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/s_axis_b_tdata[16]
+                         DSP48E1 (Prop_dsp48e1_B[16]_PCOUT[47])
+                                                      3.851    10.489 r  lenetSynthMatlab_DeQ_U18/lenetSynthMatlab_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/PCOUT[47]
+                         net (fo=1, unplaced)         0.000    10.489    lenetSynthMatlab_DeQ_U18/lenetSynthMatlab_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/PCOUT[47]
+                         DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.713    12.202 r  lenetSynthMatlab_DeQ_U18/lenetSynthMatlab_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/PCOUT[47]
+                         net (fo=1, unplaced)         0.000    12.202    lenetSynthMatlab_DeQ_U18/lenetSynthMatlab_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/RESULT_CASC[47]
+                         DSP48E1 (Prop_dsp48e1_PCIN[47]_P[33])
+                                                      1.518    13.720 r  lenetSynthMatlab_DeQ_U18/lenetSynthMatlab_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/P[33]
+                         net (fo=1, unplaced)         0.803    14.523    lenetSynthMatlab_DeQ_U18/lenetSynthMatlab_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/dsp_p_op[33]
+                         LUT5 (Prop_lut5_I4_O)        0.124    14.647 r  lenetSynthMatlab_DeQ_U18/lenetSynthMatlab_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/m_axis_result_tdata[24]_INST_0_i_1/O
+                         net (fo=1, unplaced)         0.964    15.611    lenetSynthMatlab_DeQ_U18/lenetSynthMatlab_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/EXP/EXP_ADD.C_CHAIN/DSP_1
+                         LUT6 (Prop_lut6_I4_O)        0.124    15.735 r  lenetSynthMatlab_DeQ_U18/lenetSynthMatlab_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/EXP/EXP_ADD.C_CHAIN/m_axis_result_tdata[24]_INST_0/O
+                         net (fo=6, unplaced)         0.481    16.216    biasFC2_U/lenetSynthMatlab_jbC_rom_U/m_axis_result_tdata[24]
+                         LUT6 (Prop_lut6_I2_O)        0.124    16.340 r  biasFC2_U/lenetSynthMatlab_jbC_rom_U/lenetSynthMatlab_ap_fadd_0_full_dsp_32_u_i_155/O
+                         net (fo=1, unplaced)         0.449    16.789    fv16_U/lenetSynthMatlab_Aem_ram_U/q0_reg_6
+                         LUT6 (Prop_lut6_I3_O)        0.124    16.913 r  fv16_U/lenetSynthMatlab_Aem_ram_U/lenetSynthMatlab_ap_fadd_0_full_dsp_32_u_i_40/O
+                         net (fo=9, unplaced)         0.460    17.373    lenetSynthMatlab_bkb_U17/lenetSynthMatlab_ap_fadd_0_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/s_axis_b_tdata[24]
+                         LUT5 (Prop_lut5_I0_O)        0.124    17.497 r  lenetSynthMatlab_bkb_U17/lenetSynthMatlab_ap_fadd_0_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/merged_sub_mux.gen_luts[1].sub_lut/O
+                         net (fo=1, unplaced)         0.000    17.497    lenetSynthMatlab_bkb_U17/lenetSynthMatlab_ap_fadd_0_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/merged_sub_mux.STRUCT_ADD/A[1]
+                         CARRY4 (Prop_carry4_S[1]_O[3])
+                                                      0.643    18.140 r  lenetSynthMatlab_bkb_U17/lenetSynthMatlab_ap_fadd_0_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/merged_sub_mux.STRUCT_ADD/CHAIN_GEN[0].C_MUX.CARRY_MUX_CARRY4/O[3]
+                         net (fo=20, unplaced)        1.028    19.168    lenetSynthMatlab_bkb_U17/lenetSynthMatlab_ap_fadd_0_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/merged_sub_mux.STRUCT_ADD/align_dist[3]
+                         LUT6 (Prop_lut6_I1_O)        0.307    19.475 r  lenetSynthMatlab_bkb_U17/lenetSynthMatlab_ap_fadd_0_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/merged_sub_mux.STRUCT_ADD/DSP_i_65/O
+                         net (fo=2, unplaced)         0.803    20.277    lenetSynthMatlab_bkb_U17/lenetSynthMatlab_ap_fadd_0_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/INMODE[0]
+                         DSP48E1 (Prop_dsp48e1_INMODE[2]_PATTERNDETECT)
+                                                      5.849    26.126 r  lenetSynthMatlab_bkb_U17/lenetSynthMatlab_ap_fadd_0_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/PATTERNDETECT
+                         net (fo=54, unplaced)        0.803    26.929    lenetSynthMatlab_bkb_U17/lenetSynthMatlab_ap_fadd_0_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP_0
+                         LUT3 (Prop_lut3_I1_O)        0.124    27.053 r  lenetSynthMatlab_bkb_U17/lenetSynthMatlab_ap_fadd_0_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DIST_ENC[2].LSB_i_2/O
+                         net (fo=3, unplaced)         0.750    27.803    lenetSynthMatlab_bkb_U17/lenetSynthMatlab_ap_fadd_0_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/mant_norm[5]
+                         LUT5 (Prop_lut5_I2_O)        0.124    27.927 r  lenetSynthMatlab_bkb_U17/lenetSynthMatlab_ap_fadd_0_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/DIST_ENC[2].MSB/O
+                         net (fo=1, unplaced)         0.665    28.592    lenetSynthMatlab_bkb_U17/lenetSynthMatlab_ap_fadd_0_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/DIST_ENC[2].MSB__0
+                         LUT4 (Prop_lut4_I0_O)        0.146    28.738 r  lenetSynthMatlab_bkb_U17/lenetSynthMatlab_ap_fadd_0_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/minusOp_carry_i_5/O
+                         net (fo=1, unplaced)         0.732    29.470    lenetSynthMatlab_bkb_U17/lenetSynthMatlab_ap_fadd_0_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/minusOp_carry_i_5_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124    29.594 r  lenetSynthMatlab_bkb_U17/lenetSynthMatlab_ap_fadd_0_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/minusOp_carry_i_3/O
+                         net (fo=1, unplaced)         0.000    29.594    lenetSynthMatlab_bkb_U17/lenetSynthMatlab_ap_fadd_0_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/S[1]
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533    30.127 r  lenetSynthMatlab_bkb_U17/lenetSynthMatlab_ap_fadd_0_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/minusOp_carry/CO[3]
+                         net (fo=1, unplaced)         0.000    30.127    lenetSynthMatlab_bkb_U17/lenetSynthMatlab_ap_fadd_0_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/minusOp_carry_n_0
+                         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.337    30.464 r  lenetSynthMatlab_bkb_U17/lenetSynthMatlab_ap_fadd_0_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/minusOp_carry__0/O[1]
+                         net (fo=3, unplaced)         0.803    31.267    lenetSynthMatlab_bkb_U17/lenetSynthMatlab_ap_fadd_0_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/C[7]
+                         DSP48E1 (Prop_dsp48e1_C[32]_P[2])
+                                                      1.999    33.266 r  lenetSynthMatlab_bkb_U17/lenetSynthMatlab_ap_fadd_0_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/P[2]
+                         net (fo=1, unplaced)         0.803    34.069    lenetSynthMatlab_bkb_U17/lenetSynthMatlab_ap_fadd_0_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_A/MANT_CARRY.MANT_ALL_ZERO_DET/CARRY_ZERO_DET/P[0]
+                         LUT6 (Prop_lut6_I0_O)        0.124    34.193 r  lenetSynthMatlab_bkb_U17/lenetSynthMatlab_ap_fadd_0_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_A/MANT_CARRY.MANT_ALL_ZERO_DET/CARRY_ZERO_DET/m_axis_result_tdata[0]_INST_0/O
+                         net (fo=11, unplaced)        0.803    34.996    conv1ActivationMap_U/lenetSynthMatlab_ncg_ram_U/DSP[0]
+                         RAMB36E1                                     r  conv1ActivationMap_U/lenetSynthMatlab_ncg_ram_U/ram_reg_0/DIADI[0]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)   100.000   100.000 r  
+                                                      0.000   100.000 r  ap_clk (IN)
+                         net (fo=2202, unset)         0.924   100.924    conv1ActivationMap_U/lenetSynthMatlab_ncg_ram_U/ap_clk
+                         RAMB36E1                                     r  conv1ActivationMap_U/lenetSynthMatlab_ncg_ram_U/ram_reg_0/CLKARDCLK
+                         clock pessimism              0.000   100.924    
+                         clock uncertainty           -0.035   100.889    
+                         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_DIADI[0])
+                                                     -0.737   100.152    conv1ActivationMap_U/lenetSynthMatlab_ncg_ram_U/ram_reg_0
+  -------------------------------------------------------------------
+                         required time                        100.152    
+                         arrival time                         -34.996    
+  -------------------------------------------------------------------
+                         slack                                 65.156    
+
+
+
+

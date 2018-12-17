@@ -1,0 +1,1500 @@
+INFO-FLOW: Workspace /home/tyrian/nnproject/hlsProject/hlsProject/solution1 opened at Sat Dec 08 21:20:09 EST 2018
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.lib 
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.lib 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.lib 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.lib 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.lib 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.lib 
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.lib 
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.lib 
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.lib 
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_old.lib 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/artix7/dsp48e1.hlp 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 15850} {LUT 63400}     {FF 126800} {DSP48E 240}    {BRAM 270}  
+Execute       config_chip_info -quiet -speed medium 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7.gen 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.14 sec.
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.14 sec.
+Command     ap_source done; 0.14 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7_fpv6 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_hp.lib 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7_hp.hlp 
+Execute     source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7_fpv6.gen 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     set_part xc7a100tcsg324-1 
+Execute       add_library xilinx/artix7/artix7:xc7a100t:csg324:-1 
+Execute         get_default_platform 
+Execute         license_isbetapart xc7a100t 
+Command         license_isbetapart done; error code: 1; 
+Execute         get_default_platform 
+Execute         config_chip_info -quiet -resource  {SLICE 15850} {LUT 63400}     {FF 126800} {DSP48E 240}    {BRAM 270}  
+Execute         config_chip_info -quiet -speed slow 
+Execute       add_library xilinx/artix7/artix7_fpv6 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xc7a100tcsg324-1'
+Execute       get_default_platform 
+Execute     get_default_platform 
+Execute     config_chip_info -quiet -resource  {SLICE 15850} {LUT 63400}     {FF 126800} {DSP48E 240}    {BRAM 270}  
+Execute     config_chip_info -quiet -speed slow 
+Command   open_solution done; 0.23 sec.
+Execute   set_part xc7a100tcsg324-1 -tool vivado 
+Execute     add_library xilinx/artix7/artix7:xc7a100t:csg324:-1 
+Execute       get_default_platform 
+Execute       license_isbetapart xc7a100t 
+Command       license_isbetapart done; error code: 1; 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 15850} {LUT 63400}     {FF 126800} {DSP48E 240}    {BRAM 270}  
+Execute       config_chip_info -quiet -speed slow 
+Execute     add_library xilinx/artix7/artix7_fpv6 
+Execute       get_default_platform 
+Execute     get_default_platform 
+Execute   create_clock -period 10 -name default 
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute   csynth_design 
+Execute     get_config_compile -effort 
+Execute     get_config_compile -enable_clang39 
+Execute     get_config_compile -g 
+Execute     get_config_compile -lm 
+Execute     get_config_compile -ng 
+Execute     get_config_compile -opt_fp 
+Execute     get_config_compile -skip_cdt 
+Execute     get_config_compile -skip_syncheck 
+Execute     get_config_compile -skip_transform 
+Execute     get_config_compile -keep_printf 
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -lm=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+Execute       get_config_schedule -relax_ii_for_timing 
+Execute       get_config_schedule -suppress_dependence_error_break 
+INFO: [HLS 200-10] Analyzing design file '../generatedCCode/sum.c' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling ../generatedCCode/sum.c as C
+Execute       get_default_platform 
+Execute       is_encrypted ../generatedCCode/sum.c 
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "../generatedCCode/sum.c"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot" -I "/home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "/home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/sum.pp.0.c" 
+INFO-FLOW: exec /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E ../generatedCCode/sum.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot -I /home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/sum.pp.0.c
+Command       clang done; 1.37 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/gcc" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot" -I "/home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "/home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/sum.pp.0.c"  -o "/home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/useless.bc"  
+INFO-FLOW: exec /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot -I /home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/sum.pp.0.c -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/useless.bc
+Command       clang done; 1.31 sec.
+INFO-FLOW: GCC PP time: 2 seconds per iteration
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/sum.pp.0.c std=gnu89 -directive=/home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/sum.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.26 sec.
+INFO-FLOW: CDT Preprocessing with tidy-3.1...
+Execute       tidy_31 xilinx-directive2pragma /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/sum.pp.0.c std=gnu89 -directive=/home/tyrian/nnproject/hlsProject/hlsProject/solution1/solution1.json 
+INFO-FLOW: exec /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/home/tyrian/nnproject/hlsProject/hlsProject/solution1/solution1.json -quiet -fix-errors /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/sum.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/xilinx-dataflow-lawyer.sum.pp.0.c.diag.yml /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/sum.pp.0.c -- -std=gnu99 -fhls -ferror-limit=0 -fstrict-dataflow > /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/xilinx-dataflow-lawyer.sum.pp.0.c.out.log 2> /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/xilinx-dataflow-lawyer.sum.pp.0.c.err.log 
+Command       ap_eval done; 0.13 sec.
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/sum.pp.0.c std=gnu89 
+INFO-FLOW: exec /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer -quiet -fix-errors /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/sum.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
+INFO-FLOW: exec /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/sum.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.24 sec.
+INFO-FLOW: tidy-3.1 time 0 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/sum.pragma.1.c std=gnu89 
+INFO-FLOW: exec /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/sum.pragma.1.c -- -std=gnu89 -fhls -ferror-limit=0
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "/home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/sum.pragma.1.c"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot" -I "/home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "/home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/sum.pragma.2.c" 
+INFO-FLOW: exec /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/sum.pragma.1.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot -I /home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/sum.pragma.2.c
+Command       clang done; 1.2 sec.
+Execute       get_default_platform 
+INFO-FLOW: Processing labels
+Execute       clang -src /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/sum.pragma.2.c  -fno-limit-debug-info -gcc-toolchain /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/sum.pragma.2.c"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89  -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot" -I "/home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "/home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/sum.bc" 
+INFO-FLOW: exec /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/sum.pragma.2.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot -I /home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/sum.bc
+Command       clang done; 1.26 sec.
+INFO: [HLS 200-10] Analyzing design file '../generatedCCode/lenetSynthMatlab_terminate.c' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling ../generatedCCode/lenetSynthMatlab_terminate.c as C
+Execute       get_default_platform 
+Execute       is_encrypted ../generatedCCode/lenetSynthMatlab_terminate.c 
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "../generatedCCode/lenetSynthMatlab_terminate.c"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot" -I "/home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "/home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_terminate.pp.0.c" 
+INFO-FLOW: exec /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E ../generatedCCode/lenetSynthMatlab_terminate.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot -I /home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_terminate.pp.0.c
+Command       clang done; 1.22 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/gcc" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot" -I "/home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "/home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_terminate.pp.0.c"  -o "/home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/useless.bc"  
+INFO-FLOW: exec /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot -I /home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_terminate.pp.0.c -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/useless.bc
+Command       clang done; 1.2 sec.
+INFO-FLOW: GCC PP time: 2 seconds per iteration
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_terminate.pp.0.c std=gnu89 -directive=/home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_terminate.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
+INFO-FLOW: CDT Preprocessing with tidy-3.1...
+Execute       tidy_31 xilinx-directive2pragma /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_terminate.pp.0.c std=gnu89 -directive=/home/tyrian/nnproject/hlsProject/hlsProject/solution1/solution1.json 
+INFO-FLOW: exec /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/home/tyrian/nnproject/hlsProject/hlsProject/solution1/solution1.json -quiet -fix-errors /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_terminate.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/xilinx-dataflow-lawyer.lenetSynthMatlab_terminate.pp.0.c.diag.yml /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_terminate.pp.0.c -- -std=gnu99 -fhls -ferror-limit=0 -fstrict-dataflow > /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/xilinx-dataflow-lawyer.lenetSynthMatlab_terminate.pp.0.c.out.log 2> /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/xilinx-dataflow-lawyer.lenetSynthMatlab_terminate.pp.0.c.err.log 
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_terminate.pp.0.c std=gnu89 
+INFO-FLOW: exec /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer -quiet -fix-errors /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_terminate.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
+INFO-FLOW: exec /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_terminate.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
+INFO-FLOW: tidy-3.1 time 0 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_terminate.pragma.1.c std=gnu89 
+INFO-FLOW: exec /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_terminate.pragma.1.c -- -std=gnu89 -fhls -ferror-limit=0
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "/home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_terminate.pragma.1.c"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot" -I "/home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "/home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_terminate.pragma.2.c" 
+INFO-FLOW: exec /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_terminate.pragma.1.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot -I /home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_terminate.pragma.2.c
+Command       clang done; 1.2 sec.
+Execute       get_default_platform 
+INFO-FLOW: Processing labels
+Execute       clang -src /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_terminate.pragma.2.c  -fno-limit-debug-info -gcc-toolchain /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_terminate.pragma.2.c"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89  -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot" -I "/home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "/home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_terminate.bc" 
+INFO-FLOW: exec /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_terminate.pragma.2.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot -I /home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_terminate.bc
+Command       clang done; 1.2 sec.
+INFO: [HLS 200-10] Analyzing design file '../generatedCCode/lenetSynthMatlab_initialize.c' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling ../generatedCCode/lenetSynthMatlab_initialize.c as C
+Execute       get_default_platform 
+Execute       is_encrypted ../generatedCCode/lenetSynthMatlab_initialize.c 
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "../generatedCCode/lenetSynthMatlab_initialize.c"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot" -I "/home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "/home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_initialize.pp.0.c" 
+INFO-FLOW: exec /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E ../generatedCCode/lenetSynthMatlab_initialize.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot -I /home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_initialize.pp.0.c
+Command       clang done; 1.32 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/gcc" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot" -I "/home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "/home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_initialize.pp.0.c"  -o "/home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/useless.bc"  
+INFO-FLOW: exec /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot -I /home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_initialize.pp.0.c -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/useless.bc
+Command       clang done; 1.39 sec.
+INFO-FLOW: GCC PP time: 2 seconds per iteration
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_initialize.pp.0.c std=gnu89 -directive=/home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_initialize.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.18 sec.
+INFO-FLOW: CDT Preprocessing with tidy-3.1...
+Execute       tidy_31 xilinx-directive2pragma /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_initialize.pp.0.c std=gnu89 -directive=/home/tyrian/nnproject/hlsProject/hlsProject/solution1/solution1.json 
+INFO-FLOW: exec /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/home/tyrian/nnproject/hlsProject/hlsProject/solution1/solution1.json -quiet -fix-errors /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_initialize.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.17 sec.
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/xilinx-dataflow-lawyer.lenetSynthMatlab_initialize.pp.0.c.diag.yml /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_initialize.pp.0.c -- -std=gnu99 -fhls -ferror-limit=0 -fstrict-dataflow > /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/xilinx-dataflow-lawyer.lenetSynthMatlab_initialize.pp.0.c.out.log 2> /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/xilinx-dataflow-lawyer.lenetSynthMatlab_initialize.pp.0.c.err.log 
+Command       ap_eval done; 0.15 sec.
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_initialize.pp.0.c std=gnu89 
+INFO-FLOW: exec /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer -quiet -fix-errors /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_initialize.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
+INFO-FLOW: exec /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_initialize.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.6 sec.
+INFO-FLOW: tidy-3.1 time 0 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_initialize.pragma.1.c std=gnu89 
+INFO-FLOW: exec /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_initialize.pragma.1.c -- -std=gnu89 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.43 sec.
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "/home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_initialize.pragma.1.c"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot" -I "/home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "/home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_initialize.pragma.2.c" 
+INFO-FLOW: exec /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_initialize.pragma.1.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot -I /home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_initialize.pragma.2.c
+Command       clang done; 1.29 sec.
+Execute       get_default_platform 
+INFO-FLOW: Processing labels
+Execute       clang -src /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_initialize.pragma.2.c  -fno-limit-debug-info -gcc-toolchain /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_initialize.pragma.2.c"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89  -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot" -I "/home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "/home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_initialize.bc" 
+INFO-FLOW: exec /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_initialize.pragma.2.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot -I /home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_initialize.bc
+Command       clang done; 1.43 sec.
+INFO: [HLS 200-10] Analyzing design file '../generatedCCode/lenetSynthMatlab_data.c' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling ../generatedCCode/lenetSynthMatlab_data.c as C
+Execute       get_default_platform 
+Execute       is_encrypted ../generatedCCode/lenetSynthMatlab_data.c 
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "../generatedCCode/lenetSynthMatlab_data.c"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot" -I "/home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "/home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_data.pp.0.c" 
+INFO-FLOW: exec /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E ../generatedCCode/lenetSynthMatlab_data.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot -I /home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_data.pp.0.c
+Command       clang done; 1.2 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/gcc" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot" -I "/home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "/home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_data.pp.0.c"  -o "/home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/useless.bc"  
+INFO-FLOW: exec /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot -I /home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_data.pp.0.c -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/useless.bc
+Command       clang done; 1.22 sec.
+INFO-FLOW: GCC PP time: 2 seconds per iteration
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_data.pp.0.c std=gnu89 -directive=/home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_data.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
+INFO-FLOW: CDT Preprocessing with tidy-3.1...
+Execute       tidy_31 xilinx-directive2pragma /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_data.pp.0.c std=gnu89 -directive=/home/tyrian/nnproject/hlsProject/hlsProject/solution1/solution1.json 
+INFO-FLOW: exec /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/home/tyrian/nnproject/hlsProject/hlsProject/solution1/solution1.json -quiet -fix-errors /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_data.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/xilinx-dataflow-lawyer.lenetSynthMatlab_data.pp.0.c.diag.yml /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_data.pp.0.c -- -std=gnu99 -fhls -ferror-limit=0 -fstrict-dataflow > /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/xilinx-dataflow-lawyer.lenetSynthMatlab_data.pp.0.c.out.log 2> /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/xilinx-dataflow-lawyer.lenetSynthMatlab_data.pp.0.c.err.log 
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_data.pp.0.c std=gnu89 
+INFO-FLOW: exec /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer -quiet -fix-errors /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_data.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
+INFO-FLOW: exec /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_data.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
+INFO-FLOW: tidy-3.1 time 0 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_data.pragma.1.c std=gnu89 
+INFO-FLOW: exec /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_data.pragma.1.c -- -std=gnu89 -fhls -ferror-limit=0
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "/home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_data.pragma.1.c"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot" -I "/home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "/home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_data.pragma.2.c" 
+INFO-FLOW: exec /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_data.pragma.1.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot -I /home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_data.pragma.2.c
+Command       clang done; 1.32 sec.
+Execute       get_default_platform 
+INFO-FLOW: Processing labels
+Execute       clang -src /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_data.pragma.2.c  -fno-limit-debug-info -gcc-toolchain /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_data.pragma.2.c"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89  -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot" -I "/home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "/home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_data.bc" 
+INFO-FLOW: exec /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_data.pragma.2.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot -I /home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_data.bc
+Command       clang done; 1.21 sec.
+INFO: [HLS 200-10] Analyzing design file '../generatedCCode/lenetSynthMatlab.c' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling ../generatedCCode/lenetSynthMatlab.c as C
+Execute       get_default_platform 
+Execute       is_encrypted ../generatedCCode/lenetSynthMatlab.c 
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "../generatedCCode/lenetSynthMatlab.c"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot" -I "/home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "/home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.pp.0.c" 
+INFO-FLOW: exec /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E ../generatedCCode/lenetSynthMatlab.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot -I /home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.pp.0.c
+Command       clang done; 1.21 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/gcc" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot" -I "/home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "/home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.pp.0.c"  -o "/home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/useless.bc"  
+INFO-FLOW: exec /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot -I /home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.pp.0.c -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/useless.bc
+Command       clang done; 1.23 sec.
+INFO-FLOW: GCC PP time: 2 seconds per iteration
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.pp.0.c std=gnu89 -directive=/home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
+INFO-FLOW: CDT Preprocessing with tidy-3.1...
+Execute       tidy_31 xilinx-directive2pragma /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.pp.0.c std=gnu89 -directive=/home/tyrian/nnproject/hlsProject/hlsProject/solution1/solution1.json 
+INFO-FLOW: exec /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/home/tyrian/nnproject/hlsProject/hlsProject/solution1/solution1.json -quiet -fix-errors /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/xilinx-dataflow-lawyer.lenetSynthMatlab.pp.0.c.diag.yml /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.pp.0.c -- -std=gnu99 -fhls -ferror-limit=0 -fstrict-dataflow > /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/xilinx-dataflow-lawyer.lenetSynthMatlab.pp.0.c.out.log 2> /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/xilinx-dataflow-lawyer.lenetSynthMatlab.pp.0.c.err.log 
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.pp.0.c std=gnu89 
+INFO-FLOW: exec /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer -quiet -fix-errors /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
+INFO-FLOW: exec /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
+INFO-FLOW: tidy-3.1 time 0 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.pragma.1.c std=gnu89 
+INFO-FLOW: exec /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.pragma.1.c -- -std=gnu89 -fhls -ferror-limit=0
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "/home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.pragma.1.c"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot" -I "/home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "/home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.pragma.2.c" 
+INFO-FLOW: exec /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.pragma.1.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot -I /home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.pragma.2.c
+Command       clang done; 1.25 sec.
+Execute       get_default_platform 
+INFO-FLOW: Processing labels
+Execute       clang -src /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.pragma.2.c  -fno-limit-debug-info -gcc-toolchain /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.pragma.2.c"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89  -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot" -I "/home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "/home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.bc" 
+INFO-FLOW: exec /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /home/tyrian/xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.pragma.2.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot -I /home/tyrian/xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.bc
+Command       clang done; 1.22 sec.
+INFO-FLOW: Linking Debug ...
+Execute       llvm-ld /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/sum.g.bc /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_terminate.g.bc /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_initialize.g.bc /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab_data.g.bc /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.g.bc -hls-opt -except-internalize lenetSynthMatlab -L/home/tyrian/xilinx/Vivado/2018.2/lnx64/lib -lhlsm -lhlsmc++ -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/a.g 
+Command       llvm-ld done; 0.64 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 375.664 ; gain = 0.117 ; free physical = 1144 ; free virtual = 3930
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 375.664 ; gain = 0.117 ; free physical = 1144 ; free virtual = 3930
+Execute       ::config_rtl 
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute         cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+Execute         transform -promote-dbg-pointer /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/a.pp.bc -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/a.pp.0.bc -f 
+Execute         llvm-ld /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/a.pp.0.bc -disable-opt -L/home/tyrian/xilinx/Vivado/2018.2/lnx64/lib -lfloatconversion -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/a.g.0 
+Command         llvm-ld done; 1.14 sec.
+INFO-FLOW: Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top lenetSynthMatlab -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/a.g.0.bc -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
+INFO: [XFORM 203-603] Inlining function 'ap_fixed_base<137, 84, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator<<' into 'generic_cast_IEEE754<int, (ap_q_mode)6, double>' (/wrk/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:17).
+INFO: [XFORM 203-603] Inlining function 'ap_fixed_base<1, 32, false, (ap_q_mode)5, (ap_o_mode)0, 0>::overflow_adjust' into 'ap_fixed_base<1, 32, false, (ap_q_mode)5, (ap_o_mode)0, 0>::ap_fixed_base<137, 84, false, (ap_q_mode)5, (ap_o_mode)3, 0>' ().
+Command         transform done; 2.59 sec.
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 506.652 ; gain = 131.105 ; free physical = 1092 ; free virtual = 3892
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/a.g.1.bc -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/a.g.2.prechk.bc -f 
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::mantissa' into 'generic_cast_IEEE754<int, (ap_q_mode)6, double>' (/wrk/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:14) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::expv' into 'generic_cast_IEEE754<int, (ap_q_mode)6, double>' (/wrk/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:17) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::__signbit' into 'generic_cast_IEEE754<int, (ap_q_mode)6, double>' (/wrk/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:49) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, (ap_q_mode)6, double>' into 'generic_cast_IEEE754<int, double>' (/wrk/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:98) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, double>' into '__hls_fptosi_double_i32' (/wrk/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:54) automatically.
+INFO: [XFORM 203-602] Inlining function 'b_sum' into 'lenetSynthMatlab' (../generatedCCode/lenetSynthMatlab.c:95) automatically.
+INFO: [XFORM 203-602] Inlining function 'e_sum' into 'lenetSynthMatlab' (../generatedCCode/lenetSynthMatlab.c:192) automatically.
+INFO: [XFORM 203-602] Inlining function 'h_sum' into 'lenetSynthMatlab' (../generatedCCode/lenetSynthMatlab.c:280) automatically.
+Command         transform done; 2.19 sec.
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute         transform -syn-check /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/a.g.2.prechk.bc -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 506.652 ; gain = 131.105 ; free physical = 1073 ; free virtual = 3874
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/a.g.1.bc to /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute         transform -hls -tmp /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -clib-intrinsic-prepare -dce -func-buffer -dce -array-normalize -func-legal -instcombine -gvn -constprop -dce -ptrArgReplace -mem2reg -instcombine -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -instcombine -dce -global-constprop -deadargelim -mem2reg -instcombine -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -instcombine -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -inst-simplify -dce -norm-name -function-inline -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/a.o.1.bc -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [XFORM 203-102] Automatically partitioning small array 'maxval' (../generatedCCode/lenetSynthMatlab.c:45) completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'maxval' (../generatedCCode/lenetSynthMatlab.c:45) in dimension 1 completely.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::mantissa' into 'generic_cast_IEEE754<int, (ap_q_mode)6, double>' (/wrk/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:14) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::expv' into 'generic_cast_IEEE754<int, (ap_q_mode)6, double>' (/wrk/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:17) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::__signbit' into 'generic_cast_IEEE754<int, (ap_q_mode)6, double>' (/wrk/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:49) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, (ap_q_mode)6, double>' into 'generic_cast_IEEE754<int, double>' (/wrk/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:98) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, double>' into '__hls_fptosi_double_i32' (/wrk/2018.2/continuous/2018_06_14_2258646/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:54) automatically.
+INFO: [XFORM 203-602] Inlining function 'b_sum' into 'lenetSynthMatlab' (../generatedCCode/lenetSynthMatlab.c:95) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptosi_double_i32' into 'lenetSynthMatlab' (../generatedCCode/lenetSynthMatlab.c:150) automatically.
+INFO: [XFORM 203-602] Inlining function 'e_sum' into 'lenetSynthMatlab' (../generatedCCode/lenetSynthMatlab.c:192) automatically.
+INFO: [XFORM 203-602] Inlining function 'h_sum' into 'lenetSynthMatlab' (../generatedCCode/lenetSynthMatlab.c:280) automatically.
+Command         transform done; 2.53 sec.
+INFO-FLOW: Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/a.o.1.tmp.bc -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
+INFO: [XFORM 203-11] Balancing expressions in function 'sum' (../generatedCCode/sum.c:160)...3 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'lenetSynthMatlab' (../generatedCCode/lenetSynthMatlab.c:27)...15 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'f_sum' (../generatedCCode/sum.c:99)...4 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'c_sum' (../generatedCCode/sum.c:38)...3 expression(s) balanced.
+Command         transform done; 0.4 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 568.320 ; gain = 192.773 ; free physical = 1025 ; free virtual = 3830
+INFO-FLOW: Building ssdm...
+Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -instcombine -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -bitwidth -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -dead-allocation-elimination -cdfg-build /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/a.o.2.bc -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+Command         transform done; 6.12 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 568.320 ; gain = 192.773 ; free physical = 975 ; free virtual = 3782
+INFO-FLOW: Finish building internal data model.
+Command       opt_and_import_c done; 15.12 sec.
+Command     elaborate done; 43.84 sec.
+Execute     autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'lenetSynthMatlab' ...
+Execute       ap_set_top_model lenetSynthMatlab 
+Execute       get_model_list lenetSynthMatlab -filter all-wo-channel -topdown 
+Execute       preproc_iomode -model lenetSynthMatlab 
+Execute       preproc_iomode -model g_sum 
+Execute       preproc_iomode -model f_sum 
+Execute       preproc_iomode -model d_sum 
+Execute       preproc_iomode -model c_sum 
+Execute       preproc_iomode -model sum 
+Execute       get_model_list lenetSynthMatlab -filter all-wo-channel 
+INFO-FLOW: Model list for configure: sum c_sum d_sum f_sum g_sum lenetSynthMatlab
+INFO-FLOW: Configuring Module : sum ...
+Execute       set_default_model sum 
+Execute       apply_spec_resource_limit sum 
+INFO-FLOW: Configuring Module : c_sum ...
+Execute       set_default_model c_sum 
+Execute       apply_spec_resource_limit c_sum 
+INFO-FLOW: Configuring Module : d_sum ...
+Execute       set_default_model d_sum 
+Execute       apply_spec_resource_limit d_sum 
+INFO-FLOW: Configuring Module : f_sum ...
+Execute       set_default_model f_sum 
+Execute       apply_spec_resource_limit f_sum 
+INFO-FLOW: Configuring Module : g_sum ...
+Execute       set_default_model g_sum 
+Execute       apply_spec_resource_limit g_sum 
+INFO-FLOW: Configuring Module : lenetSynthMatlab ...
+Execute       set_default_model lenetSynthMatlab 
+Execute       apply_spec_resource_limit lenetSynthMatlab 
+INFO-FLOW: Model list for preprocess: sum c_sum d_sum f_sum g_sum lenetSynthMatlab
+INFO-FLOW: Preprocessing Module: sum ...
+Execute       set_default_model sum 
+Execute       cdfg_preprocess -model sum 
+Execute       rtl_gen_preprocess sum 
+INFO-FLOW: Preprocessing Module: c_sum ...
+Execute       set_default_model c_sum 
+Execute       cdfg_preprocess -model c_sum 
+Execute       rtl_gen_preprocess c_sum 
+INFO-FLOW: Preprocessing Module: d_sum ...
+Execute       set_default_model d_sum 
+Execute       cdfg_preprocess -model d_sum 
+Execute       rtl_gen_preprocess d_sum 
+INFO-FLOW: Preprocessing Module: f_sum ...
+Execute       set_default_model f_sum 
+Execute       cdfg_preprocess -model f_sum 
+Execute       rtl_gen_preprocess f_sum 
+INFO-FLOW: Preprocessing Module: g_sum ...
+Execute       set_default_model g_sum 
+Execute       cdfg_preprocess -model g_sum 
+Execute       rtl_gen_preprocess g_sum 
+INFO-FLOW: Preprocessing Module: lenetSynthMatlab ...
+Execute       set_default_model lenetSynthMatlab 
+Execute       cdfg_preprocess -model lenetSynthMatlab 
+Execute       rtl_gen_preprocess lenetSynthMatlab 
+INFO-FLOW: Model list for synthesis: sum c_sum d_sum f_sum g_sum lenetSynthMatlab
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sum' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model sum 
+Execute       schedule -model sum 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 44.42 seconds; current allocated memory: 198.402 MB.
+Execute       report -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/sum.verbose.sched.rpt -verbose -f 
+INFO: [HLS 200-434] Only 0 loops out of a total 3 loops have been pipelined in this design.
+Execute       db_write -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/sum.sched.adb -f 
+INFO-FLOW: Finish scheduling sum.
+Execute       set_default_model sum 
+Execute       bind -model sum 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=sum
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 198.593 MB.
+Execute       report -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/sum.verbose.bind.rpt -verbose -f 
+Execute       db_write -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/sum.bind.adb -f 
+INFO-FLOW: Finish binding sum.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'c_sum' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model c_sum 
+Execute       schedule -model c_sum 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.09 seconds; current allocated memory: 199.000 MB.
+Execute       report -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/c_sum.verbose.sched.rpt -verbose -f 
+Execute       db_write -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/c_sum.sched.adb -f 
+INFO-FLOW: Finish scheduling c_sum.
+Execute       set_default_model c_sum 
+Execute       bind -model c_sum 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=c_sum
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 199.252 MB.
+Execute       report -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/c_sum.verbose.bind.rpt -verbose -f 
+Execute       db_write -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/c_sum.bind.adb -f 
+INFO-FLOW: Finish binding c_sum.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'd_sum' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model d_sum 
+Execute       schedule -model d_sum 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.09 seconds; current allocated memory: 199.493 MB.
+Execute       report -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/d_sum.verbose.sched.rpt -verbose -f 
+Execute       db_write -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/d_sum.sched.adb -f 
+INFO-FLOW: Finish scheduling d_sum.
+Execute       set_default_model d_sum 
+Execute       bind -model d_sum 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=d_sum
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 199.656 MB.
+Execute       report -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/d_sum.verbose.bind.rpt -verbose -f 
+Execute       db_write -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/d_sum.bind.adb -f 
+INFO-FLOW: Finish binding d_sum.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'f_sum' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model f_sum 
+Execute       schedule -model f_sum 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.09 seconds; current allocated memory: 199.926 MB.
+Execute       report -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/f_sum.verbose.sched.rpt -verbose -f 
+Execute       db_write -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/f_sum.sched.adb -f 
+INFO-FLOW: Finish scheduling f_sum.
+Execute       set_default_model f_sum 
+Execute       bind -model f_sum 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=f_sum
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 200.152 MB.
+Execute       report -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/f_sum.verbose.bind.rpt -verbose -f 
+Execute       db_write -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/f_sum.bind.adb -f 
+INFO-FLOW: Finish binding f_sum.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'g_sum' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model g_sum 
+Execute       schedule -model g_sum 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.09 seconds; current allocated memory: 200.375 MB.
+Execute       report -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/g_sum.verbose.sched.rpt -verbose -f 
+Execute       db_write -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/g_sum.sched.adb -f 
+INFO-FLOW: Finish scheduling g_sum.
+Execute       set_default_model g_sum 
+Execute       bind -model g_sum 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=g_sum
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 200.531 MB.
+Execute       report -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/g_sum.verbose.bind.rpt -verbose -f 
+Execute       db_write -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/g_sum.bind.adb -f 
+INFO-FLOW: Finish binding g_sum.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lenetSynthMatlab' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model lenetSynthMatlab 
+Execute       schedule -model lenetSynthMatlab 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.4 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.44 seconds; current allocated memory: 203.603 MB.
+Execute       report -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.verbose.sched.rpt -verbose -f 
+Command       report done; 0.23 sec.
+Execute       db_write -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.sched.adb -f 
+INFO-FLOW: Finish scheduling lenetSynthMatlab.
+Execute       set_default_model lenetSynthMatlab 
+Execute       bind -model lenetSynthMatlab 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=lenetSynthMatlab
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.38 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.68 seconds; current allocated memory: 206.420 MB.
+Execute       report -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.verbose.bind.rpt -verbose -f 
+Command       report done; 0.61 sec.
+Execute       db_write -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.bind.adb -f 
+INFO-FLOW: Finish binding lenetSynthMatlab.
+Execute       get_model_list lenetSynthMatlab -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess sum 
+Execute       rtl_gen_preprocess c_sum 
+Execute       rtl_gen_preprocess d_sum 
+Execute       rtl_gen_preprocess f_sum 
+Execute       rtl_gen_preprocess g_sum 
+Execute       rtl_gen_preprocess lenetSynthMatlab 
+INFO-FLOW: Model list for RTL generation: sum c_sum d_sum f_sum g_sum lenetSynthMatlab
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sum' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model sum -vendor xilinx -mg_file /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/sum.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'lenetSynthMatlab_fadd_32ns_32ns_32_5_full_dsp_1' to 'lenetSynthMatlab_bkb' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'lenetSynthMatlab_bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sum'.
+INFO: [HLS 200-111]  Elapsed time: 0.7 seconds; current allocated memory: 207.011 MB.
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.rtl_wrap.cfg.tcl 
+Execute       gen_rtl sum -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/syn/systemc/sum -synmodules sum c_sum d_sum f_sum g_sum lenetSynthMatlab 
+Execute       gen_rtl sum -style xilinx -f -lang vhdl -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/syn/vhdl/sum 
+Execute       gen_rtl sum -style xilinx -f -lang vlog -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/syn/verilog/sum 
+Execute       gen_tb_info sum -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/sum -p /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db 
+Execute       report -model sum -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/syn/report/sum_csynth.rpt -f 
+Execute       report -model sum -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/syn/report/sum_csynth.xml -f -x 
+Execute       report -model sum -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/sum.verbose.rpt -verbose -f 
+Execute       db_write -model sum -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/sum.adb -f 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'c_sum' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model c_sum -vendor xilinx -mg_file /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/c_sum.compgen.tcl 
+INFO: [RTGEN 206-100] Generating core module 'lenetSynthMatlab_bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'c_sum'.
+INFO: [HLS 200-111]  Elapsed time: 0.11 seconds; current allocated memory: 208.380 MB.
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.rtl_wrap.cfg.tcl 
+Execute       gen_rtl c_sum -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/syn/systemc/c_sum -synmodules sum c_sum d_sum f_sum g_sum lenetSynthMatlab 
+Execute       gen_rtl c_sum -style xilinx -f -lang vhdl -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/syn/vhdl/c_sum 
+Execute       gen_rtl c_sum -style xilinx -f -lang vlog -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/syn/verilog/c_sum 
+Execute       gen_tb_info c_sum -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/c_sum -p /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db 
+Execute       report -model c_sum -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/syn/report/c_sum_csynth.rpt -f 
+Execute       report -model c_sum -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/syn/report/c_sum_csynth.xml -f -x 
+Execute       report -model c_sum -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/c_sum.verbose.rpt -verbose -f 
+Execute       db_write -model c_sum -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/c_sum.adb -f 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'd_sum' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model d_sum -vendor xilinx -mg_file /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/d_sum.compgen.tcl 
+INFO: [RTGEN 206-100] Generating core module 'lenetSynthMatlab_bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'd_sum'.
+INFO: [HLS 200-111]  Elapsed time: 0.16 seconds; current allocated memory: 209.944 MB.
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.rtl_wrap.cfg.tcl 
+Execute       gen_rtl d_sum -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/syn/systemc/d_sum -synmodules sum c_sum d_sum f_sum g_sum lenetSynthMatlab 
+Execute       gen_rtl d_sum -style xilinx -f -lang vhdl -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/syn/vhdl/d_sum 
+Execute       gen_rtl d_sum -style xilinx -f -lang vlog -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/syn/verilog/d_sum 
+Execute       gen_tb_info d_sum -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/d_sum -p /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db 
+Execute       report -model d_sum -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/syn/report/d_sum_csynth.rpt -f 
+Execute       report -model d_sum -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/syn/report/d_sum_csynth.xml -f -x 
+Execute       report -model d_sum -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/d_sum.verbose.rpt -verbose -f 
+Execute       db_write -model d_sum -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/d_sum.adb -f 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'f_sum' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model f_sum -vendor xilinx -mg_file /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/f_sum.compgen.tcl 
+INFO: [RTGEN 206-100] Generating core module 'lenetSynthMatlab_bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'f_sum'.
+INFO: [HLS 200-111]  Elapsed time: 0.11 seconds; current allocated memory: 211.206 MB.
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.rtl_wrap.cfg.tcl 
+Execute       gen_rtl f_sum -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/syn/systemc/f_sum -synmodules sum c_sum d_sum f_sum g_sum lenetSynthMatlab 
+Execute       gen_rtl f_sum -style xilinx -f -lang vhdl -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/syn/vhdl/f_sum 
+Execute       gen_rtl f_sum -style xilinx -f -lang vlog -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/syn/verilog/f_sum 
+Execute       gen_tb_info f_sum -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/f_sum -p /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db 
+Execute       report -model f_sum -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/syn/report/f_sum_csynth.rpt -f 
+Execute       report -model f_sum -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/syn/report/f_sum_csynth.xml -f -x 
+Execute       report -model f_sum -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/f_sum.verbose.rpt -verbose -f 
+Execute       db_write -model f_sum -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/f_sum.adb -f 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'g_sum' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model g_sum -vendor xilinx -mg_file /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/g_sum.compgen.tcl 
+INFO: [RTGEN 206-100] Generating core module 'lenetSynthMatlab_bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'g_sum'.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 212.568 MB.
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.rtl_wrap.cfg.tcl 
+Execute       gen_rtl g_sum -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/syn/systemc/g_sum -synmodules sum c_sum d_sum f_sum g_sum lenetSynthMatlab 
+Execute       gen_rtl g_sum -style xilinx -f -lang vhdl -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/syn/vhdl/g_sum 
+Execute       gen_rtl g_sum -style xilinx -f -lang vlog -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/syn/verilog/g_sum 
+Execute       gen_tb_info g_sum -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/g_sum -p /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db 
+Execute       report -model g_sum -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/syn/report/g_sum_csynth.rpt -f 
+Execute       report -model g_sum -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/syn/report/g_sum_csynth.xml -f -x 
+Execute       report -model g_sum -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/g_sum.verbose.rpt -verbose -f 
+Execute       db_write -model g_sum -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/g_sum.adb -f 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lenetSynthMatlab' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model lenetSynthMatlab -vendor xilinx -mg_file /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.compgen.tcl 
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenetSynthMatlab/inputImg' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenetSynthMatlab/netScores' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'lenetSynthMatlab' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'lenetSynthMatlab_pool1ActivationMap' to 'lenetSynthMatlab_cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenetSynthMatlab_conv1ActivationMap' to 'lenetSynthMatlab_dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenetSynthMatlab_relu1ActivationMap' to 'lenetSynthMatlab_eOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenetSynthMatlab_fv10' to 'lenetSynthMatlab_fYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenetSynthMatlab_fv11' to 'lenetSynthMatlab_g8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenetSynthMatlab_pool2ActivationMap' to 'lenetSynthMatlab_hbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenetSynthMatlab_conv2ActivationMap' to 'lenetSynthMatlab_ibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenetSynthMatlab_relu2ActivationMap' to 'lenetSynthMatlab_jbC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenetSynthMatlab_fv12' to 'lenetSynthMatlab_kbM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenetSynthMatlab_fv13' to 'lenetSynthMatlab_lbW' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenetSynthMatlab_fv14' to 'lenetSynthMatlab_mb6' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenetSynthMatlab_b_pool2ActivationMap' to 'lenetSynthMatlab_ncg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenetSynthMatlab_fv15' to 'lenetSynthMatlab_ocq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenetSynthMatlab_fc1ActivationMap' to 'lenetSynthMatlab_pcA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenetSynthMatlab_fv16' to 'lenetSynthMatlab_qcK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenetSynthMatlab_relu3ActivationMap' to 'lenetSynthMatlab_rcU' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenetSynthMatlab_d_relu3ActivationMap' to 'lenetSynthMatlab_sc4' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenetSynthMatlab_fmul_32ns_32ns_32_4_max_dsp_1' to 'lenetSynthMatlab_tde' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenetSynthMatlab_fptrunc_64ns_32_1_1' to 'lenetSynthMatlab_udo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenetSynthMatlab_fpext_32ns_64_1_1' to 'lenetSynthMatlab_vdy' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenetSynthMatlab_dadd_64ns_64ns_64_6_full_dsp_1' to 'lenetSynthMatlab_wdI' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenetSynthMatlab_dcmp_64ns_64ns_1_1_1' to 'lenetSynthMatlab_xdS' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'lenetSynthMatlab_bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'lenetSynthMatlab_tde': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'lenetSynthMatlab_udo': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'lenetSynthMatlab_vdy': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'lenetSynthMatlab_wdI': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'lenetSynthMatlab_xdS': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lenetSynthMatlab'.
+Command       create_rtl_model done; 0.31 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.41 seconds; current allocated memory: 218.429 MB.
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.rtl_wrap.cfg.tcl 
+Execute       gen_rtl lenetSynthMatlab -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/syn/systemc/lenetSynthMatlab -synmodules sum c_sum d_sum f_sum g_sum lenetSynthMatlab 
+Execute       gen_rtl lenetSynthMatlab -istop -style xilinx -f -lang vhdl -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/syn/vhdl/lenetSynthMatlab 
+Command       gen_rtl done; 0.25 sec.
+Execute       gen_rtl lenetSynthMatlab -istop -style xilinx -f -lang vlog -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/syn/verilog/lenetSynthMatlab 
+Command       gen_rtl done; 0.13 sec.
+Execute       export_constraint_db -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.constraint.tcl -f -tool general 
+Execute       report -model lenetSynthMatlab -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.design.xml -verbose -f -dv 
+Command       report done; 0.31 sec.
+Execute       report -model lenetSynthMatlab -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.sdaccel.xml -verbose -f -sdaccel 
+Command       report done; 0.36 sec.
+Execute       gen_tb_info lenetSynthMatlab -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab -p /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db 
+Execute       report -model lenetSynthMatlab -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/syn/report/lenetSynthMatlab_csynth.rpt -f 
+Command       report done; 0.13 sec.
+Execute       report -model lenetSynthMatlab -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/syn/report/lenetSynthMatlab_csynth.xml -f -x 
+Command       report done; 0.11 sec.
+Execute       report -model lenetSynthMatlab -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.verbose.rpt -verbose -f 
+Command       report done; 0.74 sec.
+Execute       db_write -model lenetSynthMatlab -o /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.adb -f 
+Command       db_write done; 0.31 sec.
+Execute       sc_get_clocks lenetSynthMatlab 
+Execute       sc_get_portdomain lenetSynthMatlab 
+INFO-FLOW: Model list for RTL component generation: sum c_sum d_sum f_sum g_sum lenetSynthMatlab
+INFO-FLOW: Handling components in module [sum] ... 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/sum.compgen.tcl 
+INFO-FLOW: Found component lenetSynthMatlab_bkb.
+INFO-FLOW: Append model lenetSynthMatlab_bkb
+INFO-FLOW: Handling components in module [c_sum] ... 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/c_sum.compgen.tcl 
+INFO-FLOW: Handling components in module [d_sum] ... 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/d_sum.compgen.tcl 
+INFO-FLOW: Handling components in module [f_sum] ... 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/f_sum.compgen.tcl 
+INFO-FLOW: Handling components in module [g_sum] ... 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/g_sum.compgen.tcl 
+INFO-FLOW: Handling components in module [lenetSynthMatlab] ... 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.compgen.tcl 
+INFO-FLOW: Found component lenetSynthMatlab_tde.
+INFO-FLOW: Append model lenetSynthMatlab_tde
+INFO-FLOW: Found component lenetSynthMatlab_udo.
+INFO-FLOW: Append model lenetSynthMatlab_udo
+INFO-FLOW: Found component lenetSynthMatlab_vdy.
+INFO-FLOW: Append model lenetSynthMatlab_vdy
+INFO-FLOW: Found component lenetSynthMatlab_wdI.
+INFO-FLOW: Append model lenetSynthMatlab_wdI
+INFO-FLOW: Found component lenetSynthMatlab_xdS.
+INFO-FLOW: Append model lenetSynthMatlab_xdS
+INFO-FLOW: Found component lenetSynthMatlab_cud.
+INFO-FLOW: Append model lenetSynthMatlab_cud
+INFO-FLOW: Found component lenetSynthMatlab_dEe.
+INFO-FLOW: Append model lenetSynthMatlab_dEe
+INFO-FLOW: Found component lenetSynthMatlab_eOg.
+INFO-FLOW: Append model lenetSynthMatlab_eOg
+INFO-FLOW: Found component lenetSynthMatlab_fYi.
+INFO-FLOW: Append model lenetSynthMatlab_fYi
+INFO-FLOW: Found component lenetSynthMatlab_g8j.
+INFO-FLOW: Append model lenetSynthMatlab_g8j
+INFO-FLOW: Found component lenetSynthMatlab_hbi.
+INFO-FLOW: Append model lenetSynthMatlab_hbi
+INFO-FLOW: Found component lenetSynthMatlab_ibs.
+INFO-FLOW: Append model lenetSynthMatlab_ibs
+INFO-FLOW: Found component lenetSynthMatlab_jbC.
+INFO-FLOW: Append model lenetSynthMatlab_jbC
+INFO-FLOW: Found component lenetSynthMatlab_kbM.
+INFO-FLOW: Append model lenetSynthMatlab_kbM
+INFO-FLOW: Found component lenetSynthMatlab_lbW.
+INFO-FLOW: Append model lenetSynthMatlab_lbW
+INFO-FLOW: Found component lenetSynthMatlab_mb6.
+INFO-FLOW: Append model lenetSynthMatlab_mb6
+INFO-FLOW: Found component lenetSynthMatlab_ncg.
+INFO-FLOW: Append model lenetSynthMatlab_ncg
+INFO-FLOW: Found component lenetSynthMatlab_ocq.
+INFO-FLOW: Append model lenetSynthMatlab_ocq
+INFO-FLOW: Found component lenetSynthMatlab_pcA.
+INFO-FLOW: Append model lenetSynthMatlab_pcA
+INFO-FLOW: Found component lenetSynthMatlab_qcK.
+INFO-FLOW: Append model lenetSynthMatlab_qcK
+INFO-FLOW: Found component lenetSynthMatlab_sc4.
+INFO-FLOW: Append model lenetSynthMatlab_sc4
+INFO-FLOW: Append model sum
+INFO-FLOW: Append model c_sum
+INFO-FLOW: Append model d_sum
+INFO-FLOW: Append model f_sum
+INFO-FLOW: Append model g_sum
+INFO-FLOW: Append model lenetSynthMatlab
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: lenetSynthMatlab_bkb lenetSynthMatlab_tde lenetSynthMatlab_udo lenetSynthMatlab_vdy lenetSynthMatlab_wdI lenetSynthMatlab_xdS lenetSynthMatlab_cud lenetSynthMatlab_dEe lenetSynthMatlab_eOg lenetSynthMatlab_fYi lenetSynthMatlab_g8j lenetSynthMatlab_hbi lenetSynthMatlab_ibs lenetSynthMatlab_jbC lenetSynthMatlab_kbM lenetSynthMatlab_lbW lenetSynthMatlab_mb6 lenetSynthMatlab_ncg lenetSynthMatlab_ocq lenetSynthMatlab_pcA lenetSynthMatlab_qcK lenetSynthMatlab_sc4 sum c_sum d_sum f_sum g_sum lenetSynthMatlab
+INFO-FLOW: To file: write model lenetSynthMatlab_bkb
+INFO-FLOW: To file: write model lenetSynthMatlab_tde
+INFO-FLOW: To file: write model lenetSynthMatlab_udo
+INFO-FLOW: To file: write model lenetSynthMatlab_vdy
+INFO-FLOW: To file: write model lenetSynthMatlab_wdI
+INFO-FLOW: To file: write model lenetSynthMatlab_xdS
+INFO-FLOW: To file: write model lenetSynthMatlab_cud
+INFO-FLOW: To file: write model lenetSynthMatlab_dEe
+INFO-FLOW: To file: write model lenetSynthMatlab_eOg
+INFO-FLOW: To file: write model lenetSynthMatlab_fYi
+INFO-FLOW: To file: write model lenetSynthMatlab_g8j
+INFO-FLOW: To file: write model lenetSynthMatlab_hbi
+INFO-FLOW: To file: write model lenetSynthMatlab_ibs
+INFO-FLOW: To file: write model lenetSynthMatlab_jbC
+INFO-FLOW: To file: write model lenetSynthMatlab_kbM
+INFO-FLOW: To file: write model lenetSynthMatlab_lbW
+INFO-FLOW: To file: write model lenetSynthMatlab_mb6
+INFO-FLOW: To file: write model lenetSynthMatlab_ncg
+INFO-FLOW: To file: write model lenetSynthMatlab_ocq
+INFO-FLOW: To file: write model lenetSynthMatlab_pcA
+INFO-FLOW: To file: write model lenetSynthMatlab_qcK
+INFO-FLOW: To file: write model lenetSynthMatlab_sc4
+INFO-FLOW: To file: write model sum
+INFO-FLOW: To file: write model c_sum
+INFO-FLOW: To file: write model d_sum
+INFO-FLOW: To file: write model f_sum
+INFO-FLOW: To file: write model g_sum
+INFO-FLOW: To file: write model lenetSynthMatlab
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+Execute       get_config_sdx -target 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/generic/autopilot/op.gen 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/generic/autopilot/interface.gen 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7.gen 
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute             source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute             source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute             source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute             source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute               source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute             source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute             source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute             source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source done; 0.11 sec.
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.11 sec.
+Command       ap_source done; 0.11 sec.
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7_fpv6.gen 
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/sum.compgen.tcl 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/c_sum.compgen.tcl 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/d_sum.compgen.tcl 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/f_sum.compgen.tcl 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/g_sum.compgen.tcl 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.compgen.tcl 
+INFO: [RTMG 210-278] Implementing memory 'lenetSynthMatlab_cud_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenetSynthMatlab_dEe_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenetSynthMatlab_eOg_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenetSynthMatlab_fYi_ram (RAM)' using distributed RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenetSynthMatlab_g8j_ram (RAM)' using distributed RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenetSynthMatlab_hbi_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenetSynthMatlab_ibs_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenetSynthMatlab_jbC_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenetSynthMatlab_kbM_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenetSynthMatlab_lbW_ram (RAM)' using distributed RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenetSynthMatlab_mb6_ram (RAM)' using distributed RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenetSynthMatlab_ncg_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenetSynthMatlab_ocq_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenetSynthMatlab_pcA_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenetSynthMatlab_qcK_ram (RAM)' using distributed RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenetSynthMatlab_sc4_ram (RAM)' using block RAMs.
+Command       ap_source done; 0.22 sec.
+Execute       get_config_sdx -target 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/generic/autopilot/op.gen 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/generic/autopilot/interface.gen 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7.gen 
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute             source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute             source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute             source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute             source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute               source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute             source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute             source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute             source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7_fpv6.gen 
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.rtl_wrap.cfg.tcl 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.rtl_wrap.cfg.tcl 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.rtl_wrap.cfg.tcl 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.tbgen.tcl 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.tbgen.tcl 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/sum.compgen.tcl 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/c_sum.compgen.tcl 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/d_sum.compgen.tcl 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/f_sum.compgen.tcl 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/g_sum.compgen.tcl 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.compgen.tcl 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/sum.compgen.tcl 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/c_sum.compgen.tcl 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/d_sum.compgen.tcl 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/f_sum.compgen.tcl 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/g_sum.compgen.tcl 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.compgen.tcl 
+Execute         source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.tbgen.tcl 
+Execute         source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.tbgen.tcl 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/sum.compgen.tcl 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/c_sum.compgen.tcl 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/d_sum.compgen.tcl 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/f_sum.compgen.tcl 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/g_sum.compgen.tcl 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.compgen.tcl 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.constraint.tcl 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.tbgen.tcl 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.tbgen.tcl 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.tbgen.tcl 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.constraint.tcl 
+Execute       sc_get_clocks lenetSynthMatlab 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/impl/misc/lenetSynthMatlab_ap_dadd_4_full_dsp_64_ip.tcl 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/impl/misc/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_ip.tcl 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/impl/misc/lenetSynthMatlab_ap_fadd_3_full_dsp_32_ip.tcl 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/impl/misc/lenetSynthMatlab_ap_fmul_2_max_dsp_32_ip.tcl 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/impl/misc/lenetSynthMatlab_ap_fpext_0_no_dsp_32_ip.tcl 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/impl/misc/lenetSynthMatlab_ap_fptrunc_0_no_dsp_64_ip.tcl 
+Execute       get_config_sdx -target 
+Execute       get_config_sdx -profile 
+Execute       ::config_rtl 
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 568.320 ; gain = 192.773 ; free physical = 911 ; free virtual = 3739
+INFO: [SYSC 207-301] Generating SystemC RTL for lenetSynthMatlab.
+INFO: [VHDL 208-304] Generating VHDL RTL for lenetSynthMatlab.
+INFO: [VLOG 209-307] Generating Verilog RTL for lenetSynthMatlab.
+Command     autosyn done; 6.78 sec.
+Command   csynth_design done; 50.62 sec.
+Command ap_source done; 50.9 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace /home/tyrian/nnproject/hlsProject/hlsProject/solution1 opened at Sat Dec 08 21:23:59 EST 2018
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.lib 
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.lib 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.lib 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.lib 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.lib 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.lib 
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.lib 
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.lib 
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.lib 
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_old.lib 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/artix7/dsp48e1.hlp 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 15850} {LUT 63400}     {FF 126800} {DSP48E 240}    {BRAM 270}  
+Execute       config_chip_info -quiet -speed medium 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7.gen 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7_fpv6 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_hp.lib 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7_hp.hlp 
+Execute     source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7_fpv6.gen 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     set_part xc7a100tcsg324-1 
+Execute       add_library xilinx/artix7/artix7:xc7a100t:csg324:-1 
+Execute         get_default_platform 
+Execute         license_isbetapart xc7a100t 
+Command         license_isbetapart done; error code: 1; 
+Execute         get_default_platform 
+Execute         config_chip_info -quiet -resource  {SLICE 15850} {LUT 63400}     {FF 126800} {DSP48E 240}    {BRAM 270}  
+Execute         config_chip_info -quiet -speed slow 
+Execute       add_library xilinx/artix7/artix7_fpv6 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xc7a100tcsg324-1'
+Execute       get_default_platform 
+Execute     get_default_platform 
+Execute     config_chip_info -quiet -resource  {SLICE 15850} {LUT 63400}     {FF 126800} {DSP48E 240}    {BRAM 270}  
+Execute     config_chip_info -quiet -speed slow 
+Command   open_solution done; 0.18 sec.
+Execute   export_design -flow impl -rtl vhdl -format ip_catalog -description LeNet5 VHDL model. -vendor Bryan Blakeslee -library lenet5 -version 1.0 -display_name LeNet5 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/tyrian/xilinx/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source /home/tyrian/xilinx/Vivado/2018.2/common/technology/generic/autopilot/op.gen 
+Execute     source /home/tyrian/xilinx/Vivado/2018.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source /home/tyrian/xilinx/Vivado/2018.2/common/technology/generic/autopilot/interface.gen 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7.gen 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Execute     source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7_fpv6.gen 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/global.setting.tcl 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/global.setting.tcl 
+Execute     get_config_sdx -target 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/tyrian/xilinx/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source /home/tyrian/xilinx/Vivado/2018.2/common/technology/generic/autopilot/op.gen 
+Execute     source /home/tyrian/xilinx/Vivado/2018.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source /home/tyrian/xilinx/Vivado/2018.2/common/technology/generic/autopilot/interface.gen 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7.gen 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Execute     source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7_fpv6.gen 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.rtl_wrap.cfg.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.rtl_wrap.cfg.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.rtl_wrap.cfg.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.tbgen.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.tbgen.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/sum.compgen.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/c_sum.compgen.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/d_sum.compgen.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/f_sum.compgen.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/g_sum.compgen.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.compgen.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/sum.compgen.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/c_sum.compgen.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/d_sum.compgen.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/f_sum.compgen.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/g_sum.compgen.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.compgen.tcl 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.tbgen.tcl 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.tbgen.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/sum.compgen.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/c_sum.compgen.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/d_sum.compgen.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/f_sum.compgen.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/g_sum.compgen.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.compgen.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.constraint.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.tbgen.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.tbgen.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.tbgen.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.constraint.tcl 
+Execute     sc_get_clocks lenetSynthMatlab 
+ERROR: [IMPL 213-68] Vendor name 'Bryan Blakeslee' contains white spaces unsupported by Vivado, please use a valid one.
+Command   export_design done; error code: 2; 0.43 sec.
+Command ap_source done; error code: 1; 0.62 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace /home/tyrian/nnproject/hlsProject/hlsProject/solution1 opened at Sat Dec 08 21:24:27 EST 2018
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.lib 
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.lib 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.lib 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.lib 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.lib 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.lib 
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.lib 
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.lib 
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.lib 
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_old.lib 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/artix7/dsp48e1.hlp 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 15850} {LUT 63400}     {FF 126800} {DSP48E 240}    {BRAM 270}  
+Execute       config_chip_info -quiet -speed medium 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7.gen 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.11 sec.
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.11 sec.
+Command     ap_source done; 0.11 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7_fpv6 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_hp.lib 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7_hp.hlp 
+Execute     source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7_fpv6.gen 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     set_part xc7a100tcsg324-1 
+Execute       add_library xilinx/artix7/artix7:xc7a100t:csg324:-1 
+Execute         get_default_platform 
+Execute         license_isbetapart xc7a100t 
+Command         license_isbetapart done; error code: 1; 
+Execute         get_default_platform 
+Execute         config_chip_info -quiet -resource  {SLICE 15850} {LUT 63400}     {FF 126800} {DSP48E 240}    {BRAM 270}  
+Execute         config_chip_info -quiet -speed slow 
+Execute       add_library xilinx/artix7/artix7_fpv6 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xc7a100tcsg324-1'
+Execute       get_default_platform 
+Execute     get_default_platform 
+Execute     config_chip_info -quiet -resource  {SLICE 15850} {LUT 63400}     {FF 126800} {DSP48E 240}    {BRAM 270}  
+Execute     config_chip_info -quiet -speed slow 
+Command   open_solution done; 0.19 sec.
+Execute   export_design -flow impl -rtl vhdl -format ip_catalog -description LeNet5 VHDL model. -vendor BryanBlakeslee -library lenet5 -display_name LeNet5 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/tyrian/xilinx/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source /home/tyrian/xilinx/Vivado/2018.2/common/technology/generic/autopilot/op.gen 
+Execute     source /home/tyrian/xilinx/Vivado/2018.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source /home/tyrian/xilinx/Vivado/2018.2/common/technology/generic/autopilot/interface.gen 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7.gen 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Execute     source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7_fpv6.gen 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/global.setting.tcl 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/global.setting.tcl 
+Execute     get_config_sdx -target 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/tyrian/xilinx/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source /home/tyrian/xilinx/Vivado/2018.2/common/technology/generic/autopilot/op.gen 
+Execute     source /home/tyrian/xilinx/Vivado/2018.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source /home/tyrian/xilinx/Vivado/2018.2/common/technology/generic/autopilot/interface.gen 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7.gen 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Execute     source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7_fpv6.gen 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.rtl_wrap.cfg.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.rtl_wrap.cfg.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.rtl_wrap.cfg.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.tbgen.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.tbgen.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/sum.compgen.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/c_sum.compgen.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/d_sum.compgen.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/f_sum.compgen.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/g_sum.compgen.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.compgen.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/sum.compgen.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/c_sum.compgen.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/d_sum.compgen.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/f_sum.compgen.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/g_sum.compgen.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.compgen.tcl 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.tbgen.tcl 
+Execute       source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.tbgen.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/sum.compgen.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/c_sum.compgen.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/d_sum.compgen.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/f_sum.compgen.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/g_sum.compgen.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.compgen.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.constraint.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.tbgen.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.tbgen.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.tbgen.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.constraint.tcl 
+Execute     sc_get_clocks lenetSynthMatlab 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/impl/misc/lenetSynthMatlab_ap_dadd_4_full_dsp_64_ip.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/impl/misc/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_ip.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/impl/misc/lenetSynthMatlab_ap_fadd_3_full_dsp_32_ip.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/impl/misc/lenetSynthMatlab_ap_fmul_2_max_dsp_32_ip.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/impl/misc/lenetSynthMatlab_ap_fpext_0_no_dsp_32_ip.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/impl/misc/lenetSynthMatlab_ap_fptrunc_0_no_dsp_64_ip.tcl 
+Execute     get_config_sdx -target 
+Execute     get_config_sdx -profile 
+Execute     ::config_rtl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.tbgen.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.tbgen.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.rtl_wrap.cfg.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.rtl_wrap.cfg.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.rtl_wrap.cfg.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.tbgen.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.tbgen.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.tbgen.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.rtl_wrap.cfg.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.rtl_wrap.cfg.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.rtl_wrap.cfg.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.tbgen.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.tbgen.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.tbgen.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.constraint.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.constraint.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.tbgen.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/tyrian/xilinx/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source /home/tyrian/xilinx/Vivado/2018.2/common/technology/generic/autopilot/op.gen 
+Execute     source /home/tyrian/xilinx/Vivado/2018.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source /home/tyrian/xilinx/Vivado/2018.2/common/technology/generic/autopilot/interface.gen 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7.gen 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.11 sec.
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.11 sec.
+Command     ap_source done; 0.11 sec.
+Execute     source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7_fpv6.gen 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/tyrian/xilinx/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source /home/tyrian/xilinx/Vivado/2018.2/common/technology/generic/autopilot/op.gen 
+Execute     source /home/tyrian/xilinx/Vivado/2018.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source /home/tyrian/xilinx/Vivado/2018.2/common/technology/generic/autopilot/interface.gen 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7.gen 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Execute     source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7_fpv6.gen 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/global.setting.tcl 
+Execute     get_config_sdx -target 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/tyrian/xilinx/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source /home/tyrian/xilinx/Vivado/2018.2/common/technology/generic/autopilot/op.gen 
+Execute     source /home/tyrian/xilinx/Vivado/2018.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source /home/tyrian/xilinx/Vivado/2018.2/common/technology/generic/autopilot/interface.gen 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7.gen 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Execute     source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7_fpv6.gen 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/sum.compgen.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/c_sum.compgen.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/d_sum.compgen.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/f_sum.compgen.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/g_sum.compgen.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.compgen.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.constraint.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/lenetSynthMatlab.tbgen.tcl 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/tyrian/xilinx/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source /home/tyrian/xilinx/Vivado/2018.2/common/technology/generic/autopilot/op.gen 
+Execute     source /home/tyrian/xilinx/Vivado/2018.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source /home/tyrian/xilinx/Vivado/2018.2/common/technology/generic/autopilot/interface.gen 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7.gen 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Execute     source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/artix7/artix7_fpv6.gen 
+Execute       source /home/tyrian/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     get_config_rtl -vivado_synth_design_args 
+Execute     source /home/tyrian/nnproject/hlsProject/hlsProject/solution1/.autopilot/db/global.setting.tcl 
+Execute     get_config_rtl -vivado_synth_strategy 
+Execute     get_config_rtl -vivado_synth_strategy 
+Execute     get_config_rtl -vivado_phys_opt 
+Command   export_design done; 382.08 sec.
+Command ap_source done; 382.27 sec.
+Execute cleanup_all 

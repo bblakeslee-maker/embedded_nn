@@ -1,0 +1,262 @@
+
+
+================================================================
+== Vivado HLS Report for 'f_sum'
+================================================================
+* Date:           Tue Dec 11 22:56:05 2018
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        hls8BitFloatMod
+* Solution:       solution1
+* Product family: artix7
+* Target device:  xc7a100tcsg324-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+--------+----------+------------+
+    |  Clock | Target | Estimated| Uncertainty|
+    +--------+--------+----------+------------+
+    |ap_clk  |  100.00|    33.205|       12.50|
+    +--------+--------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |  860|  860|  860|  860|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------------+-----+-----+----------+-----------+-----------+------+----------+
+        |                 |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |    Loop Name    | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1         |  170|  170|        34|          -|          -|     5|    no    |
+        | + Loop 1.1      |   32|   32|         2|          -|          -|    16|    no    |
+        |- Loop 2         |  688|  688|       172|          -|          -|     4|    no    |
+        | + Loop 2.1      |  170|  170|        34|          -|          -|     5|    no    |
+        |  ++ Loop 2.1.1  |   32|   32|         2|          -|          -|    16|    no    |
+        +-----------------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 8
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (!exitcond4)
+	5  / (exitcond4)
+3 --> 
+	4  / (!exitcond3)
+	2  / (exitcond3)
+4 --> 
+	3  / true
+5 --> 
+	6  / (!exitcond2)
+6 --> 
+	7  / (!exitcond1)
+	5  / (exitcond1)
+7 --> 
+	8  / (!exitcond)
+	6  / (exitcond)
+8 --> 
+	7  / true
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.66>
+ST_1 : Operation 9 [1/1] (1.66ns)   --->   "br label %.loopexit" [../Desktop/buildTest/sum.c:104]   --->   Operation 9 'br' <Predicate = true> <Delay = 1.66>
+
+State 2 <SV = 1> <Delay = 1.68>
+ST_2 : Operation 10 [1/1] (0.00ns)   --->   "%k = phi i3 [ 0, %0 ], [ %k_25, %.loopexit.loopexit ]"   --->   Operation 10 'phi' 'k' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 11 [1/1] (1.18ns)   --->   "%exitcond4 = icmp eq i3 %k, -3" [../Desktop/buildTest/sum.c:104]   --->   Operation 11 'icmp' 'exitcond4' <Predicate = true> <Delay = 1.18> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 5, i64 5, i64 5)"   --->   Operation 12 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 13 [1/1] (1.68ns)   --->   "%k_25 = add i3 %k, 1" [../Desktop/buildTest/sum.c:104]   --->   Operation 13 'add' 'k_25' <Predicate = true> <Delay = 1.68> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.03> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "br i1 %exitcond4, label %.preheader6.preheader, label %.preheader7.preheader" [../Desktop/buildTest/sum.c:104]   --->   Operation 14 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%tmp = call i7 @_ssdm_op_BitConcatenate.i7.i3.i4(i3 %k, i4 0)" [../Desktop/buildTest/sum.c:106]   --->   Operation 15 'bitconcatenate' 'tmp' <Predicate = (!exitcond4)> <Delay = 0.00>
+ST_2 : Operation 16 [1/1] (1.66ns)   --->   "br label %.preheader7" [../Desktop/buildTest/sum.c:105]   --->   Operation 16 'br' <Predicate = (!exitcond4)> <Delay = 1.66>
+ST_2 : Operation 17 [1/1] (1.66ns)   --->   "br label %.preheader6" [../Desktop/buildTest/sum.c:110]   --->   Operation 17 'br' <Predicate = (exitcond4)> <Delay = 1.66>
+
+State 3 <SV = 2> <Delay = 5.28>
+ST_3 : Operation 18 [1/1] (0.00ns)   --->   "%b_k = phi i5 [ %b_k_10, %1 ], [ 0, %.preheader7.preheader ]"   --->   Operation 18 'phi' 'b_k' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 19 [1/1] (0.00ns)   --->   "%b_k_cast8 = zext i5 %b_k to i7" [../Desktop/buildTest/sum.c:105]   --->   Operation 19 'zext' 'b_k_cast8' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 20 [1/1] (1.44ns)   --->   "%exitcond3 = icmp eq i5 %b_k, -16" [../Desktop/buildTest/sum.c:105]   --->   Operation 20 'icmp' 'exitcond3' <Predicate = true> <Delay = 1.44> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 21 [1/1] (0.00ns)   --->   "%empty_56 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16)"   --->   Operation 21 'speclooptripcount' 'empty_56' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 22 [1/1] (1.86ns)   --->   "%b_k_10 = add i5 %b_k, 1" [../Desktop/buildTest/sum.c:105]   --->   Operation 22 'add' 'b_k_10' <Predicate = true> <Delay = 1.86> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.03> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 23 [1/1] (0.00ns)   --->   "br i1 %exitcond3, label %.loopexit.loopexit, label %1" [../Desktop/buildTest/sum.c:105]   --->   Operation 23 'br' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 24 [1/1] (2.03ns)   --->   "%tmp_s = add i7 %tmp, %b_k_cast8" [../Desktop/buildTest/sum.c:106]   --->   Operation 24 'add' 'tmp_s' <Predicate = (!exitcond3)> <Delay = 2.03> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.03> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 25 [1/1] (0.00ns)   --->   "%tmp_158 = zext i7 %tmp_s to i64" [../Desktop/buildTest/sum.c:106]   --->   Operation 25 'zext' 'tmp_158' <Predicate = (!exitcond3)> <Delay = 0.00>
+ST_3 : Operation 26 [1/1] (0.00ns)   --->   "%x_addr = getelementptr [400 x float]* %x, i64 0, i64 %tmp_158" [../Desktop/buildTest/sum.c:106]   --->   Operation 26 'getelementptr' 'x_addr' <Predicate = (!exitcond3)> <Delay = 0.00>
+ST_3 : Operation 27 [2/2] (3.25ns)   --->   "%x_load = load float* %x_addr, align 4" [../Desktop/buildTest/sum.c:106]   --->   Operation 27 'load' 'x_load' <Predicate = (!exitcond3)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 80> <RAM>
+ST_3 : Operation 28 [1/1] (0.00ns)   --->   "br label %.loopexit"   --->   Operation 28 'br' <Predicate = (exitcond3)> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 6.51>
+ST_4 : Operation 29 [1/2] (3.25ns)   --->   "%x_load = load float* %x_addr, align 4" [../Desktop/buildTest/sum.c:106]   --->   Operation 29 'load' 'x_load' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 80> <RAM>
+ST_4 : Operation 30 [1/1] (0.00ns)   --->   "%y_addr = getelementptr [80 x float]* %y, i64 0, i64 %tmp_158" [../Desktop/buildTest/sum.c:106]   --->   Operation 30 'getelementptr' 'y_addr' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 31 [1/1] (3.25ns)   --->   "store float %x_load, float* %y_addr, align 4" [../Desktop/buildTest/sum.c:106]   --->   Operation 31 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 80> <RAM>
+ST_4 : Operation 32 [1/1] (0.00ns)   --->   "br label %.preheader7" [../Desktop/buildTest/sum.c:105]   --->   Operation 32 'br' <Predicate = true> <Delay = 0.00>
+
+State 5 <SV = 2> <Delay = 1.68>
+ST_5 : Operation 33 [1/1] (0.00ns)   --->   "%k_1 = phi i3 [ %k_26, %.preheader6.loopexit ], [ 0, %.preheader6.preheader ]"   --->   Operation 33 'phi' 'k_1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 34 [1/1] (1.18ns)   --->   "%exitcond2 = icmp eq i3 %k_1, -4" [../Desktop/buildTest/sum.c:110]   --->   Operation 34 'icmp' 'exitcond2' <Predicate = true> <Delay = 1.18> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 35 [1/1] (0.00ns)   --->   "%empty_57 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4)"   --->   Operation 35 'speclooptripcount' 'empty_57' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 36 [1/1] (1.68ns)   --->   "%k_26 = add i3 %k_1, 1" [../Desktop/buildTest/sum.c:110]   --->   Operation 36 'add' 'k_26' <Predicate = true> <Delay = 1.68> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.03> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 37 [1/1] (0.00ns)   --->   "br i1 %exitcond2, label %3, label %.preheader5.preheader" [../Desktop/buildTest/sum.c:110]   --->   Operation 37 'br' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 38 [1/1] (0.00ns)   --->   "%tmp_170 = trunc i3 %k_1 to i2" [../Desktop/buildTest/sum.c:110]   --->   Operation 38 'trunc' 'tmp_170' <Predicate = (!exitcond2)> <Delay = 0.00>
+ST_5 : Operation 39 [1/1] (1.66ns)   --->   "br label %.preheader5" [../Desktop/buildTest/sum.c:111]   --->   Operation 39 'br' <Predicate = (!exitcond2)> <Delay = 1.66>
+ST_5 : Operation 40 [1/1] (0.00ns)   --->   "ret void" [../Desktop/buildTest/sum.c:117]   --->   Operation 40 'ret' <Predicate = (exitcond2)> <Delay = 0.00>
+
+State 6 <SV = 3> <Delay = 1.68>
+ST_6 : Operation 41 [1/1] (0.00ns)   --->   "%b_k_1 = phi i3 [ 0, %.preheader5.preheader ], [ %b_k_11, %.preheader5.loopexit ]"   --->   Operation 41 'phi' 'b_k_1' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 42 [1/1] (1.18ns)   --->   "%exitcond1 = icmp eq i3 %b_k_1, -3" [../Desktop/buildTest/sum.c:111]   --->   Operation 42 'icmp' 'exitcond1' <Predicate = true> <Delay = 1.18> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 43 [1/1] (0.00ns)   --->   "%empty_58 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 5, i64 5, i64 5)"   --->   Operation 43 'speclooptripcount' 'empty_58' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 44 [1/1] (1.68ns)   --->   "%b_k_11 = add i3 %b_k_1, 1" [../Desktop/buildTest/sum.c:111]   --->   Operation 44 'add' 'b_k_11' <Predicate = true> <Delay = 1.68> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.03> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 45 [1/1] (0.00ns)   --->   "br i1 %exitcond1, label %.preheader6.loopexit, label %.preheader.preheader" [../Desktop/buildTest/sum.c:111]   --->   Operation 45 'br' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 46 [1/1] (0.00ns)   --->   "%tmp_159 = call i7 @_ssdm_op_BitConcatenate.i7.i3.i4(i3 %b_k_1, i4 0)" [../Desktop/buildTest/sum.c:113]   --->   Operation 46 'bitconcatenate' 'tmp_159' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_6 : Operation 47 [1/1] (0.00ns)   --->   "%tmp_162_cast = zext i7 %tmp_159 to i8" [../Desktop/buildTest/sum.c:113]   --->   Operation 47 'zext' 'tmp_162_cast' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_6 : Operation 48 [1/1] (1.66ns)   --->   "br label %.preheader" [../Desktop/buildTest/sum.c:112]   --->   Operation 48 'br' <Predicate = (!exitcond1)> <Delay = 1.66>
+ST_6 : Operation 49 [1/1] (0.00ns)   --->   "br label %.preheader6"   --->   Operation 49 'br' <Predicate = (exitcond1)> <Delay = 0.00>
+
+State 7 <SV = 4> <Delay = 9.43>
+ST_7 : Operation 50 [1/1] (0.00ns)   --->   "%c_k = phi i5 [ %c_k_1, %2 ], [ 0, %.preheader.preheader ]"   --->   Operation 50 'phi' 'c_k' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 51 [1/1] (0.00ns)   --->   "%c_k_cast4 = zext i5 %c_k to i7" [../Desktop/buildTest/sum.c:112]   --->   Operation 51 'zext' 'c_k_cast4' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 52 [1/1] (1.44ns)   --->   "%exitcond = icmp eq i5 %c_k, -16" [../Desktop/buildTest/sum.c:112]   --->   Operation 52 'icmp' 'exitcond' <Predicate = true> <Delay = 1.44> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 53 [1/1] (0.00ns)   --->   "%empty_59 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16)"   --->   Operation 53 'speclooptripcount' 'empty_59' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 54 [1/1] (1.86ns)   --->   "%c_k_1 = add i5 %c_k, 1" [../Desktop/buildTest/sum.c:112]   --->   Operation 54 'add' 'c_k_1' <Predicate = true> <Delay = 1.86> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.03> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 55 [1/1] (0.00ns)   --->   "br i1 %exitcond, label %.preheader5.loopexit, label %2" [../Desktop/buildTest/sum.c:112]   --->   Operation 55 'br' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 56 [1/1] (0.00ns)   --->   "%tmp1 = call i8 @_ssdm_op_BitConcatenate.i8.i2.i2.i4(i2 %tmp_170, i2 %tmp_170, i4 0)" [../Desktop/buildTest/sum.c:113]   --->   Operation 56 'bitconcatenate' 'tmp1' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_7 : Operation 57 [1/1] (0.00ns)   --->   "%tmp1_cast = zext i8 %tmp1 to i9" [../Desktop/buildTest/sum.c:113]   --->   Operation 57 'zext' 'tmp1_cast' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_7 : Operation 58 [1/1] (2.03ns)   --->   "%tmp3 = add i7 %c_k_cast4, -48" [../Desktop/buildTest/sum.c:113]   --->   Operation 58 'add' 'tmp3' <Predicate = (!exitcond)> <Delay = 2.03> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.03> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 59 [1/1] (0.00ns)   --->   "%tmp3_cast = zext i7 %tmp3 to i8" [../Desktop/buildTest/sum.c:113]   --->   Operation 59 'zext' 'tmp3_cast' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_7 : Operation 60 [1/1] (2.03ns)   --->   "%tmp2 = add i8 %tmp3_cast, %tmp_162_cast" [../Desktop/buildTest/sum.c:113]   --->   Operation 60 'add' 'tmp2' <Predicate = (!exitcond)> <Delay = 2.03> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.03> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 61 [1/1] (0.00ns)   --->   "%tmp2_cast = zext i8 %tmp2 to i9" [../Desktop/buildTest/sum.c:113]   --->   Operation 61 'zext' 'tmp2_cast' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_7 : Operation 62 [1/1] (2.11ns)   --->   "%tmp_160 = add i9 %tmp2_cast, %tmp1_cast" [../Desktop/buildTest/sum.c:113]   --->   Operation 62 'add' 'tmp_160' <Predicate = (!exitcond)> <Delay = 2.11> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.03> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 63 [1/1] (0.00ns)   --->   "%tmp_161 = zext i9 %tmp_160 to i64" [../Desktop/buildTest/sum.c:113]   --->   Operation 63 'zext' 'tmp_161' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_7 : Operation 64 [1/1] (0.00ns)   --->   "%x_addr_3 = getelementptr [400 x float]* %x, i64 0, i64 %tmp_161" [../Desktop/buildTest/sum.c:113]   --->   Operation 64 'getelementptr' 'x_addr_3' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_7 : Operation 65 [2/2] (3.25ns)   --->   "%x_load_3 = load float* %x_addr_3, align 4" [../Desktop/buildTest/sum.c:113]   --->   Operation 65 'load' 'x_load_3' <Predicate = (!exitcond)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 80> <RAM>
+ST_7 : Operation 66 [1/1] (2.03ns)   --->   "%tmp_162 = add i7 %tmp_159, %c_k_cast4" [../Desktop/buildTest/sum.c:113]   --->   Operation 66 'add' 'tmp_162' <Predicate = (!exitcond)> <Delay = 2.03> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.03> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 67 [1/1] (0.00ns)   --->   "%tmp_163 = zext i7 %tmp_162 to i64" [../Desktop/buildTest/sum.c:113]   --->   Operation 67 'zext' 'tmp_163' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_7 : Operation 68 [1/1] (0.00ns)   --->   "%y_addr_3 = getelementptr [80 x float]* %y, i64 0, i64 %tmp_163" [../Desktop/buildTest/sum.c:113]   --->   Operation 68 'getelementptr' 'y_addr_3' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_7 : Operation 69 [2/2] (3.25ns)   --->   "%y_load = load float* %y_addr_3, align 4" [../Desktop/buildTest/sum.c:113]   --->   Operation 69 'load' 'y_load' <Predicate = (!exitcond)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 80> <RAM>
+ST_7 : Operation 70 [1/1] (0.00ns)   --->   "br label %.preheader5"   --->   Operation 70 'br' <Predicate = (exitcond)> <Delay = 0.00>
+
+State 8 <SV = 5> <Delay = 33.2>
+ST_8 : Operation 71 [1/2] (3.25ns)   --->   "%x_load_3 = load float* %x_addr_3, align 4" [../Desktop/buildTest/sum.c:113]   --->   Operation 71 'load' 'x_load_3' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 80> <RAM>
+ST_8 : Operation 72 [1/2] (3.25ns)   --->   "%y_load = load float* %y_addr_3, align 4" [../Desktop/buildTest/sum.c:113]   --->   Operation 72 'load' 'y_load' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 80> <RAM>
+ST_8 : Operation 73 [1/1] (26.6ns)   --->   "%tmp_164 = fadd float %y_load, %x_load_3" [../Desktop/buildTest/sum.c:113]   --->   Operation 73 'fadd' 'tmp_164' <Predicate = true> <Delay = 26.6> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 0> <II = 1> <Delay = 26.6> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 74 [1/1] (3.25ns)   --->   "store float %tmp_164, float* %y_addr_3, align 4" [../Desktop/buildTest/sum.c:113]   --->   Operation 74 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 80> <RAM>
+ST_8 : Operation 75 [1/1] (0.00ns)   --->   "br label %.preheader" [../Desktop/buildTest/sum.c:112]   --->   Operation 75 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 100ns, clock uncertainty: 12.5ns.
+
+ <State 1>: 1.66ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('k') with incoming values : ('k', ../Desktop/buildTest/sum.c:104) [5]  (1.66 ns)
+
+ <State 2>: 1.68ns
+The critical path consists of the following:
+	'phi' operation ('k') with incoming values : ('k', ../Desktop/buildTest/sum.c:104) [5]  (0 ns)
+	'add' operation ('k', ../Desktop/buildTest/sum.c:104) [8]  (1.68 ns)
+
+ <State 3>: 5.29ns
+The critical path consists of the following:
+	'phi' operation ('b_k') with incoming values : ('b_k', ../Desktop/buildTest/sum.c:105) [14]  (0 ns)
+	'add' operation ('tmp_s', ../Desktop/buildTest/sum.c:106) [21]  (2.03 ns)
+	'getelementptr' operation ('x_addr', ../Desktop/buildTest/sum.c:106) [23]  (0 ns)
+	'load' operation ('x_load', ../Desktop/buildTest/sum.c:106) on array 'x' [24]  (3.26 ns)
+
+ <State 4>: 6.51ns
+The critical path consists of the following:
+	'load' operation ('x_load', ../Desktop/buildTest/sum.c:106) on array 'x' [24]  (3.26 ns)
+	'store' operation (../Desktop/buildTest/sum.c:106) of variable 'x_load', ../Desktop/buildTest/sum.c:106 on array 'y' [26]  (3.26 ns)
+
+ <State 5>: 1.68ns
+The critical path consists of the following:
+	'phi' operation ('k') with incoming values : ('k', ../Desktop/buildTest/sum.c:110) [33]  (0 ns)
+	'add' operation ('k', ../Desktop/buildTest/sum.c:110) [36]  (1.68 ns)
+
+ <State 6>: 1.68ns
+The critical path consists of the following:
+	'phi' operation ('b_k') with incoming values : ('b_k', ../Desktop/buildTest/sum.c:111) [42]  (0 ns)
+	'add' operation ('b_k', ../Desktop/buildTest/sum.c:111) [45]  (1.68 ns)
+
+ <State 7>: 9.43ns
+The critical path consists of the following:
+	'phi' operation ('c_k') with incoming values : ('c_k', ../Desktop/buildTest/sum.c:112) [52]  (0 ns)
+	'add' operation ('tmp3', ../Desktop/buildTest/sum.c:113) [61]  (2.03 ns)
+	'add' operation ('tmp2', ../Desktop/buildTest/sum.c:113) [63]  (2.03 ns)
+	'add' operation ('tmp_160', ../Desktop/buildTest/sum.c:113) [65]  (2.12 ns)
+	'getelementptr' operation ('x_addr_3', ../Desktop/buildTest/sum.c:113) [67]  (0 ns)
+	'load' operation ('x_load_3', ../Desktop/buildTest/sum.c:113) on array 'x' [68]  (3.26 ns)
+
+ <State 8>: 33.2ns
+The critical path consists of the following:
+	'load' operation ('x_load_3', ../Desktop/buildTest/sum.c:113) on array 'x' [68]  (3.26 ns)
+	'fadd' operation ('tmp_164', ../Desktop/buildTest/sum.c:113) [73]  (26.7 ns)
+	'store' operation (../Desktop/buildTest/sum.c:113) of variable 'tmp_164', ../Desktop/buildTest/sum.c:113 on array 'y' [74]  (3.26 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

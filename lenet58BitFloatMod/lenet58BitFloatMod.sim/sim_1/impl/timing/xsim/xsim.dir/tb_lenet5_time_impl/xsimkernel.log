@@ -1,0 +1,7 @@
+Running: xsim.dir/tb_lenet5_time_impl/xsimk -simmode gui -wdb tb_lenet5_time_impl.wdb -simrunnum 0 -socket 51049
+Design successfully loaded
+Design Loading Memory Usage: 65340 KB (Peak: 65472 KB)
+Design Loading CPU Usage: 90 ms
+Simulation completed
+Simulation Memory Usage: 147076 KB (Peak: 212612 KB)
+Simulation CPU Usage: 6330 ms

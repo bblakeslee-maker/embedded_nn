@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Mon Dec 10 21:13:00 2018
+# Process ID: 14000
+# Current directory: /home/tyrian/nnproject/lenet58BitFloatMod/lenet58BitFloatMod.sim/sim_1/impl/timing/xsim
+# Command line: wbtcv -mode batch -source /home/tyrian/nnproject/lenet58BitFloatMod/lenet58BitFloatMod.sim/sim_1/impl/timing/xsim/xsim.dir/tb_lenet5_time_impl/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /home/tyrian/nnproject/lenet58BitFloatMod/lenet58BitFloatMod.sim/sim_1/impl/timing/xsim/webtalk.log
+# Journal file: /home/tyrian/nnproject/lenet58BitFloatMod/lenet58BitFloatMod.sim/sim_1/impl/timing/xsim/webtalk.jou
+#-----------------------------------------------------------
+source /home/tyrian/nnproject/lenet58BitFloatMod/lenet58BitFloatMod.sim/sim_1/impl/timing/xsim/xsim.dir/tb_lenet5_time_impl/webtalk/xsim_webtalk.tcl -notrace

@@ -1,0 +1,414 @@
+
+
+================================================================
+== Vivado HLS Report for 'sum'
+================================================================
+* Date:           Mon Dec 10 15:19:41 2018
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        hls8Bit16Quant
+* Solution:       solution1
+* Product family: artix7
+* Target device:  xc7a100tcsg324-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     6.700|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |   76|  236|   76|  236|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+        |             |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name  | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1     |   75|  235|  15 ~ 47 |          -|          -|     5|    no    |
+        | + Loop 1.1  |   12|   44|  3 ~ 11  |          -|          -|     4|    no    |
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 22
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (!exitcond1)
+3 --> 
+	4  / true
+4 --> 
+	13  / (!exitcond & b0)
+	5  / (!exitcond & !b0 & tmp_3)
+	21  / (!exitcond & !b0 & !tmp_3)
+	2  / (exitcond)
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	21  / true
+13 --> 
+	14  / true
+14 --> 
+	15  / true
+15 --> 
+	16  / true
+16 --> 
+	17  / true
+17 --> 
+	18  / true
+18 --> 
+	19  / true
+19 --> 
+	20  / true
+20 --> 
+	21  / true
+21 --> 
+	22  / true
+22 --> 
+	4  / true
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.66>
+ST_1 : Operation 23 [1/1] (1.66ns)   --->   "br label %1" [../Desktop/quantTest/sum.c:399]   --->   Operation 23 'br' <Predicate = true> <Delay = 1.66>
+
+State 2 <SV = 1> <Delay = 2.15>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%indvars_iv1 = phi i3 [ %indvars_iv_next2, %9 ], [ 0, %0 ]" [../Desktop/quantTest/sum.c:399]   --->   Operation 24 'phi' 'indvars_iv1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%indvars_iv = phi i5 [ %indvars_iv_next, %9 ], [ 4, %0 ]" [../Desktop/quantTest/sum.c:399]   --->   Operation 25 'phi' 'indvars_iv' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%iy = phi i3 [ %i, %9 ], [ 0, %0 ]"   --->   Operation 26 'phi' 'iy' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%ix = phi i6 [ %ix_2, %9 ], [ -1, %0 ]"   --->   Operation 27 'phi' 'ix' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 28 [1/1] (1.18ns)   --->   "%exitcond1 = icmp eq i3 %iy, -3" [../Desktop/quantTest/sum.c:399]   --->   Operation 28 'icmp' 'exitcond1' <Predicate = true> <Delay = 1.18> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.43> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 5, i64 5, i64 5)"   --->   Operation 29 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 30 [1/1] (1.68ns)   --->   "%indvars_iv_next2 = add i3 %indvars_iv1, 1" [../Desktop/quantTest/sum.c:399]   --->   Operation 30 'add' 'indvars_iv_next2' <Predicate = true> <Delay = 1.68> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "br i1 %exitcond1, label %10, label %2" [../Desktop/quantTest/sum.c:399]   --->   Operation 31 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 32 [1/1] (0.00ns)   --->   "%tmp = trunc i6 %ix to i5" [../Desktop/quantTest/sum.c:400]   --->   Operation 32 'trunc' 'tmp' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "%tmp_4 = zext i3 %indvars_iv1 to i64" [../Desktop/quantTest/sum.c:402]   --->   Operation 33 'zext' 'tmp_4' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_2 : Operation 34 [1/1] (0.00ns)   --->   "%X_addr = getelementptr [25 x i1]* %X, i64 0, i64 %tmp_4" [../Desktop/quantTest/sum.c:402]   --->   Operation 34 'getelementptr' 'X_addr' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_2 : Operation 35 [2/2] (2.15ns)   --->   "%ixstart = load i1* %X_addr, align 1" [../Desktop/quantTest/sum.c:402]   --->   Operation 35 'load' 'ixstart' <Predicate = (!exitcond1)> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5> <RAM>
+ST_2 : Operation 36 [1/1] (1.94ns)   --->   "%ix_2 = add i6 5, %ix" [../Desktop/quantTest/sum.c:401]   --->   Operation 36 'add' 'ix_2' <Predicate = (!exitcond1)> <Delay = 1.94> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "ret void" [../Desktop/quantTest/sum.c:439]   --->   Operation 37 'ret' <Predicate = (exitcond1)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 2.15>
+ST_3 : Operation 38 [1/1] (1.86ns)   --->   "%ixstart_cast = add i5 1, %tmp" [../Desktop/quantTest/sum.c:400]   --->   Operation 38 'add' 'ixstart_cast' <Predicate = true> <Delay = 1.86> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 39 [1/2] (2.15ns)   --->   "%ixstart = load i1* %X_addr, align 1" [../Desktop/quantTest/sum.c:402]   --->   Operation 39 'load' 'ixstart' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5> <RAM>
+ST_3 : Operation 40 [1/1] (0.00ns)   --->   "%ixstart_5_cast = zext i1 %ixstart to i32" [../Desktop/quantTest/sum.c:403]   --->   Operation 40 'zext' 'ixstart_5_cast' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 41 [1/1] (1.66ns)   --->   "br label %3" [../Desktop/quantTest/sum.c:411]   --->   Operation 41 'br' <Predicate = true> <Delay = 1.66>
+
+State 4 <SV = 3> <Delay = 5.93>
+ST_4 : Operation 42 [1/1] (0.00ns)   --->   "%i1 = phi i32 [ 0, %2 ], [ %i19_4, %._crit_edge ]" [../Desktop/quantTest/sum.c:418]   --->   Operation 42 'phi' 'i1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 43 [1/1] (0.00ns)   --->   "%ixstart_1 = phi i32 [ %ixstart_5_cast, %2 ], [ %ixstart_2, %._crit_edge ]"   --->   Operation 43 'phi' 'ixstart_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 44 [1/1] (0.00ns)   --->   "%ix_1 = phi i5 [ %ixstart_cast, %2 ], [ %ix_3, %._crit_edge ]"   --->   Operation 44 'phi' 'ix_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 45 [1/1] (0.00ns)   --->   "%b0 = phi i1 [ true, %2 ], [ false, %._crit_edge ]"   --->   Operation 45 'phi' 'b0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 46 [1/1] (1.44ns)   --->   "%exitcond = icmp eq i5 %ix_1, %indvars_iv" [../Desktop/quantTest/sum.c:411]   --->   Operation 46 'icmp' 'exitcond' <Predicate = true> <Delay = 1.44> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.43> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 47 [1/1] (0.00ns)   --->   "%empty_15 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4)"   --->   Operation 47 'speclooptripcount' 'empty_15' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 48 [1/1] (0.00ns)   --->   "br i1 %exitcond, label %9, label %4" [../Desktop/quantTest/sum.c:411]   --->   Operation 48 'br' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 49 [1/1] (1.86ns)   --->   "%ix_3 = add i5 %ix_1, 1" [../Desktop/quantTest/sum.c:412]   --->   Operation 49 'add' 'ix_3' <Predicate = (!exitcond)> <Delay = 1.86> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 50 [1/1] (0.00ns)   --->   "br i1 %b0, label %5, label %6" [../Desktop/quantTest/sum.c:416]   --->   Operation 50 'br' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_4 : Operation 51 [1/1] (2.43ns)   --->   "%tmp_3 = icmp sgt i32 %i1, 2147483642" [../Desktop/quantTest/sum.c:419]   --->   Operation 51 'icmp' 'tmp_3' <Predicate = (!exitcond & !b0)> <Delay = 2.43> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.43> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 52 [1/1] (0.00ns)   --->   "br i1 %tmp_3, label %7, label %8" [../Desktop/quantTest/sum.c:419]   --->   Operation 52 'br' <Predicate = (!exitcond & !b0)> <Delay = 0.00>
+ST_4 : Operation 53 [1/1] (2.70ns)   --->   "%i19_2 = add nsw i32 %i1, 5" [../Desktop/quantTest/sum.c:422]   --->   Operation 53 'add' 'i19_2' <Predicate = (!exitcond & !b0 & !tmp_3)> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 54 [1/1] (2.43ns)   --->   "%tmp_9 = icmp sgt i32 %i19_2, 24" [../Desktop/quantTest/sum.c:423]   --->   Operation 54 'icmp' 'tmp_9' <Predicate = (!exitcond & !b0 & !tmp_3)> <Delay = 2.43> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.43> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 55 [1/1] (2.70ns)   --->   "%i19_3 = add nsw i32 %i1, -19" [../Desktop/quantTest/sum.c:424]   --->   Operation 55 'add' 'i19_3' <Predicate = (!exitcond & !b0 & !tmp_3)> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 56 [1/1] (0.79ns)   --->   "%p_s = select i1 %tmp_9, i32 %i19_3, i32 %i19_2" [../Desktop/quantTest/sum.c:423]   --->   Operation 56 'select' 'p_s' <Predicate = (!exitcond & !b0 & !tmp_3)> <Delay = 0.79> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 57 [1/1] (1.70ns)   --->   "br label %._crit_edge"   --->   Operation 57 'br' <Predicate = (!exitcond & !b0 & !tmp_3)> <Delay = 1.70>
+ST_4 : Operation 58 [9/9] (3.06ns)   --->   "%tmp_6 = urem i5 %ix_3, 5" [../Desktop/quantTest/sum.c:420]   --->   Operation 58 'urem' 'tmp_6' <Predicate = (!exitcond & !b0 & tmp_3)> <Delay = 3.06> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 8> <II = 5> <Delay = 3.06> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 59 [9/9] (3.06ns)   --->   "%tmp_7 = urem i5 %ix_3, 5" [../Desktop/quantTest/sum.c:418]   --->   Operation 59 'urem' 'tmp_7' <Predicate = (!exitcond & b0)> <Delay = 3.06> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 8> <II = 5> <Delay = 3.06> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 60 [1/1] (0.00ns)   --->   "%tmp_s = zext i3 %iy to i64" [../Desktop/quantTest/sum.c:437]   --->   Operation 60 'zext' 'tmp_s' <Predicate = (exitcond)> <Delay = 0.00>
+ST_4 : Operation 61 [1/1] (0.00ns)   --->   "%Y_addr = getelementptr [5 x i32]* %Y, i64 0, i64 %tmp_s" [../Desktop/quantTest/sum.c:437]   --->   Operation 61 'getelementptr' 'Y_addr' <Predicate = (exitcond)> <Delay = 0.00>
+ST_4 : Operation 62 [1/1] (2.15ns)   --->   "store i32 %ixstart_1, i32* %Y_addr, align 4" [../Desktop/quantTest/sum.c:437]   --->   Operation 62 'store' <Predicate = (exitcond)> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5> <RAM>
+ST_4 : Operation 63 [1/1] (1.68ns)   --->   "%i = add i3 %iy, 1" [../Desktop/quantTest/sum.c:399]   --->   Operation 63 'add' 'i' <Predicate = (exitcond)> <Delay = 1.68> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 64 [1/1] (1.86ns)   --->   "%indvars_iv_next = add i5 %indvars_iv, 5" [../Desktop/quantTest/sum.c:399]   --->   Operation 64 'add' 'indvars_iv_next' <Predicate = (exitcond)> <Delay = 1.86> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 65 [1/1] (0.00ns)   --->   "br label %1" [../Desktop/quantTest/sum.c:399]   --->   Operation 65 'br' <Predicate = (exitcond)> <Delay = 0.00>
+
+State 5 <SV = 4> <Delay = 3.06>
+ST_5 : Operation 66 [8/9] (3.06ns)   --->   "%tmp_6 = urem i5 %ix_3, 5" [../Desktop/quantTest/sum.c:420]   --->   Operation 66 'urem' 'tmp_6' <Predicate = true> <Delay = 3.06> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 8> <II = 5> <Delay = 3.06> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 3.06>
+ST_6 : Operation 67 [7/9] (3.06ns)   --->   "%tmp_6 = urem i5 %ix_3, 5" [../Desktop/quantTest/sum.c:420]   --->   Operation 67 'urem' 'tmp_6' <Predicate = true> <Delay = 3.06> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 8> <II = 5> <Delay = 3.06> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 3.06>
+ST_7 : Operation 68 [6/9] (3.06ns)   --->   "%tmp_6 = urem i5 %ix_3, 5" [../Desktop/quantTest/sum.c:420]   --->   Operation 68 'urem' 'tmp_6' <Predicate = true> <Delay = 3.06> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 8> <II = 5> <Delay = 3.06> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 3.06>
+ST_8 : Operation 69 [5/9] (3.06ns)   --->   "%tmp_6 = urem i5 %ix_3, 5" [../Desktop/quantTest/sum.c:420]   --->   Operation 69 'urem' 'tmp_6' <Predicate = true> <Delay = 3.06> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 8> <II = 5> <Delay = 3.06> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 3.06>
+ST_9 : Operation 70 [4/9] (3.06ns)   --->   "%tmp_6 = urem i5 %ix_3, 5" [../Desktop/quantTest/sum.c:420]   --->   Operation 70 'urem' 'tmp_6' <Predicate = true> <Delay = 3.06> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 8> <II = 5> <Delay = 3.06> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 3.06>
+ST_10 : Operation 71 [3/9] (3.06ns)   --->   "%tmp_6 = urem i5 %ix_3, 5" [../Desktop/quantTest/sum.c:420]   --->   Operation 71 'urem' 'tmp_6' <Predicate = true> <Delay = 3.06> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 8> <II = 5> <Delay = 3.06> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 3.69>
+ST_11 : Operation 72 [2/9] (3.06ns)   --->   "%tmp_6 = urem i5 %ix_3, 5" [../Desktop/quantTest/sum.c:420]   --->   Operation 72 'urem' 'tmp_6' <Predicate = true> <Delay = 3.06> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 8> <II = 5> <Delay = 3.06> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 73 [1/1] (0.00ns)   --->   "%zext3_cast = zext i5 %ix_3 to i12" [../Desktop/quantTest/sum.c:420]   --->   Operation 73 'zext' 'zext3_cast' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 74 [1/1] (3.69ns)   --->   "%mul4 = mul i12 52, %zext3_cast" [../Desktop/quantTest/sum.c:420]   --->   Operation 74 'mul' 'mul4' <Predicate = true> <Delay = 3.69> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 3.69> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 75 [1/1] (0.00ns)   --->   "%tmp_15_cast = call i4 @_ssdm_op_PartSelect.i4.i12.i32.i32(i12 %mul4, i32 8, i32 11)" [../Desktop/quantTest/sum.c:420]   --->   Operation 75 'partselect' 'tmp_15_cast' <Predicate = true> <Delay = 0.00>
+
+State 12 <SV = 11> <Delay = 6.70>
+ST_12 : Operation 76 [1/9] (3.06ns)   --->   "%tmp_6 = urem i5 %ix_3, 5" [../Desktop/quantTest/sum.c:420]   --->   Operation 76 'urem' 'tmp_6' <Predicate = true> <Delay = 3.06> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 8> <II = 5> <Delay = 3.06> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 77 [1/1] (0.00ns)   --->   "%tmp_8 = trunc i5 %tmp_6 to i4" [../Desktop/quantTest/sum.c:420]   --->   Operation 77 'trunc' 'tmp_8' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 78 [1/1] (0.00ns) (grouped into LUT with out node i19_1)   --->   "%tmp_11 = shl i5 %tmp_6, 2" [../Desktop/quantTest/sum.c:420]   --->   Operation 78 'shl' 'tmp_11' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 79 [1/1] (1.77ns)   --->   "%tmp2 = add i4 %tmp_15_cast, %tmp_8" [../Desktop/quantTest/sum.c:420]   --->   Operation 79 'add' 'tmp2' <Predicate = true> <Delay = 1.77> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 80 [1/1] (0.00ns) (grouped into LUT with out node i19_1)   --->   "%tmp2_cast = zext i4 %tmp2 to i5" [../Desktop/quantTest/sum.c:420]   --->   Operation 80 'zext' 'tmp2_cast' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 81 [1/1] (1.86ns) (out node of the LUT)   --->   "%i19_1 = add i5 %tmp_11, %tmp2_cast" [../Desktop/quantTest/sum.c:420]   --->   Operation 81 'add' 'i19_1' <Predicate = true> <Delay = 1.86> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 82 [1/1] (0.00ns)   --->   "%i19_2_cast = zext i5 %i19_1 to i32" [../Desktop/quantTest/sum.c:420]   --->   Operation 82 'zext' 'i19_2_cast' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 83 [1/1] (1.70ns)   --->   "br label %._crit_edge" [../Desktop/quantTest/sum.c:421]   --->   Operation 83 'br' <Predicate = true> <Delay = 1.70>
+
+State 13 <SV = 4> <Delay = 3.06>
+ST_13 : Operation 84 [8/9] (3.06ns)   --->   "%tmp_7 = urem i5 %ix_3, 5" [../Desktop/quantTest/sum.c:418]   --->   Operation 84 'urem' 'tmp_7' <Predicate = true> <Delay = 3.06> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 8> <II = 5> <Delay = 3.06> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 14 <SV = 5> <Delay = 3.06>
+ST_14 : Operation 85 [7/9] (3.06ns)   --->   "%tmp_7 = urem i5 %ix_3, 5" [../Desktop/quantTest/sum.c:418]   --->   Operation 85 'urem' 'tmp_7' <Predicate = true> <Delay = 3.06> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 8> <II = 5> <Delay = 3.06> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 15 <SV = 6> <Delay = 3.06>
+ST_15 : Operation 86 [6/9] (3.06ns)   --->   "%tmp_7 = urem i5 %ix_3, 5" [../Desktop/quantTest/sum.c:418]   --->   Operation 86 'urem' 'tmp_7' <Predicate = true> <Delay = 3.06> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 8> <II = 5> <Delay = 3.06> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 16 <SV = 7> <Delay = 3.06>
+ST_16 : Operation 87 [5/9] (3.06ns)   --->   "%tmp_7 = urem i5 %ix_3, 5" [../Desktop/quantTest/sum.c:418]   --->   Operation 87 'urem' 'tmp_7' <Predicate = true> <Delay = 3.06> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 8> <II = 5> <Delay = 3.06> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 17 <SV = 8> <Delay = 3.06>
+ST_17 : Operation 88 [4/9] (3.06ns)   --->   "%tmp_7 = urem i5 %ix_3, 5" [../Desktop/quantTest/sum.c:418]   --->   Operation 88 'urem' 'tmp_7' <Predicate = true> <Delay = 3.06> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 8> <II = 5> <Delay = 3.06> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 18 <SV = 9> <Delay = 3.06>
+ST_18 : Operation 89 [3/9] (3.06ns)   --->   "%tmp_7 = urem i5 %ix_3, 5" [../Desktop/quantTest/sum.c:418]   --->   Operation 89 'urem' 'tmp_7' <Predicate = true> <Delay = 3.06> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 8> <II = 5> <Delay = 3.06> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 19 <SV = 10> <Delay = 3.69>
+ST_19 : Operation 90 [2/9] (3.06ns)   --->   "%tmp_7 = urem i5 %ix_3, 5" [../Desktop/quantTest/sum.c:418]   --->   Operation 90 'urem' 'tmp_7' <Predicate = true> <Delay = 3.06> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 8> <II = 5> <Delay = 3.06> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 91 [1/1] (0.00ns)   --->   "%zext_cast = zext i5 %ix_3 to i12" [../Desktop/quantTest/sum.c:418]   --->   Operation 91 'zext' 'zext_cast' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 92 [1/1] (3.69ns)   --->   "%mul = mul i12 52, %zext_cast" [../Desktop/quantTest/sum.c:418]   --->   Operation 92 'mul' 'mul' <Predicate = true> <Delay = 3.69> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 3.69> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 93 [1/1] (0.00ns)   --->   "%tmp_11_cast = call i4 @_ssdm_op_PartSelect.i4.i12.i32.i32(i12 %mul, i32 8, i32 11)" [../Desktop/quantTest/sum.c:418]   --->   Operation 93 'partselect' 'tmp_11_cast' <Predicate = true> <Delay = 0.00>
+
+State 20 <SV = 11> <Delay = 6.70>
+ST_20 : Operation 94 [1/9] (3.06ns)   --->   "%tmp_7 = urem i5 %ix_3, 5" [../Desktop/quantTest/sum.c:418]   --->   Operation 94 'urem' 'tmp_7' <Predicate = true> <Delay = 3.06> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 8> <II = 5> <Delay = 3.06> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 95 [1/1] (0.00ns)   --->   "%tmp_1 = trunc i5 %tmp_7 to i4" [../Desktop/quantTest/sum.c:418]   --->   Operation 95 'trunc' 'tmp_1' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 96 [1/1] (0.00ns) (grouped into LUT with out node i19)   --->   "%tmp_2 = shl i5 %tmp_7, 2" [../Desktop/quantTest/sum.c:418]   --->   Operation 96 'shl' 'tmp_2' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 97 [1/1] (1.77ns)   --->   "%tmp1 = add i4 %tmp_11_cast, %tmp_1" [../Desktop/quantTest/sum.c:418]   --->   Operation 97 'add' 'tmp1' <Predicate = true> <Delay = 1.77> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 98 [1/1] (0.00ns) (grouped into LUT with out node i19)   --->   "%tmp1_cast = zext i4 %tmp1 to i5" [../Desktop/quantTest/sum.c:418]   --->   Operation 98 'zext' 'tmp1_cast' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 99 [1/1] (1.86ns) (out node of the LUT)   --->   "%i19 = add i5 %tmp_2, %tmp1_cast" [../Desktop/quantTest/sum.c:418]   --->   Operation 99 'add' 'i19' <Predicate = true> <Delay = 1.86> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 100 [1/1] (0.00ns)   --->   "%i19_1_cast = zext i5 %i19 to i32" [../Desktop/quantTest/sum.c:418]   --->   Operation 100 'zext' 'i19_1_cast' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 101 [1/1] (1.70ns)   --->   "br label %._crit_edge" [../Desktop/quantTest/sum.c:419]   --->   Operation 101 'br' <Predicate = true> <Delay = 1.70>
+
+State 21 <SV = 12> <Delay = 2.15>
+ST_21 : Operation 102 [1/1] (0.00ns)   --->   "%i19_4 = phi i32 [ %i19_1_cast, %5 ], [ %i19_2_cast, %7 ], [ %p_s, %8 ]" [../Desktop/quantTest/sum.c:418]   --->   Operation 102 'phi' 'i19_4' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 103 [1/1] (0.00ns)   --->   "%tmp_5 = sext i32 %i19_4 to i64" [../Desktop/quantTest/sum.c:428]   --->   Operation 103 'sext' 'tmp_5' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 104 [1/1] (0.00ns)   --->   "%X_addr_1 = getelementptr [25 x i1]* %X, i64 0, i64 %tmp_5" [../Desktop/quantTest/sum.c:428]   --->   Operation 104 'getelementptr' 'X_addr_1' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 105 [2/2] (2.15ns)   --->   "%X_load = load i1* %X_addr_1, align 1" [../Desktop/quantTest/sum.c:428]   --->   Operation 105 'load' 'X_load' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5> <RAM>
+
+State 22 <SV = 13> <Delay = 5.65>
+ST_22 : Operation 106 [1/2] (2.15ns)   --->   "%X_load = load i1* %X_addr_1, align 1" [../Desktop/quantTest/sum.c:428]   --->   Operation 106 'load' 'X_load' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 5> <RAM>
+ST_22 : Operation 107 [1/1] (0.00ns)   --->   "%extLd = zext i1 %X_load to i32" [../Desktop/quantTest/sum.c:428]   --->   Operation 107 'zext' 'extLd' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 108 [1/1] (0.00ns)   --->   "%tmp_13 = trunc i32 %ixstart_1 to i27" [../Desktop/quantTest/sum.c:403]   --->   Operation 108 'trunc' 'tmp_13' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 109 [1/1] (0.00ns)   --->   "%tmp_10 = zext i1 %X_load to i27" [../Desktop/quantTest/sum.c:428]   --->   Operation 109 'zext' 'tmp_10' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 110 [1/1] (0.00ns)   --->   "%tmp_14 = trunc i32 %ixstart_1 to i26" [../Desktop/quantTest/sum.c:403]   --->   Operation 110 'trunc' 'tmp_14' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 111 [1/1] (0.00ns)   --->   "%tmp_12 = zext i1 %X_load to i26" [../Desktop/quantTest/sum.c:428]   --->   Operation 111 'zext' 'tmp_12' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 112 [1/1] (2.70ns)   --->   "%ixstart_3 = add nsw i32 %ixstart_1, %extLd" [../Desktop/quantTest/sum.c:428]   --->   Operation 112 'add' 'ixstart_3' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 113 [1/1] (2.49ns)   --->   "%ixstart_5 = add i26 %tmp_12, %tmp_14" [../Desktop/quantTest/sum.c:428]   --->   Operation 113 'add' 'ixstart_5' <Predicate = true> <Delay = 2.49> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 114 [1/1] (2.52ns)   --->   "%ixstart_6_cast = add i27 %tmp_10, %tmp_13" [../Desktop/quantTest/sum.c:428]   --->   Operation 114 'add' 'ixstart_6_cast' <Predicate = true> <Delay = 2.52> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 115 [1/1] (0.00ns) (grouped into LUT with out node ixstart_2)   --->   "%tmp_15 = call i1 @_ssdm_op_BitSelect.i1.i27.i32(i27 %ixstart_6_cast, i32 26)" [../Desktop/quantTest/sum.c:429]   --->   Operation 115 'bitselect' 'tmp_15' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 116 [1/1] (0.00ns) (grouped into LUT with out node ixstart_2)   --->   "%ixstart_4 = or i32 %ixstart_3, -67108864" [../Desktop/quantTest/sum.c:430]   --->   Operation 116 'or' 'ixstart_4' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 117 [1/1] (0.00ns) (grouped into LUT with out node ixstart_2)   --->   "%ixstart_8_cast = zext i26 %ixstart_5 to i32" [../Desktop/quantTest/sum.c:432]   --->   Operation 117 'zext' 'ixstart_8_cast' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 118 [1/1] (0.79ns) (out node of the LUT)   --->   "%ixstart_2 = select i1 %tmp_15, i32 %ixstart_4, i32 %ixstart_8_cast" [../Desktop/quantTest/sum.c:429]   --->   Operation 118 'select' 'ixstart_2' <Predicate = true> <Delay = 0.79> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_22 : Operation 119 [1/1] (0.00ns)   --->   "br label %3" [../Desktop/quantTest/sum.c:411]   --->   Operation 119 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.66ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('indvars_iv1', ../Desktop/quantTest/sum.c:399) with incoming values : ('indvars_iv_next2', ../Desktop/quantTest/sum.c:399) [5]  (1.66 ns)
+
+ <State 2>: 2.15ns
+The critical path consists of the following:
+	'phi' operation ('indvars_iv1', ../Desktop/quantTest/sum.c:399) with incoming values : ('indvars_iv_next2', ../Desktop/quantTest/sum.c:399) [5]  (0 ns)
+	'getelementptr' operation ('X_addr', ../Desktop/quantTest/sum.c:402) [17]  (0 ns)
+	'load' operation ('ixstart', ../Desktop/quantTest/sum.c:402) on array 'X' [18]  (2.15 ns)
+
+ <State 3>: 2.15ns
+The critical path consists of the following:
+	'load' operation ('ixstart', ../Desktop/quantTest/sum.c:402) on array 'X' [18]  (2.15 ns)
+
+ <State 4>: 5.94ns
+The critical path consists of the following:
+	'phi' operation ('i1', ../Desktop/quantTest/sum.c:418) with incoming values : ('p_s', ../Desktop/quantTest/sum.c:423) ('i19_2_cast', ../Desktop/quantTest/sum.c:420) ('i19_1_cast', ../Desktop/quantTest/sum.c:418) [23]  (0 ns)
+	'add' operation ('i19', ../Desktop/quantTest/sum.c:422) [37]  (2.7 ns)
+	'icmp' operation ('tmp_9', ../Desktop/quantTest/sum.c:423) [38]  (2.44 ns)
+	'select' operation ('p_s', ../Desktop/quantTest/sum.c:423) [40]  (0.796 ns)
+
+ <State 5>: 3.06ns
+The critical path consists of the following:
+	'urem' operation ('tmp_6', ../Desktop/quantTest/sum.c:420) [43]  (3.06 ns)
+
+ <State 6>: 3.06ns
+The critical path consists of the following:
+	'urem' operation ('tmp_6', ../Desktop/quantTest/sum.c:420) [43]  (3.06 ns)
+
+ <State 7>: 3.06ns
+The critical path consists of the following:
+	'urem' operation ('tmp_6', ../Desktop/quantTest/sum.c:420) [43]  (3.06 ns)
+
+ <State 8>: 3.06ns
+The critical path consists of the following:
+	'urem' operation ('tmp_6', ../Desktop/quantTest/sum.c:420) [43]  (3.06 ns)
+
+ <State 9>: 3.06ns
+The critical path consists of the following:
+	'urem' operation ('tmp_6', ../Desktop/quantTest/sum.c:420) [43]  (3.06 ns)
+
+ <State 10>: 3.06ns
+The critical path consists of the following:
+	'urem' operation ('tmp_6', ../Desktop/quantTest/sum.c:420) [43]  (3.06 ns)
+
+ <State 11>: 3.69ns
+The critical path consists of the following:
+	'mul' operation ('mul4', ../Desktop/quantTest/sum.c:420) [47]  (3.69 ns)
+
+ <State 12>: 6.7ns
+The critical path consists of the following:
+	'urem' operation ('tmp_6', ../Desktop/quantTest/sum.c:420) [43]  (3.06 ns)
+	'add' operation ('tmp2', ../Desktop/quantTest/sum.c:420) [49]  (1.78 ns)
+	'add' operation ('i19', ../Desktop/quantTest/sum.c:420) [51]  (1.86 ns)
+
+ <State 13>: 3.06ns
+The critical path consists of the following:
+	'urem' operation ('tmp_7', ../Desktop/quantTest/sum.c:418) [55]  (3.06 ns)
+
+ <State 14>: 3.06ns
+The critical path consists of the following:
+	'urem' operation ('tmp_7', ../Desktop/quantTest/sum.c:418) [55]  (3.06 ns)
+
+ <State 15>: 3.06ns
+The critical path consists of the following:
+	'urem' operation ('tmp_7', ../Desktop/quantTest/sum.c:418) [55]  (3.06 ns)
+
+ <State 16>: 3.06ns
+The critical path consists of the following:
+	'urem' operation ('tmp_7', ../Desktop/quantTest/sum.c:418) [55]  (3.06 ns)
+
+ <State 17>: 3.06ns
+The critical path consists of the following:
+	'urem' operation ('tmp_7', ../Desktop/quantTest/sum.c:418) [55]  (3.06 ns)
+
+ <State 18>: 3.06ns
+The critical path consists of the following:
+	'urem' operation ('tmp_7', ../Desktop/quantTest/sum.c:418) [55]  (3.06 ns)
+
+ <State 19>: 3.69ns
+The critical path consists of the following:
+	'mul' operation ('mul', ../Desktop/quantTest/sum.c:418) [59]  (3.69 ns)
+
+ <State 20>: 6.7ns
+The critical path consists of the following:
+	'urem' operation ('tmp_7', ../Desktop/quantTest/sum.c:418) [55]  (3.06 ns)
+	'add' operation ('tmp1', ../Desktop/quantTest/sum.c:418) [61]  (1.78 ns)
+	'add' operation ('i19', ../Desktop/quantTest/sum.c:418) [63]  (1.86 ns)
+
+ <State 21>: 2.15ns
+The critical path consists of the following:
+	'phi' operation ('i19_4', ../Desktop/quantTest/sum.c:418) with incoming values : ('p_s', ../Desktop/quantTest/sum.c:423) ('i19_2_cast', ../Desktop/quantTest/sum.c:420) ('i19_1_cast', ../Desktop/quantTest/sum.c:418) [67]  (0 ns)
+	'getelementptr' operation ('X_addr_1', ../Desktop/quantTest/sum.c:428) [69]  (0 ns)
+	'load' operation ('X_load', ../Desktop/quantTest/sum.c:428) on array 'X' [70]  (2.15 ns)
+
+ <State 22>: 5.65ns
+The critical path consists of the following:
+	'load' operation ('X_load', ../Desktop/quantTest/sum.c:428) on array 'X' [70]  (2.15 ns)
+	'add' operation ('ixstart', ../Desktop/quantTest/sum.c:428) [76]  (2.7 ns)
+	'or' operation ('ixstart', ../Desktop/quantTest/sum.c:430) [80]  (0 ns)
+	'select' operation ('ixstart', ../Desktop/quantTest/sum.c:429) [82]  (0.796 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

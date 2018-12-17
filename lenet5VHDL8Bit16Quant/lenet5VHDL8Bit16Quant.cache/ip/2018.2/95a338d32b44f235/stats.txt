@@ -1,0 +1,4 @@
+NumberHits:0
+Timestamp: Mon Dec 10 20:33:11 UTC 2018
+VLNV: BryanBlakeslee:LeNet5:lenetSynthMatlab_fixpt:1.0
+SynthRuntime: 53

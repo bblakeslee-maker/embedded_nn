@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Mon Dec 10 15:53:37 2018
+# Process ID: 15425
+# Current directory: /home/tyrian/nnproject/lenet5VHDL8Bit16Quant/lenet5VHDL8Bit16Quant.sim/sim_1/behav/xsim
+# Command line: wbtcv -mode batch -source /home/tyrian/nnproject/lenet5VHDL8Bit16Quant/lenet5VHDL8Bit16Quant.sim/sim_1/behav/xsim/xsim.dir/tb_lenet5_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /home/tyrian/nnproject/lenet5VHDL8Bit16Quant/lenet5VHDL8Bit16Quant.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: /home/tyrian/nnproject/lenet5VHDL8Bit16Quant/lenet5VHDL8Bit16Quant.sim/sim_1/behav/xsim/webtalk.jou
+#-----------------------------------------------------------
+source /home/tyrian/nnproject/lenet5VHDL8Bit16Quant/lenet5VHDL8Bit16Quant.sim/sim_1/behav/xsim/xsim.dir/tb_lenet5_behav/webtalk/xsim_webtalk.tcl -notrace

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Wed Dec 12 12:12:16 2018
+# Process ID: 26274
+# Current directory: /home/tyrian/nnproject/hls8BitFloatMod/Lenet_100MHz/impl/ip
+# Command line: vivado -notrace -mode batch -source run_ippack.tcl
+# Log file: /home/tyrian/nnproject/hls8BitFloatMod/Lenet_100MHz/impl/ip/vivado.log
+# Journal file: /home/tyrian/nnproject/hls8BitFloatMod/Lenet_100MHz/impl/ip/vivado.jou
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace

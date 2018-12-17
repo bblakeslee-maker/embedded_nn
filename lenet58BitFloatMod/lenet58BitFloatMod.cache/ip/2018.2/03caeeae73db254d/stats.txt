@@ -1,0 +1,4 @@
+NumberHits:0
+Timestamp: Mon Dec 10 23:05:15 UTC 2018
+VLNV: xilinx.com:hls:lenetSynthMatlab:1.0
+SynthRuntime: 161

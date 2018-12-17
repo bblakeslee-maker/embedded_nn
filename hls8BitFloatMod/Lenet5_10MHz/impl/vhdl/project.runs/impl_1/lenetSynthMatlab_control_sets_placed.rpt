@@ -1,0 +1,190 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Tue Dec 11 23:04:01 2018
+| Host         : Neuromancer running 64-bit Ubuntu 18.04.1 LTS
+| Command      : report_control_sets -verbose -file lenetSynthMatlab_control_sets_placed.rpt
+| Design       : lenetSynthMatlab
+| Device       : xc7a100t
+---------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |   122 |
+| Unused register locations in slices containing registers |   304 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      8 |           21 |
+|     10 |           24 |
+|     12 |            4 |
+|     14 |           13 |
+|    16+ |           60 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             388 |           66 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             240 |           69 |
+| Yes          | No                    | No                     |            2366 |          447 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             694 |          108 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------+-----------------------------------------------------+----------------------------------------------------------+------------------+----------------+
+| Clock Signal |                    Enable Signal                    |                     Set/Reset Signal                     | Slice Load Count | Bel Load Count |
++--------------+-----------------------------------------------------+----------------------------------------------------------+------------------+----------------+
+|  ap_clk      | ap_CS_fsm_state41                                   |                                                          |                1 |              8 |
+|  ap_clk      | j_reg_10260                                         |                                                          |                3 |              8 |
+|  ap_clk      | grp_g_sum_fu_1416/tmp_reg_2011                      |                                                          |                1 |              8 |
+|  ap_clk      | grp_g_sum_fu_1416/y_addr_2_reg_2370                 |                                                          |                1 |              8 |
+|  ap_clk      | conv2ActivationMap_U/lenetSynthMatlab_sc4_ram_U/we0 | c_2_reg_10610                                            |                2 |              8 |
+|  ap_clk      | grp_sum_fu_1422/b_k_reg_910                         |                                                          |                2 |              8 |
+|  ap_clk      | tmp_5_cast_reg_4415[4]_i_1_n_0                      |                                                          |                1 |              8 |
+|  ap_clk      | ap_CS_fsm_state21                                   |                                                          |                1 |              8 |
+|  ap_clk      | ap_CS_fsm_state28                                   |                                                          |                2 |              8 |
+|  ap_clk      | ap_CS_fsm_state40                                   |                                                          |                2 |              8 |
+|  ap_clk      | ap_CS_fsm_state27                                   |                                                          |                1 |              8 |
+|  ap_clk      | ap_CS_fsm_state62                                   | k_i2_reg_1296                                            |                1 |              8 |
+|  ap_clk      | ap_NS_fsm121_out                                    | colOutIdx_4_reg_1138                                     |                1 |              8 |
+|  ap_clk      | ap_NS_fsm122_out                                    | ap_NS_fsm133_out                                         |                1 |              8 |
+|  ap_clk      | ap_NS_fsm130_out                                    | r_2_reg_1049                                             |                1 |              8 |
+|  ap_clk      | b_k_2_reg_11490                                     |                                                          |                1 |              8 |
+|  ap_clk      | ce0                                                 |                                                          |                1 |              8 |
+|  ap_clk      | colOutIdx_8_reg_13870                               |                                                          |                1 |              8 |
+|  ap_clk      | ce047_in                                            | biasConv1_U/lenetSynthMatlab_cud_rom_U/q0[21]_i_1_n_0    |                1 |              8 |
+|  ap_clk      | grp_d_sum_fu_1410/b_k_reg_890                       |                                                          |                1 |              8 |
+|  ap_clk      | we01                                                | c_1_reg_1014                                             |                1 |              8 |
+|  ap_clk      | grp_g_sum_fu_1416/ap_CS_fsm_state3                  | grp_g_sum_fu_1416/k_reg_71                               |                1 |             10 |
+|  ap_clk      | ap_NS_fsm138_out                                    | colOutIdx_1_reg_9360                                     |                1 |             10 |
+|  ap_clk      | grp_c_sum_fu_1398/b_k_1_reg_1120                    |                                                          |                2 |             10 |
+|  ap_clk      | ap_NS_fsm131_out                                    | f_2_reg_1037                                             |                2 |             10 |
+|  ap_clk      | grp_c_sum_fu_1398/b_k_reg_900                       |                                                          |                1 |             10 |
+|  ap_clk      | ap_NS_fsm118_out                                    | f_3_reg_1171                                             |                2 |             10 |
+|  ap_clk      | ap_NS_fsm115_out                                    |                                                          |                1 |             10 |
+|  ap_clk      | grp_g_sum_fu_1416/ap_CS_fsm_state2                  |                                                          |                1 |             10 |
+|  ap_clk      | ap_CS_fsm_state42                                   |                                                          |                1 |             10 |
+|  ap_clk      | ce047_in                                            | biasConv1_U/lenetSynthMatlab_cud_rom_U/q0[31]_i_1__6_n_0 |                1 |             10 |
+|  ap_clk      | we010_in                                            | b_k_2_reg_11490                                          |                1 |             10 |
+|  ap_clk      | grp_c_sum_fu_1398/ap_NS_fsm[3]                      |                                                          |                2 |             10 |
+|  ap_clk      | ap_CS_fsm_state15                                   |                                                          |                1 |             10 |
+|  ap_clk      | ap_CS_fsm_reg_n_0_[54]                              | b_k_3_reg_12750                                          |                2 |             10 |
+|  ap_clk      | grp_g_sum_fu_1416/ap_CS_fsm_state6                  | grp_g_sum_fu_1416/b_k_reg_930                            |                1 |             10 |
+|  ap_clk      | ce03_in                                             |                                                          |                2 |             10 |
+|  ap_clk      | tmp_24_reg_42950                                    |                                                          |                1 |             10 |
+|  ap_clk      | conv1ActivationMap_U/lenetSynthMatlab_ncg_ram_U/we0 | c_reg_8590                                               |                2 |             10 |
+|  ap_clk      | grp_c_sum_fu_1398/ap_NS_fsm[7]                      |                                                          |                3 |             10 |
+|  ap_clk      | grp_f_sum_fu_1404/c_k_1_reg_361_reg[4]_0[0]         |                                                          |                3 |             10 |
+|  ap_clk      | grp_f_sum_fu_1404/ap_CS_fsm_state3                  |                                                          |                1 |             10 |
+|  ap_clk      | grp_g_sum_fu_1416/ap_CS_fsm_state5                  |                                                          |                2 |             10 |
+|  ap_clk      | grp_f_sum_fu_1404/ap_CS_fsm_state4                  | grp_f_sum_fu_1404/b_k_reg_900                            |                1 |             10 |
+|  ap_clk      | grp_f_sum_fu_1404/ap_CS_fsm_state8                  | grp_f_sum_fu_1404/c_k_reg_1230                           |                1 |             10 |
+|  ap_clk      | ap_CS_fsm_state6                                    |                                                          |                2 |             12 |
+|  ap_clk      | r_3_reg_11940                                       |                                                          |                3 |             12 |
+|  ap_clk      | c_2_reg_10610                                       |                                                          |                1 |             12 |
+|  ap_clk      | colOutIdx_4_reg_11380                               |                                                          |                1 |             12 |
+|  ap_clk      | ap_CS_fsm_state68                                   | colOutIdx_7_reg_1341                                     |                1 |             14 |
+|  ap_clk      | ap_CS_fsm_state66                                   |                                                          |                3 |             14 |
+|  ap_clk      | ap_CS_fsm_state72                                   | colOutIdx_8_reg_1387                                     |                3 |             14 |
+|  ap_clk      | ap_CS_fsm_state64                                   |                                                          |                3 |             14 |
+|  ap_clk      | ap_NS_fsm110_out                                    |                                                          |                3 |             14 |
+|  ap_clk      | we017_in                                            | ap_NS_fsm18_out                                          |                3 |             14 |
+|  ap_clk      | b_k_reg_9470                                        |                                                          |                2 |             14 |
+|  ap_clk      | we014_in                                            | ap_NS_fsm116_out                                         |                2 |             14 |
+|  ap_clk      | ap_CS_fsm_state51                                   |                                                          |                5 |             14 |
+|  ap_clk      | grp_f_sum_fu_1404/tmp_158_reg_3161                  |                                                          |                2 |             14 |
+|  ap_clk      | tmp_49_reg_49071                                    |                                                          |                3 |             14 |
+|  ap_clk      | ce015_in                                            |                                                          |                3 |             14 |
+|  ap_clk      | grp_f_sum_fu_1404/y_addr_3_reg_3710                 |                                                          |                2 |             14 |
+|  ap_clk      | tmp_101_reg_46100                                   |                                                          |                2 |             16 |
+|  ap_clk      | invdar1_reg_11600                                   | ap_NS_fsm123_out                                         |                4 |             18 |
+|  ap_clk      | b_k_3_reg_12750                                     |                                                          |                3 |             18 |
+|  ap_clk      | tmp_148_reg_48561                                   |                                                          |                3 |             18 |
+|  ap_clk      | ap_CS_fsm_state5                                    |                                                          |                4 |             20 |
+|  ap_clk      | ap_CS_fsm_state45                                   |                                                          |                3 |             20 |
+|  ap_clk      | b_k_1_reg_10950                                     |                                                          |                4 |             22 |
+|  ap_clk      | grp_c_sum_fu_1398/c_k_reg_1230                      |                                                          |                3 |             22 |
+|  ap_clk      | tmp_72_reg_46721                                    |                                                          |                3 |             22 |
+|  ap_clk      | invdar_reg_9580                                     | ap_NS_fsm140_out                                         |                4 |             22 |
+|  ap_clk      | ap_CS_fsm_state70                                   |                                                          |                3 |             24 |
+|  ap_clk      | netScores_ce0                                       | ap_NS_fsm17_out                                          |                3 |             24 |
+|  ap_clk      | ap_CS_fsm_state52                                   |                                                          |                5 |             26 |
+|  ap_clk      | ap_NS_fsm114_out                                    | k_4_reg_12410                                            |                5 |             26 |
+|  ap_clk      | tmp_8_reg_43621                                     |                                                          |                4 |             26 |
+|  ap_clk      | ap_NS_fsm144_out                                    |                                                          |                6 |             28 |
+|  ap_clk      | ap_NS_fsm134_out                                    | phi_mul4_reg_1003                                        |                2 |             28 |
+|  ap_clk      | ap_NS_fsm145_out                                    | phi_mul_reg_848                                          |                3 |             32 |
+|  ap_clk      | ap_NS_fsm139_out                                    | ap_NS_fsm148_out                                         |                4 |             32 |
+|  ap_clk      | ap_NS_fsm129_out                                    |                                                          |                4 |             32 |
+|  ap_clk      | we012_in                                            | ap_NS_fsm119_out                                         |                9 |             34 |
+|  ap_clk      | colOutIdx_7_reg_13410                               |                                                          |                5 |             36 |
+|  ap_clk      | tmp_121_reg_47790                                   |                                                          |                7 |             38 |
+|  ap_clk      | ap_CS_fsm_state20                                   |                                                          |                6 |             48 |
+|  ap_clk      | tmp_45_reg_44820                                    |                                                          |                9 |             52 |
+|  ap_clk      | ce047_in                                            |                                                          |                7 |             52 |
+|  ap_clk      | ap_CS_fsm_state4                                    |                                                          |                5 |             54 |
+|  ap_clk      | ap_CS_fsm_state14                                   |                                                          |                7 |             54 |
+|  ap_clk      | ap_CS_fsm_state3                                    |                                                          |                6 |             58 |
+|  ap_clk      | ap_CS_fsm_state26                                   |                                                          |                7 |             58 |
+|  ap_clk      | maxval_1_6_fu_344[31]_i_1_n_0                       |                                                          |               18 |             64 |
+|  ap_clk      | x_assign_reg_980[31]_i_2_n_0                        | x_assign_reg_980[31]_i_1_n_0                             |                6 |             64 |
+|  ap_clk      | maxval_1_7_fu_348[31]_i_1_n_0                       |                                                          |               16 |             64 |
+|  ap_clk      | maxval_1_fu_336                                     |                                                          |               16 |             64 |
+|  ap_clk      | tmp_111_reg_1375[31]_i_2_n_0                        | tmp_111_reg_1375[31]_i_1_n_0                             |               11 |             64 |
+|  ap_clk      | tmp_95_reg_1329[31]_i_2_n_0                         | tmp_95_reg_1329[31]_i_1_n_0                              |               12 |             64 |
+|  ap_clk      | x_assign_5_reg_1182[31]_i_2_n_0                     | x_assign_5_reg_1182[31]_i_1_n_0                          |               13 |             64 |
+|  ap_clk      | grp_sum_fu_1422/E[0]                                |                                                          |               14 |             64 |
+|  ap_clk      | grp_d_sum_fu_1410/q0_reg[31]                        |                                                          |                8 |             64 |
+|  ap_clk      | grp_d_sum_fu_1410/E[0]                              |                                                          |               14 |             64 |
+|  ap_clk      | grp_d_sum_fu_1410/q0_reg[31]_1[0]                   |                                                          |               23 |             64 |
+|  ap_clk      | grp_g_sum_fu_1416/p_0_in                            |                                                          |                8 |             64 |
+|  ap_clk      | grp_g_sum_fu_1416/E[0]                              |                                                          |               23 |             64 |
+|  ap_clk      | ap_CS_fsm[11]_i_1_n_0                               |                                                          |               11 |             64 |
+|  ap_clk      | grp_sum_fu_1422/p_0_in                              |                                                          |                8 |             64 |
+|  ap_clk      | grp_sum_fu_1422/q0_reg[0]_7                         |                                                          |                8 |             64 |
+|  ap_clk      | grp_sum_fu_1422/q0_reg[31]_0                        |                                                          |                8 |             64 |
+|  ap_clk      | grp_sum_fu_1422/q0_reg[31][0]                       |                                                          |               25 |             64 |
+|  ap_clk      | ap_CS_fsm[37]_i_1_n_0                               |                                                          |                7 |             64 |
+|  ap_clk      | ap_CS_fsm[60]_i_1_n_0                               |                                                          |               14 |             64 |
+|  ap_clk      | grp_d_sum_fu_1410/q0_reg[0]_6                       |                                                          |                8 |             64 |
+|  ap_clk      | grp_d_sum_fu_1410/p_0_in                            |                                                          |                8 |             64 |
+|  ap_clk      | maxval_1_3_fu_340                                   |                                                          |               11 |             64 |
+|  ap_clk      | c_3_reg_12060                                       |                                                          |               13 |             70 |
+|  ap_clk      | ce018_in                                            |                                                          |               18 |             70 |
+|  ap_clk      | ce032_in                                            |                                                          |                9 |             76 |
+|  ap_clk      | c_1_reg_10140                                       |                                                          |               16 |             82 |
+|  ap_clk      | ap_CS_fsm_state19                                   |                                                          |               20 |            140 |
+|  ap_clk      |                                                     | ap_rst                                                   |               69 |            240 |
+|  ap_clk      |                                                     |                                                          |               66 |            388 |
++--------------+-----------------------------------------------------+----------------------------------------------------------+------------------+----------------+
+
+

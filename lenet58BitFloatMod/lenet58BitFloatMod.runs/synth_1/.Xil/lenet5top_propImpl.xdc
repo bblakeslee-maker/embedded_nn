@@ -1,0 +1,12 @@
+set_property SRC_FILE_INFO {cfile:/home/tyrian/nnproject/lenet58BitFloatMod/lenet58BitFloatMod.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc rfile:../../../lenet58BitFloatMod.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc id:1 order:EARLY scoped_inst:clk_div_0/inst} [current_design]
+set_property SRC_FILE_INFO {cfile:/home/tyrian/nnproject/lenet58BitFloatMod/lenet58BitFloatMod.srcs/constrs_1/new/constraints.xdc rfile:../../../lenet58BitFloatMod.srcs/constrs_1/new/constraints.xdc id:2} [current_design]
+set_property src_info {type:SCOPED_XDC file:1 line:57 export:INPUT save:INPUT read:READ} [current_design]
+set_input_jitter [get_clocks -of_objects [get_ports clk_in1]] 0.1
+set_property src_info {type:XDC file:2 line:3 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN E3 [get_ports clk]
+set_property src_info {type:XDC file:2 line:8 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN M18 [get_ports rst]
+set_property src_info {type:XDC file:2 line:12 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict {PACKAGE_PIN C4  IOSTANDARD LVCMOS33} [get_ports {uart_rx}]
+set_property src_info {type:XDC file:2 line:13 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict {PACKAGE_PIN D4  IOSTANDARD LVCMOS33} [get_ports {uart_tx}]

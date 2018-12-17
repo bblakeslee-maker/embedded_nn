@@ -1,0 +1,4 @@
+NumberHits:0
+Timestamp: Sun Dec 09 18:22:26 UTC 2018
+VLNV: BryanBlakeslee:lenet5VHDL8Bit:lenetSynthMatlab:1.0
+SynthRuntime: 119

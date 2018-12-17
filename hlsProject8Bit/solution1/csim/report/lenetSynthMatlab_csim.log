@@ -1,0 +1,19 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling(apcc) ../../../../codegen/lib/lenetSynthMatlab/examples/main.c in debug mode
+INFO: [HLS 200-10] Running '/home/tyrian/xilinx/Vivado/2018.2/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'tyrian' on host 'Neuromancer' (Linux_x86_64 version 4.15.0-42-generic) on Sun Dec 09 17:51:05 EST 2018
+INFO: [HLS 200-10] On os Ubuntu 18.04.1 LTS
+INFO: [HLS 200-10] In directory '/home/tyrian/nnproject/hlsProject8Bit/solution1/csim/build'
+../../../../codegen/lib/lenetSynthMatlab/examples/main.c:36:10: fatal error: 'lenetSynthMatlab.h' file not found
+#include "lenetSynthMatlab.h"
+         ^
+1 error generated.
+ERROR: [APCC 202-10] clang compile failed: child process exited abnormally
+ERROR: [APCC 202-1] ProcessSources failed
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_tyrian/76941544395865230998
+ERROR: [APCC 202-1] APCC failed.
+csim.mk:81: recipe for target 'obj/main.o' failed
+make: *** [obj/main.o] Error 1
+ERR: [SIM 100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 3] *************** CSIM finish ***************

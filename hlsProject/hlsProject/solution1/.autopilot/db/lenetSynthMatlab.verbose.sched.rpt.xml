@@ -1,0 +1,84 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'lenetSynthMatlab'" level="0">
+<item name = "Date">Sat Dec  8 21:20:54 2018
+</item>
+<item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
+<item name = "Project">hlsProject</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">artix7</item>
+<item name = "Target device">xc7a100tcsg324-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 8.572, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">6978124, 6978124, 6978124, 6978124, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Loop 1">1783164, 1783164, 297194, -, -, 6, no</column>
+<column name=" + Loop 1.1">297192, 297192, 10614, -, -, 28, no</column>
+<column name="  ++ Loop 1.1.1">10612, 10612, 379, -, -, 28, no</column>
+<column name="   +++ Loop 1.1.1.1">160, 160, 32, -, -, 5, no</column>
+<column name="    ++++ Loop 1.1.1.1.1">30, 30, 6, -, -, 5, no</column>
+<column name="   +++ Loop 1.1.1.2">28, 28, 7, -, -, 4, no</column>
+<column name="- Loop 2">20440, 20440, 730, -, -, 28, no</column>
+<column name=" + Loop 2.1">728, 728, 26, -, -, 28, no</column>
+<column name="  ++ Loop 2.1.1">24, 24, 4, -, -, 6, no</column>
+<column name="- memset_pool1ActivationMap">1175, 1175, 1, -, -, 1176, no</column>
+<column name="- Loop 4">20592, 20592, 3432, -, -, 6, no</column>
+<column name=" + Loop 4.1">3430, 3430, 245, -, -, 14, no</column>
+<column name="  ++ Loop 4.1.1">238, 238, 17, -, -, 14, no</column>
+<column name="   +++ Loop 4.1.1.1">12, 12, 6, -, -, 2, no</column>
+<column name="- Loop 5">4163552, 4163552, 260222, -, -, 16, no</column>
+<column name=" + Loop 5.1">260220, 260220, 26022, -, -, 10, no</column>
+<column name="  ++ Loop 5.1.1">26020, 26020, 2602, -, -, 10, no</column>
+<column name="   +++ Loop 5.1.1.1">1260, 1260, 252, -, -, 5, no</column>
+<column name="    ++++ Loop 5.1.1.1.1">250, 250, 50, -, -, 5, no</column>
+<column name="     +++++ Loop 5.1.1.1.1.1">48, 48, 8, -, -, 6, no</column>
+<column name="   +++ Loop 5.1.1.2">35, 35, 7, -, -, 5, no</column>
+<column name="- Loop 6">6620, 6620, 662, -, -, 10, no</column>
+<column name=" + Loop 6.1">660, 660, 66, -, -, 10, no</column>
+<column name="  ++ Loop 6.1.1">64, 64, 4, -, -, 16, no</column>
+<column name="- memset_pool2ActivationMap">399, 399, 1, -, -, 400, no</column>
+<column name="- Loop 8">6992, 6992, 437, -, -, 16, no</column>
+<column name=" + Loop 8.1">435, 435, 87, -, -, 5, no</column>
+<column name="  ++ Loop 8.1.1">80, 80, 16, -, -, 5, no</column>
+<column name="   +++ Loop 8.1.1.1">12, 12, 6, -, -, 2, no</column>
+<column name="- Loop 9">843840, 843840, 7032, -, -, 120, no</column>
+<column name=" + Loop 9.1">3260, 3260, 652, -, -, 5, no</column>
+<column name="  ++ Loop 9.1.1">650, 650, 130, -, -, 5, no</column>
+<column name="   +++ Loop 9.1.1.1">128, 128, 8, -, -, 16, no</column>
+<column name=" + Loop 9.2">105, 105, 7, -, -, 15, no</column>
+<column name="- Loop 10">480, 480, 4, -, -, 120, no</column>
+<column name="- Loop 11">121548, 121548, 1447, -, -, 84, no</column>
+<column name=" + Loop 11.1">1440, 1440, 12, -, -, 120, no</column>
+<column name="- Loop 12">9310, 9310, 931, -, -, 10, no</column>
+<column name=" + Loop 12.1">924, 924, 11, -, -, 84, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

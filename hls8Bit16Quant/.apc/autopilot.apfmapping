@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="lenetSynthMatlab_fixpt.c" path="/home/tyrian/Desktop/quantTest/lenetSynthMatlab_fixpt.c"/>
+    <originFiles name="lenetSynthMatlab_fixpt.h" path="/home/tyrian/Desktop/quantTest/lenetSynthMatlab_fixpt.h"/>
+    <originFiles name="lenetSynthMatlab_fixpt_data.c" path="/home/tyrian/Desktop/quantTest/lenetSynthMatlab_fixpt_data.c"/>
+    <originFiles name="lenetSynthMatlab_fixpt_data.h" path="/home/tyrian/Desktop/quantTest/lenetSynthMatlab_fixpt_data.h"/>
+    <originFiles name="lenetSynthMatlab_fixpt_initialize.c" path="/home/tyrian/Desktop/quantTest/lenetSynthMatlab_fixpt_initialize.c"/>
+    <originFiles name="lenetSynthMatlab_fixpt_initialize.h" path="/home/tyrian/Desktop/quantTest/lenetSynthMatlab_fixpt_initialize.h"/>
+    <originFiles name="lenetSynthMatlab_fixpt_terminate.c" path="/home/tyrian/Desktop/quantTest/lenetSynthMatlab_fixpt_terminate.c"/>
+    <originFiles name="lenetSynthMatlab_fixpt_terminate.h" path="/home/tyrian/Desktop/quantTest/lenetSynthMatlab_fixpt_terminate.h"/>
+    <originFiles name="lenetSynthMatlab_fixpt_types.h" path="/home/tyrian/Desktop/quantTest/lenetSynthMatlab_fixpt_types.h"/>
+    <originFiles name="max.c" path="/home/tyrian/Desktop/quantTest/max.c"/>
+    <originFiles name="max.h" path="/home/tyrian/Desktop/quantTest/max.h"/>
+    <originFiles name="mtimes.c" path="/home/tyrian/Desktop/quantTest/mtimes.c"/>
+    <originFiles name="mtimes.h" path="/home/tyrian/Desktop/quantTest/mtimes.h"/>
+    <originFiles name="rtwtypes.h" path="/home/tyrian/Desktop/quantTest/rtwtypes.h"/>
+    <originFiles name="sum.c" path="/home/tyrian/Desktop/quantTest/sum.c"/>
+    <originFiles name="sum.h" path="/home/tyrian/Desktop/quantTest/sum.h"/>
+    <originFiles name="tmwtypes.h" path="/home/tyrian/Desktop/quantTest/tmwtypes.h"/>
+  </source>
+  <testbench/>
+</autopilotfilemapping:AutoPilotFileMapping>

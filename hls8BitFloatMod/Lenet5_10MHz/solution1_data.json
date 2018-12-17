@@ -1,0 +1,884 @@
+{
+  "Top": "lenetSynthMatlab",
+  "RtlTop": "lenetSynthMatlab",
+  "RtlPrefix": "",
+  "SourceLanguage": "c",
+  "ResetStyle": "control",
+  "GenerateBdFiles": "0",
+  "HostMachineBits": "64",
+  "Target": {
+    "Family": "artix7",
+    "Device": "xc7a100t",
+    "Package": "csg324",
+    "Speed": "-1"
+  },
+  "HlsSolution": {
+    
+  },
+  "ClockInfo": {
+    "ClockName": "ap_clk",
+    "ClockPeriod": "100",
+    "IsCombLogic": "0",
+    "II": "x",
+    "Latency": "2206718",
+    "Uncertainty": "12.5"
+  },
+  "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 100.000 [get_ports ap_clk]"]},
+  "Ipx": {
+    "Vendor": "BryanBlakeslee",
+    "Library": "LeNet5",
+    "Name": "lenetSynthMatlab",
+    "Version": "1.0",
+    "DisplayName": "Lenetsynthmatlab",
+    "Revision": "",
+    "Description": "LeNet5 synth for 10MHz",
+    "Taxonomy": "\/VIVADO_HLS_IP"
+  },
+  "Files": {
+    "CSource": [
+      "..\/..\/..\/Desktop\/buildTest\/sum.c",
+      "..\/..\/..\/Desktop\/buildTest\/lenetSynthMatlab.c"
+    ],
+    "Vhdl": [
+      "impl\/vhdl\/c_sum.vhd",
+      "impl\/vhdl\/d_sum.vhd",
+      "impl\/vhdl\/f_sum.vhd",
+      "impl\/vhdl\/g_sum.vhd",
+      "impl\/vhdl\/lenetSynthMatlab_Aem.vhd",
+      "impl\/vhdl\/lenetSynthMatlab_bkb.vhd",
+      "impl\/vhdl\/lenetSynthMatlab_CeG.vhd",
+      "impl\/vhdl\/lenetSynthMatlab_cud.vhd",
+      "impl\/vhdl\/lenetSynthMatlab_dEe.vhd",
+      "impl\/vhdl\/lenetSynthMatlab_DeQ.vhd",
+      "impl\/vhdl\/lenetSynthMatlab_Ee0.vhd",
+      "impl\/vhdl\/lenetSynthMatlab_eOg.vhd",
+      "impl\/vhdl\/lenetSynthMatlab_Ffa.vhd",
+      "impl\/vhdl\/lenetSynthMatlab_fYi.vhd",
+      "impl\/vhdl\/lenetSynthMatlab_g8j.vhd",
+      "impl\/vhdl\/lenetSynthMatlab_hbi.vhd",
+      "impl\/vhdl\/lenetSynthMatlab_ibs.vhd",
+      "impl\/vhdl\/lenetSynthMatlab_jbC.vhd",
+      "impl\/vhdl\/lenetSynthMatlab_kbM.vhd",
+      "impl\/vhdl\/lenetSynthMatlab_lbW.vhd",
+      "impl\/vhdl\/lenetSynthMatlab_mb6.vhd",
+      "impl\/vhdl\/lenetSynthMatlab_ncg.vhd",
+      "impl\/vhdl\/lenetSynthMatlab_ocq.vhd",
+      "impl\/vhdl\/lenetSynthMatlab_pcA.vhd",
+      "impl\/vhdl\/lenetSynthMatlab_qcK.vhd",
+      "impl\/vhdl\/lenetSynthMatlab_rcU.vhd",
+      "impl\/vhdl\/lenetSynthMatlab_sc4.vhd",
+      "impl\/vhdl\/lenetSynthMatlab_tde.vhd",
+      "impl\/vhdl\/lenetSynthMatlab_udo.vhd",
+      "impl\/vhdl\/lenetSynthMatlab_vdy.vhd",
+      "impl\/vhdl\/lenetSynthMatlab_wdI.vhd",
+      "impl\/vhdl\/lenetSynthMatlab_yd2.vhd",
+      "impl\/vhdl\/lenetSynthMatlab_zec.vhd",
+      "impl\/vhdl\/sum.vhd",
+      "impl\/vhdl\/lenetSynthMatlab.vhd"
+    ],
+    "Verilog": [
+      "impl\/verilog\/c_sum.v",
+      "impl\/verilog\/d_sum.v",
+      "impl\/verilog\/f_sum.v",
+      "impl\/verilog\/g_sum.v",
+      "impl\/verilog\/lenetSynthMatlab_Aem.v",
+      "impl\/verilog\/lenetSynthMatlab_bkb.v",
+      "impl\/verilog\/lenetSynthMatlab_CeG.v",
+      "impl\/verilog\/lenetSynthMatlab_cud.v",
+      "impl\/verilog\/lenetSynthMatlab_cud_rom.dat",
+      "impl\/verilog\/lenetSynthMatlab_dEe.v",
+      "impl\/verilog\/lenetSynthMatlab_dEe_rom.dat",
+      "impl\/verilog\/lenetSynthMatlab_DeQ.v",
+      "impl\/verilog\/lenetSynthMatlab_Ee0.v",
+      "impl\/verilog\/lenetSynthMatlab_eOg.v",
+      "impl\/verilog\/lenetSynthMatlab_eOg_rom.dat",
+      "impl\/verilog\/lenetSynthMatlab_Ffa.v",
+      "impl\/verilog\/lenetSynthMatlab_fYi.v",
+      "impl\/verilog\/lenetSynthMatlab_fYi_rom.dat",
+      "impl\/verilog\/lenetSynthMatlab_g8j.v",
+      "impl\/verilog\/lenetSynthMatlab_g8j_rom.dat",
+      "impl\/verilog\/lenetSynthMatlab_hbi.v",
+      "impl\/verilog\/lenetSynthMatlab_hbi_rom.dat",
+      "impl\/verilog\/lenetSynthMatlab_ibs.v",
+      "impl\/verilog\/lenetSynthMatlab_ibs_rom.dat",
+      "impl\/verilog\/lenetSynthMatlab_jbC.v",
+      "impl\/verilog\/lenetSynthMatlab_jbC_rom.dat",
+      "impl\/verilog\/lenetSynthMatlab_kbM.v",
+      "impl\/verilog\/lenetSynthMatlab_kbM_rom.dat",
+      "impl\/verilog\/lenetSynthMatlab_lbW.v",
+      "impl\/verilog\/lenetSynthMatlab_lbW_rom.dat",
+      "impl\/verilog\/lenetSynthMatlab_mb6.v",
+      "impl\/verilog\/lenetSynthMatlab_ncg.v",
+      "impl\/verilog\/lenetSynthMatlab_ocq.v",
+      "impl\/verilog\/lenetSynthMatlab_pcA.v",
+      "impl\/verilog\/lenetSynthMatlab_qcK.v",
+      "impl\/verilog\/lenetSynthMatlab_rcU.v",
+      "impl\/verilog\/lenetSynthMatlab_sc4.v",
+      "impl\/verilog\/lenetSynthMatlab_tde.v",
+      "impl\/verilog\/lenetSynthMatlab_udo.v",
+      "impl\/verilog\/lenetSynthMatlab_vdy.v",
+      "impl\/verilog\/lenetSynthMatlab_wdI.v",
+      "impl\/verilog\/lenetSynthMatlab_yd2.v",
+      "impl\/verilog\/lenetSynthMatlab_zec.v",
+      "impl\/verilog\/sum.v",
+      "impl\/verilog\/lenetSynthMatlab.v"
+    ],
+    "Misc": ["impl\/misc\/logo.png"],
+    "Subcore": [
+      "impl\/misc\/lenetSynthMatlab_ap_fadd_0_full_dsp_32_ip.tcl",
+      "impl\/misc\/lenetSynthMatlab_ap_fcmp_0_no_dsp_32_ip.tcl",
+      "impl\/misc\/lenetSynthMatlab_ap_fmul_0_max_dsp_32_ip.tcl",
+      "impl\/misc\/lenetSynthMatlab_ap_uitofp_0_no_dsp_32_ip.tcl"
+    ]
+  },
+  "SubcoreInfo": {
+    "HasXpmMemory": false,
+    "HasClockedDsp": false,
+    "IP": [
+      {
+        "name": "lenetSynthMatlab_ap_fadd_0_full_dsp_32",
+        "vlnv": "xilinx.com:ip:floating_point:7.1",
+        "params": "CONFIG.a_precision_type Single CONFIG.a_tuser_width 1 CONFIG.add_sub_value Add CONFIG.b_tuser_width 1 CONFIG.c_a_exponent_width 8 CONFIG.c_a_fraction_width 24 CONFIG.c_compare_operation Programmable CONFIG.c_has_divide_by_zero false CONFIG.c_has_invalid_op false CONFIG.c_has_overflow false CONFIG.c_has_underflow false CONFIG.c_latency 0 CONFIG.c_mult_usage Full_Usage CONFIG.c_optimization Speed_Optimized CONFIG.c_rate 1 CONFIG.c_result_exponent_width 8 CONFIG.c_result_fraction_width 24 CONFIG.component_name lenetSynthMatlab_ap_fadd_0_full_dsp_32 CONFIG.flow_control NonBlocking CONFIG.has_a_tlast false CONFIG.has_a_tuser false CONFIG.has_aclken false CONFIG.has_aresetn false CONFIG.has_b_tlast false CONFIG.has_b_tuser false CONFIG.has_operation_tlast false CONFIG.has_operation_tuser false CONFIG.has_result_tready false CONFIG.maximum_latency false CONFIG.operation_tuser_width 1 CONFIG.operation_type Add_Subtract CONFIG.result_precision_type Single CONFIG.result_tlast_behv Null"
+      },
+      {
+        "name": "lenetSynthMatlab_ap_fcmp_0_no_dsp_32",
+        "vlnv": "xilinx.com:ip:floating_point:7.1",
+        "params": "CONFIG.a_precision_type Single CONFIG.a_tuser_width 1 CONFIG.add_sub_value Both CONFIG.b_tuser_width 1 CONFIG.c_a_exponent_width 8 CONFIG.c_a_fraction_width 24 CONFIG.c_compare_operation Programmable CONFIG.c_has_divide_by_zero false CONFIG.c_has_invalid_op false CONFIG.c_has_overflow false CONFIG.c_has_underflow false CONFIG.c_latency 0 CONFIG.c_mult_usage No_Usage CONFIG.c_optimization Speed_Optimized CONFIG.c_rate 1 CONFIG.c_result_exponent_width 1 CONFIG.c_result_fraction_width 0 CONFIG.component_name lenetSynthMatlab_ap_fcmp_0_no_dsp_32 CONFIG.flow_control NonBlocking CONFIG.has_a_tlast false CONFIG.has_a_tuser false CONFIG.has_aclken false CONFIG.has_aresetn false CONFIG.has_b_tlast false CONFIG.has_b_tuser false CONFIG.has_operation_tlast false CONFIG.has_operation_tuser false CONFIG.has_result_tready false CONFIG.maximum_latency false CONFIG.operation_tuser_width 1 CONFIG.operation_type Compare CONFIG.result_precision_type Custom CONFIG.result_tlast_behv Null"
+      },
+      {
+        "name": "lenetSynthMatlab_ap_fmul_0_max_dsp_32",
+        "vlnv": "xilinx.com:ip:floating_point:7.1",
+        "params": "CONFIG.a_precision_type Single CONFIG.a_tuser_width 1 CONFIG.add_sub_value Both CONFIG.b_tuser_width 1 CONFIG.c_a_exponent_width 8 CONFIG.c_a_fraction_width 24 CONFIG.c_compare_operation Programmable CONFIG.c_has_divide_by_zero false CONFIG.c_has_invalid_op false CONFIG.c_has_overflow false CONFIG.c_has_underflow false CONFIG.c_latency 0 CONFIG.c_mult_usage Max_Usage CONFIG.c_optimization Speed_Optimized CONFIG.c_rate 1 CONFIG.c_result_exponent_width 8 CONFIG.c_result_fraction_width 24 CONFIG.component_name lenetSynthMatlab_ap_fmul_0_max_dsp_32 CONFIG.flow_control NonBlocking CONFIG.has_a_tlast false CONFIG.has_a_tuser false CONFIG.has_aclken false CONFIG.has_aresetn false CONFIG.has_b_tlast false CONFIG.has_b_tuser false CONFIG.has_operation_tlast false CONFIG.has_operation_tuser false CONFIG.has_result_tready false CONFIG.maximum_latency false CONFIG.operation_tuser_width 1 CONFIG.operation_type Multiply CONFIG.result_precision_type Single CONFIG.result_tlast_behv Null"
+      },
+      {
+        "name": "lenetSynthMatlab_ap_uitofp_0_no_dsp_32",
+        "vlnv": "xilinx.com:ip:floating_point:7.1",
+        "params": "CONFIG.a_precision_type Custom CONFIG.a_tuser_width 1 CONFIG.add_sub_value Both CONFIG.b_tuser_width 1 CONFIG.c_a_exponent_width 64 CONFIG.c_a_fraction_width 0 CONFIG.c_compare_operation Programmable CONFIG.c_has_divide_by_zero false CONFIG.c_has_invalid_op false CONFIG.c_has_overflow false CONFIG.c_has_underflow false CONFIG.c_latency 0 CONFIG.c_mult_usage No_Usage CONFIG.c_optimization Speed_Optimized CONFIG.c_rate 1 CONFIG.c_result_exponent_width 8 CONFIG.c_result_fraction_width 24 CONFIG.component_name lenetSynthMatlab_ap_uitofp_0_no_dsp_32 CONFIG.flow_control NonBlocking CONFIG.has_a_tlast false CONFIG.has_a_tuser false CONFIG.has_aclken false CONFIG.has_aresetn false CONFIG.has_b_tlast false CONFIG.has_b_tuser false CONFIG.has_operation_tlast false CONFIG.has_operation_tuser false CONFIG.has_result_tready false CONFIG.maximum_latency false CONFIG.operation_tuser_width 1 CONFIG.operation_type Fixed_to_Float CONFIG.result_precision_type Single CONFIG.result_tlast_behv Null"
+      }
+    ]
+  },
+  "Interfaces": {
+    "ap_clk": {
+      "type": "clock",
+      "ctype": {"CLK": {"Type": "bool"}},
+      "reset": "ap_rst"
+    },
+    "ap_ctrl": {
+      "type": "ap_ctrl",
+      "ctrl_ports": "ap_start ap_done ap_idle ap_ready",
+      "ctype": {
+        "start": {"Type": "bool"},
+        "done": {"Type": "bool"},
+        "idle": {"Type": "bool"},
+        "ready": {"Type": "bool"}
+      }
+    },
+    "ap_rst": {
+      "type": "reset",
+      "polarity": "ACTIVE_HIGH",
+      "ctype": {"RST": {"Type": "bool"}}
+    },
+    "inputImg_address0": {
+      "type": "data",
+      "dir": "out",
+      "width": "10",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "10"
+        }}
+    },
+    "inputImg_q0": {
+      "type": "data",
+      "dir": "in",
+      "width": "8",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "8"
+        }}
+    },
+    "netScores_address0": {
+      "type": "data",
+      "dir": "out",
+      "width": "4",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "4"
+        }}
+    },
+    "netScores_d0": {
+      "type": "data",
+      "dir": "out",
+      "width": "32",
+      "ctype": {"DATA": {
+          "Type": "real float",
+          "Width": "32"
+        }}
+    }
+  },
+  "RtlPorts": {
+    "ap_clk": {
+      "dir": "in",
+      "width": "1"
+    },
+    "ap_rst": {
+      "dir": "in",
+      "width": "1"
+    },
+    "ap_start": {
+      "dir": "in",
+      "width": "1"
+    },
+    "ap_done": {
+      "dir": "out",
+      "width": "1"
+    },
+    "ap_idle": {
+      "dir": "out",
+      "width": "1"
+    },
+    "ap_ready": {
+      "dir": "out",
+      "width": "1"
+    },
+    "inputImg_address0": {
+      "dir": "out",
+      "width": "10"
+    },
+    "inputImg_ce0": {
+      "dir": "out",
+      "width": "1"
+    },
+    "inputImg_q0": {
+      "dir": "in",
+      "width": "8"
+    },
+    "netScores_address0": {
+      "dir": "out",
+      "width": "4"
+    },
+    "netScores_ce0": {
+      "dir": "out",
+      "width": "1"
+    },
+    "netScores_we0": {
+      "dir": "out",
+      "width": "1"
+    },
+    "netScores_d0": {
+      "dir": "out",
+      "width": "32"
+    }
+  },
+  "CPorts": {
+    "ap_ctrl": {
+      "interfaceRef": "ap_ctrl",
+      "dir": "out"
+    },
+    "inputImg_q0": {
+      "interfaceRef": "inputImg_q0",
+      "dir": "in",
+      "dataWidth": "8",
+      "busTypeRef": "ap_memory",
+      "arraySize": "1024",
+      "handshakeRef": "ap_none"
+    },
+    "netScores_d0": {
+      "interfaceRef": "netScores_d0",
+      "dir": "out",
+      "dataWidth": "32",
+      "busTypeRef": "ap_memory",
+      "arraySize": "10",
+      "handshakeRef": "ap_none"
+    }
+  },
+  "ModuleInfo": {
+    "Hierarchy": {
+      "ModuleName": "lenetSynthMatlab",
+      "Instances": [
+        {
+          "ModuleName": "c_sum",
+          "InstanceName": "grp_c_sum_fu_1398"
+        },
+        {
+          "ModuleName": "f_sum",
+          "InstanceName": "grp_f_sum_fu_1404"
+        },
+        {
+          "ModuleName": "d_sum",
+          "InstanceName": "grp_d_sum_fu_1410"
+        },
+        {
+          "ModuleName": "g_sum",
+          "InstanceName": "grp_g_sum_fu_1416"
+        },
+        {
+          "ModuleName": "sum",
+          "InstanceName": "grp_sum_fu_1422"
+        }
+      ]
+    },
+    "Metrics": {
+      "sum": {
+        "Latency": {
+          "LatencyBest": "60",
+          "LatencyAvg": "60",
+          "LatencyWorst": "60",
+          "PipelineII": "60",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "100.00",
+          "Uncertainty": "12.50",
+          "Estimate": "30.995"
+        },
+        "Loops": [
+          {
+            "Name": "Loop 1",
+            "TripCount": "5",
+            "Latency": "10",
+            "PipelineII": "",
+            "PipelineDepth": "2"
+          },
+          {
+            "Name": "Loop 2",
+            "TripCount": "4",
+            "Latency": "48",
+            "PipelineII": "",
+            "PipelineDepth": "12",
+            "Loops": [{
+                "Name": "Loop 2.1",
+                "TripCount": "5",
+                "Latency": "10",
+                "PipelineII": "",
+                "PipelineDepth": "2"
+              }]
+          }
+        ],
+        "Area": {
+          "DSP48E": "2",
+          "FF": "211",
+          "LUT": "415",
+          "BRAM_18K": "0"
+        }
+      },
+      "c_sum": {
+        "Latency": {
+          "LatencyBest": "360",
+          "LatencyAvg": "360",
+          "LatencyWorst": "360",
+          "PipelineII": "360",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "100.00",
+          "Uncertainty": "12.50",
+          "Estimate": "32.100"
+        },
+        "Loops": [
+          {
+            "Name": "Loop 1",
+            "TripCount": "5",
+            "Latency": "70",
+            "PipelineII": "",
+            "PipelineDepth": "14",
+            "Loops": [{
+                "Name": "Loop 1.1",
+                "TripCount": "6",
+                "Latency": "12",
+                "PipelineII": "",
+                "PipelineDepth": "2"
+              }]
+          },
+          {
+            "Name": "Loop 2",
+            "TripCount": "4",
+            "Latency": "288",
+            "PipelineII": "",
+            "PipelineDepth": "72",
+            "Loops": [{
+                "Name": "Loop 2.1",
+                "TripCount": "5",
+                "Latency": "70",
+                "PipelineII": "",
+                "PipelineDepth": "14",
+                "Loops": [{
+                    "Name": "Loop 2.1.1",
+                    "TripCount": "6",
+                    "Latency": "12",
+                    "PipelineII": "",
+                    "PipelineDepth": "2"
+                  }]
+              }]
+          }
+        ],
+        "Area": {
+          "DSP48E": "2",
+          "FF": "280",
+          "LUT": "562",
+          "BRAM_18K": "0"
+        }
+      },
+      "d_sum": {
+        "Latency": {
+          "LatencyBest": "70",
+          "LatencyAvg": "70",
+          "LatencyWorst": "70",
+          "PipelineII": "70",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "100.00",
+          "Uncertainty": "12.50",
+          "Estimate": "30.995"
+        },
+        "Loops": [
+          {
+            "Name": "Loop 1",
+            "TripCount": "6",
+            "Latency": "12",
+            "PipelineII": "",
+            "PipelineDepth": "2"
+          },
+          {
+            "Name": "Loop 2",
+            "TripCount": "4",
+            "Latency": "56",
+            "PipelineII": "",
+            "PipelineDepth": "14",
+            "Loops": [{
+                "Name": "Loop 2.1",
+                "TripCount": "6",
+                "Latency": "12",
+                "PipelineII": "",
+                "PipelineDepth": "2"
+              }]
+          }
+        ],
+        "Area": {
+          "DSP48E": "2",
+          "FF": "212",
+          "LUT": "417",
+          "BRAM_18K": "0"
+        }
+      },
+      "f_sum": {
+        "Latency": {
+          "LatencyBest": "860",
+          "LatencyAvg": "860",
+          "LatencyWorst": "860",
+          "PipelineII": "860",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "100.00",
+          "Uncertainty": "12.50",
+          "Estimate": "33.205"
+        },
+        "Loops": [
+          {
+            "Name": "Loop 1",
+            "TripCount": "5",
+            "Latency": "170",
+            "PipelineII": "",
+            "PipelineDepth": "34",
+            "Loops": [{
+                "Name": "Loop 1.1",
+                "TripCount": "16",
+                "Latency": "32",
+                "PipelineII": "",
+                "PipelineDepth": "2"
+              }]
+          },
+          {
+            "Name": "Loop 2",
+            "TripCount": "4",
+            "Latency": "688",
+            "PipelineII": "",
+            "PipelineDepth": "172",
+            "Loops": [{
+                "Name": "Loop 2.1",
+                "TripCount": "5",
+                "Latency": "170",
+                "PipelineII": "",
+                "PipelineDepth": "34",
+                "Loops": [{
+                    "Name": "Loop 2.1.1",
+                    "TripCount": "16",
+                    "Latency": "32",
+                    "PipelineII": "",
+                    "PipelineDepth": "2"
+                  }]
+              }]
+          }
+        ],
+        "Area": {
+          "DSP48E": "2",
+          "FF": "248",
+          "LUT": "526",
+          "BRAM_18K": "0"
+        }
+      },
+      "g_sum": {
+        "Latency": {
+          "LatencyBest": "170",
+          "LatencyAvg": "170",
+          "LatencyWorst": "170",
+          "PipelineII": "170",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "100.00",
+          "Uncertainty": "12.50",
+          "Estimate": "32.100"
+        },
+        "Loops": [
+          {
+            "Name": "Loop 1",
+            "TripCount": "16",
+            "Latency": "32",
+            "PipelineII": "",
+            "PipelineDepth": "2"
+          },
+          {
+            "Name": "Loop 2",
+            "TripCount": "4",
+            "Latency": "136",
+            "PipelineII": "",
+            "PipelineDepth": "34",
+            "Loops": [{
+                "Name": "Loop 2.1",
+                "TripCount": "16",
+                "Latency": "32",
+                "PipelineII": "",
+                "PipelineDepth": "2"
+              }]
+          }
+        ],
+        "Area": {
+          "DSP48E": "2",
+          "FF": "220",
+          "LUT": "405",
+          "BRAM_18K": "0"
+        }
+      },
+      "lenetSynthMatlab": {
+        "Latency": {
+          "LatencyBest": "2206718",
+          "LatencyAvg": "2206718",
+          "LatencyWorst": "2206718",
+          "PipelineII": "2206719",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "100.00",
+          "Uncertainty": "12.50",
+          "Estimate": "44.129"
+        },
+        "Loops": [
+          {
+            "Name": "Loop 1",
+            "TripCount": "6",
+            "Latency": "630690",
+            "PipelineII": "",
+            "PipelineDepth": "105115",
+            "Loops": [{
+                "Name": "Loop 1.1",
+                "TripCount": "28",
+                "Latency": "105112",
+                "PipelineII": "",
+                "PipelineDepth": "3754",
+                "Loops": [{
+                    "Name": "Loop 1.1.1",
+                    "TripCount": "28",
+                    "Latency": "3752",
+                    "PipelineII": "",
+                    "PipelineDepth": "134",
+                    "Loops": [
+                      {
+                        "Name": "Loop 1.1.1.1",
+                        "TripCount": "5",
+                        "Latency": "60",
+                        "PipelineII": "",
+                        "PipelineDepth": "12",
+                        "Loops": [{
+                            "Name": "Loop 1.1.1.1.1",
+                            "TripCount": "5",
+                            "Latency": "10",
+                            "PipelineII": "",
+                            "PipelineDepth": "2"
+                          }]
+                      },
+                      {
+                        "Name": "Loop 1.1.1.2",
+                        "TripCount": "4",
+                        "Latency": "8",
+                        "PipelineII": "",
+                        "PipelineDepth": "2"
+                      }
+                    ]
+                  }]
+              }]
+          },
+          {
+            "Name": "Loop 2",
+            "TripCount": "28",
+            "Latency": "11032",
+            "PipelineII": "",
+            "PipelineDepth": "394",
+            "Loops": [{
+                "Name": "Loop 2.1",
+                "TripCount": "28",
+                "Latency": "392",
+                "PipelineII": "",
+                "PipelineDepth": "14",
+                "Loops": [{
+                    "Name": "Loop 2.1.1",
+                    "TripCount": "6",
+                    "Latency": "12",
+                    "PipelineII": "",
+                    "PipelineDepth": "2"
+                  }]
+              }]
+          },
+          {
+            "Name": "memset_pool1ActivationMap",
+            "TripCount": "1176",
+            "Latency": "1175",
+            "PipelineII": "",
+            "PipelineDepth": "1"
+          },
+          {
+            "Name": "Loop 4",
+            "TripCount": "6",
+            "Latency": "9588",
+            "PipelineII": "",
+            "PipelineDepth": "1598",
+            "Loops": [{
+                "Name": "Loop 4.1",
+                "TripCount": "14",
+                "Latency": "1596",
+                "PipelineII": "",
+                "PipelineDepth": "114",
+                "Loops": [{
+                    "Name": "Loop 4.1.1",
+                    "TripCount": "14",
+                    "Latency": "112",
+                    "PipelineII": "",
+                    "PipelineDepth": "8",
+                    "Loops": [{
+                        "Name": "Loop 4.1.1.1",
+                        "TripCount": "2",
+                        "Latency": "6",
+                        "PipelineII": "",
+                        "PipelineDepth": "3"
+                      }]
+                  }]
+              }]
+          },
+          {
+            "Name": "Loop 5",
+            "TripCount": "16",
+            "Latency": "1293168",
+            "PipelineII": "",
+            "PipelineDepth": "80823",
+            "Loops": [{
+                "Name": "Loop 5.1",
+                "TripCount": "10",
+                "Latency": "80820",
+                "PipelineII": "",
+                "PipelineDepth": "8082",
+                "Loops": [{
+                    "Name": "Loop 5.1.1",
+                    "TripCount": "10",
+                    "Latency": "8080",
+                    "PipelineII": "",
+                    "PipelineDepth": "808",
+                    "Loops": [
+                      {
+                        "Name": "Loop 5.1.1.1",
+                        "TripCount": "5",
+                        "Latency": "360",
+                        "PipelineII": "",
+                        "PipelineDepth": "72",
+                        "Loops": [{
+                            "Name": "Loop 5.1.1.1.1",
+                            "TripCount": "5",
+                            "Latency": "70",
+                            "PipelineII": "",
+                            "PipelineDepth": "14",
+                            "Loops": [{
+                                "Name": "Loop 5.1.1.1.1.1",
+                                "TripCount": "6",
+                                "Latency": "12",
+                                "PipelineII": "",
+                                "PipelineDepth": "2"
+                              }]
+                          }]
+                      },
+                      {
+                        "Name": "Loop 5.1.1.2",
+                        "TripCount": "5",
+                        "Latency": "10",
+                        "PipelineII": "",
+                        "PipelineDepth": "2"
+                      }
+                    ]
+                  }]
+              }]
+          },
+          {
+            "Name": "Loop 6",
+            "TripCount": "10",
+            "Latency": "3420",
+            "PipelineII": "",
+            "PipelineDepth": "342",
+            "Loops": [{
+                "Name": "Loop 6.1",
+                "TripCount": "10",
+                "Latency": "340",
+                "PipelineII": "",
+                "PipelineDepth": "34",
+                "Loops": [{
+                    "Name": "Loop 6.1.1",
+                    "TripCount": "16",
+                    "Latency": "32",
+                    "PipelineII": "",
+                    "PipelineDepth": "2"
+                  }]
+              }]
+          },
+          {
+            "Name": "memset_pool2ActivationMap",
+            "TripCount": "400",
+            "Latency": "399",
+            "PipelineII": "",
+            "PipelineDepth": "1"
+          },
+          {
+            "Name": "Loop 8",
+            "TripCount": "16",
+            "Latency": "3392",
+            "PipelineII": "",
+            "PipelineDepth": "212",
+            "Loops": [{
+                "Name": "Loop 8.1",
+                "TripCount": "5",
+                "Latency": "210",
+                "PipelineII": "",
+                "PipelineDepth": "42",
+                "Loops": [{
+                    "Name": "Loop 8.1.1",
+                    "TripCount": "5",
+                    "Latency": "40",
+                    "PipelineII": "",
+                    "PipelineDepth": "8",
+                    "Loops": [{
+                        "Name": "Loop 8.1.1.1",
+                        "TripCount": "2",
+                        "Latency": "6",
+                        "PipelineII": "",
+                        "PipelineDepth": "3"
+                      }]
+                  }]
+              }]
+          },
+          {
+            "Name": "Loop 9",
+            "TripCount": "120",
+            "Latency": "231480",
+            "PipelineII": "",
+            "PipelineDepth": "1929",
+            "Loops": [
+              {
+                "Name": "Loop 9.1",
+                "TripCount": "5",
+                "Latency": "860",
+                "PipelineII": "",
+                "PipelineDepth": "172",
+                "Loops": [{
+                    "Name": "Loop 9.1.1",
+                    "TripCount": "5",
+                    "Latency": "170",
+                    "PipelineII": "",
+                    "PipelineDepth": "34",
+                    "Loops": [{
+                        "Name": "Loop 9.1.1.1",
+                        "TripCount": "16",
+                        "Latency": "32",
+                        "PipelineII": "",
+                        "PipelineDepth": "2"
+                      }]
+                  }]
+              },
+              {
+                "Name": "Loop 9.2",
+                "TripCount": "15",
+                "Latency": "30",
+                "PipelineII": "",
+                "PipelineDepth": "2"
+              }
+            ]
+          },
+          {
+            "Name": "Loop 10",
+            "TripCount": "120",
+            "Latency": "240",
+            "PipelineII": "",
+            "PipelineDepth": "2"
+          },
+          {
+            "Name": "Loop 11",
+            "TripCount": "84",
+            "Latency": "20412",
+            "PipelineII": "",
+            "PipelineDepth": "243",
+            "Loops": [{
+                "Name": "Loop 11.1",
+                "TripCount": "120",
+                "Latency": "240",
+                "PipelineII": "",
+                "PipelineDepth": "2"
+              }]
+          },
+          {
+            "Name": "Loop 12",
+            "TripCount": "10",
+            "Latency": "1710",
+            "PipelineII": "",
+            "PipelineDepth": "171",
+            "Loops": [{
+                "Name": "Loop 12.1",
+                "TripCount": "84",
+                "Latency": "168",
+                "PipelineII": "",
+                "PipelineDepth": "2"
+              }]
+          }
+        ],
+        "Area": {
+          "BRAM_18K": "224",
+          "DSP48E": "18",
+          "FF": "3551",
+          "LUT": "8597"
+        }
+      }
+    }
+  },
+  "Sdx": {
+    "Target": "none",
+    "ProfileOption": "0",
+    "ProfileType": "none"
+  },
+  "GenData": {
+    "DataVersion": "0.1",
+    "Time": "2018-12-11 22:58:42 EST",
+    "ToolName": "vivado_hls",
+    "ToolVersion": "2018.2"
+  }
+}

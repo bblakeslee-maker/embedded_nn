@@ -1,0 +1,14 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../lenet58BitFloatMod.srcs/sources_1/imports/Part3/BBUART_TX.vhd" \
+"../../../../lenet58BitFloatMod.srcs/sources_1/imports/Part3/MLUART_RX.vhd" \
+"../../../../lenet58BitFloatMod.srcs/sources_1/imports/Part3/UART.vhd" \
+"../../../../lenet58BitFloatMod.srcs/sources_1/new/UART_Check.vhd" \
+"../../../../lenet58BitFloatMod.srcs/sources_1/imports/Part3/fall_edge_det.vhd" \
+"../../../../lenet58BitFloatMod.srcs/sources_1/imports/Part3/rise_edge_det.vhd" \
+"../../../../lenet58BitFloatMod.srcs/sources_1/imports/Part3/sig_stretcher.vhd" \
+"../../../../lenet58BitFloatMod.srcs/sources_1/imports/Part3/synchro_2s.vhd" \
+"../../../../lenet58BitFloatMod.srcs/sim_1/imports/Part2/tb.vhd" \
+
+# Do not sort compile order
+nosort

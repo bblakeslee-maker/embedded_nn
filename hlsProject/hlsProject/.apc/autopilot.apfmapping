@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="tmwtypes.h" path="/home/tyrian/nnproject/generatedCCode/tmwtypes.h"/>
+    <originFiles name="sum.h" path="/home/tyrian/nnproject/generatedCCode/sum.h"/>
+    <originFiles name="sum.c" path="/home/tyrian/nnproject/generatedCCode/sum.c"/>
+    <originFiles name="rtwtypes.h" path="/home/tyrian/nnproject/generatedCCode/rtwtypes.h"/>
+    <originFiles name="lenetSynthMatlab_types.h" path="/home/tyrian/nnproject/generatedCCode/lenetSynthMatlab_types.h"/>
+    <originFiles name="lenetSynthMatlab_terminate.h" path="/home/tyrian/nnproject/generatedCCode/lenetSynthMatlab_terminate.h"/>
+    <originFiles name="lenetSynthMatlab_terminate.c" path="/home/tyrian/nnproject/generatedCCode/lenetSynthMatlab_terminate.c"/>
+    <originFiles name="lenetSynthMatlab_initialize.h" path="/home/tyrian/nnproject/generatedCCode/lenetSynthMatlab_initialize.h"/>
+    <originFiles name="lenetSynthMatlab_initialize.c" path="/home/tyrian/nnproject/generatedCCode/lenetSynthMatlab_initialize.c"/>
+    <originFiles name="lenetSynthMatlab_data.h" path="/home/tyrian/nnproject/generatedCCode/lenetSynthMatlab_data.h"/>
+    <originFiles name="lenetSynthMatlab_data.c" path="/home/tyrian/nnproject/generatedCCode/lenetSynthMatlab_data.c"/>
+    <originFiles name="lenetSynthMatlab.h" path="/home/tyrian/nnproject/generatedCCode/lenetSynthMatlab.h"/>
+    <originFiles name="lenetSynthMatlab.c" path="/home/tyrian/nnproject/generatedCCode/lenetSynthMatlab.c"/>
+  </source>
+  <testbench>
+    <originFiles name="main.h" path="/home/tyrian/nnproject/codegen/lib/lenetSynthMatlab/examples/main.h"/>
+    <originFiles name="main.c" path="/home/tyrian/nnproject/codegen/lib/lenetSynthMatlab/examples/main.c"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

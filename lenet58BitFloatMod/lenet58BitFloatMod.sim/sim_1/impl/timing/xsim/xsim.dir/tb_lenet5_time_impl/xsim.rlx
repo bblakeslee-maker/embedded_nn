@@ -1,0 +1,12 @@
+
+{ 
+    crc :  2356230784030178096  , 
+    ccp_crc :  0  , 
+    cmdline : " -wto d6818fb670f94a8b9d4cb0d5e251639f --incr --debug typical --relax --mt 8 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot tb_lenet5_time_impl -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.tb_lenet5 xil_defaultlib.glbl" , 
+    buildDate : "Jun 14 2018" , 
+    buildTime : "20:07:38" , 
+    linkCmd : "/usr/bin/gcc -Wa,-W  -O -fPIC  -m64  -Wl,--unresolved-symbols=ignore-all  -o \"xsim.dir/tb_lenet5_time_impl/xsimk\"   \"xsim.dir/tb_lenet5_time_impl/obj/xsim_0.lnx64.o\" \"xsim.dir/tb_lenet5_time_impl/obj/xsim_1.lnx64.o\" \"xsim.dir/tb_lenet5_time_impl/obj/xsim_2.lnx64.o\" \"xsim.dir/tb_lenet5_time_impl/obj/xsim_3.lnx64.o\" \"xsim.dir/tb_lenet5_time_impl/obj/xsim_4.lnx64.o\" \"/home/tyrian/xilinx/Vivado/2018.2/lib/lnx64.o/librdi_simulator_kernel.so\"  \"/home/tyrian/xilinx/Vivado/2018.2/lib/lnx64.o/librdi_simbridge_kernel.so\"" , 
+    aggregate_nets : 
+    [ 
+    ] 
+} 

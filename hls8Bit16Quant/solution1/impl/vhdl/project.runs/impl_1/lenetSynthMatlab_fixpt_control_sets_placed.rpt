@@ -1,0 +1,177 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Mon Dec 10 15:25:45 2018
+| Host         : Neuromancer running 64-bit Ubuntu 18.04.1 LTS
+| Command      : report_control_sets -verbose -file lenetSynthMatlab_fixpt_control_sets_placed.rpt
+| Design       : lenetSynthMatlab_fixpt
+| Device       : xc7a100t
+---------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |   108 |
+| Unused register locations in slices containing registers |   294 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      2 |            1 |
+|      6 |            6 |
+|      8 |           23 |
+|     10 |           27 |
+|     14 |           14 |
+|    16+ |           37 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             596 |           96 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             544 |          110 |
+| Yes          | No                    | No                     |            1022 |          165 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             960 |          169 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------+------------------------------------------------------------------------------------------------------------------+------------------------------------------------+------------------+----------------+
+| Clock Signal |                                                   Enable Signal                                                  |                Set/Reset Signal                | Slice Load Count | Bel Load Count |
++--------------+------------------------------------------------------------------------------------------------------------------+------------------------------------------------+------------------+----------------+
+|  ap_clk      | lenetSynthMatlab_vdy_ram_U/p_0_in                                                                                |                                                |                1 |              2 |
+|  ap_clk      | grp_c_sum_fu_618/ap_CS_fsm_state52                                                                               |                                                |                1 |              6 |
+|  ap_clk      | grp_c_sum_fu_618/ap_CS_fsm_state44                                                                               |                                                |                2 |              6 |
+|  ap_clk      | grp_d_sum_fu_636/ap_CS_fsm_state11                                                                               |                                                |                1 |              6 |
+|  ap_clk      | grp_d_sum_fu_636/ap_CS_fsm_state19                                                                               |                                                |                1 |              6 |
+|  ap_clk      | grp_sum_fu_642/ap_CS_fsm_state11                                                                                 |                                                |                1 |              6 |
+|  ap_clk      | grp_sum_fu_642/ap_CS_fsm_state19                                                                                 |                                                |                1 |              6 |
+|  ap_clk      | grp_c_sum_fu_618/lenetSynthMatlab_eOg_U10/lenetSynthMatlab_eOg_div_U/lenetSynthMatlab_eOg_div_u_0/remd_reg[3][0] |                                                |                1 |              8 |
+|  ap_clk      | grp_c_sum_fu_618/ap_CS_fsm_reg_n_5_[27]                                                                          |                                                |                2 |              8 |
+|  ap_clk      | grp_d_max_fu_654/ap_CS_fsm_state2                                                                                |                                                |                1 |              8 |
+|  ap_clk      | grp_d_max_fu_654/ap_NS_fsm1                                                                                      | grp_d_max_fu_654/b_k_reg_71                    |                1 |              8 |
+|  ap_clk      | grp_d_max_fu_654/ap_CS_fsm_state3                                                                                |                                                |                1 |              8 |
+|  ap_clk      | we018_out                                                                                                        | c_2_reg_4410                                   |                1 |              8 |
+|  ap_clk      | grp_sum_fu_642/lenetSynthMatlab_bkb_U1/lenetSynthMatlab_bkb_div_U/lenetSynthMatlab_bkb_div_u_0/E[0]              |                                                |                1 |              8 |
+|  ap_clk      | grp_f_sum_fu_624/lenetSynthMatlab_fYi_U22/lenetSynthMatlab_fYi_div_U/lenetSynthMatlab_fYi_div_u_0/E[0]           |                                                |                1 |              8 |
+|  ap_clk      | grp_f_sum_fu_624/lenetSynthMatlab_hbi_U26/lenetSynthMatlab_hbi_div_U/lenetSynthMatlab_hbi_div_u_0/E[0]           |                                                |                1 |              8 |
+|  ap_clk      | grp_c_sum_fu_618/start                                                                                           |                                                |                1 |              8 |
+|  ap_clk      | grp_c_sum_fu_618/lenetSynthMatlab_eOg_U11/lenetSynthMatlab_eOg_div_U/lenetSynthMatlab_eOg_div_u_0/remd_reg[3][0] |                                                |                2 |              8 |
+|  ap_clk      | grp_f_sum_fu_624/lenetSynthMatlab_hbi_U25/lenetSynthMatlab_hbi_div_U/lenetSynthMatlab_hbi_div_u_0/E[0]           |                                                |                1 |              8 |
+|  ap_clk      | ap_CS_fsm_state15                                                                                                |                                                |                1 |              8 |
+|  ap_clk      | tmp_20_reg_17711                                                                                                 |                                                |                1 |              8 |
+|  ap_clk      | netScores_we0                                                                                                    | ap_NS_fsm17_out                                |                1 |              8 |
+|  ap_clk      | i26_reg_5840                                                                                                     |                                                |                2 |              8 |
+|  ap_clk      | ap_NS_fsm127_out                                                                                                 | ap_NS_fsm130_out                               |                1 |              8 |
+|  ap_clk      | ap_NS_fsm1                                                                                                       | ap_NS_fsm19_out                                |                1 |              8 |
+|  ap_clk      | ap_CS_fsm_state39                                                                                                |                                                |                2 |              8 |
+|  ap_clk      | ap_CS_fsm_state16                                                                                                |                                                |                1 |              8 |
+|  ap_clk      | grp_d_max_fu_654/ap_NS_fsm10_out                                                                                 | grp_d_max_fu_654/k_reg_60                      |                1 |              8 |
+|  ap_clk      | grp_c_sum_fu_618/lenetSynthMatlab_cud_U7/lenetSynthMatlab_cud_div_U/lenetSynthMatlab_cud_div_u_0/remd_reg[0][0]  |                                                |                1 |              8 |
+|  ap_clk      | ap_CS_fsm_state37                                                                                                |                                                |                2 |              8 |
+|  ap_clk      | ap_NS_fsm139_out                                                                                                 | ap_NS_fsm142_out                               |                1 |             10 |
+|  ap_clk      | grp_f_sum_fu_624/ap_CS_fsm_state26                                                                               |                                                |                2 |             10 |
+|  ap_clk      | we011_out                                                                                                        | i_1_reg_5400                                   |                2 |             10 |
+|  ap_clk      | we0                                                                                                              | c_reg_3640                                     |                1 |             10 |
+|  ap_clk      | grp_c_sum_fu_618/ap_CS_fsm_state24                                                                               |                                                |                1 |             10 |
+|  ap_clk      | ap_CS_fsm_state14                                                                                                |                                                |                2 |             10 |
+|  ap_clk      | grp_f_sum_fu_624/ap_CS_fsm_state39                                                                               |                                                |                2 |             10 |
+|  ap_clk      | grp_sum_fu_642/lenetSynthMatlab_bkb_U1/lenetSynthMatlab_bkb_div_U/ix_3_reg_499_reg[4]                            |                                                |                2 |             10 |
+|  ap_clk      | grp_sum_fu_642/lenetSynthMatlab_bkb_U1/lenetSynthMatlab_bkb_div_U/start0_reg_n_5                                 |                                                |                1 |             10 |
+|  ap_clk      | ap_NS_fsm128_out                                                                                                 | grp_b_max_fu_648/f_2_reg_419_reg[0][0]         |                3 |             10 |
+|  ap_clk      | grp_sum_fu_642/ixstart_1_reg_149                                                                                 |                                                |                1 |             10 |
+|  ap_clk      | grp_sum_fu_642/i19_4_reg_182[31]_i_2_n_5                                                                         |                                                |                2 |             10 |
+|  ap_clk      | ap_CS_fsm_state4                                                                                                 |                                                |                2 |             10 |
+|  ap_clk      | ap_CS_fsm_state3                                                                                                 |                                                |                2 |             10 |
+|  ap_clk      | grp_c_sum_fu_618/lenetSynthMatlab_dEe_U8/lenetSynthMatlab_dEe_div_U/start0_reg_n_5                               |                                                |                1 |             10 |
+|  ap_clk      | grp_d_max_fu_654/ap_CS_fsm_reg_n_5_[5]                                                                           | grp_d_max_fu_654/c_k_reg_820                   |                1 |             10 |
+|  ap_clk      | grp_d_max_fu_654/ap_CS_fsm_reg_n_5_[3]                                                                           |                                                |                1 |             10 |
+|  ap_clk      | grp_d_sum_fu_636/ap_NS_fsm[3]                                                                                    |                                                |                1 |             10 |
+|  ap_clk      | grp_b_max_fu_648/ap_CS_fsm_state2                                                                                |                                                |                2 |             10 |
+|  ap_clk      | grp_c_sum_fu_618/ap_CS_fsm_state36                                                                               |                                                |                3 |             10 |
+|  ap_clk      | grp_c_sum_fu_618/lenetSynthMatlab_eOg_U11/lenetSynthMatlab_eOg_div_U/start0_reg_n_5                              |                                                |                2 |             10 |
+|  ap_clk      | grp_b_max_fu_648/ap_NS_fsm1                                                                                      | grp_b_max_fu_648/b_k_reg_840                   |                1 |             10 |
+|  ap_clk      | grp_b_max_fu_648/ap_CS_fsm_state3                                                                                |                                                |                2 |             10 |
+|  ap_clk      | grp_b_max_fu_648/ap_NS_fsm10_out                                                                                 | grp_b_max_fu_648/k_reg_62                      |                1 |             10 |
+|  ap_clk      | grp_d_sum_fu_636/lenetSynthMatlab_dEe_U17/lenetSynthMatlab_dEe_div_U/start0_reg_n_5                              |                                                |                3 |             10 |
+|  ap_clk      | grp_c_sum_fu_618/lenetSynthMatlab_eOg_U10/lenetSynthMatlab_eOg_div_U/start0_reg_n_5                              |                                                |                2 |             10 |
+|  ap_clk      | grp_d_sum_fu_636/lenetSynthMatlab_dEe_U17/lenetSynthMatlab_dEe_div_U/ix_9_reg_5730                               |                                                |                2 |             10 |
+|  ap_clk      | ap_CS_fsm_state28                                                                                                |                                                |                2 |             14 |
+|  ap_clk      | grp_g_sum_fu_630/ix_5_reg_503[6]_i_1_n_5                                                                         |                                                |                3 |             14 |
+|  ap_clk      | grp_g_sum_fu_630/ixstart_4_reg_182[31]_i_2_n_5                                                                   |                                                |                3 |             14 |
+|  ap_clk      | grp_g_sum_fu_630/s_1_reg_138                                                                                     |                                                |                2 |             14 |
+|  ap_clk      | k_i1_reg_56201_out                                                                                               | k_i1_reg_5620                                  |                2 |             14 |
+|  ap_clk      | grp_g_sum_fu_630/lenetSynthMatlab_g8j_U38/lenetSynthMatlab_g8j_div_U/start0_reg_n_5                              |                                                |                2 |             14 |
+|  ap_clk      | grp_g_sum_fu_630/E[0]                                                                                            | grp_d_max_fu_654/f_4_reg_507_reg[0][0]         |                1 |             14 |
+|  ap_clk      | i26_reg_58412_out                                                                                                | i26_reg_584                                    |                2 |             14 |
+|  ap_clk      | grp_f_sum_fu_624/i7_fu_96[31]_i_2_n_5                                                                            | grp_f_sum_fu_624/i7_fu_96[6]_i_1_n_5           |                2 |             14 |
+|  ap_clk      | ap_CS_fsm_state35                                                                                                |                                                |                3 |             14 |
+|  ap_clk      | grp_f_sum_fu_624/lenetSynthMatlab_hbi_U26/lenetSynthMatlab_hbi_div_U/start0_reg_n_5                              |                                                |                1 |             14 |
+|  ap_clk      | grp_f_sum_fu_624/lenetSynthMatlab_g8j_U23/lenetSynthMatlab_g8j_div_U/start0_reg_n_5                              |                                                |                4 |             14 |
+|  ap_clk      | grp_f_sum_fu_624/lenetSynthMatlab_hbi_U25/lenetSynthMatlab_hbi_div_U/start0_reg_n_5                              |                                                |                1 |             14 |
+|  ap_clk      | ap_NS_fsm18_out                                                                                                  | ap_NS_fsm116_out                               |                1 |             14 |
+|  ap_clk      | grp_c_sum_fu_618/CEB2                                                                                            |                                                |                3 |             16 |
+|  ap_clk      | grp_c_sum_fu_618/ap_NS_fsm[12]                                                                                   |                                                |                2 |             16 |
+|  ap_clk      | grp_c_sum_fu_618/lenetSynthMatlab_cud_U7/lenetSynthMatlab_cud_div_U/start0_reg_n_5                               |                                                |                1 |             16 |
+|  ap_clk      | grp_c_sum_fu_618/ix_11_reg_1011[7]_i_1_n_5                                                                       |                                                |                3 |             16 |
+|  ap_clk      | grp_f_sum_fu_624/lenetSynthMatlab_fYi_U22/lenetSynthMatlab_fYi_div_U/start0_reg_n_5                              |                                                |                2 |             18 |
+|  ap_clk      | grp_f_sum_fu_624/ap_NS_fsm[13]                                                                                   |                                                |                3 |             18 |
+|  ap_clk      | grp_f_sum_fu_624/lenetSynthMatlab_ibs_U29/lenetSynthMatlab_ibs_DSP48_0_U/E[0]                                    |                                                |                3 |             18 |
+|  ap_clk      | grp_f_sum_fu_624/ap_CS_fsm_state10                                                                               |                                                |                2 |             18 |
+|  ap_clk      | grp_f_sum_fu_624/ixstart_5_reg_240[31]_i_2__0_n_5                                                                |                                                |                4 |             18 |
+|  ap_clk      | grp_d_sum_fu_636/ix_8_reg_5550                                                                                   |                                                |                2 |             20 |
+|  ap_clk      | grp_sum_fu_642/ix_2_reg_4810                                                                                     |                                                |                2 |             20 |
+|  ap_clk      | grp_f_sum_fu_624/ap_CS_fsm_state15                                                                               |                                                |                3 |             24 |
+|  ap_clk      | grp_f_sum_fu_624/ap_CS_fsm_state28                                                                               |                                                |                4 |             24 |
+|  ap_clk      | grp_c_sum_fu_618/ap_CS_fsm_state45                                                                               |                                                |                3 |             26 |
+|  ap_clk      | grp_sum_fu_642/ix_reg_127[4]_i_2_n_5                                                                             | grp_sum_fu_642/ap_NS_fsm11_out                 |                4 |             26 |
+|  ap_clk      | grp_g_sum_fu_630/ix_4_reg_4850                                                                                   |                                                |                3 |             28 |
+|  ap_clk      | grp_d_sum_fu_636/ix_reg_131[4]_i_2_n_5                                                                           | grp_d_sum_fu_636/ap_NS_fsm11_out               |                4 |             28 |
+|  ap_clk      | grp_c_sum_fu_618/ix_10_reg_982[7]_i_1_n_5                                                                        |                                                |                4 |             32 |
+|  ap_clk      | grp_f_sum_fu_624/ap_CS_fsm_state50                                                                               |                                                |                5 |             32 |
+|  ap_clk      | grp_f_sum_fu_624/ap_NS_fsm[2]                                                                                    |                                                |                4 |             36 |
+|  ap_clk      | grp_g_sum_fu_630/ix_reg_127[6]_i_2_n_5                                                                           | grp_g_sum_fu_630/ap_NS_fsm14_out               |                6 |             38 |
+|  ap_clk      | grp_c_sum_fu_618/ap_CS_fsm_reg_n_5_[52]                                                                          | grp_c_sum_fu_618/RSTB                          |                4 |             44 |
+|  ap_clk      | grp_f_sum_fu_624/ixstart_5_reg_240[31]_i_2__0_n_5                                                                | grp_f_sum_fu_624/ixstart_5_reg_240[31]         |                7 |             46 |
+|  ap_clk      | grp_f_sum_fu_624/i7_fu_96[31]_i_2_n_5                                                                            | grp_f_sum_fu_624/i7_fu_96[31]_i_1_n_5          |               10 |             50 |
+|  ap_clk      | grp_g_sum_fu_630/ixstart_4_reg_182[31]_i_2_n_5                                                                   | grp_g_sum_fu_630/ixstart_4_reg_182[31]_i_1_n_5 |                8 |             50 |
+|  ap_clk      | grp_f_sum_fu_624/ap_CS_fsm_reg_n_5_[59]                                                                          | grp_f_sum_fu_624/p_1_in                        |                9 |             52 |
+|  ap_clk      | grp_sum_fu_642/i19_4_reg_182[31]_i_2_n_5                                                                         | grp_sum_fu_642/i19_4_reg_182[31]_i_1_n_5       |                9 |             54 |
+|  ap_clk      | grp_c_sum_fu_618/ap_CS_fsm_state37                                                                               | grp_c_sum_fu_618/ixstart_reg_206               |               16 |             64 |
+|  ap_clk      | grp_d_sum_fu_636/ixstart_4_reg_186[31]_i_1_n_5                                                                   |                                                |               11 |             64 |
+|  ap_clk      | grp_d_sum_fu_636/ap_CS_fsm_state22                                                                               | grp_d_sum_fu_636/ixstart_reg_153               |               12 |             64 |
+|  ap_clk      | grp_sum_fu_642/ap_CS_fsm_state22                                                                                 | grp_sum_fu_642/i1_reg_138                      |               14 |             64 |
+|  ap_clk      | grp_g_sum_fu_630/ap_CS_fsm_state26                                                                               | grp_g_sum_fu_630/ixstart9_reg_149              |               12 |             64 |
+|  ap_clk      | grp_f_sum_fu_624/ap_CS_fsm_state40                                                                               | grp_f_sum_fu_624/ixstart_reg_206               |               15 |             64 |
+|  ap_clk      | grp_c_sum_fu_618/ixstart_5_reg_240[31]_i_1_n_5                                                                   |                                                |               15 |             64 |
+|  ap_clk      | grp_c_sum_fu_618/i9_fu_96[31]_i_2_n_5                                                                            | grp_c_sum_fu_618/i9_fu_96                      |               15 |             64 |
+|  ap_clk      |                                                                                                                  | ap_rst                                         |              110 |            544 |
+|  ap_clk      |                                                                                                                  |                                                |              102 |            618 |
++--------------+------------------------------------------------------------------------------------------------------------------+------------------------------------------------+------------------+----------------+
+
+

@@ -1,0 +1,1389 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Sun Dec  9 13:14:38 2018
+| Host         : Neuromancer running 64-bit Ubuntu 18.04.1 LTS
+| Command      : report_timing_summary -max_paths 10 -file lenetSynthMatlab_timing_summary_routed.rpt -pb lenetSynthMatlab_timing_summary_routed.pb -rpx lenetSynthMatlab_timing_summary_routed.rpx -warn_on_violation
+| Design       : lenetSynthMatlab
+| Device       : 7a100t-csg324
+| Speed File   : -1  PRODUCTION 1.22 2018-03-21
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  false
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock
+2. checking constant_clock
+3. checking pulse_width_clock
+4. checking unconstrained_internal_endpoints
+5. checking no_input_delay
+6. checking no_output_delay
+7. checking multiple_clock
+8. checking generated_clocks
+9. checking loops
+10. checking partial_input_delay
+11. checking partial_output_delay
+12. checking latch_loops
+
+1. checking no_clock
+--------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock
+--------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock
+-----------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints
+--------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay
+--------------------------
+ There are 10 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay
+---------------------------
+ There are 52 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock
+--------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks
+----------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops
+-----------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay
+--------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay
+---------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops
+------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+      0.524        0.000                      0                11446        0.054        0.000                      0                11446        3.750        0.000                       0                  5019  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock   Waveform(ns)       Period(ns)      Frequency(MHz)
+-----   ------------       ----------      --------------
+ap_clk  {0.000 5.000}      10.000          100.000         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+ap_clk              0.524        0.000                      0                11446        0.054        0.000                      0                11446        3.750        0.000                       0                  5019  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  ap_clk
+  To Clock:  ap_clk
+
+Setup :            0  Failing Endpoints,  Worst Slack        0.524ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.054ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        3.750ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.524ns  (required time - arrival time)
+  Source:                 conv2ActivationMap_U/lenetSynthMatlab_ibs_ram_U/ram_reg_1/CLKARDCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            rowOutIdx_4_reg_4401_reg[0]/R
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        8.963ns  (logic 2.952ns (32.937%)  route 6.011ns (67.063%))
+  Logic Levels:           12  (CARRY4=5 LUT3=2 LUT4=1 LUT5=3 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=5028, unset)         0.973     0.973    conv2ActivationMap_U/lenetSynthMatlab_ibs_ram_U/ap_clk
+    RAMB36_X2Y11         RAMB36E1                                     r  conv2ActivationMap_U/lenetSynthMatlab_ibs_ram_U/ram_reg_1/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X2Y11         RAMB36E1 (Prop_ramb36e1_CLKARDCLK_DOADO[8])
+                                                      0.882     1.855 r  conv2ActivationMap_U/lenetSynthMatlab_ibs_ram_U/ram_reg_1/DOADO[8]
+                         net (fo=3, routed)           1.410     3.265    conv2ActivationMap_U/lenetSynthMatlab_ibs_ram_U/q0[8]
+    SLICE_X66Y54         LUT6 (Prop_lut6_I0_O)        0.124     3.389 r  conv2ActivationMap_U/lenetSynthMatlab_ibs_ram_U/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u_i_302/O
+                         net (fo=1, routed)           0.423     3.812    relu2ActivationMap_U/lenetSynthMatlab_jbC_ram_U/ram_reg_1_0
+    SLICE_X64Y54         LUT5 (Prop_lut5_I4_O)        0.124     3.936 r  relu2ActivationMap_U/lenetSynthMatlab_jbC_ram_U/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u_i_197/O
+                         net (fo=1, routed)           0.403     4.339    fc1ActivationMap_U/lenetSynthMatlab_pcA_ram_U/maxval_1_6_fu_290_reg[26]
+    SLICE_X65Y54         LUT3 (Prop_lut3_I2_O)        0.118     4.457 r  fc1ActivationMap_U/lenetSynthMatlab_pcA_ram_U/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u_i_38/O
+                         net (fo=4, routed)           1.142     5.598    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/s_axis_a_tdata[26]
+    SLICE_X63Y57         LUT4 (Prop_lut4_I0_O)        0.326     5.924 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[13].C_MUX.CARRY_MUX_i_1__0/O
+                         net (fo=1, routed)           0.000     5.924    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/ADD_MANT_GEN[13].lut_op_reg
+    SLICE_X63Y57         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     6.474 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[12].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     6.474    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[15].C_MUX.CARRY_MUX_n_0
+    SLICE_X63Y58         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     6.588 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[16].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     6.588    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[19].C_MUX.CARRY_MUX_n_0
+    SLICE_X63Y59         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     6.702 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[20].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     6.702    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[23].C_MUX.CARRY_MUX_n_0
+    SLICE_X63Y60         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     6.816 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[24].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     6.816    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[27].C_MUX.CARRY_MUX_n_0
+    SLICE_X63Y61         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     6.930 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[28].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.878     7.809    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/p_0_out
+    SLICE_X64Y62         LUT5 (Prop_lut5_I0_O)        0.124     7.933 f  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/m_axis_result_tdata[0]_INST_0_i_1/O
+                         net (fo=1, routed)           0.426     8.359    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/a_gt_b_fix1_out__0
+    SLICE_X64Y62         LUT3 (Prop_lut3_I0_O)        0.124     8.483 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/m_axis_result_tdata[0]_INST_0/O
+                         net (fo=24, routed)          0.495     8.978    fc1ActivationMap_U/lenetSynthMatlab_pcA_ram_U/m_axis_result_tdata[0]
+    SLICE_X65Y62         LUT5 (Prop_lut5_I4_O)        0.124     9.102 r  fc1ActivationMap_U/lenetSynthMatlab_pcA_ram_U/rowOutIdx_4_reg_4401[63]_i_1/O
+                         net (fo=64, routed)          0.833     9.936    rowOutIdx_4_reg_4401
+    SLICE_X67Y62         FDRE                                         r  rowOutIdx_4_reg_4401_reg[0]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=5028, unset)         0.924    10.924    ap_clk
+    SLICE_X67Y62         FDRE                                         r  rowOutIdx_4_reg_4401_reg[0]/C
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    SLICE_X67Y62         FDRE (Setup_fdre_C_R)       -0.429    10.460    rowOutIdx_4_reg_4401_reg[0]
+  -------------------------------------------------------------------
+                         required time                         10.460    
+                         arrival time                          -9.936    
+  -------------------------------------------------------------------
+                         slack                                  0.524    
+
+Slack (MET) :             0.524ns  (required time - arrival time)
+  Source:                 conv2ActivationMap_U/lenetSynthMatlab_ibs_ram_U/ram_reg_1/CLKARDCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            rowOutIdx_4_reg_4401_reg[27]/R
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        8.963ns  (logic 2.952ns (32.937%)  route 6.011ns (67.063%))
+  Logic Levels:           12  (CARRY4=5 LUT3=2 LUT4=1 LUT5=3 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=5028, unset)         0.973     0.973    conv2ActivationMap_U/lenetSynthMatlab_ibs_ram_U/ap_clk
+    RAMB36_X2Y11         RAMB36E1                                     r  conv2ActivationMap_U/lenetSynthMatlab_ibs_ram_U/ram_reg_1/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X2Y11         RAMB36E1 (Prop_ramb36e1_CLKARDCLK_DOADO[8])
+                                                      0.882     1.855 r  conv2ActivationMap_U/lenetSynthMatlab_ibs_ram_U/ram_reg_1/DOADO[8]
+                         net (fo=3, routed)           1.410     3.265    conv2ActivationMap_U/lenetSynthMatlab_ibs_ram_U/q0[8]
+    SLICE_X66Y54         LUT6 (Prop_lut6_I0_O)        0.124     3.389 r  conv2ActivationMap_U/lenetSynthMatlab_ibs_ram_U/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u_i_302/O
+                         net (fo=1, routed)           0.423     3.812    relu2ActivationMap_U/lenetSynthMatlab_jbC_ram_U/ram_reg_1_0
+    SLICE_X64Y54         LUT5 (Prop_lut5_I4_O)        0.124     3.936 r  relu2ActivationMap_U/lenetSynthMatlab_jbC_ram_U/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u_i_197/O
+                         net (fo=1, routed)           0.403     4.339    fc1ActivationMap_U/lenetSynthMatlab_pcA_ram_U/maxval_1_6_fu_290_reg[26]
+    SLICE_X65Y54         LUT3 (Prop_lut3_I2_O)        0.118     4.457 r  fc1ActivationMap_U/lenetSynthMatlab_pcA_ram_U/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u_i_38/O
+                         net (fo=4, routed)           1.142     5.598    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/s_axis_a_tdata[26]
+    SLICE_X63Y57         LUT4 (Prop_lut4_I0_O)        0.326     5.924 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[13].C_MUX.CARRY_MUX_i_1__0/O
+                         net (fo=1, routed)           0.000     5.924    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/ADD_MANT_GEN[13].lut_op_reg
+    SLICE_X63Y57         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     6.474 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[12].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     6.474    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[15].C_MUX.CARRY_MUX_n_0
+    SLICE_X63Y58         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     6.588 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[16].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     6.588    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[19].C_MUX.CARRY_MUX_n_0
+    SLICE_X63Y59         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     6.702 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[20].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     6.702    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[23].C_MUX.CARRY_MUX_n_0
+    SLICE_X63Y60         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     6.816 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[24].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     6.816    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[27].C_MUX.CARRY_MUX_n_0
+    SLICE_X63Y61         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     6.930 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[28].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.878     7.809    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/p_0_out
+    SLICE_X64Y62         LUT5 (Prop_lut5_I0_O)        0.124     7.933 f  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/m_axis_result_tdata[0]_INST_0_i_1/O
+                         net (fo=1, routed)           0.426     8.359    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/a_gt_b_fix1_out__0
+    SLICE_X64Y62         LUT3 (Prop_lut3_I0_O)        0.124     8.483 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/m_axis_result_tdata[0]_INST_0/O
+                         net (fo=24, routed)          0.495     8.978    fc1ActivationMap_U/lenetSynthMatlab_pcA_ram_U/m_axis_result_tdata[0]
+    SLICE_X65Y62         LUT5 (Prop_lut5_I4_O)        0.124     9.102 r  fc1ActivationMap_U/lenetSynthMatlab_pcA_ram_U/rowOutIdx_4_reg_4401[63]_i_1/O
+                         net (fo=64, routed)          0.833     9.936    rowOutIdx_4_reg_4401
+    SLICE_X67Y62         FDRE                                         r  rowOutIdx_4_reg_4401_reg[27]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=5028, unset)         0.924    10.924    ap_clk
+    SLICE_X67Y62         FDRE                                         r  rowOutIdx_4_reg_4401_reg[27]/C
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    SLICE_X67Y62         FDRE (Setup_fdre_C_R)       -0.429    10.460    rowOutIdx_4_reg_4401_reg[27]
+  -------------------------------------------------------------------
+                         required time                         10.460    
+                         arrival time                          -9.936    
+  -------------------------------------------------------------------
+                         slack                                  0.524    
+
+Slack (MET) :             0.524ns  (required time - arrival time)
+  Source:                 conv2ActivationMap_U/lenetSynthMatlab_ibs_ram_U/ram_reg_1/CLKARDCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            rowOutIdx_4_reg_4401_reg[29]/R
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        8.963ns  (logic 2.952ns (32.937%)  route 6.011ns (67.063%))
+  Logic Levels:           12  (CARRY4=5 LUT3=2 LUT4=1 LUT5=3 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=5028, unset)         0.973     0.973    conv2ActivationMap_U/lenetSynthMatlab_ibs_ram_U/ap_clk
+    RAMB36_X2Y11         RAMB36E1                                     r  conv2ActivationMap_U/lenetSynthMatlab_ibs_ram_U/ram_reg_1/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X2Y11         RAMB36E1 (Prop_ramb36e1_CLKARDCLK_DOADO[8])
+                                                      0.882     1.855 r  conv2ActivationMap_U/lenetSynthMatlab_ibs_ram_U/ram_reg_1/DOADO[8]
+                         net (fo=3, routed)           1.410     3.265    conv2ActivationMap_U/lenetSynthMatlab_ibs_ram_U/q0[8]
+    SLICE_X66Y54         LUT6 (Prop_lut6_I0_O)        0.124     3.389 r  conv2ActivationMap_U/lenetSynthMatlab_ibs_ram_U/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u_i_302/O
+                         net (fo=1, routed)           0.423     3.812    relu2ActivationMap_U/lenetSynthMatlab_jbC_ram_U/ram_reg_1_0
+    SLICE_X64Y54         LUT5 (Prop_lut5_I4_O)        0.124     3.936 r  relu2ActivationMap_U/lenetSynthMatlab_jbC_ram_U/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u_i_197/O
+                         net (fo=1, routed)           0.403     4.339    fc1ActivationMap_U/lenetSynthMatlab_pcA_ram_U/maxval_1_6_fu_290_reg[26]
+    SLICE_X65Y54         LUT3 (Prop_lut3_I2_O)        0.118     4.457 r  fc1ActivationMap_U/lenetSynthMatlab_pcA_ram_U/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u_i_38/O
+                         net (fo=4, routed)           1.142     5.598    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/s_axis_a_tdata[26]
+    SLICE_X63Y57         LUT4 (Prop_lut4_I0_O)        0.326     5.924 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[13].C_MUX.CARRY_MUX_i_1__0/O
+                         net (fo=1, routed)           0.000     5.924    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/ADD_MANT_GEN[13].lut_op_reg
+    SLICE_X63Y57         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     6.474 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[12].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     6.474    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[15].C_MUX.CARRY_MUX_n_0
+    SLICE_X63Y58         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     6.588 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[16].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     6.588    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[19].C_MUX.CARRY_MUX_n_0
+    SLICE_X63Y59         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     6.702 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[20].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     6.702    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[23].C_MUX.CARRY_MUX_n_0
+    SLICE_X63Y60         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     6.816 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[24].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     6.816    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[27].C_MUX.CARRY_MUX_n_0
+    SLICE_X63Y61         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     6.930 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[28].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.878     7.809    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/p_0_out
+    SLICE_X64Y62         LUT5 (Prop_lut5_I0_O)        0.124     7.933 f  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/m_axis_result_tdata[0]_INST_0_i_1/O
+                         net (fo=1, routed)           0.426     8.359    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/a_gt_b_fix1_out__0
+    SLICE_X64Y62         LUT3 (Prop_lut3_I0_O)        0.124     8.483 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/m_axis_result_tdata[0]_INST_0/O
+                         net (fo=24, routed)          0.495     8.978    fc1ActivationMap_U/lenetSynthMatlab_pcA_ram_U/m_axis_result_tdata[0]
+    SLICE_X65Y62         LUT5 (Prop_lut5_I4_O)        0.124     9.102 r  fc1ActivationMap_U/lenetSynthMatlab_pcA_ram_U/rowOutIdx_4_reg_4401[63]_i_1/O
+                         net (fo=64, routed)          0.833     9.936    rowOutIdx_4_reg_4401
+    SLICE_X67Y62         FDRE                                         r  rowOutIdx_4_reg_4401_reg[29]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=5028, unset)         0.924    10.924    ap_clk
+    SLICE_X67Y62         FDRE                                         r  rowOutIdx_4_reg_4401_reg[29]/C
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    SLICE_X67Y62         FDRE (Setup_fdre_C_R)       -0.429    10.460    rowOutIdx_4_reg_4401_reg[29]
+  -------------------------------------------------------------------
+                         required time                         10.460    
+                         arrival time                          -9.936    
+  -------------------------------------------------------------------
+                         slack                                  0.524    
+
+Slack (MET) :             0.524ns  (required time - arrival time)
+  Source:                 conv2ActivationMap_U/lenetSynthMatlab_ibs_ram_U/ram_reg_1/CLKARDCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            rowOutIdx_4_reg_4401_reg[37]/R
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        8.963ns  (logic 2.952ns (32.937%)  route 6.011ns (67.063%))
+  Logic Levels:           12  (CARRY4=5 LUT3=2 LUT4=1 LUT5=3 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=5028, unset)         0.973     0.973    conv2ActivationMap_U/lenetSynthMatlab_ibs_ram_U/ap_clk
+    RAMB36_X2Y11         RAMB36E1                                     r  conv2ActivationMap_U/lenetSynthMatlab_ibs_ram_U/ram_reg_1/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X2Y11         RAMB36E1 (Prop_ramb36e1_CLKARDCLK_DOADO[8])
+                                                      0.882     1.855 r  conv2ActivationMap_U/lenetSynthMatlab_ibs_ram_U/ram_reg_1/DOADO[8]
+                         net (fo=3, routed)           1.410     3.265    conv2ActivationMap_U/lenetSynthMatlab_ibs_ram_U/q0[8]
+    SLICE_X66Y54         LUT6 (Prop_lut6_I0_O)        0.124     3.389 r  conv2ActivationMap_U/lenetSynthMatlab_ibs_ram_U/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u_i_302/O
+                         net (fo=1, routed)           0.423     3.812    relu2ActivationMap_U/lenetSynthMatlab_jbC_ram_U/ram_reg_1_0
+    SLICE_X64Y54         LUT5 (Prop_lut5_I4_O)        0.124     3.936 r  relu2ActivationMap_U/lenetSynthMatlab_jbC_ram_U/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u_i_197/O
+                         net (fo=1, routed)           0.403     4.339    fc1ActivationMap_U/lenetSynthMatlab_pcA_ram_U/maxval_1_6_fu_290_reg[26]
+    SLICE_X65Y54         LUT3 (Prop_lut3_I2_O)        0.118     4.457 r  fc1ActivationMap_U/lenetSynthMatlab_pcA_ram_U/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u_i_38/O
+                         net (fo=4, routed)           1.142     5.598    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/s_axis_a_tdata[26]
+    SLICE_X63Y57         LUT4 (Prop_lut4_I0_O)        0.326     5.924 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[13].C_MUX.CARRY_MUX_i_1__0/O
+                         net (fo=1, routed)           0.000     5.924    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/ADD_MANT_GEN[13].lut_op_reg
+    SLICE_X63Y57         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     6.474 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[12].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     6.474    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[15].C_MUX.CARRY_MUX_n_0
+    SLICE_X63Y58         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     6.588 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[16].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     6.588    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[19].C_MUX.CARRY_MUX_n_0
+    SLICE_X63Y59         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     6.702 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[20].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     6.702    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[23].C_MUX.CARRY_MUX_n_0
+    SLICE_X63Y60         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     6.816 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[24].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     6.816    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[27].C_MUX.CARRY_MUX_n_0
+    SLICE_X63Y61         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     6.930 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[28].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.878     7.809    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/p_0_out
+    SLICE_X64Y62         LUT5 (Prop_lut5_I0_O)        0.124     7.933 f  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/m_axis_result_tdata[0]_INST_0_i_1/O
+                         net (fo=1, routed)           0.426     8.359    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/a_gt_b_fix1_out__0
+    SLICE_X64Y62         LUT3 (Prop_lut3_I0_O)        0.124     8.483 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/m_axis_result_tdata[0]_INST_0/O
+                         net (fo=24, routed)          0.495     8.978    fc1ActivationMap_U/lenetSynthMatlab_pcA_ram_U/m_axis_result_tdata[0]
+    SLICE_X65Y62         LUT5 (Prop_lut5_I4_O)        0.124     9.102 r  fc1ActivationMap_U/lenetSynthMatlab_pcA_ram_U/rowOutIdx_4_reg_4401[63]_i_1/O
+                         net (fo=64, routed)          0.833     9.936    rowOutIdx_4_reg_4401
+    SLICE_X67Y62         FDRE                                         r  rowOutIdx_4_reg_4401_reg[37]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=5028, unset)         0.924    10.924    ap_clk
+    SLICE_X67Y62         FDRE                                         r  rowOutIdx_4_reg_4401_reg[37]/C
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    SLICE_X67Y62         FDRE (Setup_fdre_C_R)       -0.429    10.460    rowOutIdx_4_reg_4401_reg[37]
+  -------------------------------------------------------------------
+                         required time                         10.460    
+                         arrival time                          -9.936    
+  -------------------------------------------------------------------
+                         slack                                  0.524    
+
+Slack (MET) :             0.524ns  (required time - arrival time)
+  Source:                 conv2ActivationMap_U/lenetSynthMatlab_ibs_ram_U/ram_reg_1/CLKARDCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            rowOutIdx_4_reg_4401_reg[38]/R
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        8.963ns  (logic 2.952ns (32.937%)  route 6.011ns (67.063%))
+  Logic Levels:           12  (CARRY4=5 LUT3=2 LUT4=1 LUT5=3 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=5028, unset)         0.973     0.973    conv2ActivationMap_U/lenetSynthMatlab_ibs_ram_U/ap_clk
+    RAMB36_X2Y11         RAMB36E1                                     r  conv2ActivationMap_U/lenetSynthMatlab_ibs_ram_U/ram_reg_1/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X2Y11         RAMB36E1 (Prop_ramb36e1_CLKARDCLK_DOADO[8])
+                                                      0.882     1.855 r  conv2ActivationMap_U/lenetSynthMatlab_ibs_ram_U/ram_reg_1/DOADO[8]
+                         net (fo=3, routed)           1.410     3.265    conv2ActivationMap_U/lenetSynthMatlab_ibs_ram_U/q0[8]
+    SLICE_X66Y54         LUT6 (Prop_lut6_I0_O)        0.124     3.389 r  conv2ActivationMap_U/lenetSynthMatlab_ibs_ram_U/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u_i_302/O
+                         net (fo=1, routed)           0.423     3.812    relu2ActivationMap_U/lenetSynthMatlab_jbC_ram_U/ram_reg_1_0
+    SLICE_X64Y54         LUT5 (Prop_lut5_I4_O)        0.124     3.936 r  relu2ActivationMap_U/lenetSynthMatlab_jbC_ram_U/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u_i_197/O
+                         net (fo=1, routed)           0.403     4.339    fc1ActivationMap_U/lenetSynthMatlab_pcA_ram_U/maxval_1_6_fu_290_reg[26]
+    SLICE_X65Y54         LUT3 (Prop_lut3_I2_O)        0.118     4.457 r  fc1ActivationMap_U/lenetSynthMatlab_pcA_ram_U/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u_i_38/O
+                         net (fo=4, routed)           1.142     5.598    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/s_axis_a_tdata[26]
+    SLICE_X63Y57         LUT4 (Prop_lut4_I0_O)        0.326     5.924 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[13].C_MUX.CARRY_MUX_i_1__0/O
+                         net (fo=1, routed)           0.000     5.924    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/ADD_MANT_GEN[13].lut_op_reg
+    SLICE_X63Y57         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     6.474 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[12].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     6.474    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[15].C_MUX.CARRY_MUX_n_0
+    SLICE_X63Y58         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     6.588 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[16].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     6.588    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[19].C_MUX.CARRY_MUX_n_0
+    SLICE_X63Y59         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     6.702 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[20].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     6.702    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[23].C_MUX.CARRY_MUX_n_0
+    SLICE_X63Y60         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     6.816 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[24].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     6.816    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[27].C_MUX.CARRY_MUX_n_0
+    SLICE_X63Y61         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     6.930 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[28].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.878     7.809    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/p_0_out
+    SLICE_X64Y62         LUT5 (Prop_lut5_I0_O)        0.124     7.933 f  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/m_axis_result_tdata[0]_INST_0_i_1/O
+                         net (fo=1, routed)           0.426     8.359    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/a_gt_b_fix1_out__0
+    SLICE_X64Y62         LUT3 (Prop_lut3_I0_O)        0.124     8.483 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/m_axis_result_tdata[0]_INST_0/O
+                         net (fo=24, routed)          0.495     8.978    fc1ActivationMap_U/lenetSynthMatlab_pcA_ram_U/m_axis_result_tdata[0]
+    SLICE_X65Y62         LUT5 (Prop_lut5_I4_O)        0.124     9.102 r  fc1ActivationMap_U/lenetSynthMatlab_pcA_ram_U/rowOutIdx_4_reg_4401[63]_i_1/O
+                         net (fo=64, routed)          0.833     9.936    rowOutIdx_4_reg_4401
+    SLICE_X67Y62         FDRE                                         r  rowOutIdx_4_reg_4401_reg[38]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=5028, unset)         0.924    10.924    ap_clk
+    SLICE_X67Y62         FDRE                                         r  rowOutIdx_4_reg_4401_reg[38]/C
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    SLICE_X67Y62         FDRE (Setup_fdre_C_R)       -0.429    10.460    rowOutIdx_4_reg_4401_reg[38]
+  -------------------------------------------------------------------
+                         required time                         10.460    
+                         arrival time                          -9.936    
+  -------------------------------------------------------------------
+                         slack                                  0.524    
+
+Slack (MET) :             0.524ns  (required time - arrival time)
+  Source:                 conv2ActivationMap_U/lenetSynthMatlab_ibs_ram_U/ram_reg_1/CLKARDCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            rowOutIdx_4_reg_4401_reg[49]/R
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        8.963ns  (logic 2.952ns (32.937%)  route 6.011ns (67.063%))
+  Logic Levels:           12  (CARRY4=5 LUT3=2 LUT4=1 LUT5=3 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=5028, unset)         0.973     0.973    conv2ActivationMap_U/lenetSynthMatlab_ibs_ram_U/ap_clk
+    RAMB36_X2Y11         RAMB36E1                                     r  conv2ActivationMap_U/lenetSynthMatlab_ibs_ram_U/ram_reg_1/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X2Y11         RAMB36E1 (Prop_ramb36e1_CLKARDCLK_DOADO[8])
+                                                      0.882     1.855 r  conv2ActivationMap_U/lenetSynthMatlab_ibs_ram_U/ram_reg_1/DOADO[8]
+                         net (fo=3, routed)           1.410     3.265    conv2ActivationMap_U/lenetSynthMatlab_ibs_ram_U/q0[8]
+    SLICE_X66Y54         LUT6 (Prop_lut6_I0_O)        0.124     3.389 r  conv2ActivationMap_U/lenetSynthMatlab_ibs_ram_U/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u_i_302/O
+                         net (fo=1, routed)           0.423     3.812    relu2ActivationMap_U/lenetSynthMatlab_jbC_ram_U/ram_reg_1_0
+    SLICE_X64Y54         LUT5 (Prop_lut5_I4_O)        0.124     3.936 r  relu2ActivationMap_U/lenetSynthMatlab_jbC_ram_U/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u_i_197/O
+                         net (fo=1, routed)           0.403     4.339    fc1ActivationMap_U/lenetSynthMatlab_pcA_ram_U/maxval_1_6_fu_290_reg[26]
+    SLICE_X65Y54         LUT3 (Prop_lut3_I2_O)        0.118     4.457 r  fc1ActivationMap_U/lenetSynthMatlab_pcA_ram_U/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u_i_38/O
+                         net (fo=4, routed)           1.142     5.598    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/s_axis_a_tdata[26]
+    SLICE_X63Y57         LUT4 (Prop_lut4_I0_O)        0.326     5.924 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[13].C_MUX.CARRY_MUX_i_1__0/O
+                         net (fo=1, routed)           0.000     5.924    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/ADD_MANT_GEN[13].lut_op_reg
+    SLICE_X63Y57         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     6.474 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[12].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     6.474    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[15].C_MUX.CARRY_MUX_n_0
+    SLICE_X63Y58         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     6.588 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[16].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     6.588    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[19].C_MUX.CARRY_MUX_n_0
+    SLICE_X63Y59         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     6.702 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[20].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     6.702    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[23].C_MUX.CARRY_MUX_n_0
+    SLICE_X63Y60         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     6.816 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[24].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     6.816    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[27].C_MUX.CARRY_MUX_n_0
+    SLICE_X63Y61         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     6.930 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[28].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.878     7.809    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/p_0_out
+    SLICE_X64Y62         LUT5 (Prop_lut5_I0_O)        0.124     7.933 f  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/m_axis_result_tdata[0]_INST_0_i_1/O
+                         net (fo=1, routed)           0.426     8.359    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/a_gt_b_fix1_out__0
+    SLICE_X64Y62         LUT3 (Prop_lut3_I0_O)        0.124     8.483 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/m_axis_result_tdata[0]_INST_0/O
+                         net (fo=24, routed)          0.495     8.978    fc1ActivationMap_U/lenetSynthMatlab_pcA_ram_U/m_axis_result_tdata[0]
+    SLICE_X65Y62         LUT5 (Prop_lut5_I4_O)        0.124     9.102 r  fc1ActivationMap_U/lenetSynthMatlab_pcA_ram_U/rowOutIdx_4_reg_4401[63]_i_1/O
+                         net (fo=64, routed)          0.833     9.936    rowOutIdx_4_reg_4401
+    SLICE_X67Y62         FDRE                                         r  rowOutIdx_4_reg_4401_reg[49]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=5028, unset)         0.924    10.924    ap_clk
+    SLICE_X67Y62         FDRE                                         r  rowOutIdx_4_reg_4401_reg[49]/C
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    SLICE_X67Y62         FDRE (Setup_fdre_C_R)       -0.429    10.460    rowOutIdx_4_reg_4401_reg[49]
+  -------------------------------------------------------------------
+                         required time                         10.460    
+                         arrival time                          -9.936    
+  -------------------------------------------------------------------
+                         slack                                  0.524    
+
+Slack (MET) :             0.524ns  (required time - arrival time)
+  Source:                 conv2ActivationMap_U/lenetSynthMatlab_ibs_ram_U/ram_reg_1/CLKARDCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            rowOutIdx_4_reg_4401_reg[60]/R
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        8.963ns  (logic 2.952ns (32.937%)  route 6.011ns (67.063%))
+  Logic Levels:           12  (CARRY4=5 LUT3=2 LUT4=1 LUT5=3 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=5028, unset)         0.973     0.973    conv2ActivationMap_U/lenetSynthMatlab_ibs_ram_U/ap_clk
+    RAMB36_X2Y11         RAMB36E1                                     r  conv2ActivationMap_U/lenetSynthMatlab_ibs_ram_U/ram_reg_1/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X2Y11         RAMB36E1 (Prop_ramb36e1_CLKARDCLK_DOADO[8])
+                                                      0.882     1.855 r  conv2ActivationMap_U/lenetSynthMatlab_ibs_ram_U/ram_reg_1/DOADO[8]
+                         net (fo=3, routed)           1.410     3.265    conv2ActivationMap_U/lenetSynthMatlab_ibs_ram_U/q0[8]
+    SLICE_X66Y54         LUT6 (Prop_lut6_I0_O)        0.124     3.389 r  conv2ActivationMap_U/lenetSynthMatlab_ibs_ram_U/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u_i_302/O
+                         net (fo=1, routed)           0.423     3.812    relu2ActivationMap_U/lenetSynthMatlab_jbC_ram_U/ram_reg_1_0
+    SLICE_X64Y54         LUT5 (Prop_lut5_I4_O)        0.124     3.936 r  relu2ActivationMap_U/lenetSynthMatlab_jbC_ram_U/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u_i_197/O
+                         net (fo=1, routed)           0.403     4.339    fc1ActivationMap_U/lenetSynthMatlab_pcA_ram_U/maxval_1_6_fu_290_reg[26]
+    SLICE_X65Y54         LUT3 (Prop_lut3_I2_O)        0.118     4.457 r  fc1ActivationMap_U/lenetSynthMatlab_pcA_ram_U/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u_i_38/O
+                         net (fo=4, routed)           1.142     5.598    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/s_axis_a_tdata[26]
+    SLICE_X63Y57         LUT4 (Prop_lut4_I0_O)        0.326     5.924 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[13].C_MUX.CARRY_MUX_i_1__0/O
+                         net (fo=1, routed)           0.000     5.924    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/ADD_MANT_GEN[13].lut_op_reg
+    SLICE_X63Y57         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     6.474 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[12].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     6.474    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[15].C_MUX.CARRY_MUX_n_0
+    SLICE_X63Y58         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     6.588 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[16].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     6.588    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[19].C_MUX.CARRY_MUX_n_0
+    SLICE_X63Y59         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     6.702 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[20].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     6.702    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[23].C_MUX.CARRY_MUX_n_0
+    SLICE_X63Y60         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     6.816 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[24].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     6.816    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[27].C_MUX.CARRY_MUX_n_0
+    SLICE_X63Y61         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     6.930 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[28].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.878     7.809    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/p_0_out
+    SLICE_X64Y62         LUT5 (Prop_lut5_I0_O)        0.124     7.933 f  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/m_axis_result_tdata[0]_INST_0_i_1/O
+                         net (fo=1, routed)           0.426     8.359    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/a_gt_b_fix1_out__0
+    SLICE_X64Y62         LUT3 (Prop_lut3_I0_O)        0.124     8.483 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/m_axis_result_tdata[0]_INST_0/O
+                         net (fo=24, routed)          0.495     8.978    fc1ActivationMap_U/lenetSynthMatlab_pcA_ram_U/m_axis_result_tdata[0]
+    SLICE_X65Y62         LUT5 (Prop_lut5_I4_O)        0.124     9.102 r  fc1ActivationMap_U/lenetSynthMatlab_pcA_ram_U/rowOutIdx_4_reg_4401[63]_i_1/O
+                         net (fo=64, routed)          0.833     9.936    rowOutIdx_4_reg_4401
+    SLICE_X67Y62         FDRE                                         r  rowOutIdx_4_reg_4401_reg[60]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=5028, unset)         0.924    10.924    ap_clk
+    SLICE_X67Y62         FDRE                                         r  rowOutIdx_4_reg_4401_reg[60]/C
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    SLICE_X67Y62         FDRE (Setup_fdre_C_R)       -0.429    10.460    rowOutIdx_4_reg_4401_reg[60]
+  -------------------------------------------------------------------
+                         required time                         10.460    
+                         arrival time                          -9.936    
+  -------------------------------------------------------------------
+                         slack                                  0.524    
+
+Slack (MET) :             0.524ns  (required time - arrival time)
+  Source:                 conv2ActivationMap_U/lenetSynthMatlab_ibs_ram_U/ram_reg_1/CLKARDCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            rowOutIdx_4_reg_4401_reg[62]/R
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        8.963ns  (logic 2.952ns (32.937%)  route 6.011ns (67.063%))
+  Logic Levels:           12  (CARRY4=5 LUT3=2 LUT4=1 LUT5=3 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=5028, unset)         0.973     0.973    conv2ActivationMap_U/lenetSynthMatlab_ibs_ram_U/ap_clk
+    RAMB36_X2Y11         RAMB36E1                                     r  conv2ActivationMap_U/lenetSynthMatlab_ibs_ram_U/ram_reg_1/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X2Y11         RAMB36E1 (Prop_ramb36e1_CLKARDCLK_DOADO[8])
+                                                      0.882     1.855 r  conv2ActivationMap_U/lenetSynthMatlab_ibs_ram_U/ram_reg_1/DOADO[8]
+                         net (fo=3, routed)           1.410     3.265    conv2ActivationMap_U/lenetSynthMatlab_ibs_ram_U/q0[8]
+    SLICE_X66Y54         LUT6 (Prop_lut6_I0_O)        0.124     3.389 r  conv2ActivationMap_U/lenetSynthMatlab_ibs_ram_U/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u_i_302/O
+                         net (fo=1, routed)           0.423     3.812    relu2ActivationMap_U/lenetSynthMatlab_jbC_ram_U/ram_reg_1_0
+    SLICE_X64Y54         LUT5 (Prop_lut5_I4_O)        0.124     3.936 r  relu2ActivationMap_U/lenetSynthMatlab_jbC_ram_U/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u_i_197/O
+                         net (fo=1, routed)           0.403     4.339    fc1ActivationMap_U/lenetSynthMatlab_pcA_ram_U/maxval_1_6_fu_290_reg[26]
+    SLICE_X65Y54         LUT3 (Prop_lut3_I2_O)        0.118     4.457 r  fc1ActivationMap_U/lenetSynthMatlab_pcA_ram_U/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u_i_38/O
+                         net (fo=4, routed)           1.142     5.598    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/s_axis_a_tdata[26]
+    SLICE_X63Y57         LUT4 (Prop_lut4_I0_O)        0.326     5.924 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[13].C_MUX.CARRY_MUX_i_1__0/O
+                         net (fo=1, routed)           0.000     5.924    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/ADD_MANT_GEN[13].lut_op_reg
+    SLICE_X63Y57         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     6.474 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[12].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     6.474    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[15].C_MUX.CARRY_MUX_n_0
+    SLICE_X63Y58         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     6.588 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[16].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     6.588    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[19].C_MUX.CARRY_MUX_n_0
+    SLICE_X63Y59         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     6.702 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[20].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     6.702    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[23].C_MUX.CARRY_MUX_n_0
+    SLICE_X63Y60         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     6.816 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[24].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     6.816    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[27].C_MUX.CARRY_MUX_n_0
+    SLICE_X63Y61         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     6.930 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[28].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.878     7.809    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/p_0_out
+    SLICE_X64Y62         LUT5 (Prop_lut5_I0_O)        0.124     7.933 f  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/m_axis_result_tdata[0]_INST_0_i_1/O
+                         net (fo=1, routed)           0.426     8.359    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/a_gt_b_fix1_out__0
+    SLICE_X64Y62         LUT3 (Prop_lut3_I0_O)        0.124     8.483 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/m_axis_result_tdata[0]_INST_0/O
+                         net (fo=24, routed)          0.495     8.978    fc1ActivationMap_U/lenetSynthMatlab_pcA_ram_U/m_axis_result_tdata[0]
+    SLICE_X65Y62         LUT5 (Prop_lut5_I4_O)        0.124     9.102 r  fc1ActivationMap_U/lenetSynthMatlab_pcA_ram_U/rowOutIdx_4_reg_4401[63]_i_1/O
+                         net (fo=64, routed)          0.833     9.936    rowOutIdx_4_reg_4401
+    SLICE_X67Y62         FDRE                                         r  rowOutIdx_4_reg_4401_reg[62]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=5028, unset)         0.924    10.924    ap_clk
+    SLICE_X67Y62         FDRE                                         r  rowOutIdx_4_reg_4401_reg[62]/C
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    SLICE_X67Y62         FDRE (Setup_fdre_C_R)       -0.429    10.460    rowOutIdx_4_reg_4401_reg[62]
+  -------------------------------------------------------------------
+                         required time                         10.460    
+                         arrival time                          -9.936    
+  -------------------------------------------------------------------
+                         slack                                  0.524    
+
+Slack (MET) :             0.571ns  (required time - arrival time)
+  Source:                 conv2ActivationMap_U/lenetSynthMatlab_ibs_ram_U/ram_reg_1/CLKARDCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            rowOutIdx_4_reg_4401_reg[17]/R
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        8.821ns  (logic 2.952ns (33.465%)  route 5.869ns (66.535%))
+  Logic Levels:           12  (CARRY4=5 LUT3=2 LUT4=1 LUT5=3 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=5028, unset)         0.973     0.973    conv2ActivationMap_U/lenetSynthMatlab_ibs_ram_U/ap_clk
+    RAMB36_X2Y11         RAMB36E1                                     r  conv2ActivationMap_U/lenetSynthMatlab_ibs_ram_U/ram_reg_1/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X2Y11         RAMB36E1 (Prop_ramb36e1_CLKARDCLK_DOADO[8])
+                                                      0.882     1.855 r  conv2ActivationMap_U/lenetSynthMatlab_ibs_ram_U/ram_reg_1/DOADO[8]
+                         net (fo=3, routed)           1.410     3.265    conv2ActivationMap_U/lenetSynthMatlab_ibs_ram_U/q0[8]
+    SLICE_X66Y54         LUT6 (Prop_lut6_I0_O)        0.124     3.389 r  conv2ActivationMap_U/lenetSynthMatlab_ibs_ram_U/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u_i_302/O
+                         net (fo=1, routed)           0.423     3.812    relu2ActivationMap_U/lenetSynthMatlab_jbC_ram_U/ram_reg_1_0
+    SLICE_X64Y54         LUT5 (Prop_lut5_I4_O)        0.124     3.936 r  relu2ActivationMap_U/lenetSynthMatlab_jbC_ram_U/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u_i_197/O
+                         net (fo=1, routed)           0.403     4.339    fc1ActivationMap_U/lenetSynthMatlab_pcA_ram_U/maxval_1_6_fu_290_reg[26]
+    SLICE_X65Y54         LUT3 (Prop_lut3_I2_O)        0.118     4.457 r  fc1ActivationMap_U/lenetSynthMatlab_pcA_ram_U/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u_i_38/O
+                         net (fo=4, routed)           1.142     5.598    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/s_axis_a_tdata[26]
+    SLICE_X63Y57         LUT4 (Prop_lut4_I0_O)        0.326     5.924 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[13].C_MUX.CARRY_MUX_i_1__0/O
+                         net (fo=1, routed)           0.000     5.924    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/ADD_MANT_GEN[13].lut_op_reg
+    SLICE_X63Y57         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     6.474 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[12].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     6.474    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[15].C_MUX.CARRY_MUX_n_0
+    SLICE_X63Y58         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     6.588 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[16].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     6.588    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[19].C_MUX.CARRY_MUX_n_0
+    SLICE_X63Y59         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     6.702 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[20].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     6.702    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[23].C_MUX.CARRY_MUX_n_0
+    SLICE_X63Y60         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     6.816 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[24].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     6.816    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[27].C_MUX.CARRY_MUX_n_0
+    SLICE_X63Y61         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     6.930 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[28].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.878     7.809    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/p_0_out
+    SLICE_X64Y62         LUT5 (Prop_lut5_I0_O)        0.124     7.933 f  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/m_axis_result_tdata[0]_INST_0_i_1/O
+                         net (fo=1, routed)           0.426     8.359    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/a_gt_b_fix1_out__0
+    SLICE_X64Y62         LUT3 (Prop_lut3_I0_O)        0.124     8.483 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/m_axis_result_tdata[0]_INST_0/O
+                         net (fo=24, routed)          0.495     8.978    fc1ActivationMap_U/lenetSynthMatlab_pcA_ram_U/m_axis_result_tdata[0]
+    SLICE_X65Y62         LUT5 (Prop_lut5_I4_O)        0.124     9.102 r  fc1ActivationMap_U/lenetSynthMatlab_pcA_ram_U/rowOutIdx_4_reg_4401[63]_i_1/O
+                         net (fo=64, routed)          0.692     9.794    rowOutIdx_4_reg_4401
+    SLICE_X66Y61         FDRE                                         r  rowOutIdx_4_reg_4401_reg[17]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=5028, unset)         0.924    10.924    ap_clk
+    SLICE_X66Y61         FDRE                                         r  rowOutIdx_4_reg_4401_reg[17]/C
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    SLICE_X66Y61         FDRE (Setup_fdre_C_R)       -0.524    10.365    rowOutIdx_4_reg_4401_reg[17]
+  -------------------------------------------------------------------
+                         required time                         10.365    
+                         arrival time                          -9.794    
+  -------------------------------------------------------------------
+                         slack                                  0.571    
+
+Slack (MET) :             0.571ns  (required time - arrival time)
+  Source:                 conv2ActivationMap_U/lenetSynthMatlab_ibs_ram_U/ram_reg_1/CLKARDCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            rowOutIdx_4_reg_4401_reg[20]/R
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        8.821ns  (logic 2.952ns (33.465%)  route 5.869ns (66.535%))
+  Logic Levels:           12  (CARRY4=5 LUT3=2 LUT4=1 LUT5=3 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=5028, unset)         0.973     0.973    conv2ActivationMap_U/lenetSynthMatlab_ibs_ram_U/ap_clk
+    RAMB36_X2Y11         RAMB36E1                                     r  conv2ActivationMap_U/lenetSynthMatlab_ibs_ram_U/ram_reg_1/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X2Y11         RAMB36E1 (Prop_ramb36e1_CLKARDCLK_DOADO[8])
+                                                      0.882     1.855 r  conv2ActivationMap_U/lenetSynthMatlab_ibs_ram_U/ram_reg_1/DOADO[8]
+                         net (fo=3, routed)           1.410     3.265    conv2ActivationMap_U/lenetSynthMatlab_ibs_ram_U/q0[8]
+    SLICE_X66Y54         LUT6 (Prop_lut6_I0_O)        0.124     3.389 r  conv2ActivationMap_U/lenetSynthMatlab_ibs_ram_U/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u_i_302/O
+                         net (fo=1, routed)           0.423     3.812    relu2ActivationMap_U/lenetSynthMatlab_jbC_ram_U/ram_reg_1_0
+    SLICE_X64Y54         LUT5 (Prop_lut5_I4_O)        0.124     3.936 r  relu2ActivationMap_U/lenetSynthMatlab_jbC_ram_U/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u_i_197/O
+                         net (fo=1, routed)           0.403     4.339    fc1ActivationMap_U/lenetSynthMatlab_pcA_ram_U/maxval_1_6_fu_290_reg[26]
+    SLICE_X65Y54         LUT3 (Prop_lut3_I2_O)        0.118     4.457 r  fc1ActivationMap_U/lenetSynthMatlab_pcA_ram_U/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u_i_38/O
+                         net (fo=4, routed)           1.142     5.598    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/s_axis_a_tdata[26]
+    SLICE_X63Y57         LUT4 (Prop_lut4_I0_O)        0.326     5.924 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[13].C_MUX.CARRY_MUX_i_1__0/O
+                         net (fo=1, routed)           0.000     5.924    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/ADD_MANT_GEN[13].lut_op_reg
+    SLICE_X63Y57         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     6.474 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[12].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     6.474    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[15].C_MUX.CARRY_MUX_n_0
+    SLICE_X63Y58         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     6.588 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[16].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     6.588    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[19].C_MUX.CARRY_MUX_n_0
+    SLICE_X63Y59         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     6.702 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[20].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     6.702    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[23].C_MUX.CARRY_MUX_n_0
+    SLICE_X63Y60         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     6.816 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[24].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.000     6.816    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[27].C_MUX.CARRY_MUX_n_0
+    SLICE_X63Y61         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     6.930 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/CHAIN_GEN[28].C_MUX.CARRY_MUX_CARRY4/CO[3]
+                         net (fo=1, routed)           0.878     7.809    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/p_0_out
+    SLICE_X64Y62         LUT5 (Prop_lut5_I0_O)        0.124     7.933 f  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/m_axis_result_tdata[0]_INST_0_i_1/O
+                         net (fo=1, routed)           0.426     8.359    lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/a_gt_b_fix1_out__0
+    SLICE_X64Y62         LUT3 (Prop_lut3_I0_O)        0.124     8.483 r  lenetSynthMatlab_yd2_U23/lenetSynthMatlab_ap_dcmp_0_no_dsp_64_u/U0/i_synth/COMP_OP.SPD.OP/STRUCT_CMP.A_GT_B_DET/C_CHAIN/m_axis_result_tdata[0]_INST_0/O
+                         net (fo=24, routed)          0.495     8.978    fc1ActivationMap_U/lenetSynthMatlab_pcA_ram_U/m_axis_result_tdata[0]
+    SLICE_X65Y62         LUT5 (Prop_lut5_I4_O)        0.124     9.102 r  fc1ActivationMap_U/lenetSynthMatlab_pcA_ram_U/rowOutIdx_4_reg_4401[63]_i_1/O
+                         net (fo=64, routed)          0.692     9.794    rowOutIdx_4_reg_4401
+    SLICE_X66Y61         FDRE                                         r  rowOutIdx_4_reg_4401_reg[20]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=5028, unset)         0.924    10.924    ap_clk
+    SLICE_X66Y61         FDRE                                         r  rowOutIdx_4_reg_4401_reg[20]/C
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+    SLICE_X66Y61         FDRE (Setup_fdre_C_R)       -0.524    10.365    rowOutIdx_4_reg_4401_reg[20]
+  -------------------------------------------------------------------
+                         required time                         10.365    
+                         arrival time                          -9.794    
+  -------------------------------------------------------------------
+                         slack                                  0.571    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.054ns  (arrival time - required time)
+  Source:                 rowOutIdx_2_reg_4112_reg[38]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            relu2ActivationMap_U/lenetSynthMatlab_jbC_ram_U/ram_reg_2/DIADI[2]
+                            (rising edge-triggered cell RAMB36E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        0.372ns  (logic 0.141ns (37.899%)  route 0.231ns (62.101%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.022ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.432ns
+    Source Clock Delay      (SCD):    0.410ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=5028, unset)         0.410     0.410    ap_clk
+    SLICE_X68Y62         FDRE                                         r  rowOutIdx_2_reg_4112_reg[38]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X68Y62         FDRE (Prop_fdre_C_Q)         0.141     0.551 r  rowOutIdx_2_reg_4112_reg[38]/Q
+                         net (fo=1, routed)           0.231     0.782    relu2ActivationMap_U/lenetSynthMatlab_jbC_ram_U/rowOutIdx_2_reg_4112_reg[63][20]
+    RAMB36_X1Y12         RAMB36E1                                     r  relu2ActivationMap_U/lenetSynthMatlab_jbC_ram_U/ram_reg_2/DIADI[2]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=5028, unset)         0.432     0.432    relu2ActivationMap_U/lenetSynthMatlab_jbC_ram_U/ap_clk
+    RAMB36_X1Y12         RAMB36E1                                     r  relu2ActivationMap_U/lenetSynthMatlab_jbC_ram_U/ram_reg_2/CLKARDCLK
+                         clock pessimism              0.000     0.432    
+    RAMB36_X1Y12         RAMB36E1 (Hold_ramb36e1_CLKARDCLK_DIADI[2])
+                                                      0.296     0.728    relu2ActivationMap_U/lenetSynthMatlab_jbC_ram_U/ram_reg_2
+  -------------------------------------------------------------------
+                         required time                         -0.728    
+                         arrival time                           0.782    
+  -------------------------------------------------------------------
+                         slack                                  0.054    
+
+Slack (MET) :             0.074ns  (arrival time - required time)
+  Source:                 rowOutIdx_1_reg_3760_reg[40]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            relu1ActivationMap_U/lenetSynthMatlab_eOg_ram_U/ram_reg_10/DIADI[0]
+                            (rising edge-triggered cell RAMB36E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        0.338ns  (logic 0.128ns (37.855%)  route 0.210ns (62.145%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.022ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.432ns
+    Source Clock Delay      (SCD):    0.410ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=5028, unset)         0.410     0.410    ap_clk
+    SLICE_X65Y64         FDRE                                         r  rowOutIdx_1_reg_3760_reg[40]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X65Y64         FDRE (Prop_fdre_C_Q)         0.128     0.538 r  rowOutIdx_1_reg_3760_reg[40]/Q
+                         net (fo=1, routed)           0.210     0.748    relu1ActivationMap_U/lenetSynthMatlab_eOg_ram_U/rowOutIdx_1_reg_3760_reg[63][12]
+    RAMB36_X1Y13         RAMB36E1                                     r  relu1ActivationMap_U/lenetSynthMatlab_eOg_ram_U/ram_reg_10/DIADI[0]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=5028, unset)         0.432     0.432    relu1ActivationMap_U/lenetSynthMatlab_eOg_ram_U/ap_clk
+    RAMB36_X1Y13         RAMB36E1                                     r  relu1ActivationMap_U/lenetSynthMatlab_eOg_ram_U/ram_reg_10/CLKARDCLK
+                         clock pessimism              0.000     0.432    
+    RAMB36_X1Y13         RAMB36E1 (Hold_ramb36e1_CLKARDCLK_DIADI[0])
+                                                      0.243     0.675    relu1ActivationMap_U/lenetSynthMatlab_eOg_ram_U/ram_reg_10
+  -------------------------------------------------------------------
+                         required time                         -0.675    
+                         arrival time                           0.748    
+  -------------------------------------------------------------------
+                         slack                                  0.074    
+
+Slack (MET) :             0.076ns  (arrival time - required time)
+  Source:                 rowOutIdx_2_reg_4112_reg[39]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            relu2ActivationMap_U/lenetSynthMatlab_jbC_ram_U/ram_reg_2/DIADI[3]
+                            (rising edge-triggered cell RAMB36E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        0.394ns  (logic 0.141ns (35.787%)  route 0.253ns (64.213%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.022ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.432ns
+    Source Clock Delay      (SCD):    0.410ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=5028, unset)         0.410     0.410    ap_clk
+    SLICE_X68Y62         FDRE                                         r  rowOutIdx_2_reg_4112_reg[39]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X68Y62         FDRE (Prop_fdre_C_Q)         0.141     0.551 r  rowOutIdx_2_reg_4112_reg[39]/Q
+                         net (fo=1, routed)           0.253     0.804    relu2ActivationMap_U/lenetSynthMatlab_jbC_ram_U/rowOutIdx_2_reg_4112_reg[63][21]
+    RAMB36_X1Y12         RAMB36E1                                     r  relu2ActivationMap_U/lenetSynthMatlab_jbC_ram_U/ram_reg_2/DIADI[3]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=5028, unset)         0.432     0.432    relu2ActivationMap_U/lenetSynthMatlab_jbC_ram_U/ap_clk
+    RAMB36_X1Y12         RAMB36E1                                     r  relu2ActivationMap_U/lenetSynthMatlab_jbC_ram_U/ram_reg_2/CLKARDCLK
+                         clock pessimism              0.000     0.432    
+    RAMB36_X1Y12         RAMB36E1 (Hold_ramb36e1_CLKARDCLK_DIADI[3])
+                                                      0.296     0.728    relu2ActivationMap_U/lenetSynthMatlab_jbC_ram_U/ram_reg_2
+  -------------------------------------------------------------------
+                         required time                         -0.728    
+                         arrival time                           0.804    
+  -------------------------------------------------------------------
+                         slack                                  0.076    
+
+Slack (MET) :             0.093ns  (arrival time - required time)
+  Source:                 rowOutIdx_2_reg_4112_reg[46]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            relu2ActivationMap_U/lenetSynthMatlab_jbC_ram_U/ram_reg_2/DIADI[10]
+                            (rising edge-triggered cell RAMB36E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        0.411ns  (logic 0.141ns (34.301%)  route 0.270ns (65.699%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.022ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.432ns
+    Source Clock Delay      (SCD):    0.410ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=5028, unset)         0.410     0.410    ap_clk
+    SLICE_X67Y61         FDRE                                         r  rowOutIdx_2_reg_4112_reg[46]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X67Y61         FDRE (Prop_fdre_C_Q)         0.141     0.551 r  rowOutIdx_2_reg_4112_reg[46]/Q
+                         net (fo=1, routed)           0.270     0.821    relu2ActivationMap_U/lenetSynthMatlab_jbC_ram_U/rowOutIdx_2_reg_4112_reg[63][28]
+    RAMB36_X1Y12         RAMB36E1                                     r  relu2ActivationMap_U/lenetSynthMatlab_jbC_ram_U/ram_reg_2/DIADI[10]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=5028, unset)         0.432     0.432    relu2ActivationMap_U/lenetSynthMatlab_jbC_ram_U/ap_clk
+    RAMB36_X1Y12         RAMB36E1                                     r  relu2ActivationMap_U/lenetSynthMatlab_jbC_ram_U/ram_reg_2/CLKARDCLK
+                         clock pessimism              0.000     0.432    
+    RAMB36_X1Y12         RAMB36E1 (Hold_ramb36e1_CLKARDCLK_DIADI[10])
+                                                      0.296     0.728    relu2ActivationMap_U/lenetSynthMatlab_jbC_ram_U/ram_reg_2
+  -------------------------------------------------------------------
+                         required time                         -0.728    
+                         arrival time                           0.821    
+  -------------------------------------------------------------------
+                         slack                                  0.093    
+
+Slack (MET) :             0.096ns  (arrival time - required time)
+  Source:                 rowOutIdx_1_reg_3760_reg[41]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            relu1ActivationMap_U/lenetSynthMatlab_eOg_ram_U/ram_reg_10/DIADI[1]
+                            (rising edge-triggered cell RAMB36E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        0.414ns  (logic 0.141ns (34.085%)  route 0.273ns (65.915%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.022ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.432ns
+    Source Clock Delay      (SCD):    0.410ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=5028, unset)         0.410     0.410    ap_clk
+    SLICE_X65Y64         FDRE                                         r  rowOutIdx_1_reg_3760_reg[41]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X65Y64         FDRE (Prop_fdre_C_Q)         0.141     0.551 r  rowOutIdx_1_reg_3760_reg[41]/Q
+                         net (fo=1, routed)           0.273     0.824    relu1ActivationMap_U/lenetSynthMatlab_eOg_ram_U/rowOutIdx_1_reg_3760_reg[63][13]
+    RAMB36_X1Y13         RAMB36E1                                     r  relu1ActivationMap_U/lenetSynthMatlab_eOg_ram_U/ram_reg_10/DIADI[1]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=5028, unset)         0.432     0.432    relu1ActivationMap_U/lenetSynthMatlab_eOg_ram_U/ap_clk
+    RAMB36_X1Y13         RAMB36E1                                     r  relu1ActivationMap_U/lenetSynthMatlab_eOg_ram_U/ram_reg_10/CLKARDCLK
+                         clock pessimism              0.000     0.432    
+    RAMB36_X1Y13         RAMB36E1 (Hold_ramb36e1_CLKARDCLK_DIADI[1])
+                                                      0.296     0.728    relu1ActivationMap_U/lenetSynthMatlab_eOg_ram_U/ram_reg_10
+  -------------------------------------------------------------------
+                         required time                         -0.728    
+                         arrival time                           0.824    
+  -------------------------------------------------------------------
+                         slack                                  0.096    
+
+Slack (MET) :             0.098ns  (arrival time - required time)
+  Source:                 tmp_26_reg_3671_reg[20]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            lenetSynthMatlab_tde_U18/din0_buf1_reg[20]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        0.240ns  (logic 0.186ns (77.466%)  route 0.054ns (22.534%))
+  Logic Levels:           1  (LUT5=1)
+  Clock Path Skew:        0.022ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.432ns
+    Source Clock Delay      (SCD):    0.410ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=5028, unset)         0.410     0.410    ap_clk
+    SLICE_X35Y78         FDRE                                         r  tmp_26_reg_3671_reg[20]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X35Y78         FDRE (Prop_fdre_C_Q)         0.141     0.551 r  tmp_26_reg_3671_reg[20]/Q
+                         net (fo=1, routed)           0.054     0.605    d_relu3ActivationMap_U/lenetSynthMatlab_sc4_ram_U/tmp_26_reg_3671_reg[31][20]
+    SLICE_X34Y78         LUT5 (Prop_lut5_I2_O)        0.045     0.650 r  d_relu3ActivationMap_U/lenetSynthMatlab_sc4_ram_U/din0_buf1[20]_i_1__0/O
+                         net (fo=1, routed)           0.000     0.650    lenetSynthMatlab_tde_U18/grp_fu_1234_p0[20]
+    SLICE_X34Y78         FDRE                                         r  lenetSynthMatlab_tde_U18/din0_buf1_reg[20]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=5028, unset)         0.432     0.432    lenetSynthMatlab_tde_U18/ap_clk
+    SLICE_X34Y78         FDRE                                         r  lenetSynthMatlab_tde_U18/din0_buf1_reg[20]/C
+                         clock pessimism              0.000     0.432    
+    SLICE_X34Y78         FDRE (Hold_fdre_C_D)         0.121     0.553    lenetSynthMatlab_tde_U18/din0_buf1_reg[20]
+  -------------------------------------------------------------------
+                         required time                         -0.553    
+                         arrival time                           0.650    
+  -------------------------------------------------------------------
+                         slack                                  0.098    
+
+Slack (MET) :             0.101ns  (arrival time - required time)
+  Source:                 rowOutIdx_2_reg_4112_reg[41]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            relu2ActivationMap_U/lenetSynthMatlab_jbC_ram_U/ram_reg_2/DIADI[5]
+                            (rising edge-triggered cell RAMB36E1 clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        0.366ns  (logic 0.148ns (40.454%)  route 0.218ns (59.546%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.022ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.432ns
+    Source Clock Delay      (SCD):    0.410ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=5028, unset)         0.410     0.410    ap_clk
+    SLICE_X66Y62         FDRE                                         r  rowOutIdx_2_reg_4112_reg[41]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X66Y62         FDRE (Prop_fdre_C_Q)         0.148     0.558 r  rowOutIdx_2_reg_4112_reg[41]/Q
+                         net (fo=1, routed)           0.218     0.776    relu2ActivationMap_U/lenetSynthMatlab_jbC_ram_U/rowOutIdx_2_reg_4112_reg[63][23]
+    RAMB36_X1Y12         RAMB36E1                                     r  relu2ActivationMap_U/lenetSynthMatlab_jbC_ram_U/ram_reg_2/DIADI[5]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=5028, unset)         0.432     0.432    relu2ActivationMap_U/lenetSynthMatlab_jbC_ram_U/ap_clk
+    RAMB36_X1Y12         RAMB36E1                                     r  relu2ActivationMap_U/lenetSynthMatlab_jbC_ram_U/ram_reg_2/CLKARDCLK
+                         clock pessimism              0.000     0.432    
+    RAMB36_X1Y12         RAMB36E1 (Hold_ramb36e1_CLKARDCLK_DIADI[5])
+                                                      0.243     0.675    relu2ActivationMap_U/lenetSynthMatlab_jbC_ram_U/ram_reg_2
+  -------------------------------------------------------------------
+                         required time                         -0.675    
+                         arrival time                           0.776    
+  -------------------------------------------------------------------
+                         slack                                  0.101    
+
+Slack (MET) :             0.104ns  (arrival time - required time)
+  Source:                 grp_sum_fu_1213/lenetSynthMatlab_bkb_U1/lenetSynthMatlab_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/STATE_DELAY/i_pipe/opt_has_pipe.first_q_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            grp_sum_fu_1213/lenetSynthMatlab_bkb_U1/lenetSynthMatlab_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/STATE_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][0]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        0.197ns  (logic 0.141ns (71.611%)  route 0.056ns (28.389%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.022ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.432ns
+    Source Clock Delay      (SCD):    0.410ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=5028, unset)         0.410     0.410    grp_sum_fu_1213/lenetSynthMatlab_bkb_U1/lenetSynthMatlab_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/STATE_DELAY/i_pipe/aclk
+    SLICE_X31Y95         FDRE                                         r  grp_sum_fu_1213/lenetSynthMatlab_bkb_U1/lenetSynthMatlab_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/STATE_DELAY/i_pipe/opt_has_pipe.first_q_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X31Y95         FDRE (Prop_fdre_C_Q)         0.141     0.551 r  grp_sum_fu_1213/lenetSynthMatlab_bkb_U1/lenetSynthMatlab_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/STATE_DELAY/i_pipe/opt_has_pipe.first_q_reg[0]/Q
+                         net (fo=1, routed)           0.056     0.607    grp_sum_fu_1213/lenetSynthMatlab_bkb_U1/lenetSynthMatlab_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/STATE_DELAY/i_pipe/first_q[0]
+    SLICE_X31Y95         FDRE                                         r  grp_sum_fu_1213/lenetSynthMatlab_bkb_U1/lenetSynthMatlab_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/STATE_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=5028, unset)         0.432     0.432    grp_sum_fu_1213/lenetSynthMatlab_bkb_U1/lenetSynthMatlab_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/STATE_DELAY/i_pipe/aclk
+    SLICE_X31Y95         FDRE                                         r  grp_sum_fu_1213/lenetSynthMatlab_bkb_U1/lenetSynthMatlab_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/STATE_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][0]/C
+                         clock pessimism              0.000     0.432    
+    SLICE_X31Y95         FDRE (Hold_fdre_C_D)         0.071     0.503    grp_sum_fu_1213/lenetSynthMatlab_bkb_U1/lenetSynthMatlab_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/STATE_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][0]
+  -------------------------------------------------------------------
+                         required time                         -0.503    
+                         arrival time                           0.607    
+  -------------------------------------------------------------------
+                         slack                                  0.104    
+
+Slack (MET) :             0.106ns  (arrival time - required time)
+  Source:                 lenetSynthMatlab_xdS_U22/lenetSynthMatlab_ap_dadd_4_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/STATE_DELAY/i_pipe/opt_has_pipe.first_q_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            lenetSynthMatlab_xdS_U22/lenetSynthMatlab_ap_dadd_4_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/STATE_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][1]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        0.199ns  (logic 0.141ns (70.953%)  route 0.058ns (29.047%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.022ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.432ns
+    Source Clock Delay      (SCD):    0.410ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=5028, unset)         0.410     0.410    lenetSynthMatlab_xdS_U22/lenetSynthMatlab_ap_dadd_4_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/STATE_DELAY/i_pipe/aclk
+    SLICE_X36Y49         FDRE                                         r  lenetSynthMatlab_xdS_U22/lenetSynthMatlab_ap_dadd_4_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/STATE_DELAY/i_pipe/opt_has_pipe.first_q_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X36Y49         FDRE (Prop_fdre_C_Q)         0.141     0.551 r  lenetSynthMatlab_xdS_U22/lenetSynthMatlab_ap_dadd_4_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/STATE_DELAY/i_pipe/opt_has_pipe.first_q_reg[1]/Q
+                         net (fo=1, routed)           0.058     0.609    lenetSynthMatlab_xdS_U22/lenetSynthMatlab_ap_dadd_4_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/STATE_DELAY/i_pipe/first_q[1]
+    SLICE_X36Y49         FDRE                                         r  lenetSynthMatlab_xdS_U22/lenetSynthMatlab_ap_dadd_4_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/STATE_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=5028, unset)         0.432     0.432    lenetSynthMatlab_xdS_U22/lenetSynthMatlab_ap_dadd_4_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/STATE_DELAY/i_pipe/aclk
+    SLICE_X36Y49         FDRE                                         r  lenetSynthMatlab_xdS_U22/lenetSynthMatlab_ap_dadd_4_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/STATE_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][1]/C
+                         clock pessimism              0.000     0.432    
+    SLICE_X36Y49         FDRE (Hold_fdre_C_D)         0.071     0.503    lenetSynthMatlab_xdS_U22/lenetSynthMatlab_ap_dadd_4_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.LOGIC.OP/EXP/STATE_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][1]
+  -------------------------------------------------------------------
+                         required time                         -0.503    
+                         arrival time                           0.609    
+  -------------------------------------------------------------------
+                         slack                                  0.106    
+
+Slack (MET) :             0.110ns  (arrival time - required time)
+  Source:                 grp_f_sum_fu_1195/lenetSynthMatlab_bkb_U11/din1_buf1_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            grp_f_sum_fu_1195/lenetSynthMatlab_bkb_U11/lenetSynthMatlab_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[3]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        0.209ns  (logic 0.141ns (67.433%)  route 0.068ns (32.567%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.022ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.432ns
+    Source Clock Delay      (SCD):    0.410ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=5028, unset)         0.410     0.410    grp_f_sum_fu_1195/lenetSynthMatlab_bkb_U11/ap_clk
+    SLICE_X53Y104        FDRE                                         r  grp_f_sum_fu_1195/lenetSynthMatlab_bkb_U11/din1_buf1_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X53Y104        FDRE (Prop_fdre_C_Q)         0.141     0.551 r  grp_f_sum_fu_1195/lenetSynthMatlab_bkb_U11/din1_buf1_reg[3]/Q
+                         net (fo=4, routed)           0.068     0.619    grp_f_sum_fu_1195/lenetSynthMatlab_bkb_U11/lenetSynthMatlab_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/B_IP_DELAY/i_pipe/s_axis_b_tdata[3]
+    SLICE_X53Y104        FDRE                                         r  grp_f_sum_fu_1195/lenetSynthMatlab_bkb_U11/lenetSynthMatlab_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=5028, unset)         0.432     0.432    grp_f_sum_fu_1195/lenetSynthMatlab_bkb_U11/lenetSynthMatlab_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/B_IP_DELAY/i_pipe/aclk
+    SLICE_X53Y104        FDRE                                         r  grp_f_sum_fu_1195/lenetSynthMatlab_bkb_U11/lenetSynthMatlab_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[3]/C
+                         clock pessimism              0.000     0.432    
+    SLICE_X53Y104        FDRE (Hold_fdre_C_D)         0.078     0.510    grp_f_sum_fu_1195/lenetSynthMatlab_bkb_U11/lenetSynthMatlab_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[3]
+  -------------------------------------------------------------------
+                         required time                         -0.510    
+                         arrival time                           0.619    
+  -------------------------------------------------------------------
+                         slack                                  0.110    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         ap_clk
+Waveform(ns):       { 0.000 5.000 }
+Period(ns):         10.000
+Sources:            { ap_clk }
+
+Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location      Pin
+Min Period        n/a     DSP48E1/CLK         n/a            3.884         10.000      6.116      DSP48_X1Y16   tmp_60_reg_3935_reg/CLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.576         10.000      7.424      RAMB36_X1Y10  relu1ActivationMap_U/lenetSynthMatlab_eOg_ram_U/ram_reg_0/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKBWRCLK  n/a            2.576         10.000      7.424      RAMB36_X1Y10  relu1ActivationMap_U/lenetSynthMatlab_eOg_ram_U/ram_reg_0/CLKBWRCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.576         10.000      7.424      RAMB36_X1Y13  relu1ActivationMap_U/lenetSynthMatlab_eOg_ram_U/ram_reg_10/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKBWRCLK  n/a            2.576         10.000      7.424      RAMB36_X1Y13  relu1ActivationMap_U/lenetSynthMatlab_eOg_ram_U/ram_reg_10/CLKBWRCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.576         10.000      7.424      RAMB36_X3Y13  relu1ActivationMap_U/lenetSynthMatlab_eOg_ram_U/ram_reg_11/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKBWRCLK  n/a            2.576         10.000      7.424      RAMB36_X3Y13  relu1ActivationMap_U/lenetSynthMatlab_eOg_ram_U/ram_reg_11/CLKBWRCLK
+Min Period        n/a     RAMB18E1/CLKARDCLK  n/a            2.576         10.000      7.424      RAMB18_X1Y36  b_pool2ActivationMap_U/lenetSynthMatlab_ncg_ram_U/ram_reg/CLKARDCLK
+Min Period        n/a     RAMB18E1/CLKBWRCLK  n/a            2.576         10.000      7.424      RAMB18_X1Y36  b_pool2ActivationMap_U/lenetSynthMatlab_ncg_ram_U/ram_reg/CLKBWRCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.576         10.000      7.424      RAMB36_X3Y12  relu1ActivationMap_U/lenetSynthMatlab_eOg_ram_U/ram_reg_12/CLKARDCLK
+Low Pulse Width   Fast    RAMS32/CLK          n/a            1.250         5.000       3.750      SLICE_X34Y83  fv10_U/lenetSynthMatlab_fYi_ram_U/ram_reg_0_15_0_0/SP/CLK
+Low Pulse Width   Fast    RAMS32/CLK          n/a            1.250         5.000       3.750      SLICE_X38Y84  fv10_U/lenetSynthMatlab_fYi_ram_U/ram_reg_0_15_0_0__0/SP/CLK
+Low Pulse Width   Fast    RAMS32/CLK          n/a            1.250         5.000       3.750      SLICE_X34Y83  fv10_U/lenetSynthMatlab_fYi_ram_U/ram_reg_0_15_0_0__1/SP/CLK
+Low Pulse Width   Fast    RAMS32/CLK          n/a            1.250         5.000       3.750      SLICE_X38Y84  fv10_U/lenetSynthMatlab_fYi_ram_U/ram_reg_0_15_0_0__10/SP/CLK
+Low Pulse Width   Fast    RAMS32/CLK          n/a            1.250         5.000       3.750      SLICE_X34Y83  fv10_U/lenetSynthMatlab_fYi_ram_U/ram_reg_0_15_0_0__11/SP/CLK
+Low Pulse Width   Fast    RAMS32/CLK          n/a            1.250         5.000       3.750      SLICE_X38Y84  fv10_U/lenetSynthMatlab_fYi_ram_U/ram_reg_0_15_0_0__12/SP/CLK
+Low Pulse Width   Fast    RAMS32/CLK          n/a            1.250         5.000       3.750      SLICE_X34Y83  fv10_U/lenetSynthMatlab_fYi_ram_U/ram_reg_0_15_0_0__13/SP/CLK
+Low Pulse Width   Fast    RAMS32/CLK          n/a            1.250         5.000       3.750      SLICE_X38Y84  fv10_U/lenetSynthMatlab_fYi_ram_U/ram_reg_0_15_0_0__14/SP/CLK
+Low Pulse Width   Fast    RAMS32/CLK          n/a            1.250         5.000       3.750      SLICE_X34Y86  fv10_U/lenetSynthMatlab_fYi_ram_U/ram_reg_0_15_0_0__15/SP/CLK
+Low Pulse Width   Fast    RAMS32/CLK          n/a            1.250         5.000       3.750      SLICE_X34Y85  fv10_U/lenetSynthMatlab_fYi_ram_U/ram_reg_0_15_0_0__16/SP/CLK
+High Pulse Width  Slow    RAMS32/CLK          n/a            1.250         5.000       3.750      SLICE_X34Y83  fv10_U/lenetSynthMatlab_fYi_ram_U/ram_reg_0_15_0_0/SP/CLK
+High Pulse Width  Fast    RAMS32/CLK          n/a            1.250         5.000       3.750      SLICE_X34Y83  fv10_U/lenetSynthMatlab_fYi_ram_U/ram_reg_0_15_0_0/SP/CLK
+High Pulse Width  Slow    RAMS32/CLK          n/a            1.250         5.000       3.750      SLICE_X38Y84  fv10_U/lenetSynthMatlab_fYi_ram_U/ram_reg_0_15_0_0__0/SP/CLK
+High Pulse Width  Fast    RAMS32/CLK          n/a            1.250         5.000       3.750      SLICE_X38Y84  fv10_U/lenetSynthMatlab_fYi_ram_U/ram_reg_0_15_0_0__0/SP/CLK
+High Pulse Width  Slow    RAMS32/CLK          n/a            1.250         5.000       3.750      SLICE_X34Y83  fv10_U/lenetSynthMatlab_fYi_ram_U/ram_reg_0_15_0_0__1/SP/CLK
+High Pulse Width  Fast    RAMS32/CLK          n/a            1.250         5.000       3.750      SLICE_X34Y83  fv10_U/lenetSynthMatlab_fYi_ram_U/ram_reg_0_15_0_0__1/SP/CLK
+High Pulse Width  Slow    RAMS32/CLK          n/a            1.250         5.000       3.750      SLICE_X38Y84  fv10_U/lenetSynthMatlab_fYi_ram_U/ram_reg_0_15_0_0__10/SP/CLK
+High Pulse Width  Fast    RAMS32/CLK          n/a            1.250         5.000       3.750      SLICE_X38Y84  fv10_U/lenetSynthMatlab_fYi_ram_U/ram_reg_0_15_0_0__10/SP/CLK
+High Pulse Width  Slow    RAMS32/CLK          n/a            1.250         5.000       3.750      SLICE_X34Y83  fv10_U/lenetSynthMatlab_fYi_ram_U/ram_reg_0_15_0_0__11/SP/CLK
+High Pulse Width  Fast    RAMS32/CLK          n/a            1.250         5.000       3.750      SLICE_X34Y83  fv10_U/lenetSynthMatlab_fYi_ram_U/ram_reg_0_15_0_0__11/SP/CLK
+
+
+

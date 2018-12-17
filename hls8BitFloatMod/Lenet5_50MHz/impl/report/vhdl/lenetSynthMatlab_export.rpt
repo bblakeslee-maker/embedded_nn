@@ -1,0 +1,20 @@
+
+
+Implementation tool: Xilinx Vivado v.2018.2
+Project:             hls8BitFloatMod
+Solution:            Lenet5_50MHz
+Device target:       xc7a100tcsg324-1
+Report date:         Wed Dec 12 12:44:05 EST 2018
+
+#=== Post-Implementation Resource usage ===
+SLICE:         1510
+LUT:           4276
+FF:            3223
+DSP:             16
+BRAM:           224
+SRL:              5
+#=== Final timing ===
+CP required:    20.000
+CP achieved post-synthesis:    12.958
+CP achieved post-implementation:    17.048
+Timing met

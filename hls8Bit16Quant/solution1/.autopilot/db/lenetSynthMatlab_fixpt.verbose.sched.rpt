@@ -1,0 +1,856 @@
+
+
+================================================================
+== Vivado HLS Report for 'lenetSynthMatlab_fixpt'
+================================================================
+* Date:           Mon Dec 10 15:19:42 2018
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        hls8Bit16Quant
+* Solution:       solution1
+* Product family: artix7
+* Target device:  xc7a100tcsg324-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.360|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +---------+---------+---------+---------+---------+
+    |      Latency      |      Interval     | Pipeline|
+    |   min   |   max   |   min   |   max   |   Type  |
+    +---------+---------+---------+---------+---------+
+    |  2729254|  6861094|  2729254|  6861094|   none  |
+    +---------+---------+---------+---------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------------------------+---------+---------+-----------------+-----------+-----------+------+----------+
+        |                             |      Latency      |    Iteration    |  Initiation Interval  | Trip |          |
+        |          Loop Name          |   min   |   max   |     Latency     |  achieved |   target  | Count| Pipelined|
+        +-----------------------------+---------+---------+-----------------+-----------+-----------+------+----------+
+        |- Loop 1                     |   593052|  1345692|  98842 ~ 224282 |          -|          -|     6|    no    |
+        | + Loop 1.1                  |    98840|   224280|   3530 ~ 8010   |          -|          -|    28|    no    |
+        |  ++ Loop 1.1.1              |     3528|     8008|    126 ~ 286    |          -|          -|    28|    no    |
+        |   +++ Loop 1.1.1.1          |       35|       35|                7|          -|          -|     5|    no    |
+        |    ++++ Loop 1.1.1.1.1      |        5|        5|                1|          -|          -|     5|    no    |
+        |   +++ Loop 1.1.1.2          |        8|        8|                2|          -|          -|     4|    no    |
+        |- Loop 2                     |  1760352|  4515552| 110022 ~ 282222 |          -|          -|    16|    no    |
+        | + Loop 2.1                  |   110020|   282220|  11002 ~ 28222  |          -|          -|    10|    no    |
+        |  ++ Loop 2.1.1              |    11000|    28220|   1100 ~ 2822   |          -|          -|    10|    no    |
+        |   +++ Loop 2.1.1.1          |      210|      210|               42|          -|          -|     5|    no    |
+        |    ++++ Loop 2.1.1.1.1      |       40|       40|                8|          -|          -|     5|    no    |
+        |     +++++ Loop 2.1.1.1.1.1  |        6|        6|                1|          -|          -|     6|    no    |
+        |   +++ Loop 2.1.1.2          |       10|       10|                2|          -|          -|     5|    no    |
+        |- Loop 3                     |   344040|   968040|   2867 ~ 8067   |          -|          -|   120|    no    |
+        | + Loop 3.1                  |      460|      460|               92|          -|          -|     5|    no    |
+        |  ++ Loop 3.1.1              |       90|       90|               18|          -|          -|     5|    no    |
+        |   +++ Loop 3.1.1.1          |       16|       16|                1|          -|          -|    16|    no    |
+        |- Loop 4                     |    10164|    10164|              121|          -|          -|    84|    no    |
+        | + Loop 4.1                  |      119|      119|                1|          -|          -|   120|    no    |
+        |- Loop 5                     |      860|      860|               86|          -|          -|    10|    no    |
+        | + Loop 5.1                  |       84|       84|                1|          -|          -|    84|    no    |
+        |- Loop 6                     |       20|       20|                2|          -|          -|    10|    no    |
+        +-----------------------------+---------+---------+-----------------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 40
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	13  / (exitcond1)
+	3  / (!exitcond1)
+3 --> 
+	4  / (!exitcond7)
+	2  / (exitcond7)
+4 --> 
+	5  / (!exitcond9)
+	3  / (exitcond9)
+5 --> 
+	7  / (exitcond11)
+	6  / (!exitcond11)
+6 --> 
+	6  / (!exitcond15)
+	5  / (exitcond15)
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / (!exitcond_i)
+	12  / (exitcond_i)
+11 --> 
+	10  / true
+12 --> 
+	4  / true
+13 --> 
+	14  / true
+14 --> 
+	27  / (exitcond2)
+	15  / (!exitcond2)
+15 --> 
+	16  / (!exitcond8)
+	14  / (exitcond8)
+16 --> 
+	17  / (!exitcond10)
+	15  / (exitcond10)
+17 --> 
+	20  / (exitcond12)
+	18  / (!exitcond12)
+18 --> 
+	19  / (!exitcond14)
+	17  / (exitcond14)
+19 --> 
+	19  / (!exitcond13)
+	18  / (exitcond13)
+20 --> 
+	21  / true
+21 --> 
+	22  / true
+22 --> 
+	23  / true
+23 --> 
+	24  / true
+24 --> 
+	25  / true
+25 --> 
+	26  / (!exitcond_i2)
+	16  / (exitcond_i2)
+26 --> 
+	25  / true
+27 --> 
+	28  / true
+28 --> 
+	29  / (!exitcond6)
+	35  / (exitcond6)
+29 --> 
+	32  / (exitcond5)
+	30  / (!exitcond5)
+30 --> 
+	31  / (!exitcond4)
+	29  / (exitcond4)
+31 --> 
+	31  / (!exitcond3)
+	30  / (exitcond3)
+32 --> 
+	33  / true
+33 --> 
+	34  / true
+34 --> 
+	28  / true
+35 --> 
+	36  / (!exitcond1_i)
+	37  / (exitcond1_i)
+36 --> 
+	36  / (!exitcond_i4)
+	35  / (exitcond_i4)
+37 --> 
+	38  / (!exitcond1_i1)
+	39  / (exitcond1_i1)
+38 --> 
+	38  / (!exitcond_i6)
+	37  / (exitcond_i6)
+39 --> 
+	40  / (!exitcond)
+40 --> 
+	39  / true
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.66>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([1024 x i8]* %inputImg) nounwind, !map !112"   --->   Operation 41 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([10 x i16]* %netScores) nounwind, !map !118"   --->   Operation 42 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([23 x i8]* @lenetSynthMatlab_fix) nounwind"   --->   Operation 43 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%conv1ActivationMap = alloca [4704 x i16], align 16" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:33]   --->   Operation 44 'alloca' 'conv1ActivationMap' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 10> <RAM>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%iv10 = alloca [4704 x i16], align 16"   --->   Operation 45 'alloca' 'iv10' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%iv11 = alloca [25 x i1], align 1" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:41]   --->   Operation 46 'alloca' 'iv11' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 10> <RAM>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%iv12 = alloca [5 x i32], align 16" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:42]   --->   Operation 47 'alloca' 'iv12' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 10> <RAM>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%conv2ActivationMap = alloca [1600 x i16], align 16" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:49]   --->   Operation 48 'alloca' 'conv2ActivationMap' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 10> <RAM>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%iv13 = alloca [1600 x i16], align 16"   --->   Operation 49 'alloca' 'iv13' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%iv14 = alloca [150 x i1], align 1" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:60]   --->   Operation 50 'alloca' 'iv14' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 10> <RAM>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%iv15 = alloca [30 x i64], align 16" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:61]   --->   Operation 51 'alloca' 'iv15' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%iv16 = alloca [6 x i64], align 16" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:62]   --->   Operation 52 'alloca' 'iv16' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 10> <RAM>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%b_pool2ActivationMap = alloca [400 x i1], align 1" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:65]   --->   Operation 53 'alloca' 'b_pool2ActivationMap' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 10> <RAM>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%iv17 = alloca [80 x i64], align 16" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:66]   --->   Operation 54 'alloca' 'iv17' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%iv18 = alloca [16 x i64], align 16"   --->   Operation 55 'alloca' 'iv18' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%c_assign_1 = alloca [10 x i64], align 16"   --->   Operation 56 'alloca' 'c_assign_1' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 10> <RAM>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%iv12_addr = getelementptr [5 x i32]* %iv12, i64 0, i64 0"   --->   Operation 57 'getelementptr' 'iv12_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 58 [1/1] (1.66ns)   --->   "br label %.loopexit" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:107]   --->   Operation 58 'br' <Predicate = true> <Delay = 1.66>
+
+State 2 <SV = 1> <Delay = 1.68>
+ST_2 : Operation 59 [1/1] (0.00ns)   --->   "%f = phi i3 [ 0, %0 ], [ %f_1, %.loopexit.loopexit ]"   --->   Operation 59 'phi' 'f' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 60 [1/1] (0.00ns)   --->   "%f_cast = zext i3 %f to i14" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:107]   --->   Operation 60 'zext' 'f_cast' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 61 [1/1] (1.18ns)   --->   "%exitcond1 = icmp eq i3 %f, -2" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:107]   --->   Operation 61 'icmp' 'exitcond1' <Predicate = true> <Delay = 1.18> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 62 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 6, i64 6, i64 6) nounwind"   --->   Operation 62 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 63 [1/1] (1.68ns)   --->   "%f_1 = add i3 %f, 1" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:107]   --->   Operation 63 'add' 'f_1' <Predicate = true> <Delay = 1.68> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 64 [1/1] (0.00ns)   --->   "br i1 %exitcond1, label %.preheader137.preheader, label %.preheader46.preheader" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:107]   --->   Operation 64 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 65 [1/1] (1.66ns)   --->   "br label %.preheader46"   --->   Operation 65 'br' <Predicate = (!exitcond1)> <Delay = 1.66>
+ST_2 : Operation 66 [2/2] (0.00ns)   --->   "call fastcc void @b_max([4704 x i16]* %conv1ActivationMap, [4704 x i16]* %iv10) nounwind" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:157]   --->   Operation 66 'call' <Predicate = (exitcond1)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 2.13>
+ST_3 : Operation 67 [1/1] (0.00ns)   --->   "%r = phi i5 [ %r_1, %.preheader46.loopexit ], [ 0, %.preheader46.preheader ]"   --->   Operation 67 'phi' 'r' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 68 [1/1] (0.00ns)   --->   "%phi_mul = phi i13 [ %next_mul, %.preheader46.loopexit ], [ 0, %.preheader46.preheader ]"   --->   Operation 68 'phi' 'phi_mul' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 69 [1/1] (0.00ns)   --->   "%phi_mul_cast = zext i13 %phi_mul to i14"   --->   Operation 69 'zext' 'phi_mul_cast' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 70 [1/1] (2.13ns)   --->   "%next_mul = add i13 %phi_mul, 168"   --->   Operation 70 'add' 'next_mul' <Predicate = true> <Delay = 2.13> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 71 [1/1] (1.44ns)   --->   "%exitcond7 = icmp eq i5 %r, -4" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:111]   --->   Operation 71 'icmp' 'exitcond7' <Predicate = true> <Delay = 1.44> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 72 [1/1] (0.00ns)   --->   "%empty_16 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 28, i64 28, i64 28) nounwind"   --->   Operation 72 'speclooptripcount' 'empty_16' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 73 [1/1] (1.86ns)   --->   "%r_1 = add i5 %r, 1" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:111]   --->   Operation 73 'add' 'r_1' <Predicate = true> <Delay = 1.86> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 74 [1/1] (0.00ns)   --->   "br i1 %exitcond7, label %.loopexit.loopexit, label %.preheader45.preheader" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:111]   --->   Operation 74 'br' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 75 [1/1] (1.66ns)   --->   "br label %.preheader45" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:113]   --->   Operation 75 'br' <Predicate = (!exitcond7)> <Delay = 1.66>
+ST_3 : Operation 76 [1/1] (0.00ns)   --->   "br label %.loopexit"   --->   Operation 76 'br' <Predicate = (exitcond7)> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 1.86>
+ST_4 : Operation 77 [1/1] (0.00ns)   --->   "%c = phi i5 [ %c_1, %b_sum.exit ], [ 0, %.preheader45.preheader ]"   --->   Operation 77 'phi' 'c' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 78 [1/1] (1.44ns)   --->   "%exitcond9 = icmp eq i5 %c, -4" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:113]   --->   Operation 78 'icmp' 'exitcond9' <Predicate = true> <Delay = 1.44> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 79 [1/1] (0.00ns)   --->   "%empty_17 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 28, i64 28, i64 28) nounwind"   --->   Operation 79 'speclooptripcount' 'empty_17' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 80 [1/1] (1.86ns)   --->   "%c_1 = add i5 %c, 1" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:113]   --->   Operation 80 'add' 'c_1' <Predicate = true> <Delay = 1.86> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 81 [1/1] (0.00ns)   --->   "br i1 %exitcond9, label %.preheader46.loopexit, label %.preheader44.preheader" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:113]   --->   Operation 81 'br' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 82 [1/1] (1.66ns)   --->   "br label %.preheader44" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:116]   --->   Operation 82 'br' <Predicate = (!exitcond9)> <Delay = 1.66>
+ST_4 : Operation 83 [1/1] (0.00ns)   --->   "br label %.preheader46"   --->   Operation 83 'br' <Predicate = (exitcond9)> <Delay = 0.00>
+
+State 5 <SV = 4> <Delay = 1.68>
+ST_5 : Operation 84 [1/1] (0.00ns)   --->   "%i3 = phi i3 [ %i0_1, %.preheader44.loopexit ], [ 0, %.preheader44.preheader ]"   --->   Operation 84 'phi' 'i3' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 85 [1/1] (0.00ns)   --->   "%i3_cast = zext i3 %i3 to i5" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:116]   --->   Operation 85 'zext' 'i3_cast' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 86 [1/1] (1.18ns)   --->   "%exitcond11 = icmp eq i3 %i3, -3" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:116]   --->   Operation 86 'icmp' 'exitcond11' <Predicate = true> <Delay = 1.18> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 87 [1/1] (0.00ns)   --->   "%empty_18 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 5, i64 5, i64 5) nounwind"   --->   Operation 87 'speclooptripcount' 'empty_18' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 88 [1/1] (1.68ns)   --->   "%i0_1 = add i3 %i3, 1" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:116]   --->   Operation 88 'add' 'i0_1' <Predicate = true> <Delay = 1.68> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 89 [1/1] (0.00ns)   --->   "br i1 %exitcond11, label %2, label %.preheader43.preheader" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:116]   --->   Operation 89 'br' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 90 [1/1] (0.00ns)   --->   "%p_shl6 = call i5 @_ssdm_op_BitConcatenate.i5.i3.i2(i3 %i3, i2 0)" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:118]   --->   Operation 90 'bitconcatenate' 'p_shl6' <Predicate = (!exitcond11)> <Delay = 0.00>
+ST_5 : Operation 91 [1/1] (1.66ns)   --->   "br label %.preheader43" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:117]   --->   Operation 91 'br' <Predicate = (!exitcond11)> <Delay = 1.66>
+ST_5 : Operation 92 [2/2] (0.00ns)   --->   "call fastcc void @sum([25 x i1]* %iv11, [5 x i32]* %iv12) nounwind" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:128]   --->   Operation 92 'call' <Predicate = (exitcond11)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 5.43>
+ST_6 : Operation 93 [1/1] (0.00ns)   --->   "%i1 = phi i3 [ %i1_1, %1 ], [ 0, %.preheader43.preheader ]"   --->   Operation 93 'phi' 'i1' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 94 [1/1] (0.00ns)   --->   "%i1_cast = zext i3 %i1 to i5" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:117]   --->   Operation 94 'zext' 'i1_cast' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 95 [1/1] (1.18ns)   --->   "%exitcond15 = icmp eq i3 %i1, -3" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:117]   --->   Operation 95 'icmp' 'exitcond15' <Predicate = true> <Delay = 1.18> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 96 [1/1] (0.00ns)   --->   "%empty_19 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 5, i64 5, i64 5) nounwind"   --->   Operation 96 'speclooptripcount' 'empty_19' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 97 [1/1] (1.68ns)   --->   "%i1_1 = add i3 %i1, 1" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:117]   --->   Operation 97 'add' 'i1_1' <Predicate = true> <Delay = 1.68> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 98 [1/1] (0.00ns)   --->   "br i1 %exitcond15, label %.preheader44.loopexit, label %1" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:117]   --->   Operation 98 'br' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 99 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp1 = add i5 %p_shl6, %i1_cast" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:118]   --->   Operation 99 'add' 'tmp1' <Predicate = (!exitcond15)> <Delay = 0.00> <Core = "TAddSub">   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.97> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 100 [1/1] (3.27ns) (root node of TernaryAdder)   --->   "%tmp_18 = add i5 %tmp1, %i3_cast" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:118]   --->   Operation 100 'add' 'tmp_18' <Predicate = (!exitcond15)> <Delay = 3.27> <Core = "TAddSub">   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.97> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 101 [1/1] (0.00ns)   --->   "%tmp_19 = zext i5 %tmp_18 to i64" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:118]   --->   Operation 101 'zext' 'tmp_19' <Predicate = (!exitcond15)> <Delay = 0.00>
+ST_6 : Operation 102 [1/1] (0.00ns)   --->   "%iv11_addr = getelementptr [25 x i1]* %iv11, i64 0, i64 %tmp_19" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:123]   --->   Operation 102 'getelementptr' 'iv11_addr' <Predicate = (!exitcond15)> <Delay = 0.00>
+ST_6 : Operation 103 [1/1] (2.15ns)   --->   "store i1 false, i1* %iv11_addr, align 1" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:123]   --->   Operation 103 'store' <Predicate = (!exitcond15)> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 10> <RAM>
+ST_6 : Operation 104 [1/1] (0.00ns)   --->   "br label %.preheader43" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:117]   --->   Operation 104 'br' <Predicate = (!exitcond15)> <Delay = 0.00>
+ST_6 : Operation 105 [1/1] (0.00ns)   --->   "br label %.preheader44"   --->   Operation 105 'br' <Predicate = (exitcond15)> <Delay = 0.00>
+
+State 7 <SV = 5> <Delay = 0.00>
+ST_7 : Operation 106 [1/2] (0.00ns)   --->   "call fastcc void @sum([25 x i1]* %iv11, [5 x i32]* %iv12) nounwind" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:128]   --->   Operation 106 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 8 <SV = 6> <Delay = 2.15>
+ST_8 : Operation 107 [2/2] (2.15ns)   --->   "%i20 = load i32* %iv12_addr, align 16" [../Desktop/quantTest/sum.c:26->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:129]   --->   Operation 107 'load' 'i20' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 10> <RAM>
+
+State 9 <SV = 7> <Delay = 2.94>
+ST_9 : Operation 108 [1/2] (2.15ns)   --->   "%i20 = load i32* %iv12_addr, align 16" [../Desktop/quantTest/sum.c:26->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:129]   --->   Operation 108 'load' 'i20' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 10> <RAM>
+ST_9 : Operation 109 [1/1] (0.00ns) (grouped into LUT with out node Y_2)   --->   "%Y_1 = trunc i32 %i20 to i29" [../Desktop/quantTest/sum.c:26->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:129]   --->   Operation 109 'trunc' 'Y_1' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 110 [1/1] (0.00ns) (grouped into LUT with out node Y_2)   --->   "%tmp_21 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %i20, i32 29)" [../Desktop/quantTest/sum.c:27->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:129]   --->   Operation 110 'bitselect' 'tmp_21' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 111 [1/1] (0.00ns) (grouped into LUT with out node Y_2)   --->   "%Y = or i32 %i20, -536870912" [../Desktop/quantTest/sum.c:28->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:129]   --->   Operation 111 'or' 'Y' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 112 [1/1] (0.00ns) (grouped into LUT with out node Y_2)   --->   "%Y_1_cast = zext i29 %Y_1 to i32" [../Desktop/quantTest/sum.c:30->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:129]   --->   Operation 112 'zext' 'Y_1_cast' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 113 [1/1] (0.79ns) (out node of the LUT)   --->   "%Y_2 = select i1 %tmp_21, i32 %Y, i32 %Y_1_cast" [../Desktop/quantTest/sum.c:27->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:129]   --->   Operation 113 'select' 'Y_2' <Predicate = true> <Delay = 0.79> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_9 : Operation 114 [1/1] (1.66ns)   --->   "br label %3" [../Desktop/quantTest/sum.c:33->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:129]   --->   Operation 114 'br' <Predicate = true> <Delay = 1.66>
+
+State 10 <SV = 8> <Delay = 6.06>
+ST_10 : Operation 115 [1/1] (0.00ns)   --->   "%Y_1_i = phi i32 [ %Y_2, %2 ], [ %Y_5, %4 ]"   --->   Operation 115 'phi' 'Y_1_i' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 116 [1/1] (0.00ns)   --->   "%k_i = phi i3 [ 0, %2 ], [ %k, %4 ]"   --->   Operation 116 'phi' 'k_i' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 117 [1/1] (1.18ns)   --->   "%exitcond_i = icmp eq i3 %k_i, -4" [../Desktop/quantTest/sum.c:33->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:129]   --->   Operation 117 'icmp' 'exitcond_i' <Predicate = true> <Delay = 1.18> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 118 [1/1] (0.00ns)   --->   "%empty_20 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4) nounwind"   --->   Operation 118 'speclooptripcount' 'empty_20' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 119 [1/1] (1.68ns)   --->   "%k = add i3 %k_i, 1" [../Desktop/quantTest/sum.c:34->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:129]   --->   Operation 119 'add' 'k' <Predicate = true> <Delay = 1.68> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 120 [1/1] (0.00ns)   --->   "br i1 %exitcond_i, label %b_sum.exit, label %4" [../Desktop/quantTest/sum.c:33->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:129]   --->   Operation 120 'br' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 121 [1/1] (0.00ns)   --->   "%tmp_247_i = zext i3 %k to i64" [../Desktop/quantTest/sum.c:34->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:129]   --->   Operation 121 'zext' 'tmp_247_i' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_10 : Operation 122 [1/1] (0.00ns)   --->   "%iv12_addr_1 = getelementptr [5 x i32]* %iv12, i64 0, i64 %tmp_247_i" [../Desktop/quantTest/sum.c:34->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:129]   --->   Operation 122 'getelementptr' 'iv12_addr_1' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_10 : Operation 123 [2/2] (2.15ns)   --->   "%iv12_load = load i32* %iv12_addr_1, align 4" [../Desktop/quantTest/sum.c:34->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:129]   --->   Operation 123 'load' 'iv12_load' <Predicate = (!exitcond_i)> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 10> <RAM>
+ST_10 : Operation 124 [1/1] (0.00ns)   --->   "%p_shl = call i8 @_ssdm_op_BitConcatenate.i8.i5.i3(i5 %c, i3 0)" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:150]   --->   Operation 124 'bitconcatenate' 'p_shl' <Predicate = (exitcond_i)> <Delay = 0.00>
+ST_10 : Operation 125 [1/1] (0.00ns)   --->   "%p_shl_cast = zext i8 %p_shl to i9" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:150]   --->   Operation 125 'zext' 'p_shl_cast' <Predicate = (exitcond_i)> <Delay = 0.00>
+ST_10 : Operation 126 [1/1] (0.00ns)   --->   "%p_shl1 = call i6 @_ssdm_op_BitConcatenate.i6.i5.i1(i5 %c, i1 false)" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:150]   --->   Operation 126 'bitconcatenate' 'p_shl1' <Predicate = (exitcond_i)> <Delay = 0.00>
+ST_10 : Operation 127 [1/1] (0.00ns)   --->   "%p_shl1_cast = zext i6 %p_shl1 to i9" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:150]   --->   Operation 127 'zext' 'p_shl1_cast' <Predicate = (exitcond_i)> <Delay = 0.00>
+ST_10 : Operation 128 [1/1] (2.11ns)   --->   "%tmp_15 = sub i9 %p_shl_cast, %p_shl1_cast" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:150]   --->   Operation 128 'sub' 'tmp_15' <Predicate = (exitcond_i)> <Delay = 2.11> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 129 [1/1] (0.00ns)   --->   "%tmp_31_cast = sext i9 %tmp_15 to i14" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:150]   --->   Operation 129 'sext' 'tmp_31_cast' <Predicate = (exitcond_i)> <Delay = 0.00>
+ST_10 : Operation 130 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp2 = add i14 %tmp_31_cast, %phi_mul_cast" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:150]   --->   Operation 130 'add' 'tmp2' <Predicate = (exitcond_i)> <Delay = 0.00> <Core = "TAddSub">   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.97> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_10 : Operation 131 [1/1] (3.94ns) (root node of TernaryAdder)   --->   "%tmp_16 = add i14 %f_cast, %tmp2" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:150]   --->   Operation 131 'add' 'tmp_16' <Predicate = (exitcond_i)> <Delay = 3.94> <Core = "TAddSub">   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.97> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+State 11 <SV = 9> <Delay = 5.65>
+ST_11 : Operation 132 [1/2] (2.15ns)   --->   "%iv12_load = load i32* %iv12_addr_1, align 4" [../Desktop/quantTest/sum.c:34->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:129]   --->   Operation 132 'load' 'iv12_load' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 10> <RAM>
+ST_11 : Operation 133 [1/1] (0.00ns)   --->   "%tmp = trunc i32 %Y_1_i to i30" [../Desktop/quantTest/sum.c:27->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:129]   --->   Operation 133 'trunc' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 134 [1/1] (0.00ns)   --->   "%tmp_23 = trunc i32 %iv12_load to i30" [../Desktop/quantTest/sum.c:34->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:129]   --->   Operation 134 'trunc' 'tmp_23' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 135 [1/1] (0.00ns)   --->   "%tmp_34 = trunc i32 %Y_1_i to i29" [../Desktop/quantTest/sum.c:27->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:129]   --->   Operation 135 'trunc' 'tmp_34' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 136 [1/1] (0.00ns)   --->   "%tmp_35 = trunc i32 %iv12_load to i29" [../Desktop/quantTest/sum.c:34->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:129]   --->   Operation 136 'trunc' 'tmp_35' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 137 [1/1] (2.70ns)   --->   "%i20_1 = add nsw i32 %Y_1_i, %iv12_load" [../Desktop/quantTest/sum.c:34->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:129]   --->   Operation 137 'add' 'i20_1' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 138 [1/1] (2.59ns)   --->   "%Y_8 = add i29 %tmp_35, %tmp_34" [../Desktop/quantTest/sum.c:34->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:129]   --->   Operation 138 'add' 'Y_8' <Predicate = true> <Delay = 2.59> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 139 [1/1] (2.63ns)   --->   "%i20_1_cast = add i30 %tmp_23, %tmp" [../Desktop/quantTest/sum.c:34->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:129]   --->   Operation 139 'add' 'i20_1_cast' <Predicate = true> <Delay = 2.63> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 140 [1/1] (0.00ns) (grouped into LUT with out node Y_5)   --->   "%tmp_36 = call i1 @_ssdm_op_BitSelect.i1.i30.i32(i30 %i20_1_cast, i32 29)" [../Desktop/quantTest/sum.c:35->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:129]   --->   Operation 140 'bitselect' 'tmp_36' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 141 [1/1] (0.00ns) (grouped into LUT with out node Y_5)   --->   "%Y_3 = or i32 %i20_1, -536870912" [../Desktop/quantTest/sum.c:36->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:129]   --->   Operation 141 'or' 'Y_3' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 142 [1/1] (0.00ns) (grouped into LUT with out node Y_5)   --->   "%Y_4_cast = zext i29 %Y_8 to i32" [../Desktop/quantTest/sum.c:38->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:129]   --->   Operation 142 'zext' 'Y_4_cast' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 143 [1/1] (0.79ns) (out node of the LUT)   --->   "%Y_5 = select i1 %tmp_36, i32 %Y_3, i32 %Y_4_cast" [../Desktop/quantTest/sum.c:35->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:129]   --->   Operation 143 'select' 'Y_5' <Predicate = true> <Delay = 0.79> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_11 : Operation 144 [1/1] (0.00ns)   --->   "br label %3" [../Desktop/quantTest/sum.c:33->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:129]   --->   Operation 144 'br' <Predicate = true> <Delay = 0.00>
+
+State 12 <SV = 9> <Delay = 3.25>
+ST_12 : Operation 145 [1/1] (0.00ns)   --->   "%tmp_14 = call i16 @_ssdm_op_PartSelect.i16.i32.i32.i32(i32 %Y_1_i, i32 11, i32 26)" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:150]   --->   Operation 145 'partselect' 'tmp_14' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 146 [1/1] (0.00ns)   --->   "%tmp_32_cast = sext i14 %tmp_16 to i32" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:150]   --->   Operation 146 'sext' 'tmp_32_cast' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 147 [1/1] (0.00ns)   --->   "%tmp_17 = zext i32 %tmp_32_cast to i64" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:150]   --->   Operation 147 'zext' 'tmp_17' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 148 [1/1] (0.00ns)   --->   "%conv1ActivationMap_a = getelementptr inbounds [4704 x i16]* %conv1ActivationMap, i64 0, i64 %tmp_17" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:150]   --->   Operation 148 'getelementptr' 'conv1ActivationMap_a' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 149 [1/1] (3.25ns)   --->   "store i16 %tmp_14, i16* %conv1ActivationMap_a, align 2" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:150]   --->   Operation 149 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 10> <RAM>
+ST_12 : Operation 150 [1/1] (0.00ns)   --->   "br label %.preheader45" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:113]   --->   Operation 150 'br' <Predicate = true> <Delay = 0.00>
+
+State 13 <SV = 2> <Delay = 1.66>
+ST_13 : Operation 151 [1/2] (0.00ns)   --->   "call fastcc void @b_max([4704 x i16]* %conv1ActivationMap, [4704 x i16]* %iv10) nounwind" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:157]   --->   Operation 151 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_13 : Operation 152 [1/1] (0.00ns)   --->   "%iv16_addr = getelementptr [6 x i64]* %iv16, i64 0, i64 0"   --->   Operation 152 'getelementptr' 'iv16_addr' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 153 [1/1] (1.66ns)   --->   "br label %.preheader40" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:211]   --->   Operation 153 'br' <Predicate = true> <Delay = 1.66>
+
+State 14 <SV = 3> <Delay = 1.86>
+ST_14 : Operation 154 [1/1] (0.00ns)   --->   "%f_2 = phi i5 [ 0, %.preheader137.preheader ], [ %f_3, %.preheader40.loopexit ]"   --->   Operation 154 'phi' 'f_2' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 155 [1/1] (0.00ns)   --->   "%f_2_cast = zext i5 %f_2 to i8" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:211]   --->   Operation 155 'zext' 'f_2_cast' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 156 [1/1] (1.44ns)   --->   "%exitcond2 = icmp eq i5 %f_2, -16" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:211]   --->   Operation 156 'icmp' 'exitcond2' <Predicate = true> <Delay = 1.44> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 157 [1/1] (0.00ns)   --->   "%empty_21 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16) nounwind"   --->   Operation 157 'speclooptripcount' 'empty_21' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 158 [1/1] (1.86ns)   --->   "%f_3 = add i5 %f_2, 1" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:211]   --->   Operation 158 'add' 'f_3' <Predicate = true> <Delay = 1.86> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 159 [1/1] (0.00ns)   --->   "br i1 %exitcond2, label %.preheader51.preheader, label %.preheader39.preheader" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:211]   --->   Operation 159 'br' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 160 [1/1] (1.66ns)   --->   "br label %.preheader39" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:215]   --->   Operation 160 'br' <Predicate = (!exitcond2)> <Delay = 1.66>
+ST_14 : Operation 161 [2/2] (0.00ns)   --->   "call fastcc void @d_max([1600 x i16]* %conv2ActivationMap, [1600 x i16]* %iv13) nounwind" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:261]   --->   Operation 161 'call' <Predicate = (exitcond2)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 15 <SV = 4> <Delay = 2.12>
+ST_15 : Operation 162 [1/1] (0.00ns)   --->   "%r_2 = phi i4 [ %r_3, %.preheader39.loopexit ], [ 0, %.preheader39.preheader ]"   --->   Operation 162 'phi' 'r_2' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 163 [1/1] (1.44ns)   --->   "%exitcond8 = icmp eq i4 %r_2, -6" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:215]   --->   Operation 163 'icmp' 'exitcond8' <Predicate = true> <Delay = 1.44> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 164 [1/1] (0.00ns)   --->   "%empty_22 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 10, i64 10, i64 10) nounwind"   --->   Operation 164 'speclooptripcount' 'empty_22' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 165 [1/1] (1.77ns)   --->   "%r_3 = add i4 %r_2, 1" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:215]   --->   Operation 165 'add' 'r_3' <Predicate = true> <Delay = 1.77> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 166 [1/1] (0.00ns)   --->   "br i1 %exitcond8, label %.preheader40.loopexit, label %.preheader38.preheader" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:215]   --->   Operation 166 'br' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 167 [1/1] (0.00ns)   --->   "%p_shl2 = call i11 @_ssdm_op_BitConcatenate.i11.i4.i7(i4 %r_2, i7 0)" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:254]   --->   Operation 167 'bitconcatenate' 'p_shl2' <Predicate = (!exitcond8)> <Delay = 0.00>
+ST_15 : Operation 168 [1/1] (0.00ns)   --->   "%p_shl3 = call i9 @_ssdm_op_BitConcatenate.i9.i4.i5(i4 %r_2, i5 0)" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:254]   --->   Operation 168 'bitconcatenate' 'p_shl3' <Predicate = (!exitcond8)> <Delay = 0.00>
+ST_15 : Operation 169 [1/1] (0.00ns)   --->   "%p_shl3_cast = zext i9 %p_shl3 to i11" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:254]   --->   Operation 169 'zext' 'p_shl3_cast' <Predicate = (!exitcond8)> <Delay = 0.00>
+ST_15 : Operation 170 [1/1] (2.12ns)   --->   "%tmp4 = add i11 %p_shl3_cast, %p_shl2" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:254]   --->   Operation 170 'add' 'tmp4' <Predicate = (!exitcond8)> <Delay = 2.12> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 171 [1/1] (1.66ns)   --->   "br label %.preheader38" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:217]   --->   Operation 171 'br' <Predicate = (!exitcond8)> <Delay = 1.66>
+ST_15 : Operation 172 [1/1] (0.00ns)   --->   "br label %.preheader40"   --->   Operation 172 'br' <Predicate = (exitcond8)> <Delay = 0.00>
+
+State 16 <SV = 5> <Delay = 1.77>
+ST_16 : Operation 173 [1/1] (0.00ns)   --->   "%c_2 = phi i4 [ %c_3, %e_sum.exit ], [ 0, %.preheader38.preheader ]"   --->   Operation 173 'phi' 'c_2' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 174 [1/1] (1.44ns)   --->   "%exitcond10 = icmp eq i4 %c_2, -6" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:217]   --->   Operation 174 'icmp' 'exitcond10' <Predicate = true> <Delay = 1.44> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 175 [1/1] (0.00ns)   --->   "%empty_23 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 10, i64 10, i64 10) nounwind"   --->   Operation 175 'speclooptripcount' 'empty_23' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 176 [1/1] (1.77ns)   --->   "%c_3 = add i4 %c_2, 1" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:217]   --->   Operation 176 'add' 'c_3' <Predicate = true> <Delay = 1.77> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 177 [1/1] (0.00ns)   --->   "br i1 %exitcond10, label %.preheader39.loopexit, label %.preheader37.preheader" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:217]   --->   Operation 177 'br' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 178 [1/1] (1.66ns)   --->   "br label %.preheader37" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:220]   --->   Operation 178 'br' <Predicate = (!exitcond10)> <Delay = 1.66>
+ST_16 : Operation 179 [1/1] (0.00ns)   --->   "br label %.preheader39"   --->   Operation 179 'br' <Predicate = (exitcond10)> <Delay = 0.00>
+
+State 17 <SV = 6> <Delay = 2.11>
+ST_17 : Operation 180 [1/1] (0.00ns)   --->   "%i0_3 = phi i3 [ %i0_2, %.preheader37.loopexit ], [ 0, %.preheader37.preheader ]"   --->   Operation 180 'phi' 'i0_3' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 181 [1/1] (1.18ns)   --->   "%exitcond12 = icmp eq i3 %i0_3, -3" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:220]   --->   Operation 181 'icmp' 'exitcond12' <Predicate = true> <Delay = 1.18> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 182 [1/1] (0.00ns)   --->   "%empty_24 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 5, i64 5, i64 5) nounwind"   --->   Operation 182 'speclooptripcount' 'empty_24' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 183 [1/1] (1.68ns)   --->   "%i0_2 = add i3 %i0_3, 1" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:220]   --->   Operation 183 'add' 'i0_2' <Predicate = true> <Delay = 1.68> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 184 [1/1] (0.00ns)   --->   "br i1 %exitcond12, label %6, label %.preheader36.preheader" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:220]   --->   Operation 184 'br' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 185 [1/1] (0.00ns)   --->   "%p_shl9 = call i8 @_ssdm_op_BitConcatenate.i8.i3.i5(i3 %i0_3, i5 0)" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:223]   --->   Operation 185 'bitconcatenate' 'p_shl9' <Predicate = (!exitcond12)> <Delay = 0.00>
+ST_17 : Operation 186 [1/1] (0.00ns)   --->   "%p_shl9_cast = zext i8 %p_shl9 to i9" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:223]   --->   Operation 186 'zext' 'p_shl9_cast' <Predicate = (!exitcond12)> <Delay = 0.00>
+ST_17 : Operation 187 [1/1] (0.00ns)   --->   "%p_shl4 = call i4 @_ssdm_op_BitConcatenate.i4.i3.i1(i3 %i0_3, i1 false)" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:223]   --->   Operation 187 'bitconcatenate' 'p_shl4' <Predicate = (!exitcond12)> <Delay = 0.00>
+ST_17 : Operation 188 [1/1] (0.00ns)   --->   "%p_shl4_cast = zext i4 %p_shl4 to i9" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:223]   --->   Operation 188 'zext' 'p_shl4_cast' <Predicate = (!exitcond12)> <Delay = 0.00>
+ST_17 : Operation 189 [1/1] (2.11ns)   --->   "%tmp_13 = sub i9 %p_shl9_cast, %p_shl4_cast" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:223]   --->   Operation 189 'sub' 'tmp_13' <Predicate = (!exitcond12)> <Delay = 2.11> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 190 [1/1] (1.66ns)   --->   "br label %.preheader36" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:221]   --->   Operation 190 'br' <Predicate = (!exitcond12)> <Delay = 1.66>
+ST_17 : Operation 191 [2/2] (0.00ns)   --->   "call fastcc void @c_sum([150 x i1]* %iv14, [30 x i64]* %iv15) nounwind" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:231]   --->   Operation 191 'call' <Predicate = (exitcond12)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 18 <SV = 7> <Delay = 1.94>
+ST_18 : Operation 192 [1/1] (0.00ns)   --->   "%i1_2 = phi i3 [ 0, %.preheader36.preheader ], [ %i1_5, %.preheader36.loopexit ]"   --->   Operation 192 'phi' 'i1_2' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 193 [1/1] (1.18ns)   --->   "%exitcond14 = icmp eq i3 %i1_2, -3" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:221]   --->   Operation 193 'icmp' 'exitcond14' <Predicate = true> <Delay = 1.18> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 194 [1/1] (0.00ns)   --->   "%empty_25 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 5, i64 5, i64 5) nounwind"   --->   Operation 194 'speclooptripcount' 'empty_25' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 195 [1/1] (1.68ns)   --->   "%i1_5 = add i3 %i1_2, 1" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:221]   --->   Operation 195 'add' 'i1_5' <Predicate = true> <Delay = 1.68> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 196 [1/1] (0.00ns)   --->   "br i1 %exitcond14, label %.preheader37.loopexit, label %.preheader35.preheader" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:221]   --->   Operation 196 'br' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 197 [1/1] (0.00ns)   --->   "%p_shl8 = call i6 @_ssdm_op_BitConcatenate.i6.i3.i3(i3 %i1_2, i3 0)" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:223]   --->   Operation 197 'bitconcatenate' 'p_shl8' <Predicate = (!exitcond14)> <Delay = 0.00>
+ST_18 : Operation 198 [1/1] (0.00ns)   --->   "%p_shl8_cast = zext i6 %p_shl8 to i7" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:223]   --->   Operation 198 'zext' 'p_shl8_cast' <Predicate = (!exitcond14)> <Delay = 0.00>
+ST_18 : Operation 199 [1/1] (0.00ns)   --->   "%p_shl10 = call i4 @_ssdm_op_BitConcatenate.i4.i3.i1(i3 %i1_2, i1 false)" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:223]   --->   Operation 199 'bitconcatenate' 'p_shl10' <Predicate = (!exitcond14)> <Delay = 0.00>
+ST_18 : Operation 200 [1/1] (0.00ns)   --->   "%p_shl10_cast = zext i4 %p_shl10 to i7" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:223]   --->   Operation 200 'zext' 'p_shl10_cast' <Predicate = (!exitcond14)> <Delay = 0.00>
+ST_18 : Operation 201 [1/1] (1.94ns)   --->   "%tmp_31 = sub i7 %p_shl8_cast, %p_shl10_cast" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:223]   --->   Operation 201 'sub' 'tmp_31' <Predicate = (!exitcond14)> <Delay = 1.94> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 202 [1/1] (1.66ns)   --->   "br label %.preheader35" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:222]   --->   Operation 202 'br' <Predicate = (!exitcond14)> <Delay = 1.66>
+ST_18 : Operation 203 [1/1] (0.00ns)   --->   "br label %.preheader37"   --->   Operation 203 'br' <Predicate = (exitcond14)> <Delay = 0.00>
+
+State 19 <SV = 8> <Delay = 6.43>
+ST_19 : Operation 204 [1/1] (0.00ns)   --->   "%i9 = phi i3 [ %i_3, %5 ], [ 0, %.preheader35.preheader ]"   --->   Operation 204 'phi' 'i9' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 205 [1/1] (0.00ns)   --->   "%i9_cast = zext i3 %i9 to i7" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:222]   --->   Operation 205 'zext' 'i9_cast' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 206 [1/1] (1.18ns)   --->   "%exitcond13 = icmp eq i3 %i9, -2" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:222]   --->   Operation 206 'icmp' 'exitcond13' <Predicate = true> <Delay = 1.18> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 207 [1/1] (0.00ns)   --->   "%empty_26 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 6, i64 6, i64 6) nounwind"   --->   Operation 207 'speclooptripcount' 'empty_26' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 208 [1/1] (1.68ns)   --->   "%i_3 = add i3 %i9, 1" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:222]   --->   Operation 208 'add' 'i_3' <Predicate = true> <Delay = 1.68> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 209 [1/1] (0.00ns)   --->   "br i1 %exitcond13, label %.preheader36.loopexit, label %5" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:222]   --->   Operation 209 'br' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 210 [1/1] (2.03ns)   --->   "%tmp3 = add i7 %tmp_31, %i9_cast" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:223]   --->   Operation 210 'add' 'tmp3' <Predicate = (!exitcond13)> <Delay = 2.03> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 211 [1/1] (0.00ns)   --->   "%tmp3_cast = sext i7 %tmp3 to i9" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:223]   --->   Operation 211 'sext' 'tmp3_cast' <Predicate = (!exitcond13)> <Delay = 0.00>
+ST_19 : Operation 212 [1/1] (2.11ns)   --->   "%tmp_32 = add i9 %tmp3_cast, %tmp_13" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:223]   --->   Operation 212 'add' 'tmp_32' <Predicate = (!exitcond13)> <Delay = 2.11> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 213 [1/1] (0.00ns)   --->   "%tmp_58_cast = sext i9 %tmp_32 to i32" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:223]   --->   Operation 213 'sext' 'tmp_58_cast' <Predicate = (!exitcond13)> <Delay = 0.00>
+ST_19 : Operation 214 [1/1] (0.00ns)   --->   "%tmp_33 = zext i32 %tmp_58_cast to i64" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:223]   --->   Operation 214 'zext' 'tmp_33' <Predicate = (!exitcond13)> <Delay = 0.00>
+ST_19 : Operation 215 [1/1] (0.00ns)   --->   "%iv14_addr = getelementptr [150 x i1]* %iv14, i64 0, i64 %tmp_33" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:225]   --->   Operation 215 'getelementptr' 'iv14_addr' <Predicate = (!exitcond13)> <Delay = 0.00>
+ST_19 : Operation 216 [1/1] (2.28ns)   --->   "store i1 false, i1* %iv14_addr, align 1" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:225]   --->   Operation 216 'store' <Predicate = (!exitcond13)> <Delay = 2.28> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 10> <RAM>
+ST_19 : Operation 217 [1/1] (0.00ns)   --->   "br label %.preheader35" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:222]   --->   Operation 217 'br' <Predicate = (!exitcond13)> <Delay = 0.00>
+ST_19 : Operation 218 [1/1] (0.00ns)   --->   "br label %.preheader36"   --->   Operation 218 'br' <Predicate = (exitcond13)> <Delay = 0.00>
+
+State 20 <SV = 7> <Delay = 0.00>
+ST_20 : Operation 219 [1/2] (0.00ns)   --->   "call fastcc void @c_sum([150 x i1]* %iv14, [30 x i64]* %iv15) nounwind" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:231]   --->   Operation 219 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 21 <SV = 8> <Delay = 0.00>
+ST_21 : Operation 220 [2/2] (0.00ns)   --->   "call fastcc void @d_sum([30 x i64]* %iv15, [6 x i64]* %iv16) nounwind" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:232]   --->   Operation 220 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 22 <SV = 9> <Delay = 0.00>
+ST_22 : Operation 221 [1/2] (0.00ns)   --->   "call fastcc void @d_sum([30 x i64]* %iv15, [6 x i64]* %iv16) nounwind" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:232]   --->   Operation 221 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 23 <SV = 10> <Delay = 2.15>
+ST_23 : Operation 222 [2/2] (2.15ns)   --->   "%i22 = load i64* %iv16_addr, align 16" [../Desktop/quantTest/sum.c:194->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:233]   --->   Operation 222 'load' 'i22' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 10> <RAM>
+
+State 24 <SV = 11> <Delay = 3.13>
+ST_24 : Operation 223 [1/2] (2.15ns)   --->   "%i22 = load i64* %iv16_addr, align 16" [../Desktop/quantTest/sum.c:194->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:233]   --->   Operation 223 'load' 'i22' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 10> <RAM>
+ST_24 : Operation 224 [1/1] (0.00ns) (grouped into LUT with out node Y_7)   --->   "%Y_6 = trunc i64 %i22 to i40" [../Desktop/quantTest/sum.c:194->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:233]   --->   Operation 224 'trunc' 'Y_6' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 225 [1/1] (0.00ns) (grouped into LUT with out node Y_7)   --->   "%tmp_22 = call i1 @_ssdm_op_BitSelect.i1.i64.i32(i64 %i22, i32 40)" [../Desktop/quantTest/sum.c:195->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:233]   --->   Operation 225 'bitselect' 'tmp_22' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 226 [1/1] (0.00ns) (grouped into LUT with out node Y_7)   --->   "%Y_4 = or i64 %i22, -1099511627776" [../Desktop/quantTest/sum.c:196->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:233]   --->   Operation 226 'or' 'Y_4' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 227 [1/1] (0.00ns) (grouped into LUT with out node Y_7)   --->   "%Y_7_cast = zext i40 %Y_6 to i64" [../Desktop/quantTest/sum.c:198->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:233]   --->   Operation 227 'zext' 'Y_7_cast' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 228 [1/1] (0.98ns) (out node of the LUT)   --->   "%Y_7 = select i1 %tmp_22, i64 %Y_4, i64 %Y_7_cast" [../Desktop/quantTest/sum.c:195->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:233]   --->   Operation 228 'select' 'Y_7' <Predicate = true> <Delay = 0.98> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_24 : Operation 229 [1/1] (1.66ns)   --->   "br label %7" [../Desktop/quantTest/sum.c:201->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:233]   --->   Operation 229 'br' <Predicate = true> <Delay = 1.66>
+
+State 25 <SV = 12> <Delay = 7.49>
+ST_25 : Operation 230 [1/1] (0.00ns)   --->   "%ix = phi i3 [ 1, %6 ], [ %phitmp_i, %8 ]" [../Desktop/quantTest/sum.c:201->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:233]   --->   Operation 230 'phi' 'ix' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 231 [1/1] (0.00ns)   --->   "%Y_1_i1 = phi i64 [ %Y_7, %6 ], [ %Y_11, %8 ]"   --->   Operation 231 'phi' 'Y_1_i1' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 232 [1/1] (1.18ns)   --->   "%exitcond_i2 = icmp eq i3 %ix, -2" [../Desktop/quantTest/sum.c:201->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:233]   --->   Operation 232 'icmp' 'exitcond_i2' <Predicate = true> <Delay = 1.18> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 233 [1/1] (0.00ns)   --->   "%empty_27 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 5, i64 5, i64 5) nounwind"   --->   Operation 233 'speclooptripcount' 'empty_27' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 234 [1/1] (0.00ns)   --->   "br i1 %exitcond_i2, label %e_sum.exit, label %8" [../Desktop/quantTest/sum.c:201->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:233]   --->   Operation 234 'br' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 235 [1/1] (0.00ns)   --->   "%tmp_189_i = zext i3 %ix to i64" [../Desktop/quantTest/sum.c:203->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:233]   --->   Operation 235 'zext' 'tmp_189_i' <Predicate = (!exitcond_i2)> <Delay = 0.00>
+ST_25 : Operation 236 [1/1] (0.00ns)   --->   "%iv16_addr_1 = getelementptr [6 x i64]* %iv16, i64 0, i64 %tmp_189_i" [../Desktop/quantTest/sum.c:203->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:233]   --->   Operation 236 'getelementptr' 'iv16_addr_1' <Predicate = (!exitcond_i2)> <Delay = 0.00>
+ST_25 : Operation 237 [2/2] (2.15ns)   --->   "%iv16_load = load i64* %iv16_addr_1, align 8" [../Desktop/quantTest/sum.c:203->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:233]   --->   Operation 237 'load' 'iv16_load' <Predicate = (!exitcond_i2)> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 10> <RAM>
+ST_25 : Operation 238 [1/1] (1.68ns)   --->   "%phitmp_i = add i3 1, %ix" [../Desktop/quantTest/sum.c:201->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:233]   --->   Operation 238 'add' 'phitmp_i' <Predicate = (!exitcond_i2)> <Delay = 1.68> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 239 [1/1] (0.00ns)   --->   "%tmp_27 = call i16 @_ssdm_op_PartSelect.i16.i64.i32.i32(i64 %Y_1_i1, i32 18, i32 33)" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:254]   --->   Operation 239 'partselect' 'tmp_27' <Predicate = (exitcond_i2)> <Delay = 0.00>
+ST_25 : Operation 240 [1/1] (0.00ns)   --->   "%tmp_28 = call i8 @_ssdm_op_BitConcatenate.i8.i4.i4(i4 %c_2, i4 0)" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:254]   --->   Operation 240 'bitconcatenate' 'tmp_28' <Predicate = (exitcond_i2)> <Delay = 0.00>
+ST_25 : Operation 241 [1/1] (2.11ns)   --->   "%tmp5 = add i8 %tmp_28, %f_2_cast" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:254]   --->   Operation 241 'add' 'tmp5' <Predicate = (exitcond_i2)> <Delay = 2.11> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 242 [1/1] (0.00ns)   --->   "%tmp5_cast = zext i8 %tmp5 to i11" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:254]   --->   Operation 242 'zext' 'tmp5_cast' <Predicate = (exitcond_i2)> <Delay = 0.00>
+ST_25 : Operation 243 [1/1] (2.12ns)   --->   "%tmp_29 = add i11 %tmp4, %tmp5_cast" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:254]   --->   Operation 243 'add' 'tmp_29' <Predicate = (exitcond_i2)> <Delay = 2.12> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 244 [1/1] (0.00ns)   --->   "%tmp_30 = zext i11 %tmp_29 to i64" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:254]   --->   Operation 244 'zext' 'tmp_30' <Predicate = (exitcond_i2)> <Delay = 0.00>
+ST_25 : Operation 245 [1/1] (0.00ns)   --->   "%conv2ActivationMap_a = getelementptr inbounds [1600 x i16]* %conv2ActivationMap, i64 0, i64 %tmp_30" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:254]   --->   Operation 245 'getelementptr' 'conv2ActivationMap_a' <Predicate = (exitcond_i2)> <Delay = 0.00>
+ST_25 : Operation 246 [1/1] (3.25ns)   --->   "store i16 %tmp_27, i16* %conv2ActivationMap_a, align 2" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:254]   --->   Operation 246 'store' <Predicate = (exitcond_i2)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 10> <RAM>
+ST_25 : Operation 247 [1/1] (0.00ns)   --->   "br label %.preheader38" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:217]   --->   Operation 247 'br' <Predicate = (exitcond_i2)> <Delay = 0.00>
+
+State 26 <SV = 13> <Delay = 6.69>
+ST_26 : Operation 248 [1/2] (2.15ns)   --->   "%iv16_load = load i64* %iv16_addr_1, align 8" [../Desktop/quantTest/sum.c:203->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:233]   --->   Operation 248 'load' 'iv16_load' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 10> <RAM>
+ST_26 : Operation 249 [1/1] (0.00ns)   --->   "%tmp_42 = trunc i64 %Y_1_i1 to i41" [../Desktop/quantTest/sum.c:195->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:233]   --->   Operation 249 'trunc' 'tmp_42' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 250 [1/1] (0.00ns)   --->   "%tmp_43 = trunc i64 %iv16_load to i41" [../Desktop/quantTest/sum.c:203->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:233]   --->   Operation 250 'trunc' 'tmp_43' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 251 [1/1] (0.00ns)   --->   "%tmp_44 = trunc i64 %Y_1_i1 to i40" [../Desktop/quantTest/sum.c:195->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:233]   --->   Operation 251 'trunc' 'tmp_44' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 252 [1/1] (0.00ns)   --->   "%tmp_45 = trunc i64 %iv16_load to i40" [../Desktop/quantTest/sum.c:203->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:233]   --->   Operation 252 'trunc' 'tmp_45' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 253 [1/1] (3.56ns)   --->   "%i22_1 = add nsw i64 %Y_1_i1, %iv16_load" [../Desktop/quantTest/sum.c:203->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:233]   --->   Operation 253 'add' 'i22_1' <Predicate = true> <Delay = 3.56> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_26 : Operation 254 [1/1] (2.88ns)   --->   "%Y_10 = add i40 %tmp_45, %tmp_44" [../Desktop/quantTest/sum.c:203->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:233]   --->   Operation 254 'add' 'Y_10' <Predicate = true> <Delay = 2.88> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_26 : Operation 255 [1/1] (2.91ns)   --->   "%i22_1_cast = add i41 %tmp_43, %tmp_42" [../Desktop/quantTest/sum.c:203->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:233]   --->   Operation 255 'add' 'i22_1_cast' <Predicate = true> <Delay = 2.91> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_26 : Operation 256 [1/1] (0.00ns) (grouped into LUT with out node Y_11)   --->   "%tmp_46 = call i1 @_ssdm_op_BitSelect.i1.i41.i32(i41 %i22_1_cast, i32 40)" [../Desktop/quantTest/sum.c:204->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:233]   --->   Operation 256 'bitselect' 'tmp_46' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 257 [1/1] (0.00ns) (grouped into LUT with out node Y_11)   --->   "%Y_9 = or i64 %i22_1, -1099511627776" [../Desktop/quantTest/sum.c:205->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:233]   --->   Operation 257 'or' 'Y_9' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 258 [1/1] (0.00ns) (grouped into LUT with out node Y_11)   --->   "%Y_10_cast = zext i40 %Y_10 to i64" [../Desktop/quantTest/sum.c:207->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:233]   --->   Operation 258 'zext' 'Y_10_cast' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 259 [1/1] (0.98ns) (out node of the LUT)   --->   "%Y_11 = select i1 %tmp_46, i64 %Y_9, i64 %Y_10_cast" [../Desktop/quantTest/sum.c:204->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:233]   --->   Operation 259 'select' 'Y_11' <Predicate = true> <Delay = 0.98> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_26 : Operation 260 [1/1] (0.00ns)   --->   "br label %7" [../Desktop/quantTest/sum.c:201->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:233]   --->   Operation 260 'br' <Predicate = true> <Delay = 0.00>
+
+State 27 <SV = 4> <Delay = 1.66>
+ST_27 : Operation 261 [1/2] (0.00ns)   --->   "call fastcc void @d_max([1600 x i16]* %conv2ActivationMap, [1600 x i16]* %iv13) nounwind" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:261]   --->   Operation 261 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_27 : Operation 262 [1/1] (1.66ns)   --->   "br label %.preheader32" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:315]   --->   Operation 262 'br' <Predicate = true> <Delay = 1.66>
+
+State 28 <SV = 5> <Delay = 2.03>
+ST_28 : Operation 263 [1/1] (0.00ns)   --->   "%f_4 = phi i7 [ %f_5, %h_sum.exit ], [ 0, %.preheader51.preheader ]"   --->   Operation 263 'phi' 'f_4' <Predicate = true> <Delay = 0.00>
+ST_28 : Operation 264 [1/1] (1.46ns)   --->   "%exitcond6 = icmp eq i7 %f_4, -8" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:315]   --->   Operation 264 'icmp' 'exitcond6' <Predicate = true> <Delay = 1.46> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_28 : Operation 265 [1/1] (0.00ns)   --->   "%empty_28 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 120, i64 120, i64 120) nounwind"   --->   Operation 265 'speclooptripcount' 'empty_28' <Predicate = true> <Delay = 0.00>
+ST_28 : Operation 266 [1/1] (2.03ns)   --->   "%f_5 = add i7 %f_4, 1" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:315]   --->   Operation 266 'add' 'f_5' <Predicate = true> <Delay = 2.03> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_28 : Operation 267 [1/1] (0.00ns)   --->   "br i1 %exitcond6, label %.preheader135.preheader, label %.preheader31.preheader" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:315]   --->   Operation 267 'br' <Predicate = true> <Delay = 0.00>
+ST_28 : Operation 268 [1/1] (1.66ns)   --->   "br label %.preheader31" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:317]   --->   Operation 268 'br' <Predicate = (!exitcond6)> <Delay = 1.66>
+ST_28 : Operation 269 [1/1] (1.66ns)   --->   "br label %.preheader135" [../Desktop/quantTest/mtimes.c:52->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:364]   --->   Operation 269 'br' <Predicate = (exitcond6)> <Delay = 1.66>
+
+State 29 <SV = 6> <Delay = 2.11>
+ST_29 : Operation 270 [1/1] (0.00ns)   --->   "%i0_6 = phi i3 [ %i0, %.preheader31.loopexit ], [ 0, %.preheader31.preheader ]"   --->   Operation 270 'phi' 'i0_6' <Predicate = true> <Delay = 0.00>
+ST_29 : Operation 271 [1/1] (1.18ns)   --->   "%exitcond5 = icmp eq i3 %i0_6, -3" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:317]   --->   Operation 271 'icmp' 'exitcond5' <Predicate = true> <Delay = 1.18> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_29 : Operation 272 [1/1] (0.00ns)   --->   "%empty_29 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 5, i64 5, i64 5) nounwind"   --->   Operation 272 'speclooptripcount' 'empty_29' <Predicate = true> <Delay = 0.00>
+ST_29 : Operation 273 [1/1] (1.68ns)   --->   "%i0 = add i3 %i0_6, 1" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:317]   --->   Operation 273 'add' 'i0' <Predicate = true> <Delay = 1.68> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_29 : Operation 274 [1/1] (0.00ns)   --->   "br i1 %exitcond5, label %h_sum.exit, label %.preheader30.preheader" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:317]   --->   Operation 274 'br' <Predicate = true> <Delay = 0.00>
+ST_29 : Operation 275 [1/1] (0.00ns)   --->   "%p_shl5 = call i9 @_ssdm_op_BitConcatenate.i9.i3.i6(i3 %i0_6, i6 0)" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:320]   --->   Operation 275 'bitconcatenate' 'p_shl5' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_29 : Operation 276 [1/1] (0.00ns)   --->   "%p_shl7 = call i7 @_ssdm_op_BitConcatenate.i7.i3.i4(i3 %i0_6, i4 0)" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:320]   --->   Operation 276 'bitconcatenate' 'p_shl7' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_29 : Operation 277 [1/1] (0.00ns)   --->   "%p_shl12_cast = zext i7 %p_shl7 to i9" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:320]   --->   Operation 277 'zext' 'p_shl12_cast' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_29 : Operation 278 [1/1] (2.11ns)   --->   "%tmp6 = add i9 %p_shl12_cast, %p_shl5" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:320]   --->   Operation 278 'add' 'tmp6' <Predicate = (!exitcond5)> <Delay = 2.11> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_29 : Operation 279 [1/1] (1.66ns)   --->   "br label %.preheader30" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:318]   --->   Operation 279 'br' <Predicate = (!exitcond5)> <Delay = 1.66>
+ST_29 : Operation 280 [2/2] (0.00ns)   --->   "call fastcc void @f_sum([400 x i1]* %b_pool2ActivationMap, [80 x i64]* %iv17) nounwind" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:327]   --->   Operation 280 'call' <Predicate = (exitcond5)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 30 <SV = 7> <Delay = 1.68>
+ST_30 : Operation 281 [1/1] (0.00ns)   --->   "%i1_4 = phi i3 [ 0, %.preheader30.preheader ], [ %i1_3, %.preheader30.loopexit ]"   --->   Operation 281 'phi' 'i1_4' <Predicate = true> <Delay = 0.00>
+ST_30 : Operation 282 [1/1] (1.18ns)   --->   "%exitcond4 = icmp eq i3 %i1_4, -3" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:318]   --->   Operation 282 'icmp' 'exitcond4' <Predicate = true> <Delay = 1.18> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_30 : Operation 283 [1/1] (0.00ns)   --->   "%empty_30 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 5, i64 5, i64 5) nounwind"   --->   Operation 283 'speclooptripcount' 'empty_30' <Predicate = true> <Delay = 0.00>
+ST_30 : Operation 284 [1/1] (1.68ns)   --->   "%i1_3 = add i3 %i1_4, 1" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:318]   --->   Operation 284 'add' 'i1_3' <Predicate = true> <Delay = 1.68> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_30 : Operation 285 [1/1] (0.00ns)   --->   "br i1 %exitcond4, label %.preheader31.loopexit, label %.preheader.preheader" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:318]   --->   Operation 285 'br' <Predicate = true> <Delay = 0.00>
+ST_30 : Operation 286 [1/1] (0.00ns)   --->   "%tmp_s = call i7 @_ssdm_op_BitConcatenate.i7.i3.i4(i3 %i1_4, i4 0)" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:320]   --->   Operation 286 'bitconcatenate' 'tmp_s' <Predicate = (!exitcond4)> <Delay = 0.00>
+ST_30 : Operation 287 [1/1] (1.66ns)   --->   "br label %.preheader" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:319]   --->   Operation 287 'br' <Predicate = (!exitcond4)> <Delay = 1.66>
+ST_30 : Operation 288 [1/1] (0.00ns)   --->   "br label %.preheader31"   --->   Operation 288 'br' <Predicate = (exitcond4)> <Delay = 0.00>
+
+State 31 <SV = 8> <Delay = 6.58>
+ST_31 : Operation 289 [1/1] (0.00ns)   --->   "%i_1 = phi i5 [ %i_2, %9 ], [ 0, %.preheader.preheader ]"   --->   Operation 289 'phi' 'i_1' <Predicate = true> <Delay = 0.00>
+ST_31 : Operation 290 [1/1] (0.00ns)   --->   "%i_1_cast = zext i5 %i_1 to i7" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:319]   --->   Operation 290 'zext' 'i_1_cast' <Predicate = true> <Delay = 0.00>
+ST_31 : Operation 291 [1/1] (1.44ns)   --->   "%exitcond3 = icmp eq i5 %i_1, -16" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:319]   --->   Operation 291 'icmp' 'exitcond3' <Predicate = true> <Delay = 1.44> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_31 : Operation 292 [1/1] (0.00ns)   --->   "%empty_31 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16) nounwind"   --->   Operation 292 'speclooptripcount' 'empty_31' <Predicate = true> <Delay = 0.00>
+ST_31 : Operation 293 [1/1] (1.86ns)   --->   "%i_2 = add i5 %i_1, 1" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:319]   --->   Operation 293 'add' 'i_2' <Predicate = true> <Delay = 1.86> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_31 : Operation 294 [1/1] (0.00ns)   --->   "br i1 %exitcond3, label %.preheader30.loopexit, label %9" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:319]   --->   Operation 294 'br' <Predicate = true> <Delay = 0.00>
+ST_31 : Operation 295 [1/1] (2.03ns)   --->   "%tmp7 = add i7 %tmp_s, %i_1_cast" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:320]   --->   Operation 295 'add' 'tmp7' <Predicate = (!exitcond3)> <Delay = 2.03> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_31 : Operation 296 [1/1] (0.00ns)   --->   "%tmp7_cast = zext i7 %tmp7 to i9" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:320]   --->   Operation 296 'zext' 'tmp7_cast' <Predicate = (!exitcond3)> <Delay = 0.00>
+ST_31 : Operation 297 [1/1] (2.11ns)   --->   "%tmp_25 = add i9 %tmp7_cast, %tmp6" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:320]   --->   Operation 297 'add' 'tmp_25' <Predicate = (!exitcond3)> <Delay = 2.11> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_31 : Operation 298 [1/1] (0.00ns)   --->   "%tmp_26 = zext i9 %tmp_25 to i64" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:320]   --->   Operation 298 'zext' 'tmp_26' <Predicate = (!exitcond3)> <Delay = 0.00>
+ST_31 : Operation 299 [1/1] (0.00ns)   --->   "%b_pool2ActivationMap_1 = getelementptr [400 x i1]* %b_pool2ActivationMap, i64 0, i64 %tmp_26" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:320]   --->   Operation 299 'getelementptr' 'b_pool2ActivationMap_1' <Predicate = (!exitcond3)> <Delay = 0.00>
+ST_31 : Operation 300 [1/1] (2.43ns)   --->   "store i1 false, i1* %b_pool2ActivationMap_1, align 1" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:320]   --->   Operation 300 'store' <Predicate = (!exitcond3)> <Delay = 2.43> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 10> <RAM>
+ST_31 : Operation 301 [1/1] (0.00ns)   --->   "br label %.preheader" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:319]   --->   Operation 301 'br' <Predicate = (!exitcond3)> <Delay = 0.00>
+ST_31 : Operation 302 [1/1] (0.00ns)   --->   "br label %.preheader30"   --->   Operation 302 'br' <Predicate = (exitcond3)> <Delay = 0.00>
+
+State 32 <SV = 7> <Delay = 0.00>
+ST_32 : Operation 303 [1/2] (0.00ns)   --->   "call fastcc void @f_sum([400 x i1]* %b_pool2ActivationMap, [80 x i64]* %iv17) nounwind" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:327]   --->   Operation 303 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 33 <SV = 8> <Delay = 0.00>
+ST_33 : Operation 304 [2/2] (0.00ns)   --->   "call fastcc void @g_sum([80 x i64]* %iv17, [16 x i64]* %iv18) nounwind" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:328]   --->   Operation 304 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 34 <SV = 9> <Delay = 0.00>
+ST_34 : Operation 305 [1/2] (0.00ns)   --->   "call fastcc void @g_sum([80 x i64]* %iv17, [16 x i64]* %iv18) nounwind" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:328]   --->   Operation 305 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_34 : Operation 306 [1/1] (0.00ns)   --->   "br label %.preheader32" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:315]   --->   Operation 306 'br' <Predicate = true> <Delay = 0.00>
+
+State 35 <SV = 6> <Delay = 2.03>
+ST_35 : Operation 307 [1/1] (0.00ns)   --->   "%l_i = phi i7 [ %l, %.preheader135.loopexit ], [ 0, %.preheader135.preheader ]"   --->   Operation 307 'phi' 'l_i' <Predicate = true> <Delay = 0.00>
+ST_35 : Operation 308 [1/1] (1.46ns)   --->   "%exitcond1_i = icmp eq i7 %l_i, -44" [../Desktop/quantTest/mtimes.c:52->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:364]   --->   Operation 308 'icmp' 'exitcond1_i' <Predicate = true> <Delay = 1.46> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_35 : Operation 309 [1/1] (0.00ns)   --->   "%empty_32 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 84, i64 84, i64 84) nounwind"   --->   Operation 309 'speclooptripcount' 'empty_32' <Predicate = true> <Delay = 0.00>
+ST_35 : Operation 310 [1/1] (2.03ns)   --->   "%l = add i7 %l_i, 1" [../Desktop/quantTest/mtimes.c:52->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:364]   --->   Operation 310 'add' 'l' <Predicate = true> <Delay = 2.03> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_35 : Operation 311 [1/1] (0.00ns)   --->   "br i1 %exitcond1_i, label %.preheader134.preheader, label %.preheader2.preheader" [../Desktop/quantTest/mtimes.c:52->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:364]   --->   Operation 311 'br' <Predicate = true> <Delay = 0.00>
+ST_35 : Operation 312 [1/1] (1.66ns)   --->   "br label %.preheader2" [../Desktop/quantTest/mtimes.c:54->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:364]   --->   Operation 312 'br' <Predicate = (!exitcond1_i)> <Delay = 1.66>
+ST_35 : Operation 313 [1/1] (1.66ns)   --->   "br label %.preheader134" [../Desktop/quantTest/mtimes.c:28->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:390]   --->   Operation 313 'br' <Predicate = (exitcond1_i)> <Delay = 1.66>
+
+State 36 <SV = 7> <Delay = 2.03>
+ST_36 : Operation 314 [1/1] (0.00ns)   --->   "%k_i1 = phi i7 [ %k_1, %.preheader2 ], [ 0, %.preheader2.preheader ]"   --->   Operation 314 'phi' 'k_i1' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 315 [1/1] (1.46ns)   --->   "%exitcond_i4 = icmp eq i7 %k_i1, -8" [../Desktop/quantTest/mtimes.c:54->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:364]   --->   Operation 315 'icmp' 'exitcond_i4' <Predicate = true> <Delay = 1.46> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 316 [1/1] (0.00ns)   --->   "%empty_33 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 120, i64 120, i64 120) nounwind"   --->   Operation 316 'speclooptripcount' 'empty_33' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 317 [1/1] (2.03ns)   --->   "%k_1 = add i7 %k_i1, 1" [../Desktop/quantTest/mtimes.c:54->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:364]   --->   Operation 317 'add' 'k_1' <Predicate = true> <Delay = 2.03> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 318 [1/1] (0.00ns)   --->   "br i1 %exitcond_i4, label %.preheader135.loopexit, label %.preheader2" [../Desktop/quantTest/mtimes.c:54->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:364]   --->   Operation 318 'br' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 319 [1/1] (0.00ns)   --->   "br label %.preheader135"   --->   Operation 319 'br' <Predicate = (exitcond_i4)> <Delay = 0.00>
+
+State 37 <SV = 7> <Delay = 1.77>
+ST_37 : Operation 320 [1/1] (0.00ns)   --->   "%l_i1 = phi i4 [ %l_1, %.preheader134.loopexit ], [ 0, %.preheader134.preheader ]"   --->   Operation 320 'phi' 'l_i1' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 321 [1/1] (1.44ns)   --->   "%exitcond1_i1 = icmp eq i4 %l_i1, -6" [../Desktop/quantTest/mtimes.c:28->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:390]   --->   Operation 321 'icmp' 'exitcond1_i1' <Predicate = true> <Delay = 1.44> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 322 [1/1] (0.00ns)   --->   "%empty_34 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 10, i64 10, i64 10) nounwind"   --->   Operation 322 'speclooptripcount' 'empty_34' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 323 [1/1] (1.77ns)   --->   "%l_1 = add i4 %l_i1, 1" [../Desktop/quantTest/mtimes.c:28->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:390]   --->   Operation 323 'add' 'l_1' <Predicate = true> <Delay = 1.77> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 324 [1/1] (0.00ns)   --->   "br i1 %exitcond1_i1, label %b_mtimes.exit.preheader, label %10" [../Desktop/quantTest/mtimes.c:28->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:390]   --->   Operation 324 'br' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 325 [1/1] (0.00ns)   --->   "%tmp_i4 = zext i4 %l_i1 to i64" [../Desktop/quantTest/mtimes.c:29->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:390]   --->   Operation 325 'zext' 'tmp_i4' <Predicate = (!exitcond1_i1)> <Delay = 0.00>
+ST_37 : Operation 326 [1/1] (0.00ns)   --->   "%c_assign_1_addr = getelementptr [10 x i64]* %c_assign_1, i64 0, i64 %tmp_i4" [../Desktop/quantTest/mtimes.c:29->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:390]   --->   Operation 326 'getelementptr' 'c_assign_1_addr' <Predicate = (!exitcond1_i1)> <Delay = 0.00>
+ST_37 : Operation 327 [1/1] (1.66ns)   --->   "br label %11" [../Desktop/quantTest/mtimes.c:30->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:390]   --->   Operation 327 'br' <Predicate = (!exitcond1_i1)> <Delay = 1.66>
+ST_37 : Operation 328 [1/1] (1.66ns)   --->   "br label %b_mtimes.exit" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:391]   --->   Operation 328 'br' <Predicate = (exitcond1_i1)> <Delay = 1.66>
+
+State 38 <SV = 8> <Delay = 2.15>
+ST_38 : Operation 329 [1/1] (0.00ns)   --->   "%i26 = phi i64 [ 0, %10 ], [ %storemerge_i1, %12 ]" [../Desktop/quantTest/mtimes.c:32->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:390]   --->   Operation 329 'phi' 'i26' <Predicate = true> <Delay = 0.00>
+ST_38 : Operation 330 [1/1] (0.00ns)   --->   "%k_i2 = phi i7 [ 0, %10 ], [ %k_2, %12 ]"   --->   Operation 330 'phi' 'k_i2' <Predicate = true> <Delay = 0.00>
+ST_38 : Operation 331 [1/1] (2.15ns)   --->   "store i64 %i26, i64* %c_assign_1_addr, align 8" [../Desktop/quantTest/mtimes.c:35->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:390]   --->   Operation 331 'store' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 10> <RAM>
+ST_38 : Operation 332 [1/1] (1.46ns)   --->   "%exitcond_i6 = icmp eq i7 %k_i2, -44" [../Desktop/quantTest/mtimes.c:30->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:390]   --->   Operation 332 'icmp' 'exitcond_i6' <Predicate = true> <Delay = 1.46> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_38 : Operation 333 [1/1] (0.00ns)   --->   "%empty_35 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 84, i64 84, i64 84) nounwind"   --->   Operation 333 'speclooptripcount' 'empty_35' <Predicate = true> <Delay = 0.00>
+ST_38 : Operation 334 [1/1] (2.03ns)   --->   "%k_2 = add i7 %k_i2, 1" [../Desktop/quantTest/mtimes.c:30->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:390]   --->   Operation 334 'add' 'k_2' <Predicate = true> <Delay = 2.03> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_38 : Operation 335 [1/1] (0.00ns)   --->   "br i1 %exitcond_i6, label %.preheader134.loopexit, label %12" [../Desktop/quantTest/mtimes.c:30->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:390]   --->   Operation 335 'br' <Predicate = true> <Delay = 0.00>
+ST_38 : Operation 336 [1/1] (0.00ns) (grouped into LUT with out node storemerge_i1)   --->   "%tmp_37 = trunc i64 %i26 to i38" [../Desktop/quantTest/mtimes.c:31->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:390]   --->   Operation 336 'trunc' 'tmp_37' <Predicate = (!exitcond_i6)> <Delay = 0.00>
+ST_38 : Operation 337 [1/1] (0.00ns) (grouped into LUT with out node storemerge_i1)   --->   "%tmp_41 = call i1 @_ssdm_op_BitSelect.i1.i64.i32(i64 %i26, i32 38)" [../Desktop/quantTest/mtimes.c:32->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:390]   --->   Operation 337 'bitselect' 'tmp_41' <Predicate = (!exitcond_i6)> <Delay = 0.00>
+ST_38 : Operation 338 [1/1] (0.00ns) (grouped into LUT with out node storemerge_i1)   --->   "%tmp_259_i = or i64 %i26, -274877906944" [../Desktop/quantTest/mtimes.c:33->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:390]   --->   Operation 338 'or' 'tmp_259_i' <Predicate = (!exitcond_i6)> <Delay = 0.00>
+ST_38 : Operation 339 [1/1] (0.00ns) (grouped into LUT with out node storemerge_i1)   --->   "%tmp_260_i_cast = zext i38 %tmp_37 to i64" [../Desktop/quantTest/mtimes.c:35->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:390]   --->   Operation 339 'zext' 'tmp_260_i_cast' <Predicate = (!exitcond_i6)> <Delay = 0.00>
+ST_38 : Operation 340 [1/1] (0.98ns) (out node of the LUT)   --->   "%storemerge_i1 = select i1 %tmp_41, i64 %tmp_259_i, i64 %tmp_260_i_cast" [../Desktop/quantTest/mtimes.c:32->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:390]   --->   Operation 340 'select' 'storemerge_i1' <Predicate = (!exitcond_i6)> <Delay = 0.98> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_38 : Operation 341 [1/1] (0.00ns)   --->   "br label %11" [../Desktop/quantTest/mtimes.c:30->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:390]   --->   Operation 341 'br' <Predicate = (!exitcond_i6)> <Delay = 0.00>
+ST_38 : Operation 342 [1/1] (0.00ns)   --->   "br label %.preheader134"   --->   Operation 342 'br' <Predicate = (exitcond_i6)> <Delay = 0.00>
+
+State 39 <SV = 8> <Delay = 2.15>
+ST_39 : Operation 343 [1/1] (0.00ns)   --->   "%i_4 = phi i4 [ %i, %13 ], [ 0, %b_mtimes.exit.preheader ]"   --->   Operation 343 'phi' 'i_4' <Predicate = true> <Delay = 0.00>
+ST_39 : Operation 344 [1/1] (1.44ns)   --->   "%exitcond = icmp eq i4 %i_4, -6" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:391]   --->   Operation 344 'icmp' 'exitcond' <Predicate = true> <Delay = 1.44> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_39 : Operation 345 [1/1] (0.00ns)   --->   "%empty_36 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 10, i64 10, i64 10) nounwind"   --->   Operation 345 'speclooptripcount' 'empty_36' <Predicate = true> <Delay = 0.00>
+ST_39 : Operation 346 [1/1] (1.77ns)   --->   "%i = add i4 %i_4, 1" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:391]   --->   Operation 346 'add' 'i' <Predicate = true> <Delay = 1.77> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_39 : Operation 347 [1/1] (0.00ns)   --->   "br i1 %exitcond, label %14, label %13" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:391]   --->   Operation 347 'br' <Predicate = true> <Delay = 0.00>
+ST_39 : Operation 348 [1/1] (0.00ns)   --->   "%tmp_20 = zext i4 %i_4 to i64" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:392]   --->   Operation 348 'zext' 'tmp_20' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_39 : Operation 349 [1/1] (0.00ns)   --->   "%c_assign_1_addr_1 = getelementptr inbounds [10 x i64]* %c_assign_1, i64 0, i64 %tmp_20" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:392]   --->   Operation 349 'getelementptr' 'c_assign_1_addr_1' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_39 : Operation 350 [2/2] (2.15ns)   --->   "%i2 = load i64* %c_assign_1_addr_1, align 8" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:392]   --->   Operation 350 'load' 'i2' <Predicate = (!exitcond)> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 10> <RAM>
+ST_39 : Operation 351 [1/1] (0.00ns)   --->   "ret void" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:415]   --->   Operation 351 'ret' <Predicate = (exitcond)> <Delay = 0.00>
+
+State 40 <SV = 9> <Delay = 4.30>
+ST_40 : Operation 352 [1/2] (2.15ns)   --->   "%i2 = load i64* %c_assign_1_addr_1, align 8" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:392]   --->   Operation 352 'load' 'i2' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 10> <RAM>
+ST_40 : Operation 353 [1/1] (0.00ns)   --->   "%tmp_24 = call i16 @_ssdm_op_PartSelect.i16.i64.i32.i32(i64 %i2, i32 17, i32 32)" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:413]   --->   Operation 353 'partselect' 'tmp_24' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 354 [1/1] (0.00ns)   --->   "%netScores_addr = getelementptr [10 x i16]* %netScores, i64 0, i64 %tmp_20" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:413]   --->   Operation 354 'getelementptr' 'netScores_addr' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 355 [1/1] (2.15ns)   --->   "store i16 %tmp_24, i16* %netScores_addr, align 2" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:413]   --->   Operation 355 'store' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 10> <RAM>
+ST_40 : Operation 356 [1/1] (0.00ns)   --->   "br label %b_mtimes.exit" [../Desktop/quantTest/lenetSynthMatlab_fixpt.c:391]   --->   Operation 356 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.66ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('f') with incoming values : ('f', ../Desktop/quantTest/lenetSynthMatlab_fixpt.c:107) [22]  (1.66 ns)
+
+ <State 2>: 1.68ns
+The critical path consists of the following:
+	'phi' operation ('f') with incoming values : ('f', ../Desktop/quantTest/lenetSynthMatlab_fixpt.c:107) [22]  (0 ns)
+	'add' operation ('f', ../Desktop/quantTest/lenetSynthMatlab_fixpt.c:107) [26]  (1.68 ns)
+
+ <State 3>: 2.13ns
+The critical path consists of the following:
+	'phi' operation ('phi_mul') with incoming values : ('next_mul') [32]  (0 ns)
+	'add' operation ('next_mul') [34]  (2.13 ns)
+
+ <State 4>: 1.86ns
+The critical path consists of the following:
+	'phi' operation ('c') with incoming values : ('c', ../Desktop/quantTest/lenetSynthMatlab_fixpt.c:113) [42]  (0 ns)
+	'add' operation ('c', ../Desktop/quantTest/lenetSynthMatlab_fixpt.c:113) [45]  (1.86 ns)
+
+ <State 5>: 1.68ns
+The critical path consists of the following:
+	'phi' operation ('i0') with incoming values : ('i0', ../Desktop/quantTest/lenetSynthMatlab_fixpt.c:116) [50]  (0 ns)
+	'add' operation ('i0', ../Desktop/quantTest/lenetSynthMatlab_fixpt.c:116) [54]  (1.68 ns)
+
+ <State 6>: 5.43ns
+The critical path consists of the following:
+	'phi' operation ('i1') with incoming values : ('i1', ../Desktop/quantTest/lenetSynthMatlab_fixpt.c:117) [60]  (0 ns)
+	'add' operation ('tmp1', ../Desktop/quantTest/lenetSynthMatlab_fixpt.c:118) [67]  (0 ns)
+	'add' operation ('tmp_18', ../Desktop/quantTest/lenetSynthMatlab_fixpt.c:118) [68]  (3.28 ns)
+	'getelementptr' operation ('iv11_addr', ../Desktop/quantTest/lenetSynthMatlab_fixpt.c:123) [70]  (0 ns)
+	'store' operation (../Desktop/quantTest/lenetSynthMatlab_fixpt.c:123) of constant 0 on array 'iv11', ../Desktop/quantTest/lenetSynthMatlab_fixpt.c:41 [71]  (2.15 ns)
+
+ <State 7>: 0ns
+The critical path consists of the following:
+
+ <State 8>: 2.15ns
+The critical path consists of the following:
+	'load' operation ('i20', ../Desktop/quantTest/sum.c:26->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:129) on array 'iv12', ../Desktop/quantTest/lenetSynthMatlab_fixpt.c:42 [77]  (2.15 ns)
+
+ <State 9>: 2.95ns
+The critical path consists of the following:
+	'load' operation ('i20', ../Desktop/quantTest/sum.c:26->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:129) on array 'iv12', ../Desktop/quantTest/lenetSynthMatlab_fixpt.c:42 [77]  (2.15 ns)
+	'select' operation ('Y', ../Desktop/quantTest/sum.c:27->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:129) [82]  (0.796 ns)
+
+ <State 10>: 6.06ns
+The critical path consists of the following:
+	'sub' operation ('tmp_15', ../Desktop/quantTest/lenetSynthMatlab_fixpt.c:150) [113]  (2.12 ns)
+	'add' operation ('tmp2', ../Desktop/quantTest/lenetSynthMatlab_fixpt.c:150) [115]  (0 ns)
+	'add' operation ('tmp_16', ../Desktop/quantTest/lenetSynthMatlab_fixpt.c:150) [116]  (3.95 ns)
+
+ <State 11>: 5.65ns
+The critical path consists of the following:
+	'load' operation ('iv12_load', ../Desktop/quantTest/sum.c:34->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:129) on array 'iv12', ../Desktop/quantTest/lenetSynthMatlab_fixpt.c:42 [94]  (2.15 ns)
+	'add' operation ('i20', ../Desktop/quantTest/sum.c:34->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:129) [99]  (2.7 ns)
+	'or' operation ('Y', ../Desktop/quantTest/sum.c:36->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:129) [103]  (0 ns)
+	'select' operation ('Y', ../Desktop/quantTest/sum.c:35->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:129) [105]  (0.796 ns)
+
+ <State 12>: 3.26ns
+The critical path consists of the following:
+	'store' operation (../Desktop/quantTest/lenetSynthMatlab_fixpt.c:150) of variable 'tmp_14', ../Desktop/quantTest/lenetSynthMatlab_fixpt.c:150 on array 'conv1ActivationMap', ../Desktop/quantTest/lenetSynthMatlab_fixpt.c:33 [120]  (3.26 ns)
+
+ <State 13>: 1.66ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('f') with incoming values : ('f', ../Desktop/quantTest/lenetSynthMatlab_fixpt.c:211) [131]  (1.66 ns)
+
+ <State 14>: 1.86ns
+The critical path consists of the following:
+	'phi' operation ('f') with incoming values : ('f', ../Desktop/quantTest/lenetSynthMatlab_fixpt.c:211) [131]  (0 ns)
+	'add' operation ('f', ../Desktop/quantTest/lenetSynthMatlab_fixpt.c:211) [135]  (1.86 ns)
+
+ <State 15>: 2.13ns
+The critical path consists of the following:
+	'phi' operation ('r') with incoming values : ('r', ../Desktop/quantTest/lenetSynthMatlab_fixpt.c:215) [140]  (0 ns)
+	'add' operation ('tmp4', ../Desktop/quantTest/lenetSynthMatlab_fixpt.c:254) [149]  (2.13 ns)
+
+ <State 16>: 1.78ns
+The critical path consists of the following:
+	'phi' operation ('c') with incoming values : ('c', ../Desktop/quantTest/lenetSynthMatlab_fixpt.c:217) [152]  (0 ns)
+	'add' operation ('c', ../Desktop/quantTest/lenetSynthMatlab_fixpt.c:217) [155]  (1.78 ns)
+
+ <State 17>: 2.12ns
+The critical path consists of the following:
+	'phi' operation ('i0') with incoming values : ('i0', ../Desktop/quantTest/lenetSynthMatlab_fixpt.c:220) [160]  (0 ns)
+	'sub' operation ('tmp_13', ../Desktop/quantTest/lenetSynthMatlab_fixpt.c:223) [170]  (2.12 ns)
+
+ <State 18>: 1.95ns
+The critical path consists of the following:
+	'phi' operation ('i1') with incoming values : ('i1', ../Desktop/quantTest/lenetSynthMatlab_fixpt.c:221) [173]  (0 ns)
+	'sub' operation ('tmp_31', ../Desktop/quantTest/lenetSynthMatlab_fixpt.c:223) [183]  (1.95 ns)
+
+ <State 19>: 6.43ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', ../Desktop/quantTest/lenetSynthMatlab_fixpt.c:222) [186]  (0 ns)
+	'add' operation ('tmp3', ../Desktop/quantTest/lenetSynthMatlab_fixpt.c:223) [193]  (2.03 ns)
+	'add' operation ('tmp_32', ../Desktop/quantTest/lenetSynthMatlab_fixpt.c:223) [195]  (2.12 ns)
+	'getelementptr' operation ('iv14_addr', ../Desktop/quantTest/lenetSynthMatlab_fixpt.c:225) [198]  (0 ns)
+	'store' operation (../Desktop/quantTest/lenetSynthMatlab_fixpt.c:225) of constant 0 on array 'iv14', ../Desktop/quantTest/lenetSynthMatlab_fixpt.c:60 [199]  (2.28 ns)
+
+ <State 20>: 0ns
+The critical path consists of the following:
+
+ <State 21>: 0ns
+The critical path consists of the following:
+
+ <State 22>: 0ns
+The critical path consists of the following:
+
+ <State 23>: 2.15ns
+The critical path consists of the following:
+	'load' operation ('i22', ../Desktop/quantTest/sum.c:194->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:233) on array 'iv16', ../Desktop/quantTest/lenetSynthMatlab_fixpt.c:62 [208]  (2.15 ns)
+
+ <State 24>: 3.14ns
+The critical path consists of the following:
+	'load' operation ('i22', ../Desktop/quantTest/sum.c:194->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:233) on array 'iv16', ../Desktop/quantTest/lenetSynthMatlab_fixpt.c:62 [208]  (2.15 ns)
+	'select' operation ('Y', ../Desktop/quantTest/sum.c:195->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:233) [213]  (0.987 ns)
+
+ <State 25>: 7.5ns
+The critical path consists of the following:
+	'add' operation ('tmp5', ../Desktop/quantTest/lenetSynthMatlab_fixpt.c:254) [241]  (2.12 ns)
+	'add' operation ('tmp_29', ../Desktop/quantTest/lenetSynthMatlab_fixpt.c:254) [243]  (2.13 ns)
+	'getelementptr' operation ('conv2ActivationMap_a', ../Desktop/quantTest/lenetSynthMatlab_fixpt.c:254) [245]  (0 ns)
+	'store' operation (../Desktop/quantTest/lenetSynthMatlab_fixpt.c:254) of variable 'tmp_27', ../Desktop/quantTest/lenetSynthMatlab_fixpt.c:254 on array 'conv2ActivationMap', ../Desktop/quantTest/lenetSynthMatlab_fixpt.c:49 [246]  (3.26 ns)
+
+ <State 26>: 6.7ns
+The critical path consists of the following:
+	'load' operation ('iv16_load', ../Desktop/quantTest/sum.c:203->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:233) on array 'iv16', ../Desktop/quantTest/lenetSynthMatlab_fixpt.c:62 [224]  (2.15 ns)
+	'add' operation ('i22', ../Desktop/quantTest/sum.c:203->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:233) [229]  (3.56 ns)
+	'or' operation ('Y', ../Desktop/quantTest/sum.c:205->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:233) [233]  (0 ns)
+	'select' operation ('Y', ../Desktop/quantTest/sum.c:204->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:233) [235]  (0.987 ns)
+
+ <State 27>: 1.66ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('f') with incoming values : ('f', ../Desktop/quantTest/lenetSynthMatlab_fixpt.c:315) [256]  (1.66 ns)
+
+ <State 28>: 2.03ns
+The critical path consists of the following:
+	'phi' operation ('f') with incoming values : ('f', ../Desktop/quantTest/lenetSynthMatlab_fixpt.c:315) [256]  (0 ns)
+	'add' operation ('f', ../Desktop/quantTest/lenetSynthMatlab_fixpt.c:315) [259]  (2.03 ns)
+
+ <State 29>: 2.12ns
+The critical path consists of the following:
+	'phi' operation ('i0') with incoming values : ('i0', ../Desktop/quantTest/lenetSynthMatlab_fixpt.c:317) [264]  (0 ns)
+	'add' operation ('tmp6', ../Desktop/quantTest/lenetSynthMatlab_fixpt.c:320) [273]  (2.12 ns)
+
+ <State 30>: 1.68ns
+The critical path consists of the following:
+	'phi' operation ('i1') with incoming values : ('i1', ../Desktop/quantTest/lenetSynthMatlab_fixpt.c:318) [276]  (0 ns)
+	'add' operation ('i1', ../Desktop/quantTest/lenetSynthMatlab_fixpt.c:318) [279]  (1.68 ns)
+
+ <State 31>: 6.58ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', ../Desktop/quantTest/lenetSynthMatlab_fixpt.c:319) [285]  (0 ns)
+	'add' operation ('tmp7', ../Desktop/quantTest/lenetSynthMatlab_fixpt.c:320) [292]  (2.03 ns)
+	'add' operation ('tmp_25', ../Desktop/quantTest/lenetSynthMatlab_fixpt.c:320) [294]  (2.12 ns)
+	'getelementptr' operation ('b_pool2ActivationMap_1', ../Desktop/quantTest/lenetSynthMatlab_fixpt.c:320) [296]  (0 ns)
+	'store' operation (../Desktop/quantTest/lenetSynthMatlab_fixpt.c:320) of constant 0 on array 'b_pool2ActivationMap', ../Desktop/quantTest/lenetSynthMatlab_fixpt.c:65 [297]  (2.44 ns)
+
+ <State 32>: 0ns
+The critical path consists of the following:
+
+ <State 33>: 0ns
+The critical path consists of the following:
+
+ <State 34>: 0ns
+The critical path consists of the following:
+
+ <State 35>: 2.03ns
+The critical path consists of the following:
+	'phi' operation ('l') with incoming values : ('l', ../Desktop/quantTest/mtimes.c:52->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:364) [310]  (0 ns)
+	'add' operation ('l', ../Desktop/quantTest/mtimes.c:52->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:364) [313]  (2.03 ns)
+
+ <State 36>: 2.03ns
+The critical path consists of the following:
+	'phi' operation ('k') with incoming values : ('k', ../Desktop/quantTest/mtimes.c:54->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:364) [318]  (0 ns)
+	'add' operation ('k', ../Desktop/quantTest/mtimes.c:54->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:364) [321]  (2.03 ns)
+
+ <State 37>: 1.78ns
+The critical path consists of the following:
+	'phi' operation ('l') with incoming values : ('l', ../Desktop/quantTest/mtimes.c:28->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:390) [328]  (0 ns)
+	'add' operation ('l', ../Desktop/quantTest/mtimes.c:28->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:390) [331]  (1.78 ns)
+
+ <State 38>: 2.15ns
+The critical path consists of the following:
+	'phi' operation ('i26', ../Desktop/quantTest/mtimes.c:32->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:390) with incoming values : ('storemerge_i1', ../Desktop/quantTest/mtimes.c:32->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:390) [338]  (0 ns)
+	'store' operation (../Desktop/quantTest/mtimes.c:35->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:390) of variable 'i26', ../Desktop/quantTest/mtimes.c:32->../Desktop/quantTest/lenetSynthMatlab_fixpt.c:390 on array 'c' [340]  (2.15 ns)
+
+ <State 39>: 2.15ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', ../Desktop/quantTest/lenetSynthMatlab_fixpt.c:391) [357]  (0 ns)
+	'getelementptr' operation ('c_assign_1_addr_1', ../Desktop/quantTest/lenetSynthMatlab_fixpt.c:392) [364]  (0 ns)
+	'load' operation ('i2', ../Desktop/quantTest/lenetSynthMatlab_fixpt.c:392) on array 'c' [365]  (2.15 ns)
+
+ <State 40>: 4.3ns
+The critical path consists of the following:
+	'load' operation ('i2', ../Desktop/quantTest/lenetSynthMatlab_fixpt.c:392) on array 'c' [365]  (2.15 ns)
+	'store' operation (../Desktop/quantTest/lenetSynthMatlab_fixpt.c:413) of variable 'tmp_24', ../Desktop/quantTest/lenetSynthMatlab_fixpt.c:413 on array 'netScores' [368]  (2.15 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

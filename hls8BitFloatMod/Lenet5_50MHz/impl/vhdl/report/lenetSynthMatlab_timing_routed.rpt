@@ -1,0 +1,321 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Wed Dec 12 12:44:04 2018
+| Host         : Neuromancer running 64-bit Ubuntu 18.04.1 LTS
+| Command      : report_timing_summary -file ./report/lenetSynthMatlab_timing_routed.rpt
+| Design       : lenetSynthMatlab
+| Device       : 7a100t-csg324
+| Speed File   : -1  PRODUCTION 1.22 2018-03-21
+-----------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  false
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock
+2. checking constant_clock
+3. checking pulse_width_clock
+4. checking unconstrained_internal_endpoints
+5. checking no_input_delay
+6. checking no_output_delay
+7. checking multiple_clock
+8. checking generated_clocks
+9. checking loops
+10. checking partial_input_delay
+11. checking partial_output_delay
+12. checking latch_loops
+
+1. checking no_clock
+--------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock
+--------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock
+-----------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints
+--------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay
+--------------------------
+ There are 10 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay
+---------------------------
+ There are 52 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock
+--------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks
+----------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops
+-----------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay
+--------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay
+---------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops
+------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+      2.952        0.000                      0                 9196        0.098        0.000                      0                 9196        8.750        0.000                       0                  3589  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock   Waveform(ns)       Period(ns)      Frequency(MHz)
+-----   ------------       ----------      --------------
+ap_clk  {0.000 10.000}     20.000          50.000          
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+ap_clk              2.952        0.000                      0                 9196        0.098        0.000                      0                 9196        8.750        0.000                       0                  3589  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  ap_clk
+  To Clock:  ap_clk
+
+Setup :            0  Failing Endpoints,  Worst Slack        2.952ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.098ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        8.750ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             2.952ns  (required time - arrival time)
+  Source:                 weightsFC1_U/lenetSynthMatlab_g8j_rom_U/q0_reg_0_14/CLKARDCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by ap_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            reg_1488_reg[13]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (ap_clk rise@20.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        17.039ns  (logic 9.057ns (53.155%)  route 7.982ns (46.845%))
+  Logic Levels:           8  (DSP48E1=3 LUT2=1 LUT5=1 LUT6=2 RAMB36E1=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 20.924 - 20.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=3601, unset)         0.973     0.973    weightsFC1_U/lenetSynthMatlab_g8j_rom_U/ap_clk
+    RAMB36_X1Y34         RAMB36E1                                     r  weightsFC1_U/lenetSynthMatlab_g8j_rom_U/q0_reg_0_14/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X1Y34         RAMB36E1 (Prop_ramb36e1_CLKARDCLK_CASCADEOUTA)
+                                                      1.028     2.001 r  weightsFC1_U/lenetSynthMatlab_g8j_rom_U/q0_reg_0_14/CASCADEOUTA
+                         net (fo=1, routed)           0.065     2.066    weightsFC1_U/lenetSynthMatlab_g8j_rom_U/q0_reg_0_14_n_0
+    RAMB36_X1Y35         RAMB36E1 (Prop_ramb36e1_CASCADEINA_DOADO[0])
+                                                      0.425     2.491 r  weightsFC1_U/lenetSynthMatlab_g8j_rom_U/q0_reg_1_14/DOADO[0]
+                         net (fo=1, routed)           4.819     7.311    pool1ActivationMap_U/lenetSynthMatlab_mb6_ram_U/q0_reg_1_31[14]
+    SLICE_X58Y18         LUT6 (Prop_lut6_I4_O)        0.124     7.435 r  pool1ActivationMap_U/lenetSynthMatlab_mb6_ram_U/lenetSynthMatlab_ap_fmul_0_max_dsp_32_u_i_115/O
+                         net (fo=1, routed)           0.492     7.927    weightsFC3_U/lenetSynthMatlab_kbM_rom_U/ram_reg_0_12
+    SLICE_X58Y18         LUT5 (Prop_lut5_I4_O)        0.124     8.051 r  weightsFC3_U/lenetSynthMatlab_kbM_rom_U/lenetSynthMatlab_ap_fmul_0_max_dsp_32_u_i_50/O
+                         net (fo=2, routed)           0.412     8.462    lenetSynthMatlab_DeQ_U18/lenetSynthMatlab_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/s_axis_b_tdata[14]
+    DSP48_X1Y6           DSP48E1 (Prop_dsp48e1_B[14]_PCOUT[47])
+                                                      3.851    12.313 r  lenetSynthMatlab_DeQ_U18/lenetSynthMatlab_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/PCOUT[47]
+                         net (fo=1, routed)           0.002    12.315    lenetSynthMatlab_DeQ_U18/lenetSynthMatlab_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/PCOUT[47]
+    DSP48_X1Y7           DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.713    14.028 r  lenetSynthMatlab_DeQ_U18/lenetSynthMatlab_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/PCOUT[47]
+                         net (fo=1, routed)           0.002    14.030    lenetSynthMatlab_DeQ_U18/lenetSynthMatlab_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/RESULT_CASC[47]
+    DSP48_X1Y8           DSP48E1 (Prop_dsp48e1_PCIN[47]_P[19])
+                                                      1.518    15.548 r  lenetSynthMatlab_DeQ_U18/lenetSynthMatlab_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/P[19]
+                         net (fo=2, routed)           1.078    16.627    lenetSynthMatlab_DeQ_U18/lenetSynthMatlab_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP_1[12]
+    SLICE_X56Y19         LUT6 (Prop_lut6_I1_O)        0.124    16.751 r  lenetSynthMatlab_DeQ_U18/lenetSynthMatlab_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/m_axis_result_tdata[13]_INST_0_i_1/O
+                         net (fo=1, routed)           1.111    17.862    lenetSynthMatlab_DeQ_U18/lenetSynthMatlab_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/m_axis_result_tdata[13]_INST_0_i_1_n_0
+    SLICE_X43Y19         LUT2 (Prop_lut2_I0_O)        0.150    18.012 r  lenetSynthMatlab_DeQ_U18/lenetSynthMatlab_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/m_axis_result_tdata[13]_INST_0/O
+                         net (fo=1, routed)           0.000    18.012    grp_fu_1453_p2[13]
+    SLICE_X43Y19         FDRE                                         r  reg_1488_reg[13]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    20.000    20.000 r  
+                                                      0.000    20.000 r  ap_clk (IN)
+                         net (fo=3601, unset)         0.924    20.924    ap_clk
+    SLICE_X43Y19         FDRE                                         r  reg_1488_reg[13]/C
+                         clock pessimism              0.000    20.924    
+                         clock uncertainty           -0.035    20.889    
+    SLICE_X43Y19         FDRE (Setup_fdre_C_D)        0.075    20.964    reg_1488_reg[13]
+  -------------------------------------------------------------------
+                         required time                         20.964    
+                         arrival time                         -18.012    
+  -------------------------------------------------------------------
+                         slack                                  2.952    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.098ns  (arrival time - required time)
+  Source:                 tmp_95_reg_1329_reg[19]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            lenetSynthMatlab_bkb_U17/din0_buf1_reg[19]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             ap_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        0.240ns  (logic 0.186ns (77.466%)  route 0.054ns (22.534%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.022ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.432ns
+    Source Clock Delay      (SCD):    0.410ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=3601, unset)         0.410     0.410    ap_clk
+    SLICE_X31Y25         FDRE                                         r  tmp_95_reg_1329_reg[19]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X31Y25         FDRE (Prop_fdre_C_Q)         0.141     0.551 r  tmp_95_reg_1329_reg[19]/Q
+                         net (fo=1, routed)           0.054     0.605    lenetSynthMatlab_bkb_U17/tmp_95_reg_1329[19]
+    SLICE_X30Y25         LUT6 (Prop_lut6_I3_O)        0.045     0.650 r  lenetSynthMatlab_bkb_U17/din0_buf1[19]_i_1/O
+                         net (fo=1, routed)           0.000     0.650    lenetSynthMatlab_bkb_U17/din0_buf1[19]_i_1_n_0
+    SLICE_X30Y25         FDRE                                         r  lenetSynthMatlab_bkb_U17/din0_buf1_reg[19]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=3601, unset)         0.432     0.432    lenetSynthMatlab_bkb_U17/ap_clk
+    SLICE_X30Y25         FDRE                                         r  lenetSynthMatlab_bkb_U17/din0_buf1_reg[19]/C
+                         clock pessimism              0.000     0.432    
+    SLICE_X30Y25         FDRE (Hold_fdre_C_D)         0.121     0.553    lenetSynthMatlab_bkb_U17/din0_buf1_reg[19]
+  -------------------------------------------------------------------
+                         required time                         -0.553    
+                         arrival time                           0.650    
+  -------------------------------------------------------------------
+                         slack                                  0.098    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         ap_clk
+Waveform(ns):       { 0.000 10.000 }
+Period(ns):         20.000
+Sources:            { ap_clk }
+
+Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location      Pin
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.892         20.000      17.108     RAMB36_X3Y23  weightsFC1_U/lenetSynthMatlab_g8j_rom_U/q0_reg_1_11/CLKARDCLK
+Low Pulse Width   Slow    RAMS32/CLK          n/a            1.250         10.000      8.750      SLICE_X10Y17  fv10_U/lenetSynthMatlab_pcA_ram_U/ram_reg_0_15_0_0/SP/CLK
+High Pulse Width  Slow    RAMS32/CLK          n/a            1.250         10.000      8.750      SLICE_X10Y17  fv10_U/lenetSynthMatlab_pcA_ram_U/ram_reg_0_15_0_0/SP/CLK
+
+
+

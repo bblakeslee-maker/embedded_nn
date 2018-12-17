@@ -1,0 +1,233 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Fixed-Point Report for lenetSynthMatlab</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style>
+	body { font-family: monospace; }
+	h2 { font-family: Arial, Helvetica, sans-serif; color: #990000; margin-top: 50px; }
+	table,th,td { border: 1px solid black; }
+	table { margin-top: 30px; }
+	th { align: center; font-weight: bold; }
+	tr.h { background-color: #99CCFF; }
+	tr.a { background-color: #EEEEFF; }
+	tr.b { background-color: #FFFFFF; }
+	tr.c { background-color: #FFA500; }
+	tr.a td, tr.b td { border-style: none; }
+	td.left { text-align: left; }
+	td.right { text-align: right; }
+	td.center { text-align: center; }
+	td.bold { font-weight: bold; }
+	pre { padding: 0px; margin: 0px; }
+	span { font-style: italic; }
+	.code, .code tr, .code th, .code td { border: none; border-collapse: collapse; }
+	.padd { padding-left: 5px; }
+	td.cov, th.cov { width: 50px; height: 20px; text-align: center; font-weight: bold; border-right: 2px solid black; cell-spacing: 0px; }
+	td.cov { vertical-align: top; }
+	td.black { color: #000000; font-weight: bold; padding-top: 4px; }
+	td.white { color: #FFFFFF; font-weight: bold; padding-top: 4px; }
+	.code th { font-weight: bold; border-bottom: 2px solid black; }
+</style>
+</head>
+<body>
+<h3>Generated on  2018-12-10 14:43:42</h3>
+<p>The following table shows fixed point instrumentation results</p>
+<h2>Fixed-Point Report <span>lenetSynthMatlab<span></h2>
+<TABLE class="code">
+<TR>
+<TH class="cov padd">Simulation Coverage</TH>
+<TH>Code</TH>
+</TR>
+<TR>
+<TD class="cov white" style="background-color: rgb(5,112,9);">100%</TD>
+<TD class="padd"><pre>function [netScores] = lenetSynthMatlab(inputImg)
+%LENETSYNTH Synthesizable model of LeNet5
+%   inputImg: 32x32x1 MNIST image
+
+    % Load all constants
+    % networkWeights = coder.load('networkWeights.mat');
+    global weightsConv1;    weightsConv1 = weightsConv1;
+    global biasConv1;       biasConv1 = biasConv1;
+    global weightsConv2;    weightsConv2 = weightsConv2;
+    global biasConv2;       biasConv2 = biasConv2;
+    global weightsFC1;      weightsFC1 = weightsFC1;
+    global biasFC1;         biasFC1 = biasFC1;
+    global weightsFC2;      weightsFC2 = weightsFC2;
+    global biasFC2;         biasFC2 = biasFC2;
+    global weightsFC3;      weightsFC3 = weightsFC3;
+    global biasFC3;         biasFC3 = biasFC3;
+
+    % Layer 1: conv1 -- OK
+    conv1ActivationMap = zeros(28, 28, 6);
+    for f = 1:1:6
+        % Extract desired filter
+        filter = weightsConv1(:, : , :, f);
+</pre></TD>
+</TR>
+<TR>
+<TD class="cov black" style="background-color: rgb(255,160,118);">Once</TD>
+<TD class="padd"><pre>        for r = 1:1:28
+            for c = 1:1:28
+                imgRegion = inputImg(r:r + 4, c:c + 4, :);
+                conv1ActivationMap(r, c, f) = sum(sum(filter .* imgRegion)) + biasConv1(:, :, f);
+            end
+        end
+    end
+    
+    % Layer 2: relu1 -- OK
+    relu1ActivationMap = max(0, conv1ActivationMap);
+    
+    % Layer 3: pool1 -- OK
+    pool1ActivationMap = zeros(14, 14, 6);
+</pre></TD>
+</TR>
+<TR>
+<TD class="cov white" style="background-color: rgb(5,112,9);">100%</TD>
+<TD class="padd"><pre>    for f = 1:1:6
+        rowOutIdx = 1;
+</pre></TD>
+</TR>
+<TR>
+<TD class="cov black" style="background-color: rgb(255,160,118);">Once</TD>
+<TD class="padd"><pre>        for r = 1:2:27
+            colOutIdx = 1;
+            for c = 1:2:27
+                pool1ActivationMap(rowOutIdx, colOutIdx, f) = max(max(relu1ActivationMap(r:r + 1, c:c + 1, f)));
+                colOutIdx = colOutIdx + 1;
+            end
+            rowOutIdx = rowOutIdx + 1;
+        end</pre></TD>
+</TR>
+<TR>
+<TD class="cov white" style="background-color: rgb(5,112,9);">100%</TD>
+<TD class="padd"><pre>
+    end
+    
+    % Layer 4: conv2 -- OK
+    conv2ActivationMap = zeros(10, 10, 16);
+    for f = 1:1:16
+        % Extract desired filter
+        filter = weightsConv2(:, : , :, f);
+</pre></TD>
+</TR>
+<TR>
+<TD class="cov black" style="background-color: rgb(255,160,118);">Once</TD>
+<TD class="padd"><pre>        for r = 1:1:10
+            for c = 1:1:10
+                imgRegion = pool1ActivationMap(r:r + 4, c:c + 4, :);
+                conv2ActivationMap(r, c, f) = sum(sum(sum(filter .* imgRegion))) + biasConv2(:, :, f);
+            end
+        end
+    end
+        
+    % Layer 5: relu2 -- OK
+    relu2ActivationMap = max(0, conv2ActivationMap);
+    
+    % Layer 6: pool2 -- OK
+    pool2ActivationMap = zeros(5, 5, 16);
+</pre></TD>
+</TR>
+<TR>
+<TD class="cov white" style="background-color: rgb(5,112,9);">100%</TD>
+<TD class="padd"><pre>    for f = 1:1:16
+        rowOutIdx = 1;
+</pre></TD>
+</TR>
+<TR>
+<TD class="cov black" style="background-color: rgb(255,160,118);">Once</TD>
+<TD class="padd"><pre>        for r = 1:2:9
+            colOutIdx = 1;
+            for c = 1:2:9
+                pool2ActivationMap(rowOutIdx, colOutIdx, f) = max(max(relu2ActivationMap(r:r + 1, c:c + 1, f)));
+                colOutIdx = colOutIdx + 1;
+            end
+            rowOutIdx = rowOutIdx + 1;
+        end</pre></TD>
+</TR>
+<TR>
+<TD class="cov white" style="background-color: rgb(5,112,9);">100%</TD>
+<TD class="padd"><pre>
+    end
+    
+    % Layer 7: fc1 -- OK
+    fc1ActivationMap = zeros(120, 1);
+    for f = 1:1:120
+        fc1ActivationMap(f) = sum(sum(sum((pool2ActivationMap .* weightsFC1(:, :, :, f))))) + biasFC1(:, :, f);
+    end
+    
+    % Layer 8: relu3 -- OK
+    relu3ActivationMap = max(0, fc1ActivationMap);
+    
+    % Layer 9: fc2 -- OK
+    fc2ActivationMap = weightsFC2 * relu3ActivationMap + biasFC2;
+    
+    % Layer 10: fc3 -- OK
+    netScores = weightsFC3 * fc2ActivationMap + biasFC3;
+
+end</pre></TD>
+</TR>
+</TABLE>
+<TABLE><TR class="h"><th>Variable Name</th><th>Type</th><th>Sim Min</th><th>Sim Max</th><th>Static Min</th><th>Static Max</th><th>Whole Number</th><th>ProposedType <BR /> (Best For WL = 16)</th></TR><TR class="a">
+<TD class="left">biasConv1</TD><TD class="left">single 1 x 1 x 6 </TD><TD class="right">-0.00015727018762845546</TD><TD class="right">0.00020271603716537356</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 27)</TD></TR>
+<TR class="b">
+<TD class="left">biasConv2</TD><TD class="left">single 1 x 1 x 16 </TD><TD class="right">-0.0005454023485071957</TD><TD class="right">0.000448507780674845</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 25)</TD></TR>
+<TR class="a">
+<TD class="left">biasFC1</TD><TD class="left">single 1 x 1 x 120 </TD><TD class="right">-0.0005962798604741693</TD><TD class="right">0.0007547273999080062</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 25)</TD></TR>
+<TR class="b">
+<TD class="left">biasFC2</TD><TD class="left">single 84 x 1 </TD><TD class="right">-0.0022069974802434444</TD><TD class="right">0.0022767551708966494</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 23)</TD></TR>
+<TR class="a">
+<TD class="left">biasFC3</TD><TD class="left">single 10 x 1 </TD><TD class="right">-0.02171306498348713</TD><TD class="right">0.0660393089056015</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 18)</TD></TR>
+<TR class="b">
+<TD class="left">c</TD><TD class="left">double</TD><TD class="right">1</TD><TD class="right">28</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 5, 0)</TD></TR>
+<TR class="a">
+<TD class="left">colOutIdx</TD><TD class="left">double</TD><TD class="right">1</TD><TD class="right">15</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 4, 0)</TD></TR>
+<TR class="b">
+<TD class="left">conv1ActivationMap</TD><TD class="left">double 28 x 28 x 6 </TD><TD class="right">-140.221435546875</TD><TD class="right">864.6664428710938</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 5)</TD></TR>
+<TR class="a">
+<TD class="left">conv2ActivationMap</TD><TD class="left">double 10 x 10 x 16 </TD><TD class="right">-583.998291015625</TD><TD class="right">460.67266845703125</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 5)</TD></TR>
+<TR class="b">
+<TD class="left">f</TD><TD class="left">double</TD><TD class="right">1</TD><TD class="right">120</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 7, 0)</TD></TR>
+<TR class="a">
+<TD class="left">fc1ActivationMap</TD><TD class="left">double 120 x 1 </TD><TD class="right">-259.18756103515625</TD><TD class="right">186.32257080078125</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 6)</TD></TR>
+<TR class="b">
+<TD class="left">fc2ActivationMap</TD><TD class="left">single 84 x 1 </TD><TD class="right">-45.669456481933594</TD><TD class="right">37.10658645629883</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 9)</TD></TR>
+<TR class="a">
+<TD class="left">filter > 1</TD><TD class="left">single 5 x 5 </TD><TD class="right">-0.09597090631723404</TD><TD class="right">0.39989063143730164</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 16)</TD></TR>
+<TR class="b">
+<TD class="left">filter > 2</TD><TD class="left">single 5 x 5 x 6 </TD><TD class="right">-0.16781820356845856</TD><TD class="right">0.13925620913505554</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 17)</TD></TR>
+<TR class="a">
+<TD class="left">imgRegion > 1</TD><TD class="left">single 5 x 5 </TD><TD class="right">0</TD><TD class="right">255</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 8, 0)</TD></TR>
+<TR class="b">
+<TD class="left">imgRegion > 2</TD><TD class="left">double 5 x 5 x 6 </TD><TD class="right">0</TD><TD class="right">864.6664428710938</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 16, 6)</TD></TR>
+<TR class="a">
+<TD class="left">inputImg</TD><TD class="left">single 32 x 32 </TD><TD class="right">0</TD><TD class="right">255</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 8, 0)</TD></TR>
+<TR class="b">
+<TD class="left">netScores</TD><TD class="left">single 10 x 1 </TD><TD class="right">-30.314226150512695</TD><TD class="right">32.747291564941406</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 9)</TD></TR>
+<TR class="a">
+<TD class="left">pool1ActivationMap</TD><TD class="left">double 14 x 14 x 6 </TD><TD class="right">0</TD><TD class="right">864.6664428710938</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 16, 6)</TD></TR>
+<TR class="b">
+<TD class="left">pool2ActivationMap</TD><TD class="left">double 5 x 5 x 16 </TD><TD class="right">0</TD><TD class="right">460.67266845703125</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 16, 7)</TD></TR>
+<TR class="a">
+<TD class="left">r</TD><TD class="left">double</TD><TD class="right">1</TD><TD class="right">28</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 5, 0)</TD></TR>
+<TR class="b">
+<TD class="left">relu1ActivationMap</TD><TD class="left">double 28 x 28 x 6 </TD><TD class="right">0</TD><TD class="right">864.6664428710938</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 16, 6)</TD></TR>
+<TR class="a">
+<TD class="left">relu2ActivationMap</TD><TD class="left">double 10 x 10 x 16 </TD><TD class="right">0</TD><TD class="right">460.67266845703125</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 16, 7)</TD></TR>
+<TR class="b">
+<TD class="left">relu3ActivationMap</TD><TD class="left">double 120 x 1 </TD><TD class="right">0</TD><TD class="right">186.32257080078125</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 16, 8)</TD></TR>
+<TR class="a">
+<TD class="left">rowOutIdx</TD><TD class="left">double</TD><TD class="right">1</TD><TD class="right">15</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 4, 0)</TD></TR>
+<TR class="b">
+<TD class="left">weightsConv1</TD><TD class="left">single 5 x 5 x 1 x 6 </TD><TD class="right">-0.09597090631723404</TD><TD class="right">0.39989063143730164</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 16)</TD></TR>
+<TR class="a">
+<TD class="left">weightsConv2</TD><TD class="left">single 5 x 5 x 6 x 16 </TD><TD class="right">-0.16781820356845856</TD><TD class="right">0.13925620913505554</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 17)</TD></TR>
+<TR class="b">
+<TD class="left">weightsFC1</TD><TD class="left">single 5 x 5 x 16 x 120 </TD><TD class="right">-0.07443201541900635</TD><TD class="right">0.08216544985771179</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 18)</TD></TR>
+<TR class="a">
+<TD class="left">weightsFC2</TD><TD class="left">single 84 x 120 </TD><TD class="right">-0.07689773291349411</TD><TD class="right">0.07190904766321182</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 18)</TD></TR>
+<TR class="b">
+<TD class="left">weightsFC3</TD><TD class="left">single 10 x 84 </TD><TD class="right">-0.1284559667110443</TD><TD class="right">0.13222075998783112</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 17)</TD></TR>
+</TABLE>
+
+</body>
+</html>

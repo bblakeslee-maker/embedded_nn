@@ -27,4 +27,3 @@ trainingOpts = trainingOptions('sgdm', 'MaxEpochs', 10, ...
 
 % Train the network
 trainedLenet5 = trainNetwork(trainData, lenet5, trainingOpts);
-referenceLenet5 = trainedLenet5;

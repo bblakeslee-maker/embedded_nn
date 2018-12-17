@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Fri Dec 14 13:35:19 2018
+# Process ID: 742
+# Current directory: /home/tyrian/nnproject/lenet58BitFloatMod/lenet58BitFloatMod.runs/impl_1
+# Command line: vivado -log lenet5top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source lenet5top.tcl -notrace
+# Log file: /home/tyrian/nnproject/lenet58BitFloatMod/lenet58BitFloatMod.runs/impl_1/lenet5top.vdi
+# Journal file: /home/tyrian/nnproject/lenet58BitFloatMod/lenet58BitFloatMod.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source lenet5top.tcl -notrace

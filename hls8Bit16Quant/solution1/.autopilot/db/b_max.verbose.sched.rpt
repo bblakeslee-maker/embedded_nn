@@ -1,0 +1,210 @@
+
+
+================================================================
+== Vivado HLS Report for 'b_max'
+================================================================
+* Date:           Mon Dec 10 15:19:41 2018
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        hls8Bit16Quant
+* Solution:       solution1
+* Product family: artix7
+* Target device:  xc7a100tcsg324-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     7.510|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-------+-------+-------+-------+---------+
+    |    Latency    |    Interval   | Pipeline|
+    |  min  |  max  |  min  |  max  |   Type  |
+    +-------+-------+-------+-------+---------+
+    |  15737|  15737|  15737|  15737|   none  |
+    +-------+-------+-------+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------------+-------+-------+----------+-----------+-----------+------+----------+
+        |                 |    Latency    | Iteration|  Initiation Interval  | Trip |          |
+        |    Loop Name    |  min  |  max  |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------------+-------+-------+----------+-----------+-----------+------+----------+
+        |- Loop 1         |  15736|  15736|       562|          -|          -|    28|    no    |
+        | + Loop 1.1      |    560|    560|        20|          -|          -|    28|    no    |
+        |  ++ Loop 1.1.1  |     18|     18|         3|          -|          -|     6|    no    |
+        +-----------------+-------+-------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 6
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (!exitcond2)
+3 --> 
+	4  / (!exitcond1)
+	2  / (exitcond1)
+4 --> 
+	5  / (!exitcond)
+	3  / (exitcond)
+5 --> 
+	6  / true
+6 --> 
+	4  / true
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.66>
+ST_1 : Operation 7 [1/1] (1.66ns)   --->   "br label %.loopexit" [../Desktop/quantTest/max.c:27]   --->   Operation 7 'br' <Predicate = true> <Delay = 1.66>
+
+State 2 <SV = 1> <Delay = 2.13>
+ST_2 : Operation 8 [1/1] (0.00ns)   --->   "%k = phi i5 [ 0, %0 ], [ %k_4, %.loopexit.loopexit ]"   --->   Operation 8 'phi' 'k' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 9 [1/1] (0.00ns)   --->   "%phi_mul = phi i13 [ 0, %0 ], [ %next_mul, %.loopexit.loopexit ]"   --->   Operation 9 'phi' 'phi_mul' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 10 [1/1] (0.00ns)   --->   "%phi_mul_cast = zext i13 %phi_mul to i14"   --->   Operation 10 'zext' 'phi_mul_cast' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 11 [1/1] (2.13ns)   --->   "%next_mul = add i13 %phi_mul, 168"   --->   Operation 11 'add' 'next_mul' <Predicate = true> <Delay = 2.13> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 12 [1/1] (1.44ns)   --->   "%exitcond2 = icmp eq i5 %k, -4" [../Desktop/quantTest/max.c:27]   --->   Operation 12 'icmp' 'exitcond2' <Predicate = true> <Delay = 1.44> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.38> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 28, i64 28, i64 28)"   --->   Operation 13 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 14 [1/1] (1.86ns)   --->   "%k_4 = add i5 %k, 1" [../Desktop/quantTest/max.c:27]   --->   Operation 14 'add' 'k_4' <Predicate = true> <Delay = 1.86> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "br i1 %exitcond2, label %2, label %.preheader3.preheader" [../Desktop/quantTest/max.c:27]   --->   Operation 15 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 16 [1/1] (1.66ns)   --->   "br label %.preheader3" [../Desktop/quantTest/max.c:28]   --->   Operation 16 'br' <Predicate = (!exitcond2)> <Delay = 1.66>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "ret void" [../Desktop/quantTest/max.c:38]   --->   Operation 17 'ret' <Predicate = (exitcond2)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 2.11>
+ST_3 : Operation 18 [1/1] (0.00ns)   --->   "%b_k = phi i5 [ %b_k_2, %.preheader3.loopexit ], [ 0, %.preheader3.preheader ]"   --->   Operation 18 'phi' 'b_k' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 19 [1/1] (1.44ns)   --->   "%exitcond1 = icmp eq i5 %b_k, -4" [../Desktop/quantTest/max.c:28]   --->   Operation 19 'icmp' 'exitcond1' <Predicate = true> <Delay = 1.44> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.38> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 20 [1/1] (0.00ns)   --->   "%empty_43 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 28, i64 28, i64 28)"   --->   Operation 20 'speclooptripcount' 'empty_43' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 21 [1/1] (1.86ns)   --->   "%b_k_2 = add i5 %b_k, 1" [../Desktop/quantTest/max.c:28]   --->   Operation 21 'add' 'b_k_2' <Predicate = true> <Delay = 1.86> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 22 [1/1] (0.00ns)   --->   "br i1 %exitcond1, label %.loopexit.loopexit, label %.preheader.preheader" [../Desktop/quantTest/max.c:28]   --->   Operation 22 'br' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 23 [1/1] (0.00ns)   --->   "%p_shl = call i8 @_ssdm_op_BitConcatenate.i8.i5.i3(i5 %b_k, i3 0)" [../Desktop/quantTest/max.c:30]   --->   Operation 23 'bitconcatenate' 'p_shl' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_3 : Operation 24 [1/1] (0.00ns)   --->   "%p_shl_cast = zext i8 %p_shl to i9" [../Desktop/quantTest/max.c:30]   --->   Operation 24 'zext' 'p_shl_cast' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_3 : Operation 25 [1/1] (0.00ns)   --->   "%p_shl7 = call i6 @_ssdm_op_BitConcatenate.i6.i5.i1(i5 %b_k, i1 false)" [../Desktop/quantTest/max.c:30]   --->   Operation 25 'bitconcatenate' 'p_shl7' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_3 : Operation 26 [1/1] (0.00ns)   --->   "%p_shl7_cast = zext i6 %p_shl7 to i9" [../Desktop/quantTest/max.c:30]   --->   Operation 26 'zext' 'p_shl7_cast' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_3 : Operation 27 [1/1] (2.11ns)   --->   "%tmp_s = sub i9 %p_shl_cast, %p_shl7_cast" [../Desktop/quantTest/max.c:30]   --->   Operation 27 'sub' 'tmp_s' <Predicate = (!exitcond1)> <Delay = 2.11> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 28 [1/1] (1.66ns)   --->   "br label %.preheader" [../Desktop/quantTest/max.c:29]   --->   Operation 28 'br' <Predicate = (!exitcond1)> <Delay = 1.66>
+ST_3 : Operation 29 [1/1] (0.00ns)   --->   "br label %.loopexit"   --->   Operation 29 'br' <Predicate = (exitcond1)> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 7.51>
+ST_4 : Operation 30 [1/1] (0.00ns)   --->   "%c_k = phi i3 [ %c_k_2, %1 ], [ 0, %.preheader.preheader ]"   --->   Operation 30 'phi' 'c_k' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 31 [1/1] (0.00ns)   --->   "%c_k_cast2 = zext i3 %c_k to i9" [../Desktop/quantTest/max.c:29]   --->   Operation 31 'zext' 'c_k_cast2' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 32 [1/1] (1.18ns)   --->   "%exitcond = icmp eq i3 %c_k, -2" [../Desktop/quantTest/max.c:29]   --->   Operation 32 'icmp' 'exitcond' <Predicate = true> <Delay = 1.18> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.38> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 33 [1/1] (0.00ns)   --->   "%empty_44 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 6, i64 6, i64 6)"   --->   Operation 33 'speclooptripcount' 'empty_44' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 34 [1/1] (1.68ns)   --->   "%c_k_2 = add i3 %c_k, 1" [../Desktop/quantTest/max.c:29]   --->   Operation 34 'add' 'c_k_2' <Predicate = true> <Delay = 1.68> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 35 [1/1] (0.00ns)   --->   "br i1 %exitcond, label %.preheader3.loopexit, label %1" [../Desktop/quantTest/max.c:29]   --->   Operation 35 'br' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 36 [1/1] (2.11ns)   --->   "%tmp1 = add i9 %tmp_s, %c_k_cast2" [../Desktop/quantTest/max.c:30]   --->   Operation 36 'add' 'tmp1' <Predicate = (!exitcond)> <Delay = 2.11> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 37 [1/1] (0.00ns)   --->   "%tmp1_cast = sext i9 %tmp1 to i14" [../Desktop/quantTest/max.c:30]   --->   Operation 37 'sext' 'tmp1_cast' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_4 : Operation 38 [1/1] (2.13ns)   --->   "%tmp_97 = add i14 %tmp1_cast, %phi_mul_cast" [../Desktop/quantTest/max.c:30]   --->   Operation 38 'add' 'tmp_97' <Predicate = (!exitcond)> <Delay = 2.13> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 39 [1/1] (0.00ns)   --->   "%tmp_192_cast = sext i14 %tmp_97 to i32" [../Desktop/quantTest/max.c:30]   --->   Operation 39 'sext' 'tmp_192_cast' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_4 : Operation 40 [1/1] (0.00ns)   --->   "%tmp_98 = zext i32 %tmp_192_cast to i64" [../Desktop/quantTest/max.c:30]   --->   Operation 40 'zext' 'tmp_98' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_4 : Operation 41 [1/1] (0.00ns)   --->   "%b_y0_addr = getelementptr [4704 x i16]* %b_y0, i64 0, i64 %tmp_98" [../Desktop/quantTest/max.c:30]   --->   Operation 41 'getelementptr' 'b_y0_addr' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_4 : Operation 42 [2/2] (3.25ns)   --->   "%b_y0_load = load i16* %b_y0_addr, align 2" [../Desktop/quantTest/max.c:30]   --->   Operation 42 'load' 'b_y0_load' <Predicate = (!exitcond)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 4704> <RAM>
+ST_4 : Operation 43 [1/1] (0.00ns)   --->   "br label %.preheader3"   --->   Operation 43 'br' <Predicate = (exitcond)> <Delay = 0.00>
+
+State 5 <SV = 4> <Delay = 3.25>
+ST_5 : Operation 44 [1/2] (3.25ns)   --->   "%b_y0_load = load i16* %b_y0_addr, align 2" [../Desktop/quantTest/max.c:30]   --->   Operation 44 'load' 'b_y0_load' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 4704> <RAM>
+
+State 6 <SV = 5> <Delay = 6.93>
+ST_6 : Operation 45 [1/1] (2.38ns)   --->   "%tmp_99 = icmp sgt i16 %b_y0_load, 0" [../Desktop/quantTest/max.c:30]   --->   Operation 45 'icmp' 'tmp_99' <Predicate = true> <Delay = 2.38> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.38> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 46 [1/1] (0.00ns)   --->   "%maxval_addr = getelementptr [4704 x i16]* %maxval, i64 0, i64 %tmp_98" [../Desktop/quantTest/max.c:31]   --->   Operation 46 'getelementptr' 'maxval_addr' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 47 [1/1] (1.29ns)   --->   "%b_y0_load_s = select i1 %tmp_99, i16 %b_y0_load, i16 0" [../Desktop/quantTest/max.c:30]   --->   Operation 47 'select' 'b_y0_load_s' <Predicate = true> <Delay = 1.29> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.29> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_6 : Operation 48 [1/1] (3.25ns)   --->   "store i16 %b_y0_load_s, i16* %maxval_addr, align 2" [../Desktop/quantTest/max.c:31]   --->   Operation 48 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 4704> <RAM>
+ST_6 : Operation 49 [1/1] (0.00ns)   --->   "br label %.preheader" [../Desktop/quantTest/max.c:29]   --->   Operation 49 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.66ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('k') with incoming values : ('k', ../Desktop/quantTest/max.c:27) [5]  (1.66 ns)
+
+ <State 2>: 2.13ns
+The critical path consists of the following:
+	'phi' operation ('phi_mul') with incoming values : ('next_mul') [6]  (0 ns)
+	'add' operation ('next_mul') [8]  (2.13 ns)
+
+ <State 3>: 2.12ns
+The critical path consists of the following:
+	'phi' operation ('b_k') with incoming values : ('b_k', ../Desktop/quantTest/max.c:28) [16]  (0 ns)
+	'sub' operation ('tmp_s', ../Desktop/quantTest/max.c:30) [26]  (2.12 ns)
+
+ <State 4>: 7.51ns
+The critical path consists of the following:
+	'phi' operation ('c_k') with incoming values : ('c_k', ../Desktop/quantTest/max.c:29) [29]  (0 ns)
+	'add' operation ('tmp1', ../Desktop/quantTest/max.c:30) [36]  (2.12 ns)
+	'add' operation ('tmp_97', ../Desktop/quantTest/max.c:30) [38]  (2.13 ns)
+	'getelementptr' operation ('b_y0_addr', ../Desktop/quantTest/max.c:30) [41]  (0 ns)
+	'load' operation ('b_y0_load', ../Desktop/quantTest/max.c:30) on array 'b_y0' [42]  (3.26 ns)
+
+ <State 5>: 3.26ns
+The critical path consists of the following:
+	'load' operation ('b_y0_load', ../Desktop/quantTest/max.c:30) on array 'b_y0' [42]  (3.26 ns)
+
+ <State 6>: 6.93ns
+The critical path consists of the following:
+	'icmp' operation ('tmp_99', ../Desktop/quantTest/max.c:30) [43]  (2.38 ns)
+	'select' operation ('b_y0_load_s', ../Desktop/quantTest/max.c:30) [45]  (1.29 ns)
+	'store' operation (../Desktop/quantTest/max.c:31) of variable 'b_y0_load_s', ../Desktop/quantTest/max.c:30 on array 'maxval' [46]  (3.26 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

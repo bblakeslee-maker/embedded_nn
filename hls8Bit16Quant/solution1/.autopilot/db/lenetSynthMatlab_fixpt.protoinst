@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"lenetSynthMatlab_fixpt": {
+			"proto_instances": {
+			}
+		}
+	}
+}

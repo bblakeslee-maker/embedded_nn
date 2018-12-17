@@ -8,7 +8,7 @@ datasetLoader;
 networkTrainer;
 networkTester;
 parameterExtractor;
-synthTester;
+% synthTester;
 
 % quantizer;
 % networkTester;

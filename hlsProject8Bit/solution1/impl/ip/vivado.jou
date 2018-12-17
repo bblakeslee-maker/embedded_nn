@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sun Dec  9 13:08:40 2018
+# Process ID: 2858
+# Current directory: /home/tyrian/nnproject/hlsProject8Bit/solution1/impl/ip
+# Command line: vivado -notrace -mode batch -source run_ippack.tcl
+# Log file: /home/tyrian/nnproject/hlsProject8Bit/solution1/impl/ip/vivado.log
+# Journal file: /home/tyrian/nnproject/hlsProject8Bit/solution1/impl/ip/vivado.jou
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace

@@ -1,0 +1,84 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'lenetSynthMatlab'" level="0">
+<item name = "Date">Tue Dec 11 22:56:06 2018
+</item>
+<item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
+<item name = "Project">hls8BitFloatMod</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">artix7</item>
+<item name = "Target device">xc7a100tcsg324-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">100.00, 44.129, 12.50</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">2206718, 2206718, 2206718, 2206718, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Loop 1">630690, 630690, 105115, -, -, 6, no</column>
+<column name=" + Loop 1.1">105112, 105112, 3754, -, -, 28, no</column>
+<column name="  ++ Loop 1.1.1">3752, 3752, 134, -, -, 28, no</column>
+<column name="   +++ Loop 1.1.1.1">60, 60, 12, -, -, 5, no</column>
+<column name="    ++++ Loop 1.1.1.1.1">10, 10, 2, -, -, 5, no</column>
+<column name="   +++ Loop 1.1.1.2">8, 8, 2, -, -, 4, no</column>
+<column name="- Loop 2">11032, 11032, 394, -, -, 28, no</column>
+<column name=" + Loop 2.1">392, 392, 14, -, -, 28, no</column>
+<column name="  ++ Loop 2.1.1">12, 12, 2, -, -, 6, no</column>
+<column name="- memset_pool1ActivationMap">1175, 1175, 1, -, -, 1176, no</column>
+<column name="- Loop 4">9588, 9588, 1598, -, -, 6, no</column>
+<column name=" + Loop 4.1">1596, 1596, 114, -, -, 14, no</column>
+<column name="  ++ Loop 4.1.1">112, 112, 8, -, -, 14, no</column>
+<column name="   +++ Loop 4.1.1.1">6, 6, 3, -, -, 2, no</column>
+<column name="- Loop 5">1293168, 1293168, 80823, -, -, 16, no</column>
+<column name=" + Loop 5.1">80820, 80820, 8082, -, -, 10, no</column>
+<column name="  ++ Loop 5.1.1">8080, 8080, 808, -, -, 10, no</column>
+<column name="   +++ Loop 5.1.1.1">360, 360, 72, -, -, 5, no</column>
+<column name="    ++++ Loop 5.1.1.1.1">70, 70, 14, -, -, 5, no</column>
+<column name="     +++++ Loop 5.1.1.1.1.1">12, 12, 2, -, -, 6, no</column>
+<column name="   +++ Loop 5.1.1.2">10, 10, 2, -, -, 5, no</column>
+<column name="- Loop 6">3420, 3420, 342, -, -, 10, no</column>
+<column name=" + Loop 6.1">340, 340, 34, -, -, 10, no</column>
+<column name="  ++ Loop 6.1.1">32, 32, 2, -, -, 16, no</column>
+<column name="- memset_pool2ActivationMap">399, 399, 1, -, -, 400, no</column>
+<column name="- Loop 8">3392, 3392, 212, -, -, 16, no</column>
+<column name=" + Loop 8.1">210, 210, 42, -, -, 5, no</column>
+<column name="  ++ Loop 8.1.1">40, 40, 8, -, -, 5, no</column>
+<column name="   +++ Loop 8.1.1.1">6, 6, 3, -, -, 2, no</column>
+<column name="- Loop 9">231480, 231480, 1929, -, -, 120, no</column>
+<column name=" + Loop 9.1">860, 860, 172, -, -, 5, no</column>
+<column name="  ++ Loop 9.1.1">170, 170, 34, -, -, 5, no</column>
+<column name="   +++ Loop 9.1.1.1">32, 32, 2, -, -, 16, no</column>
+<column name=" + Loop 9.2">30, 30, 2, -, -, 15, no</column>
+<column name="- Loop 10">240, 240, 2, -, -, 120, no</column>
+<column name="- Loop 11">20412, 20412, 243, -, -, 84, no</column>
+<column name=" + Loop 11.1">240, 240, 2, -, -, 120, no</column>
+<column name="- Loop 12">1710, 1710, 171, -, -, 10, no</column>
+<column name=" + Loop 12.1">168, 168, 2, -, -, 84, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

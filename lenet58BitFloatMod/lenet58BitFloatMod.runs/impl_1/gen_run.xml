@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1544812229">
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="BG-DRC" Name="lenet5top.drc"/>
+  <File Type="BG-BGN" Name="lenet5top.bgn"/>
+  <File Type="BITSTR-SYSDEF" Name="lenet5top.sysdef"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="lenet5top.ltx"/>
+  <File Type="BITSTR-MMI" Name="lenet5top.mmi"/>
+  <File Type="BITSTR-BMM" Name="lenet5top_bd.bmm"/>
+  <File Type="BITSTR-NKY" Name="lenet5top.nky"/>
+  <File Type="BITSTR-RBT" Name="lenet5top.rbt"/>
+  <File Type="BITSTR-MSK" Name="lenet5top.msk"/>
+  <File Type="BG-BIN" Name="lenet5top.bin"/>
+  <File Type="BG-BIT" Name="lenet5top.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="lenet5top_bus_skew_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="lenet5top_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="lenet5top_bus_skew_postroute_physopted.rpt"/>
+  <File Type="RDI-RDI" Name="lenet5top.vdi"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="lenet5top_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="lenet5top_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="lenet5top_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="lenet5top_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="lenet5top_postroute_physopt.dcp"/>
+  <File Type="ROUTE-BUS-SKEW" Name="lenet5top_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="lenet5top_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-SIMILARITY" Name="lenet5top_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-TIMING-RPX" Name="lenet5top_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-TIMING-PB" Name="lenet5top_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="lenet5top_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="lenet5top_route_status.pb"/>
+  <File Type="ROUTE-STATUS" Name="lenet5top_route_status.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="lenet5top_power_routed.rpx"/>
+  <File Type="ROUTE-PWR-SUM" Name="lenet5top_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="lenet5top_power_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="lenet5top_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="lenet5top_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="lenet5top_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="lenet5top_drc_routed.rpx"/>
+  <File Type="ROUTE-DRC-PB" Name="lenet5top_drc_routed.pb"/>
+  <File Type="ROUTE-DRC" Name="lenet5top_drc_routed.rpt"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="lenet5top_routed_bb.dcp"/>
+  <File Type="ROUTE-DCP" Name="lenet5top_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="lenet5top_routed_error.dcp"/>
+  <File Type="PHYSOPT-TIMING" Name="lenet5top_timing_summary_physopted.rpt"/>
+  <File Type="PHYSOPT-DRC" Name="lenet5top_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="lenet5top_physopt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="lenet5top_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="lenet5top_postplace_pwropt.dcp"/>
+  <File Type="PLACE-TIMING" Name="lenet5top_timing_summary_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="lenet5top_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="lenet5top_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-CTRL" Name="lenet5top_control_sets_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="lenet5top_utilization_placed.pb"/>
+  <File Type="PLACE-UTIL" Name="lenet5top_utilization_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="lenet5top_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-IO" Name="lenet5top_io_placed.rpt"/>
+  <File Type="PLACE-DCP" Name="lenet5top_placed.dcp"/>
+  <File Type="PWROPT-TIMING" Name="lenet5top_timing_summary_pwropted.rpt"/>
+  <File Type="PWROPT-DRC" Name="lenet5top_drc_pwropted.rpt"/>
+  <File Type="PWROPT-DCP" Name="lenet5top_pwropt.dcp"/>
+  <File Type="OPT-TIMING" Name="lenet5top_timing_summary_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="lenet5top.hwdef"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="lenet5top_methodology_drc_opted.rpt"/>
+  <File Type="OPT-DRC" Name="lenet5top_drc_opted.rpt"/>
+  <File Type="OPT-DCP" Name="lenet5top_opt.dcp"/>
+  <File Type="INIT-TIMING" Name="lenet5top_timing_summary_init.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="lenet5top_bus_skew_routed.rpx"/>
+  <File Type="REPORTS-TCL" Name="lenet5top_reports.tcl"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="lenet5top_bus_skew_routed.pb"/>
+  <File Type="PA-TCL" Name="lenet5top.tcl"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/ip/lenetSynthMatlab_0_2/lenetSynthMatlab_0.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Part3/BBUART_TX.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Desktop/Ex4/Part3/BBUART_TX.vhd"/>
+        <Attr Name="ImportTime" Val="1542142790"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Part3/MLUART_RX.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Desktop/Ex4/Part3/MLUART_RX.vhd"/>
+        <Attr Name="ImportTime" Val="1542142790"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Part3/UART.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Desktop/Ex4/Part3/UART.vhd"/>
+        <Attr Name="ImportTime" Val="1542142790"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Part3/fall_edge_det.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Desktop/Ex4/Part3/fall_edge_det.vhd"/>
+        <Attr Name="ImportTime" Val="1542142790"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/lenet5top.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../lenet5VHDL8Bit/lenet5VHDL8Bit.srcs/sources_1/new/lenet5top.vhd"/>
+        <Attr Name="ImportTime" Val="1544401394"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Part3/rise_edge_det.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Desktop/Ex4/Part3/rise_edge_det.vhd"/>
+        <Attr Name="ImportTime" Val="1542142790"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Part3/sig_stretcher.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Desktop/Ex4/Part3/sig_stretcher.vhd"/>
+        <Attr Name="ImportTime" Val="1542142790"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Part3/synchro_2s.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Desktop/Ex4/Part3/synchro_2s.vhd"/>
+        <Attr Name="ImportTime" Val="1542142790"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../checkerRow.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../checker4Row.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Part3/fifo.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Desktop/Ex4/Part3/fifo.vhd"/>
+        <Attr Name="ImportTime" Val="1542142801"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/image_ram/image_ram.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/score_ram/score_ram.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/serializer.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../testROM.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/UART_checker.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/clk_wiz_0/clk_wiz_0.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="lenet5top"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/constraints.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
+      <Desc>Default settings for Implementation.</Desc>
+    </StratHandle>
+    <Step Id="init_design"/>
+    <Step Id="opt_design">
+      <Option Id="MoreOptsStr"><![CDATA[-retarget -propconst -bram_power_opt]]></Option>
+    </Step>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="testROM"/>
+</GenRun>

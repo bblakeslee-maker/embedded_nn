@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="tmwtypes.h" path="/home/tyrian/Desktop/buildTest/tmwtypes.h"/>
+    <originFiles name="sum.h" path="/home/tyrian/Desktop/buildTest/sum.h"/>
+    <originFiles name="sum.c" path="/home/tyrian/Desktop/buildTest/sum.c"/>
+    <originFiles name="rtwtypes.h" path="/home/tyrian/Desktop/buildTest/rtwtypes.h"/>
+    <originFiles name="lenetSynthMatlab_types.h" path="/home/tyrian/Desktop/buildTest/lenetSynthMatlab_types.h"/>
+    <originFiles name="lenetSynthMatlab.h" path="/home/tyrian/Desktop/buildTest/lenetSynthMatlab.h"/>
+    <originFiles name="lenetSynthMatlab.c" path="/home/tyrian/Desktop/buildTest/lenetSynthMatlab.c"/>
+  </source>
+  <testbench>
+    <originFiles name="main.h" path="/home/tyrian/Desktop/buildTest/main.h"/>
+    <originFiles name="main.c" path="/home/tyrian/Desktop/buildTest/main.c"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>
