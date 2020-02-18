@@ -2,4 +2,4 @@
 
 This repository contains an implementation of LeNet5 trained on MNIST-Digits for an FPGA.
 
-For details, see the [final report file](/master/BryanBlakeslee_ProjectFinalReport.pdf).
+For details, see the [final report file](/BryanBlakeslee_ProjectFinalReport.pdf).
